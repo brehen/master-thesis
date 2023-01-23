@@ -17,7 +17,7 @@ temporary topic and description for a Master Thesis due the summer of 24.
 
 <!--toc:end-->
 
-## Initial suggestion
+## Suggested topics
 
 Modern software systems' business requirements are pushing systems architecture
 towards the cloud. It is not uncommon to do so by extending applications'
@@ -29,6 +29,22 @@ efficient choices in all regards.
 
 The topic of this thesis, is to investigate advanced options for cloud native
 web application developers. And could include
+
+1. Investigating languages like Scala or OCaml, that compile to java-script,
+   such that the front- and backend programs can be written in the same
+   language.
+2. Investigate options for writing backend programs as operating systems
+   modules, such as MirageOS, where the compiler may specialise the virtual
+   machine to be a runtime for the applications' backend.
+3. Design a measurement method for comparing historical ways of doing remote
+   procedure calls (REST, gRPC, GraphQL, etc.). And use the comparison to try
+   and design novel ways of calling procedures remotely.
+
+In either case, leaning from an investigation is all about demonstrating
+differences and evaluating them. As a vessel for demonstration, we have bought
+`academemes.com`, which will host a social network platform for sharing academic
+memes that relate to academic papers. The student is free to suggest features
+for the page, that demonstrate their findings.
 
 ## Motivation
 
