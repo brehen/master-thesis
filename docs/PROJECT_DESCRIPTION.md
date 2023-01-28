@@ -58,7 +58,7 @@ computing power.
 <!-- A presentation of another convention -->
 
 Another convention, is that of serverless services, where the focus has been
-to move from creating the environment yourself, but rather writing code that
+to move from building the environment yourself, but rather writing code that
 serve a specific purpose while the infrastructure is (generally) managed by
 someone else. This allows for servers that can spin up a process to run a
 specific task, and then turn it off again once it's done. Between each
