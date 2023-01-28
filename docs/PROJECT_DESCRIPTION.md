@@ -47,7 +47,9 @@ The internet of today is made up of interconnected services across the
 world. It isn't obvious how to build such services, nor how they should
 communicate. However, some conventions seems to be emerging.
 
-Today, you build an application using Docker, make an image and upload it to run
+<!-- A presentation of one such conventions -->
+
+A common convention, is to build an application using Docker, make an image and upload it to run
 as a virtual machine either on a server, or on a kubernetes cluster. These
 images are often gigabytes of data that need to transfer between point A to B,
 (and perhaps up to point Z, based on the level of distribution). These
