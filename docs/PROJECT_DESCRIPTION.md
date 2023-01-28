@@ -24,6 +24,8 @@ topic and project description for a Master Thesis due the summer of '24.
 
 ## Tentative title for thesis
 
+<!-- todo:jtk -->
+
 (Open for suggestions here)
 
 Exploring the use of Rust and WebAssembly for building cloud native
