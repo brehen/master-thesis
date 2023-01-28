@@ -52,7 +52,7 @@ communicate. However, some conventions seems to be emerging.
 A common convention, is to build an image to be deployed and run using a
 container orchestration tool such as Docker Swarm or Kubernetes.  Images are
 commonly gigabytes of data that need to transfer between various machines,
-and even starting the environment required to run them, can require a lot of
+and even building the environment required to run them, can require a lot of
 computing power.
 
 <!-- A presentation of another convention -->
