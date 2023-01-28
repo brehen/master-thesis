@@ -131,8 +131,6 @@ will help future software vendors make the right decision regarding WASM+WASI.
 
 ## Learning outcome
 
-<!-- from joachim -->
-
 My goal for the research is to learn:
 
 - More about the exciting alternatives for the future of cloud native
