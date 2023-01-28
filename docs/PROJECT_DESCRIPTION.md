@@ -57,12 +57,12 @@ computing power.
 
 <!-- A presentation of another convention -->
 
-Another convention, is that of serverless services, where the focus has
-been to move from creating the environment yourself, but rather writing code
-that serve a specific purpose while the infrastructure is (generally) managed by
+Another convention, is that of serverless services, where the focus has been
+to move from creating the environment yourself, but rather writing code that
+serve a specific purpose while the infrastructure is (generally) managed by
 someone else. This allows for servers that can spin up a process to run a
-specific task, and then turn it off again once it's done. Between each request,
-the service doesn't occupy and hardware, and thus doesn't cause any
+specific task, and then turn it off again once it's done. Between each
+request, the service doesn't occupy and hardware, and thus doesn't cause any
 monetary/computational cost.
 
 But these services are often written in languages that require to run on
