@@ -50,8 +50,8 @@ communicate. However, some conventions seems to be emerging.
 <!-- A presentation of one such conventions -->
 
 A common convention, is to build an image to be deployed and run using a
-container orchestration tool such as Docker Swarm or Kubernetes.  Such
-images are often gigabytes of data that need to transfer between various
+container orchestration tool such as Docker Swarm or Kubernetes.  Images are
+commonly gigabytes of data that need to transfer between various
 machines. These applications are then run as services that, based on the
 environment specified by the Docker file, can require a lot of computing
 power to even start.
