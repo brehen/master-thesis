@@ -55,7 +55,9 @@ commonly gigabytes of data that need to transfer between various machines,
 and even starting the environment required to run them, can require a lot of
 computing power.
 
-We've seen the rise of serverless services the past years, where the focus has
+<!-- A presentation of another convention -->
+
+Another convention, is that of serverless services, where the focus has
 been to move from creating the environment yourself, but rather writing code
 that serve a specific purpose while the infrastructure is (generally) managed by
 someone else. This allows for servers that can spin up a process to run a
