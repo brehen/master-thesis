@@ -41,8 +41,11 @@ applications: A performance, efficiency and mobility analysis.
 > &mdash;
 > [_Solomon Hykes, founder of Docker_](https://twitter.com/solomonstre/status/1111004913222324225?lang=en)
 
-In todays world of interconnected services across the world, there seem to be
-some convention about how to build and communicate on these.
+<!-- What is the general topic. -->
+
+The internet of today is made up of interconnected services across the
+world. It isn't obvious how to build such services, or how they should
+communicate. However, some conventions seems to be emerging.
 
 Today, you build an application using Docker, make an image and upload it to run
 as a virtual machine either on a server, or on a kubernetes cluster. These
