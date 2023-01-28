@@ -60,10 +60,12 @@ computing power.
 Another convention, is that of serverless services, where the focus is
 to move from building the environment yourself, but rather writing code that
 serve a specific purpose while the infrastructure is (generally) managed by
-someone else. This allows for servers that can spin up a process to run a
+someone else. This allows servers to spin up a process for running a
 specific task, and then turn it off again once it's done. Between each
 request, the service doesn't occupy and hardware, and thus doesn't cause any
 monetary/computational cost.
+
+<!-- Marius : short comment about what this paragraph is -->
 
 But these services are often written in languages that require to run on
 specific infrastructure to work. These requirements can cause the service to
@@ -74,6 +76,8 @@ could cause security issues, if two different companies share the same
 infrastructure without being able to control what the services are able to
 access on the same machine.
 
+<!-- Marius : short comment about what this paragraph is -->
+
 Is it possible to eat your cake and have it too?
 
 My motivation for this thesis is to research alternative technologies that might
@@ -81,6 +85,15 @@ enable developers to create distributed cloud native applications that are more
 efficient, more secure and reduce the environmental footprint from running.
 
 ## Hypothesis
+
+<!-- from Joachim : it seems to me like you are trying to express two
+different hypothesis here. Decide if your thesis is about mobility, or about
+deployment/orchestration. It sounds to me (based on the introduction), that
+you are converging on deployment. So the hypothesis should say "We can use
+technology T to solve problem X, and in doing so, we can build and deploy
+webapplications more efficiently than that which is the current
+convention". The hypothesis doesn't have to hold (your thesis is about doing
+the investigation, and concluding if it holds or not). -->
 
 > A web application can become more responsive by solving a mobility problem, by
 > running the code closer to the end user. If the web application can be
@@ -96,23 +109,29 @@ that I can run simulations/experiments on in an attempt to measure how much
 runtime each tehnology uses, and thus attempt to calculate how much
 computational power we can save on more efficient runtimes.
 
+<!-- from Joachim : Good, but can you design a more precise initial
+"measuring stick". Say, a list of 5 parameters that you think are important,
+and a description of how you intend to measure them?-->
+
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
 cloud native applications.
 
 ## Perspectivication
 
-Is this what you mean with the word `perspecivication`, Joachim?
-https://www.youtube.com/watch?v=b0q6dGJl7wU
+Modern software development is driven by financial considerations that
+presure software vendors to build and deploy software hastily. This kind of
+short-term thinking evidentally has long term consequenses regarding
+maintainability <!-- reference here -->,
+but perhaps also on financial externalities, such as carbon footprint.
 
-( Note to supervisors: I will not actually include this video in any hand-in. I
-tried googling the word, and this was one of the few results I found. I just
-thought it was funny how random the video was! 😁 )
-
-Let me know if you'd like me to write some points on putting the thesis into
-perspective, if that is what you mean. :)
+Short sighted thinking is about looking into the market and identifying
+promising off-the-shelf technology. We hope that the result of this work
+will help future software vendors make the right decision regarding WASM+WASI.
 
 ## Learning outcome
+
+<!-- from joachim -->
 
 My goal for the research is to learn:
 
