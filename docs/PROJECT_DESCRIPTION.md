@@ -49,12 +49,13 @@ communicate. However, some conventions seems to be emerging.
 
 <!-- A presentation of one such conventions -->
 
-A common convention, is to build an application using Docker, make an image and upload it to run
-as a virtual machine either on a server, or on a kubernetes cluster. These
-images are often gigabytes of data that need to transfer between point A to B,
-(and perhaps up to point Z, based on the level of distribution). These
-applications are then run as services that, based on the environment specified
-by the Docker file, can require a lot of computing power to even start.
+A common convention, is to build an image to be deployed and run on using a
+container orchestration tool such as Docker Swarm or Kubernetes.  These
+images are often gigabytes of data that need to transfer between point A to
+B, (and perhaps up to point Z, based on the level of distribution). These
+applications are then run as services that, based on the environment
+specified by the Docker file, can require a lot of computing power to even
+start.
 
 We've seen the rise of serverless services the past years, where the focus has
 been to move from creating the environment yourself, but rather writing code
