@@ -44,7 +44,7 @@ applications: A performance, efficiency and mobility analysis.
 <!-- What is the general topic. -->
 
 The internet of today is made up of interconnected services across the
-world. It isn't obvious how to build such services, or how they should
+world. It isn't obvious how to build such services, nor how they should
 communicate. However, some conventions seems to be emerging.
 
 Today, you build an application using Docker, make an image and upload it to run
