@@ -156,24 +156,23 @@ cloud native applications.
 
 ## Perspectivication
 
-Modern software development is driven by financial considerations that
-presure software vendors to build and deploy software hastily. This kind of
-short-term thinking evidentally has long term consequenses on maintainability,
-but perhaps also on financial externalities, such as carbon footprint.
+Modern software development is driven by financial considerations that presure
+software vendors to build and deploy software hastily. This kind of short-term
+thinking evidentally has long term consequenses on maintainability, but perhaps
+also on financial externalities, such as carbon footprint.
+
+<!-- reference here -->
+<!-- Marius: Is a reference mandatory at this stage? Sounds like something
+I would be able to unearth during the literature study.-->
 
 Short sighted thinking is about looking into the market and identifying
-promising off-the-shelf technology. We hope that the result of this work
-will help future software vendors make the right decision regarding WASM+WASI.
+promising off-the-shelf technology. We hope that the result of this work will
+help future software vendors make the right decision on WASM+WASI.
 
 ## Learning outcome
 
-My goal for the research is to learn:
-
-- More about the exciting alternatives for the future of cloud native
-  application development.
-- How much potential power we can save from more efficient runtimes.
-- How to immerse myself deep into a topic and gain the experience provided from
-  writing a longer academic research paper based in prior research.
+My goal for the research is to be able to analyse the design space for crafting
+cloud native applications with respect to energy efficiency.
 
 ---
 
