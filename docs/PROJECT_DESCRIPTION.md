@@ -25,8 +25,9 @@ topic and project description for a Master Thesis due the summer of '24.
 ## Tentative title for thesis
 
 <!-- Suggestion from Joachim. -->
-`academemes.com` : A case study on energy effiency for cloud native
-application deployment.
+
+`academemes.com` : A case study on energy effiency for cloud native application
+deployment.
 
 Exploring the use of Rust and WebAssembly for building cloud native
 applications: A performance, efficiency and mobility analysis.
@@ -43,29 +44,28 @@ applications: A performance, efficiency and mobility analysis.
 
 <!-- What is the general topic. -->
 
-The internet of today is made up of interconnected services across the
-world. It isn't obvious how to build such services, nor how they should
-communicate. However, some conventions seems to be emerging.
+The internet of today is made up of interconnected services across the world. It
+isn't obvious how to build such services, nor how they should communicate.
+However, some conventions seems to be emerging.
 
 <!-- A presentation of one such conventions -->
 
 A common convention, is to build an image to be deployed and run using a
-container orchestration tool such as Docker Swarm or Kubernetes.  Images are
-commonly gigabytes of data that need to transfer between various machines,
-and even building the environment required to run them, can require a lot of
+container orchestration tool such as Docker Swarm or Kubernetes. Images are
+commonly gigabytes of data that need to transfer between various machines, and
+even building the environment required to run them, can require a lot of
 computing power.
 
 <!-- A presentation of another convention -->
 
-Another convention, is that of serverless services, where the focus is
-to move from building the environment yourself, but rather writing code that
-serve a specific purpose while the infrastructure is (generally) managed by
-someone else. This allows servers to spin up a process for running a
-specific task, and then turn it off again once it's done. Between each
-request, the service doesn't occupy and hardware, and thus doesn't cause any
-monetary/computational cost.
+Another convention, is that of serverless services, where the focus is to move
+from building the environment yourself, but rather writing code that serve a
+specific purpose while the infrastructure is (generally) managed by someone
+else. This allows servers to spin up a process for running a specific task, and
+then turn it off again once it's done. Between each request, the service doesn't
+occupy any hardware, and thus doesn't cause any monetary/computational cost.
 
-<!-- Marius : short comment about what this paragraph is -->
+<!-- Potential issues related to the previous conventions -->
 
 But these services are often written in languages that require to run on
 specific infrastructure to work. These requirements can cause the service to
@@ -76,7 +76,8 @@ could cause security issues, if two different companies share the same
 infrastructure without being able to control what the services are able to
 access on the same machine.
 
-<!-- Marius : short comment about what this paragraph is -->
+<!-- Present the basis for my motivation based on the issue related to the
+conventions above -->
 
 Is it possible to eat your cake and have it too?
 
@@ -95,10 +96,10 @@ webapplications more efficiently than that which is the current
 convention". The hypothesis doesn't have to hold (your thesis is about doing
 the investigation, and concluding if it holds or not). -->
 
-> A web application can become more responsive by solving a mobility problem, by
-> running the code closer to the end user. If the web application can be
-> compiled to smaller packages, require less computing time to startup and
-> perform an operation we could reduce the amount of power required.
+> We can craft web applications that target WASM+WASI to create services that
+> compile to smaller packages, require less computing time to startup and
+> perform operations and thus reduce the energy required to distribute and
+> operate our cloud native world.
 
 ## Method
 
@@ -112,6 +113,42 @@ computational power we can save on more efficient runtimes.
 <!-- from Joachim : Good, but can you design a more precise initial
 "measuring stick". Say, a list of 5 parameters that you think are important,
 and a description of how you intend to measure them?-->
+<!-- My measuring stick 🥍 -->
+
+Some parameters I think are important to research during my thesis:
+
+1. Package size
+   - What: How large are the files that need to be distributed?
+   - How: Build different example applications and measure the resulting files.
+2. Startup time/cold start
+   - What: How long does it take to start a "cold" service?
+   - How: Deploy example applications to virtual machines and measure the
+     timings when requests come in.
+3. Runtime
+   - What: How long does the service spend on running the requested operation?
+   - How: Deploy example applications and record timings from the moment it
+     starts running, after startup.
+4. Energy usage
+   - What: How much power is consumed for an entire request?
+   - How: On example machine, measure how much cpu/memory/storage is utilized
+     for each request and over time.
+5. Developer productivity
+   - What: How do the technology help with making the developer more productive?
+   - How: Attempt to write some example apps myself, and take notes while
+     developing on how the ecosystem for the technologies I compare against are.
+     Perhaps reach out to some developers and perform some interviews to gauge
+     how the community experiences this.
+
+<!-- Marius: Got the idea for point #5 from the initial topic suggestion. In the
+example of Rust, one could write entire full stack applications using rust
+WASM+WASI for the backend, and WASM in the browser for the frontend. Based on
+the perspectivication below, I think it might be fruitful to take a look at the
+potential developer productivity gained from being able to use WASM/Rust for the
+entire stack as well, to further "sell" the idea for software vendors.
+  Does it make sense for the thesis, or would it "cross the beams" so to say,
+  when it comes to determining specific research methods to apply for the
+  thesis?
+-->
 
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
@@ -119,25 +156,23 @@ cloud native applications.
 
 ## Perspectivication
 
-Modern software development is driven by financial considerations that
-presure software vendors to build and deploy software hastily. This kind of
-short-term thinking evidentally has long term consequenses regarding
-maintainability <!-- reference here -->,
-but perhaps also on financial externalities, such as carbon footprint.
+Modern software development is driven by financial considerations that presure
+software vendors to build and deploy software hastily. This kind of short-term
+thinking evidentally has long term consequenses on maintainability, but perhaps
+also on financial externalities, such as carbon footprint.
+
+<!-- reference here -->
+<!-- Marius: Is a reference mandatory at this stage? Sounds like something
+I would be able to unearth during the literature study.-->
 
 Short sighted thinking is about looking into the market and identifying
-promising off-the-shelf technology. We hope that the result of this work
-will help future software vendors make the right decision regarding WASM+WASI.
+promising off-the-shelf technology. We hope that the result of this work will
+help future software vendors make the right decision on WASM+WASI.
 
 ## Learning outcome
 
-My goal for the research is to learn:
-
-- More about the exciting alternatives for the future of cloud native
-  application development.
-- How much potential power we can save from more efficient runtimes.
-- How to immerse myself deep into a topic and gain the experience provided from
-  writing a longer academic research paper based in prior research.
+My goal for the research is to be able to analyse the design space for crafting
+cloud native applications with respect to energy efficiency.
 
 ---
 
