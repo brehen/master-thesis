@@ -65,7 +65,7 @@ else. This allows servers to spin up a process for running a specific task, and
 then turn it off again once it's done. Between each request, the service doesn't
 occupy any hardware, and thus doesn't cause any monetary/computational cost.
 
-<!-- Marius : short comment about what this paragraph is -->
+<!-- Potential issues related to the previous conventions -->
 
 But these services are often written in languages that require to run on
 specific infrastructure to work. These requirements can cause the service to
@@ -76,7 +76,8 @@ could cause security issues, if two different companies share the same
 infrastructure without being able to control what the services are able to
 access on the same machine.
 
-<!-- Marius : short comment about what this paragraph is -->
+<!-- Present the basis for my motivation based on the issue related to the
+conventions above -->
 
 Is it possible to eat your cake and have it too?
 
@@ -112,6 +113,7 @@ computational power we can save on more efficient runtimes.
 <!-- from Joachim : Good, but can you design a more precise initial
 "measuring stick". Say, a list of 5 parameters that you think are important,
 and a description of how you intend to measure them?-->
+<!-- My measuring stick 🥍 -->
 
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
