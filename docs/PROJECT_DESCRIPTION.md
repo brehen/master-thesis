@@ -115,6 +115,41 @@ computational power we can save on more efficient runtimes.
 and a description of how you intend to measure them?-->
 <!-- My measuring stick 🥍 -->
 
+Some parameters I think are important to research during my thesis:
+
+1. Package size
+   - What: How large are the files that need to be distributed?
+   - How: Build different example applications and measure the resulting files.
+2. Startup time/cold start
+   - What: How long does it take to start a "cold" service?
+   - How: Deploy example applications to virtual machines and measure the
+     timings when requests come in.
+3. Runtime
+   - What: How long does the service spend on running the requested operation?
+   - How: Deploy example applications and record timings from the moment it
+     starts running, after startup.
+4. Energy usage
+   - What: How much power is consumed for an entire request?
+   - How: On example machine, measure how much cpu/memory/storage is utilized
+     for each request and over time.
+5. Developer productivity
+   - What: How do the technology help with making the developer more productive?
+   - How: Attempt to write some example apps myself, and take notes while
+     developing on how the ecosystem for the technologies I compare against are.
+     Perhaps reach out to some developers and perform some interviews to gauge
+     how the community experiences this.
+
+<!-- Marius: Got the idea for point #5 from the initial topic suggestion. In the
+example of Rust, one could write entire full stack applications using rust
+WASM+WASI for the backend, and WASM in the browser for the frontend. Based on
+the perspectivication below, I think it might be fruitful to take a look at the
+potential developer productivity gained from being able to use WASM/Rust for the
+entire stack as well, to further "sell" the idea for software vendors.
+  Does it make sense for the thesis, or would it "cross the beams" so to say,
+  when it comes to determining specific research methods to apply for the
+  thesis?
+-->
+
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
 cloud native applications.
