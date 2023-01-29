@@ -44,16 +44,16 @@ applications: A performance, efficiency and mobility analysis.
 
 <!-- What is the general topic. -->
 
-The internet of today is made up of interconnected services across the
-world. It isn't obvious how to build such services, nor how they should
-communicate. However, some conventions seems to be emerging.
+The internet of today is made up of interconnected services across the world. It
+isn't obvious how to build such services, nor how they should communicate.
+However, some conventions seems to be emerging.
 
 <!-- A presentation of one such conventions -->
 
 A common convention, is to build an image to be deployed and run using a
-container orchestration tool such as Docker Swarm or Kubernetes.  Images are
-commonly gigabytes of data that need to transfer between various machines,
-and even building the environment required to run them, can require a lot of
+container orchestration tool such as Docker Swarm or Kubernetes. Images are
+commonly gigabytes of data that need to transfer between various machines, and
+even building the environment required to run them, can require a lot of
 computing power.
 
 <!-- A presentation of another convention -->
@@ -121,8 +121,7 @@ cloud native applications.
 
 Modern software development is driven by financial considerations that
 presure software vendors to build and deploy software hastily. This kind of
-short-term thinking evidentally has long term consequenses regarding
-maintainability <!-- reference here -->,
+short-term thinking evidentally has long term consequenses on maintainability,
 but perhaps also on financial externalities, such as carbon footprint.
 
 Short sighted thinking is about looking into the market and identifying
