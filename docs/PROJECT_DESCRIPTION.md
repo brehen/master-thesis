@@ -96,10 +96,10 @@ webapplications more efficiently than that which is the current
 convention". The hypothesis doesn't have to hold (your thesis is about doing
 the investigation, and concluding if it holds or not). -->
 
-> A web application can become more responsive by solving a mobility problem, by
-> running the code closer to the end user. If the web application can be
-> compiled to smaller packages, require less computing time to startup and
-> perform an operation we could reduce the amount of power required.
+> We can craft web applications that target WASM+WASI to create services that
+> compile to smaller packages, require less computing time to startup and
+> perform operations and thus reduce the energy required to distribute and
+> operate our cloud native world.
 
 ## Method
 
