@@ -25,8 +25,9 @@ topic and project description for a Master Thesis due the summer of '24.
 ## Tentative title for thesis
 
 <!-- Suggestion from Joachim. -->
-`academemes.com` : A case study on energy effiency for cloud native
-application deployment.
+
+`academemes.com` : A case study on energy effiency for cloud native application
+deployment.
 
 Exploring the use of Rust and WebAssembly for building cloud native
 applications: A performance, efficiency and mobility analysis.
