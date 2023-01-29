@@ -24,7 +24,10 @@ topic and project description for a Master Thesis due the summer of '24.
 
 ## Tentative title for thesis
 
-(Open for suggestions here)
+<!-- Suggestion from Joachim. -->
+
+`academemes.com` : A case study on energy effiency for cloud native application
+deployment.
 
 Exploring the use of Rust and WebAssembly for building cloud native
 applications: A performance, efficiency and mobility analysis.
@@ -39,23 +42,30 @@ applications: A performance, efficiency and mobility analysis.
 > &mdash;
 > [_Solomon Hykes, founder of Docker_](https://twitter.com/solomonstre/status/1111004913222324225?lang=en)
 
-In todays world of interconnected services across the world, there seem to be
-some convention about how to build and communicate on these.
+<!-- What is the general topic. -->
 
-Today, you build an application using Docker, make an image and upload it to run
-as a virtual machine either on a server, or on a kubernetes cluster. These
-images are often gigabytes of data that need to transfer between point A to B,
-(and perhaps up to point Z, based on the level of distribution). These
-applications are then run as services that, based on the environment specified
-by the Docker file, can require a lot of computing power to even start.
+The internet of today is made up of interconnected services across the world. It
+isn't obvious how to build such services, nor how they should communicate.
+However, some conventions seems to be emerging.
 
-We've seen the rise of serverless services the past years, where the focus has
-been to move from creating the environment yourself, but rather writing code
-that serve a specific purpose while the infrastructure is (generally) managed by
-someone else. This allows for servers that can spin up a process to run a
-specific task, and then turn it off again once it's done. Between each request,
-the service doesn't occupy and hardware, and thus doesn't cause any
-monetary/computational cost.
+<!-- A presentation of one such conventions -->
+
+A common convention, is to build an image to be deployed and run using a
+container orchestration tool such as Docker Swarm or Kubernetes. Images are
+commonly gigabytes of data that need to transfer between various machines, and
+even building the environment required to run them, can require a lot of
+computing power.
+
+<!-- A presentation of another convention -->
+
+Another convention, is that of serverless services, where the focus is to move
+from building the environment yourself, but rather writing code that serve a
+specific purpose while the infrastructure is (generally) managed by someone
+else. This allows servers to spin up a process for running a specific task, and
+then turn it off again once it's done. Between each request, the service doesn't
+occupy any hardware, and thus doesn't cause any monetary/computational cost.
+
+<!-- Potential issues related to the previous conventions -->
 
 But these services are often written in languages that require to run on
 specific infrastructure to work. These requirements can cause the service to
@@ -66,6 +76,9 @@ could cause security issues, if two different companies share the same
 infrastructure without being able to control what the services are able to
 access on the same machine.
 
+<!-- Present the basis for my motivation based on the issue related to the
+conventions above -->
+
 Is it possible to eat your cake and have it too?
 
 My motivation for this thesis is to research alternative technologies that might
@@ -74,10 +87,19 @@ efficient, more secure and reduce the environmental footprint from running.
 
 ## Hypothesis
 
-> A web application can become more responsive by solving a mobility problem, by
-> running the code closer to the end user. If the web application can be
-> compiled to smaller packages, require less computing time to startup and
-> perform an operation we could reduce the amount of power required.
+<!-- from Joachim : it seems to me like you are trying to express two
+different hypothesis here. Decide if your thesis is about mobility, or about
+deployment/orchestration. It sounds to me (based on the introduction), that
+you are converging on deployment. So the hypothesis should say "We can use
+technology T to solve problem X, and in doing so, we can build and deploy
+webapplications more efficiently than that which is the current
+convention". The hypothesis doesn't have to hold (your thesis is about doing
+the investigation, and concluding if it holds or not). -->
+
+> We can craft web applications that target WASM+WASI to create services that
+> compile to smaller packages, require less computing time to startup and
+> perform operations and thus reduce the energy required to distribute and
+> operate our cloud native world.
 
 ## Method
 
@@ -88,31 +110,69 @@ that I can run simulations/experiments on in an attempt to measure how much
 runtime each tehnology uses, and thus attempt to calculate how much
 computational power we can save on more efficient runtimes.
 
+<!-- from Joachim : Good, but can you design a more precise initial
+"measuring stick". Say, a list of 5 parameters that you think are important,
+and a description of how you intend to measure them?-->
+<!-- My measuring stick 🥍 -->
+
+Some parameters I think are important to research during my thesis:
+
+1. Package size
+   - What: How large are the files that need to be distributed?
+   - How: Build different example applications and measure the resulting files.
+2. Startup time/cold start
+   - What: How long does it take to start a "cold" service?
+   - How: Deploy example applications to virtual machines and measure the
+     timings when requests come in.
+3. Runtime
+   - What: How long does the service spend on running the requested operation?
+   - How: Deploy example applications and record timings from the moment it
+     starts running, after startup.
+4. Energy usage
+   - What: How much power is consumed for an entire request?
+   - How: On example machine, measure how much cpu/memory/storage is utilized
+     for each request and over time.
+5. Developer productivity
+   - What: How do the technology help with making the developer more productive?
+   - How: Attempt to write some example apps myself, and take notes while
+     developing on how the ecosystem for the technologies I compare against are.
+     Perhaps reach out to some developers and perform some interviews to gauge
+     how the community experiences this.
+
+<!-- Marius: Got the idea for point #5 from the initial topic suggestion. In the
+example of Rust, one could write entire full stack applications using rust
+WASM+WASI for the backend, and WASM in the browser for the frontend. Based on
+the perspectivication below, I think it might be fruitful to take a look at the
+potential developer productivity gained from being able to use WASM/Rust for the
+entire stack as well, to further "sell" the idea for software vendors.
+  Does it make sense for the thesis, or would it "cross the beams" so to say,
+  when it comes to determining specific research methods to apply for the
+  thesis?
+-->
+
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
 cloud native applications.
 
 ## Perspectivication
 
-Is this what you mean with the word `perspecivication`, Joachim?
-https://www.youtube.com/watch?v=b0q6dGJl7wU
+Modern software development is driven by financial considerations that presure
+software vendors to build and deploy software hastily. This kind of short-term
+thinking evidentally has long term consequenses on maintainability, but perhaps
+also on financial externalities, such as carbon footprint.
 
-( Note to supervisors: I will not actually include this video in any hand-in. I
-tried googling the word, and this was one of the few results I found. I just
-thought it was funny how random the video was! 😁 )
+<!-- reference here -->
+<!-- Marius: Is a reference mandatory at this stage? Sounds like something
+I would be able to unearth during the literature study.-->
 
-Let me know if you'd like me to write some points on putting the thesis into
-perspective, if that is what you mean. :)
+Short sighted thinking is about looking into the market and identifying
+promising off-the-shelf technology. We hope that the result of this work will
+help future software vendors make the right decision on WASM+WASI.
 
 ## Learning outcome
 
-My goal for the research is to learn:
-
-- More about the exciting alternatives for the future of cloud native
-  application development.
-- How much potential power we can save from more efficient runtimes.
-- How to immerse myself deep into a topic and gain the experience provided from
-  writing a longer academic research paper based in prior research.
+My goal for the research is to be able to analyse the design space for crafting
+cloud native applications with respect to energy efficiency.
 
 ---
 
