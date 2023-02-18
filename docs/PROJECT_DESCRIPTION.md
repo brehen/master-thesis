@@ -16,9 +16,8 @@ topic and project description for a Master Thesis due the summer of '24.
   - [Method](#method)
   - [Perspectivication](#perspectivication)
   - [Learning outcome](#learning-outcome)
-  - [References](#references)
-    - [The original description](#the-original-description)
-  - [Suggested topics](#suggested-topics)
+  - [Progress plan for thesis](#progress-plan-for-thesis)
+  - [Relevant curriculum](#relevant-curriculum)
 
 <!--toc:end-->
 
@@ -50,6 +49,19 @@ However, some conventions seems to be emerging.
 
 <!-- A presentation of one such conventions -->
 
+<!-- Solomon suggested that we use something else as a programming paradigm. We
+should do so because it saves energy. Method: Here's an experiment that makes it
+happen. Learning outcome: something testable to aim for.
+
+Learning outcome: How to: How to benchmark for
+energy consumption is nice to know.
+Learning outcome: Learn how to write energy
+efficient programs using Rust compiled to Webassembly.
+Be able to describe and understand the paradigms presented above.
+Be able to compare web application deployment paradigms.
+
+-->
+
 A common convention, is to build an image to be deployed and run using a
 container orchestration tool such as Docker Swarm or Kubernetes. Images are
 commonly gigabytes of data that need to transfer between various machines, and
@@ -57,6 +69,8 @@ even building the environment required to run them, can require a lot of
 computing power.
 
 <!-- A presentation of another convention -->
+
+<!-- The paradigm that Solomon Hykes suggests  -->
 
 Another convention, is that of serverless services, where the focus is to move
 from building the environment yourself, but rather writing code that serve a
@@ -67,14 +81,13 @@ occupy any hardware, and thus doesn't cause any monetary/computational cost.
 
 <!-- Potential issues related to the previous conventions -->
 
-But these services are often written in languages that require to run on
-specific infrastructure to work. These requirements can cause the service to
-have pretty high startup times (often referred to as cold starts) and thus incur
-a high impact on the environment. A way to mitigate this, is to keep the server
-running at all times and serve services on the same "serverless server". This
-could cause security issues, if two different companies share the same
-infrastructure without being able to control what the services are able to
-access on the same machine.
+In either case, the conventions do not address the energy inefficiency of
+virtualization, so some services have a pretty high startup times (often
+referred to as cold starts) and thus incur a high impact on the environment. A
+way to mitigate this, is to keep the server running at all times and serve
+services on the same "serverless server". This could cause security issues, if
+two different companies share the same infrastructure without being able to
+control what the services are able to access on the same machine.
 
 <!-- Present the basis for my motivation based on the issue related to the
 conventions above -->
@@ -86,15 +99,6 @@ enable developers to create distributed cloud native applications that are more
 efficient, more secure and reduce the environmental footprint from running.
 
 ## Hypothesis
-
-<!-- from Joachim : it seems to me like you are trying to express two
-different hypothesis here. Decide if your thesis is about mobility, or about
-deployment/orchestration. It sounds to me (based on the introduction), that
-you are converging on deployment. So the hypothesis should say "We can use
-technology T to solve problem X, and in doing so, we can build and deploy
-webapplications more efficiently than that which is the current
-convention". The hypothesis doesn't have to hold (your thesis is about doing
-the investigation, and concluding if it holds or not). -->
 
 > We can craft web applications that target WASM+WASI to create services that
 > compile to smaller packages, require less computing time to startup and
@@ -109,11 +113,6 @@ For the thesis research my initial thoughts are to attempt to create something
 that I can run simulations/experiments on in an attempt to measure how much
 runtime each tehnology uses, and thus attempt to calculate how much
 computational power we can save on more efficient runtimes.
-
-<!-- from Joachim : Good, but can you design a more precise initial
-"measuring stick". Say, a list of 5 parameters that you think are important,
-and a description of how you intend to measure them?-->
-<!-- My measuring stick 🥍 -->
 
 Some parameters I think are important to research during my thesis:
 
@@ -139,17 +138,6 @@ Some parameters I think are important to research during my thesis:
      Perhaps reach out to some developers and perform some interviews to gauge
      how the community experiences this.
 
-<!-- Marius: Got the idea for point #5 from the initial topic suggestion. In the
-example of Rust, one could write entire full stack applications using rust
-WASM+WASI for the backend, and WASM in the browser for the frontend. Based on
-the perspectivication below, I think it might be fruitful to take a look at the
-potential developer productivity gained from being able to use WASM/Rust for the
-entire stack as well, to further "sell" the idea for software vendors.
-  Does it make sense for the thesis, or would it "cross the beams" so to say,
-  when it comes to determining specific research methods to apply for the
-  thesis?
--->
-
 To support this, I will spend some time during the next semester reading up on
 related literature that can teach me about the underlying technology behind
 cloud native applications.
@@ -161,10 +149,6 @@ software vendors to build and deploy software hastily. This kind of short-term
 thinking evidentally has long term consequenses on maintainability, but perhaps
 also on financial externalities, such as carbon footprint.
 
-<!-- reference here -->
-<!-- Marius: Is a reference mandatory at this stage? Sounds like something
-I would be able to unearth during the literature study.-->
-
 Short sighted thinking is about looking into the market and identifying
 promising off-the-shelf technology. We hope that the result of this work will
 help future software vendors make the right decision on WASM+WASI.
@@ -174,37 +158,30 @@ help future software vendors make the right decision on WASM+WASI.
 My goal for the research is to be able to analyse the design space for crafting
 cloud native applications with respect to energy efficiency.
 
----
+<!-- there Conjuectura  -->
 
-## References
+<!--
+Notes from Joachim.
 
-### The original description
+-->
 
-## Suggested topics
+## Progress plan for thesis
 
-Modern software systems' business requirements are pushing systems architecture
-towards the cloud. It is not uncommon to do so by extending applications'
-functionality to include a web-API, and then deploy the server on a virtual
-machine (running server editions of e.g Ubuntu or Windows). Then a "frontend"
-program is written, often in a different programming language, to call the
-application remotely. However, cloud native applications can make radically more
-efficient choices in all regards.
+1. 1st of March, begin researching relevant data material for further reading.
+2. 1st of April, begin reading relevant research and start collecting potential
+   related data points to the hypothesis.
+3. 1st of May, hand in first draft of compulsory essay to supervisor
+4. 1st of June, hand in compulsory essay and continue collecting data related to
+   thesis.
+5. 1st of October, start of the end of collecting relevant data to efficiency.
+6. 1st of November, begin on first full draft of thesis
+7. 1st of February 2024, hand in first draft of thesis to supervisor
+8. 1st of April 2024, Hand in second draft to supervisor
+9. 10th of May, hand in final thesis
 
-The topic of this thesis, is to investigate advanced options for cloud native
-web application developers. And could include
+## Where to go from Here
 
-1. Investigating languages like Scala or OCaml, that compile to java-script,
-   such that the front- and backend programs can be written in the same
-   language.
-2. Investigate options for writing backend programs as operating systems
-   modules, such as MirageOS, where the compiler may specialise the virtual
-   machine to be a runtime for the applications' backend.
-3. Design a measurement method for comparing historical ways of doing remote
-   procedure calls (REST, gRPC, GraphQL, etc.). And use the comparison to try
-   and design novel ways of calling procedures remotely.
+While in Bangkok:
 
-In either case, leaning from an investigation is all about demonstrating
-differences and evaluating them. As a vessel for demonstration, we have bought
-`academemes.com`, which will host a social network platform for sharing academic
-memes that relate to academic papers. The student is free to suggest features
-for the page, that demonstrate their findings.
+- Rewrite the project description
+  - Direct the focus towards the cloud efficiency and.
