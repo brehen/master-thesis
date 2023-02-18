@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "52319250c1dbc7bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "cdf9794ae748c8cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77fa166fd442bb9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/📙 Book Reference.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66f847f87c64aa0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Zettelkasten/Master thesis project description.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "869c70ef9b953c93",
+    "type": "split",
+    "children": [
+      {
+        "id": "769d70377c9d3fdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc94341cdd38553b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "86896372b99a4cd5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e790e4c3dca8339b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7221f4741bd5dfa6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e60a144d7aa9cbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db5027a1a7e39dca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Zettelkasten/Master thesis project description.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0b907cae48024f94",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Zettelkasten/Master thesis project description.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31d0bae1d47d6e39",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5f33b3900911be1d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Zettelkasten/Master thesis project description.md"
+              }
+            }
+          },
+          {
+            "id": "67d8dc07042a34ad",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-projects:Open projects": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "66f847f87c64aa0f",
+  "lastOpenFiles": [
+    "Zettelkasten/Master thesis project description.md",
+    "Zettelkasten/Workshop questions exam.md",
+    "Zettelkasten/Web hacking.md",
+    "Zettelkasten/WebAssembly.md",
+    "Zettelkasten/Vulnerability finding with fuzzing.md",
+    "Zettelkasten/Vim plugins that I use.md",
+    "Zettelkasten/Ultralearning.md",
+    "Zettelkasten/TypeScript project structure.md",
+    "Zettelkasten/Technical Information Gathering.md",
+    "Zettelkasten/TCP handshake.md"
+  ]
+}
