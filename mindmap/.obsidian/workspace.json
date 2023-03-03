@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Zettelkasten/Master thesis project description.md",
+                "file": "Zettelkasten/Reading List.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "376d9d8af0472a90",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/📃 Paper Reference.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Zettelkasten/Master thesis project description.md",
+                "file": "Templates/📃 Paper Reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Zettelkasten/Master thesis project description.md",
+                "file": "Templates/📃 Paper Reference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Zettelkasten/Master thesis project description.md"
+                "file": "Templates/📃 Paper Reference.md"
               }
             }
           },
@@ -171,17 +183,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "66f847f87c64aa0f",
+  "active": "376d9d8af0472a90",
   "lastOpenFiles": [
-    "Zettelkasten/Master thesis project description.md",
-    "Zettelkasten/Workshop questions exam.md",
-    "Zettelkasten/Web hacking.md",
-    "Zettelkasten/WebAssembly.md",
-    "Zettelkasten/Vulnerability finding with fuzzing.md",
-    "Zettelkasten/Vim plugins that I use.md",
-    "Zettelkasten/Ultralearning.md",
-    "Zettelkasten/TypeScript project structure.md",
-    "Zettelkasten/Technical Information Gathering.md",
-    "Zettelkasten/TCP handshake.md"
+    "Reference Notes/📃 Towards Greener Applications.md",
+    "Daily Notes/2023-02-20.md",
+    "Templates/📹 Video reference.md",
+    "Templates/📙 Book Reference.md",
+    "Templates/📃 Paper Reference.md",
+    "Templates/🎓 Course Reference.md",
+    "Reference Notes/Energy Efficient Next-Gen of Virtualization for Cloud-native Applications in Modern Data Centres.md",
+    "Zettelkasten/Reading List.md",
+    "Zettelkasten/2023-02-18.md",
+    "Zettelkasten/Master thesis project description.md"
   ]
 }
