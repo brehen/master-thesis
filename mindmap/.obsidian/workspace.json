@@ -8,43 +8,44 @@
         "type": "tabs",
         "children": [
           {
-            "id": "77fa166fd442bb9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/📙 Book Reference.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "66f847f87c64aa0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Zettelkasten/Reading List.md",
+                "file": "Zettelkasten/Master thesis project description.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "376d9d8af0472a90",
+            "id": "becf3c1fffe5c88d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "940ef8d2fbe7c18c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "401bd68faaf8e935",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/📃 Paper Reference.md",
+                "file": "Zettelkasten/Thesis essay.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/📃 Paper Reference.md",
+                "file": "Zettelkasten/Thesis essay.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/📃 Paper Reference.md",
+                "file": "Zettelkasten/Thesis essay.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/📃 Paper Reference.md"
+                "file": "Zettelkasten/Thesis essay.md"
               }
             }
           },
@@ -183,17 +184,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "376d9d8af0472a90",
+  "active": "401bd68faaf8e935",
   "lastOpenFiles": [
+    "Zettelkasten/Master thesis project description.md",
+    "Zettelkasten/Thesis essay.md",
+    "Templates/📙 Book Reference.md",
+    "Zettelkasten/Reading List.md",
+    "Zettelkasten/Rust project structure.md",
+    "Templates/📃 Paper Reference.md",
     "Reference Notes/📃 Towards Greener Applications.md",
     "Daily Notes/2023-02-20.md",
     "Templates/📹 Video reference.md",
-    "Templates/📙 Book Reference.md",
-    "Templates/📃 Paper Reference.md",
     "Templates/🎓 Course Reference.md",
     "Reference Notes/Energy Efficient Next-Gen of Virtualization for Cloud-native Applications in Modern Data Centres.md",
-    "Zettelkasten/Reading List.md",
-    "Zettelkasten/2023-02-18.md",
-    "Zettelkasten/Master thesis project description.md"
+    "Zettelkasten/2023-02-18.md"
   ]
 }
