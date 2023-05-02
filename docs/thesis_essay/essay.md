@@ -15,50 +15,48 @@
 
 <!-- The general topic. -->
 
-In our world wide web we rely on thousands upon thousands of different services
-that attempt to solve every issue known to mankind (thus far). These services
-need to be developed, deployed and hosted on machines that require energy to
-run.
+The world wide web comprises countless services designed to cater to a wide
+range of human needs. To address these needs, these services must be: developed,
+deployed, and hosted on machines that consume energy.
 
 <!-- Two common ways to solve "the cloud" -->
 
-Today we have two very widely used ways to deploy and host these services. This
-can be done by using Virtual Machines that you install full operating systems
-on, in order to run a web server that provides a set service. This approach
-generally require you to have the machine turned on at all times, in order to
-keep up availability, and can be hard to scale.
+We have two widely used ways to deploy and host these services and web
+applications. One of these is by using Virtual Machines where you install full
+operating systems on restricted resources, but this requires you to have the
+machine turned on at all times availability, and can be hard to scale.
 
-In order to build services that scale well, there exists another approach
-through building an image that is deployed and run on containers through a
-container orchestration tool such as Docker Swarm or Kubernetes. These images
-are often quite large and require a lot of networking traffic to transfer
-between various machines.
+Or, to build services that scale well another approach emerged; through building
+an image that deploy and run on containers through a container orchestration
+tool such as Docker Swarm or Kubernetes. These images are often large and
+require a lot of networking traffic to transfer between machines.
 
 <!-- The effect of these common ways -->
 
 Both approaches require a lot of computing power that has resulted in major
-vendors building giant data centers that combined puts out 2.5% to 3.7% of all
-global greenhouse gas emissions. [1] <!-- source pending -->
+vendors building giant data centers that, when combined, puts out 2.5% to 3.7%
+of all global greenhouse gas emissions. [1] Are there any ways for us to attempt
+to mitigate this, using alternative technologies?
 
-<!-- Introducing a new hot contender that we want to compare with -->
+<!-- Our saviour, Wasm-->
 
-Solomon Hykes, the creator of Docker, has suggested in his tweet from 2019 that
-if WebAssembly had existed in 2008, he would not have created Docker.
-WebAssembly was originally developed with a philosophy that it should be able to
-run on all kinds of browsers on all kinds of devices. This philosophy translated
-well when WebAssembly System Interface was developed as a way to run WASM on any
-kind of hardware and . This resulted in an alternative way to deploy web
-applications, namely WASM modules that is designed to run on any kind of
-hardware with near-native efficiency.
+Solomon Hykes suggested in his tweet from 2019 that if _WebAssembly_ and the
+_WebAssembly System Interface_ project had existed in 2008, there would not have
+been a need to develop Docker.
 
-<!-- What can we do with this knowledge -->
+<!-- TODO: Weave these two paragraphs together -->
 
-Using a technology like WASM modules, which can be compiled and targeted by many
-well-established technologies, could reduce the startup and runtime dramatically
-as opposed to the previously mentioned approaches, and thus enable companies to
-drastically reduce the carbon footprint of their services.
+WebAssembly, initially developed to run on all browsers and devices, found a new
+application when the WebAssembly System Interface allowed it to run on and
+interface with any hardware. This development model has led to an alternative
+deployment method using WebAssembly modules designed for near-native efficiency
+on any hardware.
 
-<!-- Note: Not 100% sure yet if I want to focus on serverless deployments and functions-as-a-service for the experiments. WASM modules seems like a very good fit for this space, so I'm inclined to approach the further work with Joachim's suggestion for setting up our own serverless sandbox in the Energy Læbs -->
+This master thesis explores the hyphothesis "it is possible to develop a FaaS
+platform that scale to zero, without losing availability, but the price is that
+we run WebAssembly." To test this, we will develop a prototype FaaS written in
+Rust, and attempt to scale to zero by implementing a simple service for serving
+memes on the internet that is always available, but energy efficient.
 
 ## Background
 
@@ -84,10 +82,10 @@ time on a set amount of resources is both inefficient and hard to scale with
 increased traffic. As a way to combat these drawbacks, we have seen the rise of
 containerisation the past decade.
 
-A very popular option for packaging applications in containers is the open
-source project Docker. This technology allowed developers to develop, package
-and deploy applications easily. One of the biggest challenges for those working
-with containers, is deployment and orchestration at scale. which saw the rise of
+A popular option for packaging applications in containers is the open source
+project Docker. This technology allowed developers to develop, package and
+deploy applications easily. One of the biggest challenges for those working with
+containers, is deployment and orchestration at scale. which saw the rise of
 Google's Kubernetes, a tool that most companies attempt to incorporate into
 their platform.
 
