@@ -53,10 +53,12 @@ deployment method using WebAssembly modules designed for near-native efficiency
 on any hardware.
 
 This master thesis explores the hyphothesis "it is possible to develop a FaaS
-platform that scale to zero, without losing availability, but the price is that
-we run WebAssembly." To test this, we will develop a prototype FaaS written in
-Rust, and attempt to scale to zero by implementing a simple service for serving
-memes on the internet that is always available, but energy efficient.
+platform that scale to near-zero resource usage without comprimising
+availability, by exclusively running WebAssembly modules". To test this, we will
+develop a prototype FaaS written in Rust, and attempt to scale to near-zero by
+implementing a simple service for serving memes on the internet that is
+virtually always available, but also more energy efficient than contending
+alternatives.
 
 ## Background
 
