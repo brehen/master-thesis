@@ -52,44 +52,50 @@ interface with any hardware. This development model has led to an alternative
 deployment method using WebAssembly modules designed for near-native efficiency
 on any hardware.
 
-This master thesis explores the hyphothesis "it is possible to develop a FaaS
-platform that scale to near-zero resource usage without comprimising
-availability, by exclusively running WebAssembly modules". To test this, we will
-develop a prototype FaaS written in Rust, and attempt to scale to near-zero by
-implementing a simple service for serving memes on the internet that is
-virtually always available, but also more energy efficient than contending
-alternatives.
-
 ## Background
 
-<!-- Note from Marius: I initially wrote this for my motivation, but after a while I noticed that it might be a bit too detailed and long winded, and perhaps would be better to incorporate as part of the background information for the thesis? -->
+This master thesis explores the hyphothesis:
 
-To serve these services we need resources to run the computation required to
-solve a request. These resources were uausally owned and managed by companies
-on-premise, but today we rent hardware from someone else. This concept is
-popularised through the term _cloud computing_ and is the basis for what we now
-know as _the cloud_. Two of the most widely used means of cloud computing today
-is through virtual machines, or VM's, and containerisation.
+> it is possible to develop a FaaS platform that scale to near-zero resource
+> usage without comprimising availability, by exclusively running WebAssembly
+> modules
 
-VMs are essentially full operating systems that run "on top" of another
-operating system through virtualisation, where we can install a OS of our
-choice, granted the underlying hardware supports it. On these machines we
-usually have full control of the environment granted by the vendor and we can
-deploy and host full servers that run all the time and are thus always available
-to resolve requests.
+To test this, we will develop a prototype FaaS written in Rust, and attempt to
+scale to near-zero by implementing a simple service for serving memes on the
+internet that is virtually always available, but also more energy efficient than
+contending alternatives.
 
-There are many benefits to this approach, as opposed to managing your own
-infrastructure, but there are also some drawbacks. Leaving VMs running all the
-time on a set amount of resources is both inefficient and hard to scale with
-increased traffic. As a way to combat these drawbacks, we have seen the rise of
-containerisation the past decade.
+### Cloud Computing: An Overview
 
-A popular option for packaging applications in containers is the open source
-project Docker. This technology allowed developers to develop, package and
-deploy applications easily. One of the biggest challenges for those working with
-containers, is deployment and orchestration at scale. which saw the rise of
-Google's Kubernetes, a tool that most companies attempt to incorporate into
-their platform.
+<!-- What is the cloud and its significance in todays web -->
+<!-- Introduce benefits and challenges associated with cloud computing. Some
+important points for this thesis: Scalability, cost and energy efficiency -->
+<!-- What are some major players, and how are they attempting to solve the same
+problems? -->
+
+### Traditional Deployment Methods: Virtual machines and Containers
+
+<!-- Introduce the concept of "the first two waves of cloud computing" -->
+<!-- Describe each wave and detail advantages and disadvantages to each -->
+
+### Function-as-a-Service (FaaS)
+
+<!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
+<!-- Challenges associated with FaaS, including cold start latency -->
+
+### WebAssembly: A new paradigm
+
+<!-- Provide an overview of WebAssembly, its purpose, and its advantages over
+traditional deployment methods. -->
+
+<!-- Introduce WASI -->
+
+<!-- Discuss advantages to introducing Wasm+Wasi component modules as an
+alternative way to deploy and host FaaS platforms. Focus on startup times and
+energy efficiency. Runtime efficiency is also nice, but maybe not a focus for
+this thesis -->
+
+### Hypothesis Revisited
 
 `Initial thoughts here: Based on my assumption that serverless services might be more energy efficient if vendors explore WebAssembly modules as opposed to classic container orchestration, it would be fruitful to gauge the current market to paint a picture to any fellow student at IFI what the current status quo is.`
 
