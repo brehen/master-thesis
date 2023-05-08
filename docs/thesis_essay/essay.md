@@ -40,8 +40,8 @@ by serving academic memes through a web service.
 This master thesis explores the following hyphothesis:
 
 > it is possible to develop a FaaS platform that scale to near-zero resource
-> usage without comprimising availability, by exclusively running WebAssembly
-> modules
+> usage without sacrificing consistency/latency, by exclusively running
+> WebAssembly modules
 
 To test this, we will develop a prototype FaaS written in Rust, and attempt to
 scale to near-zero by implementing a simple service for serving memes on the
@@ -52,9 +52,8 @@ contending alternatives.
 
 ### Cloud Computing: An Overview
 
-A general overview of the current state of cloud computing
-
 <!-- What is the cloud and its significance in todays web -->
+
 <!-- Introduce benefits and challenges associated with cloud computing. Some
 important points for this thesis: Scalability, cost and energy efficiency -->
 <!-- What are some major players, and how are they attempting to solve the same
