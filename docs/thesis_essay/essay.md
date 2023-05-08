@@ -54,10 +54,62 @@ contending alternatives.
 
 <!-- What is the cloud and its significance in todays web -->
 
+Cloud computing, more commonly known as _the cloud_, refers to the delivery of
+computing services, such as storage, processing power, databases and software,
+served over the internet, instead of running on locally owned hardware
+(on-premise). For companies, this has proved to be a super power, where
+businesses can focus on deploying their own applications and services to their
+users without worrying about the underlying infrastructure.
+
 <!-- Introduce benefits and challenges associated with cloud computing. Some
 important points for this thesis: Scalability, cost and energy efficiency -->
+
+<!-- TODO: Rewrite these points from lists to paragraph-->
+
+Some benefits:
+
+- Cloud computing has enabled companies to take their computing needs to the
+  next level. Startups who can't afford neither the cost or time required to
+  build their own infrastructure, and larger companies that want to iterate
+  faster and decrease their lead time from idea to production. !Source pending.
+- Scalability: With the advent of containerization and orchestration (more on
+  that later), companies are less prone to outages based on varying degrees of
+  usage of their services. Example: Walmart is available in june, as well as on
+  Black Friday. !Source pending.
+- Increased security, with third party vendors putting multi-million dollar
+  efforts into keeping their services secure to keep their customers. !Source
+  pending.
+
+Some challenges:
+
+- Scalability: How do cloud companies maximize their investment in hardware? Do
+  they let users have their alloted resources on a given piece of hardware sit
+  idly by during periods of low usage?
+- Cost: This relates to energy usage, and with rising energy costs in the world,
+  this becomes an even bigger issue every day. This also includes investment in
+  the actual hardware (storage/cpu/ram)
+- Energy usage: Data centers alone use 1% of the worlds electricity [1]. Are
+  there any ways to reduce this? Reducing energy usage should also lead to
+  reduced costs and lessen the carbon footprint of running the cloud.
+
 <!-- What are some major players, and how are they attempting to solve the same
 problems? -->
+
+There doesn't exist any one company that "owns" the cloud, but we have vendors
+that together make up what we have today. These vendors include Amazon,
+Microsoft, Google, Alibaba, DigitalOcean and more.
+
+- Google: Google Cloud Functions is their FaaS
+- Amazon: Amazon Lambda
+  - Side note: Amazon's streaming service; Prime Video, moved away from a
+    serverless architecture back to running a monolith to meet the service's
+    specific requirements. Is this due to serverless being a poor fit for cloud
+    computing, or a poor fit for their exact use case? Read some material online
+    on this, that their use case was to process videoes frame by frame, which
+    ran up insane costs on their sibling companys FaaS, Amazon Lambda. (Marius
+    note: Maybe a FaaS running WebAssembly wouldn't rack up these insane costs?
+    🤷)
+- Microsoft: Their cloud offerings include Azure Functions
 
 ### Traditional Deployment Methods: Virtual machines and Containers
 
