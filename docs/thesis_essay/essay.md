@@ -110,10 +110,18 @@ Microsoft, Google, Alibaba, DigitalOcean and more.
     note: Maybe a FaaS running WebAssembly wouldn't rack up these insane costs?
     🤷)
 - Microsoft: Their cloud offerings include Azure Functions
+  <!-- According to
+  most people I met at WASM IO, this platform is very lackluster -->
 
 ### Traditional Deployment Methods: Virtual machines and Containers
 
 <!-- Introduce the concept of "the first two waves of cloud computing" -->
+
+The first wave of cloud computing saw the rise of virtual machines running on
+managed infrastructure.
+
+The following second wave is attributed to the rise of containerization and
+orchestration through tools like Docker and Kubernetes.
 
 <!-- Moved the following text from the previous introduction, and should
 definetly rewrite it -->
