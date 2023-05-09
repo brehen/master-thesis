@@ -135,6 +135,23 @@ offered similar services before 2006, but Amazon gained significant traction and
 attention due to its large customer base and are commonly attributed as the
 first company that brought cloud computing to the masses.
 
+<!-- The second wave -->
+
+At the start of 2010s we saw a gradual shift from Virtual Machines to
+containers. VMs had several challenges, primarily related to efficiency,
+resource utilization and application deployment speed, that containers were
+developed to address. While VMs typically required heavyweight operating systems
+to be installed and required minutes to start up, containers proved to be a
+lightweight alternative.
+
+Containers are a way to package an application with the required OS support that
+is popularely orchastrated through Kubernetes. This model allows companies to
+scale up and down their resources for when their services experience high or low
+traffic/load. This is a popular approach, and companies today have founded their
+own platform teams with the goal of building orchestrated developer platforms to
+make it easier for developers to deploy their applications in its company K8s
+cluster. PaaS
+
 <!-- Moved the following text from the previous introduction, and should
 definetly rewrite it -->
 
