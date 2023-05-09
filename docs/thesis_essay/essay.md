@@ -152,6 +152,15 @@ own platform teams with the goal of building orchestrated developer platforms to
 make it easier for developers to deploy their applications in its company K8s
 cluster. PaaS
 
+<!-- The third wave -->
+
+But building your own platform is also a costly venture, and many times
+developers want to launch small services that perform specific operations. This
+has led to the rise of the Serverless model, where the developer doesn't have to
+worry about interacting with an Operating System, and can focus on writing the
+code that does what they want. This has led to big vendors launching their own
+Functions-as-a-Service offerings.
+
 <!-- Moved the following text from the previous introduction, and should
 definetly rewrite it -->
 
@@ -190,7 +199,7 @@ stack-based virtual machine. It is designed as a portable compilation target for
 programming languages, enabling deployment on the web for client and server
 applications. [x](https://webassembly.org/) Wasm was initially designed and
 developed to complement JavaScript in the browser, but its philosophy of "Run
-everywhere, efficient, fast and secure" translated well into the server
+everywhere, efficient, fast and secure" translates well into the server
 landscape as well.
 
 Solomon Hykes suggested in his tweet from 2019 that if _WebAssembly_ and the
