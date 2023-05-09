@@ -117,11 +117,23 @@ Microsoft, Google, Alibaba, DigitalOcean and more.
 
 <!-- Introduce the concept of "the first two waves of cloud computing" -->
 
-The first wave of cloud computing saw the rise of virtual machines running on
-managed infrastructure.
+Before the cloud companies had to buy, build and maintain their own
+infrastructure. This required employing their own infrastructure engineers in
+order to manage their on-premise data centers or servers incurring high cost. In
+the mid 00s Amazon saw the potential of a market of managed infrastructure and
+launched their subsidiary Amazon Web Services, Inc. (AWS). On March 14, 2006,
+AWS launched Amazon S3 cloud storage followed by Elastic Compute Cloud (EC2) in
+August 2006. The launch of these two products brought the cloud to the
+mainstream, and changed how we develop and deploy services.
+[x](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/)
 
-The following second wave is attributed to the rise of containerization and
-orchestration through tools like Docker and Kubernetes.
+Elastic Compute Cloud is an Infrastructure-as-a-Service platform that allows
+developers to run virtual machines externally. It provides resizable compute
+capacity in the cloud, enabling developers to borrow and configure virtual
+servers to run their applications. There were a couple of other companies that
+offered similar services before 2006, but Amazon gained significant traction and
+attention due to its large customer base and are commonly attributed as the
+first company that brought cloud computing to the masses.
 
 <!-- Moved the following text from the previous introduction, and should
 definetly rewrite it -->
