@@ -145,7 +145,8 @@ to mitigate this, using alternative technologies?
 
 ### Serverless and Function-as-a-Service (FaaS)
 
-Serverless, tjohei!
+<!-- the waves of cloud sounds _maybe_
+a bit too pop cultury/marketingy for a academic paper? -->
 
 <!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
 <!-- Challenges associated with FaaS, including cold start latency -->
@@ -154,6 +155,14 @@ Serverless, tjohei!
 
 <!-- Provide an overview of WebAssembly, its purpose, and its advantages over
 traditional deployment methods. -->
+
+WebAssembly, also known as Wasm, is a binary instruction format for a
+stack-based virtual machine. It is designed as a portable compilation target for
+programming languages, enabling deployment on the web for client and server
+applications. [x](https://webassembly.org/) Wasm was initially designed and
+developed to complement JavaScript in the browser, but its philosophy of "Run
+everywhere, efficient, fast and secure" translated well into the server
+landscape as well.
 
 Solomon Hykes suggested in his tweet from 2019 that if _WebAssembly_ and the
 _WebAssembly System Interface_ project had existed in 2008, there would not have
