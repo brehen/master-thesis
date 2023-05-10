@@ -219,6 +219,15 @@ this thesis -->
 
 `What will my experiments look like?`
 
+Some key points:
+
+- Language: Rust
+- Compilation target: Wasm+Wasi
+- Runtime: Wasmtime or Wasmer
+- Database required to store memes (Or fetch them from other locations)
+- A frontend either written in Rust and server-rendered, or a separate client
+  side Svelte application that interfaces with the functions through http.
+
 <!--More specifically, how will we setup a academemes webpage that provides academic
 memes through a serverless application? Should I make both an implementation in
 Docker with Node as a backend and one version written in Rust that gets compiled
