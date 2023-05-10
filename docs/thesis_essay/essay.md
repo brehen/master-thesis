@@ -117,69 +117,44 @@ Microsoft, Google, Alibaba, DigitalOcean and more.
 
 <!-- Introduce the concept of "the first two waves of cloud computing" -->
 
-Before the cloud companies had to buy, build and maintain their own
-infrastructure. This required employing their own infrastructure engineers in
-order to manage their on-premise data centers or servers incurring high cost. In
-the mid 00s Amazon saw the potential of a market of managed infrastructure and
-launched their subsidiary Amazon Web Services, Inc. (AWS). On March 14, 2006,
-AWS launched Amazon S3 cloud storage followed by Elastic Compute Cloud (EC2) in
-August 2006. The launch of these two products brought the cloud to the
-mainstream, and changed how we develop and deploy services.
+In the era preceding cloud computing, companies were tasked with, buying,
+setting up and managing their own infrastructure. This necessitated having
+in-house infrastructure engineers to oversee their on-premise data centers or
+servers, leading to considerable expenses. During the mid 00s Amazon recognized
+the potential of a market of managed infrastructure and launched its subsidiary,
+Amazon Web Services.
+
+On March 14, 2006, AWS launched Amazon S3 cloud storage, a cloud storage
+service, followed by Elastic Compute Cloud (EC2) in August 2006. The launch of
+these two services revolutionized the landscape of application development and
+deployment, making cloud computing widely accessible.
 [x](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/)
 
-Elastic Compute Cloud is an Infrastructure-as-a-Service platform that allows
-developers to run virtual machines externally. It provides resizable compute
-capacity in the cloud, enabling developers to borrow and configure virtual
-servers to run their applications. There were a couple of other companies that
-offered similar services before 2006, but Amazon gained significant traction and
-attention due to its large customer base and are commonly attributed as the
-first company that brought cloud computing to the masses.
+EC2, an Infrastructure-as-a-Service platform, changed the way developers worked
+by enabling them to run virtual machines externally. While other companies had
+ventured into similar services before 2006, Amazon's extensive customer base
+enabled them to attract significant traction. Thus, Amazon is often credited
+with making cloud computing a mainstream concept.
 
 <!-- The second wave -->
 
-At the start of 2010s we saw a gradual shift from Virtual Machines to
-containers. VMs had several challenges, primarily related to efficiency,
-resource utilization and application deployment speed, that containers were
-developed to address. While VMs typically required heavyweight operating systems
-to be installed and required minutes to start up, containers proved to be a
-lightweight alternative.
+As we entered the 2010s, we saw that the trend begant to shift from Virtual
+Machines to containers. This transition was primarily driven by the limitations
+associated with VMs, including efficiency, resource utilization and the speed of
+application deployment. Containers, being a lightweight alternative to VMs, were
+designed to address these issues.
 
-Containers are a way to package an application with the required OS support that
-is popularely orchastrated through Kubernetes. This model allows companies to
-scale up and down their resources for when their services experience high or low
-traffic/load. This is a popular approach, and companies today have founded their
-own platform teams with the goal of building orchestrated developer platforms to
-make it easier for developers to deploy their applications in its company K8s
-cluster. PaaS
+Unlike VMs, which typically required the installation of resource-intensive
+operating systems and took minutes to start up, containers could achive the same
+in seconds. Containers package an application alongside with its required OS
+components and is typically managed using orchastration tools like Kubernetes.
+This approach allows companies to scale their resources in response to varying
+service loads. As such, more and more companies have now established platform
+teams tasked with constructing orchestrated developer platforms to simplify
+application deployment in Kubernetes clusters.
 
-<!-- The third wave -->
+### Serverless and Function-as-a-Service (FaaS)
 
-But building your own platform is also a costly venture, and many times
-developers want to launch small services that perform specific operations. This
-has led to the rise of the Serverless model, where the developer doesn't have to
-worry about interacting with an Operating System, and can focus on writing the
-code that does what they want. This has led to big vendors launching their own
-Functions-as-a-Service offerings.
-
-<!-- Moved the following text from the previous introduction, and should
-definetly rewrite it -->
-
-We have two widely used ways to deploy and host these services and web
-applications. One of these is by using Virtual Machines where you install full
-operating systems on restricted resources, but this requires you to have the
-machine turned on at all times availability, and can be hard to scale.
-
-Or, to build services that scale well another approach emerged; through building
-an image that deploy and run on containers through a container orchestration
-tool such as Docker Swarm or Kubernetes. These images are often large and
-require a lot of networking traffic to transfer between machines.
-
-Both approaches require a lot of computing power that has resulted in major
-vendors building giant data centers that, when combined, puts out 2.5% to 3.7%
-of all global greenhouse gas emissions. [1] Are there any ways for us to attempt
-to mitigate this, using alternative technologies?
-
-<!-- Describe each wave and detail advantages and disadvantages to each -->
 
 ### Serverless and Function-as-a-Service (FaaS)
 
