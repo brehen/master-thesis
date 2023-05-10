@@ -155,8 +155,6 @@ application deployment in Kubernetes clusters.
 
 ### Serverless and Function-as-a-Service (FaaS)
 
-<!-- The third wave -->
-
 Building your own developer platform on top of Kubernetes, much like building
 your own infrastructure, also entails a significant cost. Often, developers wish
 to launch specialized smaller services, without having to grapple with
@@ -165,8 +163,10 @@ Despite its somewhat misleading name, serverless doesn't imply the absence of a
 server. Instead, it means that the responsibility of server management has
 shifted from the developer to a third party provider.
 
-<!-- the waves of cloud sounds _maybe_
-a bit too pop cultury/marketingy for a academic paper? -->
+From the advancements of serverless, we get its subset, Functions-as-a-Service,
+or FaaS. Companies already in the cloud game decided to develop their own FaaS
+platforms to attract developers interested in running their code, and not worry
+about anything underneath.
 
 <!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
 <!-- Challenges associated with FaaS, including cold start latency -->
