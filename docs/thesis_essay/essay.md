@@ -229,6 +229,54 @@ alternative way to deploy and host FaaS platforms. Focus on startup times and
 energy efficiency. Runtime efficiency is also nice, but _maybe_ not a focus for
 this thesis -->
 
+### Wasm+WASI: Towards Energy-efficient FaaS Platforms
+
+WebAssembly (Wasm) and WebAssembly System Interface (WASI) present promising
+alternatives to traditional ways of deploying and hosting Function as a Service
+(FaaS) platforms, offering several notable advantages, especially in terms of
+startup times and energy efficiency.
+
+_Reduced Startup Times_: One of the greatest strengths of Wasm is its compact
+binary format designed for quick decoding and efficient execution. It offers
+near-native performance, which results in significantly reduced startup times
+compared to container-based or VM-based solutions. In a FaaS context, where
+functions need to spin up rapidly in response to events, this attribute is
+particularly advantageous. This not only contributes to the overall performance
+but also improves the user experience, as the latency associated with function
+initialization is minimized.
+
+_Improved Energy Efficiency_: Wasm's efficiency extends to energy use as well.
+Thanks to its optimized execution, Wasm can accomplish the same tasks as
+traditional cloud applications but with less computational effort. The CPU
+doesn't need to work as hard, which results in less energy consumed. With data
+centers being responsible for a significant portion of global energy consumption
+and carbon emissions, adopting Wasm could lead to substantial energy savings and
+environmental benefits.
+
+_Scalability_: Wasm's small footprint and fast startup times make it an
+excellent fit for highly scalable cloud applications. Its efficiency means it
+can handle many more requests within the same hardware resources, hence reducing
+the need for additional servers and thus reducing the energy footprint further.
+
+_Portability and Flexibility_: WASI extends the portability of Wasm outside the
+browser environment, making it possible to run Wasm modules securely on any
+WASI-compatible runtime. This means that FaaS platforms can run these modules on
+any hardware, operating system, or cloud provider that supports WASI. This
+portability ensures flexibility and mitigates the risk of vendor lock-in.
+
+While runtime efficiency is an important aspect and typically a strength of
+Wasm, it might not be the primary focus of this thesis. That being said, it is
+worth mentioning that the efficient execution of Wasm modules does contribute to
+the overall operational efficiency and energy savings of Wasm-based FaaS
+platforms.
+
+In summary, introducing Wasm+WASI as a component for deploying and hosting FaaS
+platforms can offer significant benefits. Focusing on energy efficiency and
+reduced startup times, this approach could pave the way for more sustainable,
+efficient, and responsive cloud services. In the context of our "Academemes"
+service, this could lead to a scalable, performant, and environmentally friendly
+platform.
+
 ### Hypothesis Revisited
 
 `Initial thoughts here: Based on my assumption that serverless services might be more energy efficient if vendors explore WebAssembly modules as opposed to classic container orchestration, it would be fruitful to gauge the current market to paint a picture to any fellow student at IFI what the current status quo is.`
@@ -263,6 +311,14 @@ into webassembly and deployed as [[WebAssembly Modules]]?-->
 > spinning up, running and spinning down services?
 
 ---
+
+CAP theorem states that distributed systems can only choose 2 from:
+
+- Consistency
+- Availability
+- Partition tolerance
+
+However, restricting ourselves pure functions guarantee all three
 
 ## References
 
