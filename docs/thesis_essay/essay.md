@@ -99,8 +99,9 @@ There doesn't exist any one company that "owns" the cloud, but we have vendors
 that together make up what we have today. These vendors include Amazon,
 Microsoft, Google, Alibaba, DigitalOcean and more.
 
-- Google: Google Cloud Functions is their FaaS
-- Amazon: Amazon Lambda
+- Amazon Web Services: Amazon has AWS Lambdas which relies on their proprietary
+  technology; Firecracker. Firecracker is a lightweight virtualization
+  technology that run their functions.
   - Side note: Amazon's streaming service; Prime Video, moved away from a
     serverless architecture back to running a monolith to meet the service's
     specific requirements. Is this due to serverless being a poor fit for cloud
@@ -109,7 +110,13 @@ Microsoft, Google, Alibaba, DigitalOcean and more.
     ran up insane costs on their sibling companys FaaS, Amazon Lambda. (Marius
     note: Maybe a FaaS running WebAssembly wouldn't rack up these insane costs?
     🤷)
-- Microsoft: Their cloud offerings include Azure Functions
+- Google: Their FaaS service is Google Cloud Functions, and allow developers to
+  write functions in languages like Node, Python, Go and execute them in
+  response to events. Google relies on containers to execute these functions.
+  [x](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html)
+- Microsoft has Azure Functions, a Faas platform that allows developers to
+  create and execute functions in C#, JavaScript, Python and more. They also
+  rely on containers for executing functions.
   <!-- According to
   most people I met at WASM IO, this platform is very lackluster -->
 
