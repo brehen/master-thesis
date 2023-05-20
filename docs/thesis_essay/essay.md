@@ -183,29 +183,46 @@ about anything underneath.
 <!-- Provide an overview of WebAssembly, its purpose, and its advantages over
 traditional deployment methods. -->
 
-WebAssembly, also known as Wasm, is a binary instruction format for a
-stack-based virtual machine. It is designed as a portable compilation target for
-programming languages, enabling deployment on the web for client and server
-applications. [x](https://webassembly.org/) Wasm was initially designed and
-developed to complement JavaScript in the browser, but its philosophy of "Run
-everywhere, efficient, fast and secure" translates well into the server
-landscape as well.
+WebAssembly (Wasm) is a binary instruction format designed as a stack-based
+virtual machine. It aims to be a portable target for the compilation of
+high-level languages like Rust, C++, Go and many others, enabling deployment on
+the web for client and server applications. [x](https://webassembly.org/)
+Originally designed and developed to complement JavaScript in the browser, it
+now expands its scope to server-side applications, thanks to projects like
+WebAssembly System Interface (WASI), which provides a standarized interface for
+WebAssembly modules to interface with a system.
 
-Solomon Hykes suggested in his tweet from 2019 that if _WebAssembly_ and the
-_WebAssembly System Interface_ project had existed in 2008, there would not have
-been a need to develop Docker.
+WebAssembly's design provides advantages over traditional deployments methods in
+the context of cloud native applications:
 
-<!-- TODO: Weave these two paragraphs together -->
+_Efficiency and Speed_: Wasm was designed to be fast, enabling near-native
+performance. Its binary format is compact and designed for quick decoding,
+contributing to quicker startup times, an important aspect for server-side
+applications. The performance gains could lead to less CPU usage, thereby
+improving energy efficiency.
 
-WebAssembly, initially developed to run on all browsers and devices, found a new
-application when the WebAssembly System Interface allowed it to run on and
-interface with any hardware. This development model has led to an alternative
-deployment method using WebAssembly modules designed for near-native efficiency
-on any hardware.
+_Safety and Security_: WebAssembly is designed to be safe and sandboxed. Each
+WebAssembly module executes within a confined environment without direct access
+to the host system's resources. This isolation of processes is inherent in
+WebAssembly's design, promoting secure practices.
 
-<!-- Introduce WASI -->
+_Portability_: WebAssembly's platform-agnostic design makes it highly portable.
+It can run across a variety of different system architectures. For cloud native
+applications, this means WebAssembly modules, once compiled, can run anywhere -
+from the edge to the server, irrespective of the environment.
 
-WASI is pretty cool.
+_Language Support_: A large amount of programming langauages can already target
+WebAssembly. This means developers are not restricted to a particular language
+when developing applications intended to be deployed as WebAssembly modules.
+This provides greater flexibility to leverage the most suitable languages for
+particular tasks.
+
+In contrast, traditional methods such as deployment with containers or VMs can
+be resource-intensive, slower to boot up, less secure due to a larger surface
+attack area, and less efficient. Given these, WebAssembly, with its efficiency,
+security, and portability, can potentially offer an attractive alternative
+deployment method for building and running cloud native applications, like the
+"Academemes" service we will explore in this essay.
 
 <!-- Discuss advantages to introducing Wasm+Wasi component modules as an
 alternative way to deploy and host FaaS platforms. Focus on startup times and
