@@ -145,7 +145,7 @@ with making cloud computing a mainstream concept.
 
 <!-- The second wave -->
 
-As we entered the 2010s, we saw that the trend begant to shift from Virtual
+As we entered the 2010s, we saw that the trend began to shift from Virtual
 Machines to containers. This transition was primarily driven by the limitations
 associated with VMs, including efficiency, resource utilization and the speed of
 application deployment. Containers, being a lightweight alternative to VMs, were
