@@ -43,10 +43,10 @@ This master thesis explores the following hyphothesis:
 > usage without sacrificing consistency/latency, by exclusively running
 > WebAssembly modules
 
-To test this, we will develop a prototype FaaS written in Rust, and attempt to
-scale to near-zero by implementing a simple service for serving memes on the
-internet that is virtually always available, but also more energy efficient than
-contending alternatives.
+To test this, we will develop a prototype Pure Functions as a Service written in
+Rust, and attempt to scale to near-zero by implementing a simple service for
+serving memes on the internet that is virtually always available, but also more
+energy efficient than contending alternatives.
 
 ## Background
 
@@ -97,7 +97,8 @@ problems? -->
 
 There doesn't exist any one company that "owns" the cloud, but we have vendors
 that together make up what we have today. These vendors include Amazon,
-Microsoft, Google, Alibaba, DigitalOcean and more.
+Microsoft, Google, Alibaba, DigitalOcean and more. This essay will point the
+light on the three biggest vendors and some challenges they face.
 
 - Amazon Web Services: Amazon has AWS Lambdas which relies on their proprietary
   technology; Firecracker. Firecracker is a lightweight virtualization
@@ -277,13 +278,57 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-### Hypothesis Revisited
-
-`Initial thoughts here: Based on my assumption that serverless services might be more energy efficient if vendors explore WebAssembly modules as opposed to classic container orchestration, it would be fruitful to gauge the current market to paint a picture to any fellow student at IFI what the current status quo is.`
-
-## Related Work
-
 ## Proposed _methodology_
+
+This thesis will use an experimental research design to investigate the power
+consumption under load of a FaaS platform developed with pure functions written
+in Rust.
+
+### System development
+
+The first stage will involve developing a prototype PFaaS dubbet "Purify". This
+platform will be developed using Rust and (might) compile to Wasm and Wasi that
+runs on the Wasmtime runtime. This platform will require some way of "deploying"
+functions compiled to Wasm that need to be pure.
+
+### Benchmarking
+
+Once the platform is developed, a series of benchmarking tests will be
+conduncted. The intended web application that will test this platform, is
+"Academemes.com", a web page that serves academic memes. These tests will
+emulate users accessing academic memes through scripts and measure the
+performance of the system under varying loads, capturing data on startup time,
+execution time and (hopefully) energy consumption.
+
+If there is enough interest and other students begin using the service, there
+might be data from "real-life" use cases that would be interesting to compare.
+
+### Energy measurement
+
+The energy consumption of the system is a key focus of this thesis. To measure
+this, I will rely on a device that's plugged into the computers motherboard
+through its power pins that should be able to measure specific parts of the CPU.
+These energy readings would then transmit to a USB device connected to the same
+device, and feed the data to the benchmarking tools.
+
+### Comparison
+
+The power consumption of the "Purify" platform will be compared to either
+existing FaaS platforms that can install locally, e.g. serverless.com, or by
+replicating existing platforms built on top of Docker and Kubernetes. If this is
+the case, the scope of the research will expand to learning these technologies,
+and attempt to build a simple FaaS on top of these.
+
+### Data Analysis
+
+The data gathered from the benchmarking and energy measurement stages will be
+analyzed to provide insights into the relationship between load, performance,
+and energy consumption. The aim is to understand the impact of relying on
+WebAssembly on the power efficiency of FaaS platforms.
+
+By following this methodology, the thesi aims to contribute a practical analysis
+of the potential for Rust and WebAssembly to enhance the power efficiency of
+cloud computing platforms.
 
 ## Preliminary ideas and future direction
 
