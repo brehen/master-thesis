@@ -40,7 +40,7 @@ by serving academic memes through a web service.
 This master thesis explores the following hyphothesis:
 
 > It is possible to develop a FaaS platform that scale to near-zero resource
-> usage without sacrificing consistency.
+> usage without suffering the CAP-theorem.
 
 To test this, we will develop a prototype Pure Functions as a Service written in
 Rust, and attempt to scale to near-zero by implementing a simple service for
@@ -277,7 +277,7 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-## Proposed _methodology_
+## Methodology
 
 This thesis will use an experimental research design to investigate the power
 consumption under load of a FaaS platform developed with pure functions written
