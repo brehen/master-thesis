@@ -39,9 +39,8 @@ by serving academic memes through a web service.
 
 This master thesis explores the following hyphothesis:
 
-> it is possible to develop a FaaS platform that scale to near-zero resource
-> usage without sacrificing consistency/latency, by exclusively running
-> WebAssembly modules
+> It is possible to develop a FaaS platform that scale to near-zero resource
+> usage without sacrificing consistency.
 
 To test this, we will develop a prototype Pure Functions as a Service written in
 Rust, and attempt to scale to near-zero by implementing a simple service for
