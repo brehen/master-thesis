@@ -100,26 +100,26 @@ that together make up what we have today. These vendors include Amazon,
 Microsoft, Google, Alibaba, DigitalOcean and more. This essay will point the
 light on the three biggest vendors and some challenges they face.
 
-- Amazon Web Services: Amazon has AWS Lambdas which relies on their proprietary
-  technology; Firecracker. Firecracker is a lightweight virtualization
-  technology that run their functions.
-  - Side note: Amazon's streaming service; Prime Video, moved away from a
-    serverless architecture back to running a monolith to meet the service's
-    specific requirements. Is this due to serverless being a poor fit for cloud
-    computing, or a poor fit for their exact use case? Read some material online
-    on this, that their use case was to process videoes frame by frame, which
-    ran up insane costs on their sibling companys FaaS, Amazon Lambda. (Marius
-    note: Maybe a FaaS running WebAssembly wouldn't rack up these insane costs?
-    🤷)
-- Google: Their FaaS service is Google Cloud Functions, and allow developers to
-  write functions in languages like Node, Python, Go and execute them in
-  response to events. Google relies on containers to execute these functions.
-  [x](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html)
-- Microsoft has Azure Functions, a Faas platform that allows developers to
-  create and execute functions in C#, JavaScript, Python and more. They also
-  rely on containers for executing functions.
-  <!-- According to
-  most people I met at WASM IO, this platform is very lackluster -->
+Amazon Web Services (AWS) offers AWS Lambdas which relies on their proprietary
+technology; Firecracker. Firecracker is a lightweight virtualization technology
+that run their functions.
+
+Side note: Amazon's streaming service; Prime Video, moved away from a serverless
+architecture back to running a monolith to meet the service's specific
+requirements. Is this due to serverless being a poor fit for cloud computing, or
+a poor fit for their exact use case? Read some material online on this, that
+their use case was to process videoes frame by frame, which ran up insane costs
+on their sibling companys FaaS, Amazon Lambda. (Marius note: Maybe a FaaS
+running WebAssembly wouldn't rack up these insane costs? 🤷)
+
+Google offers Google Cloud Functions, and allow developers to write functions in
+languages like Node, Python, Go and execute them in response to events. Google
+relies on containers to execute these functions.
+[x](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html)
+
+Microsoft has Azure Functions, a Faas platform that allows developers to create
+and execute functions in C#, JavaScript, Python and more. They also rely on
+containers for executing functions.
 
 ### Traditional Deployment Methods: Virtual machines and Containers
 
