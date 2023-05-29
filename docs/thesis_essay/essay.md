@@ -16,12 +16,11 @@ consuming enormous amounts of energy. The entire ICT (Information- and
 Communication Technology) industry emits 2.1% to 3.9% of global green gas
 emission. Data centers, which are at the core of cloud computing, consume a
 significant amount of energy, estimated at around 200 TWh/yr or 1% of the worlds
-electricity [[1]](http://dx.doi.org/10.1016/j.patter.2021.100340). This energy
-consumption could grow to between 15-30% of electricity consumption in some
-countries by 2030. Allthough data centers strive to reach a net zero sum carbon
-footprint, there are still a lot of electricity genereated by fossil fuels, a
-leading contributer to climate change
-[[2]](https://doi.org/10.1038/s41558-020-0837-6).
+electricity [(Freitag et al. 2021)][1]. This energy consumption could grow to
+between 15-30% of electricity consumption in some countries by 2030. Allthough
+data centers strive to reach a net zero sum carbon footprint, there are still a
+lot of electricity genereated by fossil fuels, a leading contributer to climate
+change [(Mytton, D. 2021)][2].
 
 Important to note is that these measurements and estimates comes with some level
 of uncertainty, but give us a rough idea of the current and future situation. As
@@ -29,11 +28,10 @@ demand for cloud services continues to rise, there is a pressing need to explore
 alternative methods that can help improve energy efficiency, while maintaining
 the performance, availability and scalability of these services.
 
-This essay investigates the potential for utilizing technologies like Rust
-[[3]](https://www.rust-lang.org/) and WebAssembly
-[[4]](https://webassembly.org/) to develop a prototype Function-as-a-Service
-(FaaS) platform. This prototype will aim to address the energy efficiency
-problem in cloud computing by serving academic memes through a web service.
+This essay investigates the potential for utilizing technologies like [Rust][3]
+and [WebAssembly][4] to develop a prototype Function-as-a-Service (FaaS)
+platform. This prototype will aim to address the energy efficiency problem in
+cloud computing by serving academic memes through a web service.
 
 ### Hypothesis
 
@@ -46,8 +44,8 @@ To test this, we will develop a prototype Pure Functions as a Service written in
 Rust, and attempt to scale to near-zero by implementing a simple service for
 serving memes on the internet that remains consistent, is virtually always
 available, and suffers no issues from partition tolerance (Consistency,
-Availability, Partition Tolerance - CAP) while also being more energy efficient
-than predominant alternatives.
+Availability, Partition Tolerance - CAP)[(Brewer, Fox. 1999)][5] while also
+being more energy efficient than predominant alternatives.
 
 ## Background
 
@@ -70,32 +68,31 @@ Some benefits include:
   their computing needs to the next level. Startups who can't afford neither the
   cost or time required to build their own infrastructure, and larger companies
   that want to iterate faster and decrease their lead time from idea to
-  production [[5]](https://www.jot.fm/contents/issue_2009_05/column4.html).
+  production [(Thomas, Dave. 2009)][6].
 
 - Scalability is one of the most significant benefits of cloud computing. As
   organizations expand, so do their customer needs and the complexity of their
   application infrastructure. Each additional feature brings with it additional
   costs, highlighting the importance of efficient resource management to
   optimize hardware investments in a cloud computing environment
-  [[6]](https://www.jot.fm/contents/issue_2009_05/column4.html).
+  [(Thomas, Dave. 2008)][6].
 
 Some challenges include:
 
 - Cost: Managing the cost of cloud computing is an ongoing challenge, with
   Gartner predicting that through 2024, 60% of infrastructure and operations
-  (I&O) leaders will encounter cloud costs that are higher than budgeted for.
-  [[8]](https://www.gartner.com/smarterwithgartner/6-ways-cloud-migration-costs-go-off-the-rails).
+  (I&O) leaders will encounter cloud costs that are higher than budgeted for
+  [(Rimol, M. 2021)][7].
 
 - Energy usage: The challenge of energy usage in cloud computing is a
   significant concern, with data centers alone accounting for approximately 1%
-  of the world's electricity consumption
-  [[9]](https://www.cisco.com/c/dam/m/en_us/solutions/industries/docs/gov/government-global-energy-divide-white-paper.pdf).
-  This staggering statistic highlights the need to explore strategies and
-  measures to mitigate energy usage in data centers. By reducing energy
-  consumption, not only can costs be reduced, but also the carbon footprint
-  associated with running the cloud can be lessened. Decreasing energy usage in
-  data centers is expected to yield cost savings and contribute to the overall
-  sustainability goals by reducing the cloud's environmental impact.
+  of the world's electricity consumption [(Freitag et al. 2021)][1]. This
+  staggering statistic highlights the need to explore strategies and measures to
+  mitigate energy usage in data centers. By reducing energy consumption, not
+  only can costs be reduced, but also the carbon footprint associated with
+  running the cloud can be lessened. Decreasing energy usage in data centers is
+  expected to yield cost savings and contribute to the overall sustainability
+  goals by reducing the cloud's environmental impact.
 
 ### Traditional Deployment Methods: Virtual machines and Containers
 
@@ -108,8 +105,7 @@ Sensing the potential in offering managed infrastructure, Amazon launched its
 subsidiary, Amazon Web Services, during the mid-2000s.
 
 The launch of AWS's Amazon S3 cloud service in March 2006, followed by Elastic
-Compute Cloud (EC2) in August the same year
-[[15]](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/), marked a major
+Compute Cloud (EC2) in August the same year [(Barr, J. 2006)][8], marked a major
 turning point in application development and deployment, and popularized cloud
 computing. EC2, as an Infrastructure-as-a-Service platform, empowered developers
 to run virtual machines remotely. While similar services existed before 2006,
@@ -121,17 +117,16 @@ bringing cloud computing to the mainstream.
 As we entered the 2010s, the focus shifted from Virtual Machines to containers,
 largely due to the limitations of VMs in efficiency, resource utilization, and
 application deployment speed. Containers, being a lightweight alternative to
-VMs, designed to overcome these hurdles
-[[16]](https://www.researchgate.net/publication/309961613_Containers_and_Virtual_Machines_at_Scale_A_Comparative_Study).
+VMs, designed to overcome these hurdles [(Sharma, et al. 2016)][9].
 
 In contrast to VMs, which require installation of resource-intensive operating
 systems and minutes to start up, containers along with their required OS
 components, could start up in seconds. Typically managed by orchestration tools
-like Kubernetes [[17]](https://kubernetes.io/), containers enabled applications
-to package alongside their required OS components, facilitating scalability in
-response to varying service loads. Consequently, an increasing number of
-companies have since established platform teams to build orchestrated developers
-platforms, thereby simplifying application development in Kubernetes clusters.
+like [Kubernetes][10], containers enabled applications to package alongside
+their required OS components, facilitating scalability in response to varying
+service loads. Consequently, an increasing number of companies have since
+established platform teams to build orchestrated developers platforms, thereby
+simplifying application development in Kubernetes clusters.
 
 ### Serverless and Function-as-a-Service (FaaS)
 
@@ -145,8 +140,8 @@ shifted from the developer to a third party provider.
 
 From the advancements of serverless, we get its subset, Functions-as-a-Service,
 or FaaS. Companies already in the cloud game decided to develop their own FaaS
-platforms to attract developers interested in running their code, and not worry
-about anything underneath.
+platforms to attract developers interested in just writing their functions and
+running them, and not worry about anything underneath.
 
 ### Some major vendors in Serverless
 
@@ -155,30 +150,25 @@ through the collective effort of industry players including Amazon, Microsoft,
 Google, Alibaba and DigitalOcean, among others. This essay delves into some
 challenges faced by the biggest three vendors: Amazon, Google and Microsoft.
 
-Amazon Web Services (AWS) provides AWS Lambdas
-[[10]](https://aws.amazon.com/lambda/), a technology that hinges on their
-proprietary Firecracker - a streamlined virtualization technology for executing
-functions. Interestingly, for this thesis, is that Amazon's Prime Video
-streaming service transitioned recently from a serverless architecture to a
-monolithic system to meet specific service demands. One might question whether
+Amazon Web Services (AWS) provides [AWS Lambdas][11], a technology that hinges
+on their proprietary Firecracker - a streamlined virtualization technology for
+executing functions. Interestingly, for this thesis, is that Amazon's Prime
+Video streaming service transitioned recently from a serverless architecture to
+a monolithic system to meet specific service demands. One might question whether
 this reflects the suitability of serverless systems for cloud computing, or for
-specific use cases like theirs
-[[11]](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90).
-Some discussions suggest that their need to process videos frame by frame led to
+specific use cases like theirs [(Kolny, M. 2023. Accessed 29.05.23)][12]. Some
+discussions suggest that their need to process videos frame by frame led to
 astronomical costs on their sibling company's FaaS, Amazon Lambda.
 
-Google provides Google Cloud Functions
-[[12]](https://cloud.google.com/functions), which allow developers to write and
-execute functions in languages such as Node.js, Python, Go and execute them in
-response to events. Google's approach to function execution centeres around
-container technology
-[[13]](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html).
+Google provides [Google Cloud Functions][13], which allow developers to write
+and execute functions in languages such as Node.js, Python, Go and execute them
+in response to events. Google's approach to function execution centeres around
+container technology [(Wayner, P. 2018. Accessed 29.05.23)][14].
 
-Microsoft's Azure Functions
-[[14]](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview?pivots=programming-language-csharp)
-is a Faas platform that enables developers to create and execute functions
-written in languages like C#, JavaScript, Python. Similar to Google, they also
-harness the power of containers to execute these functions.
+Microsoft's [Azure Functions][15] is a Faas platform that enables developers to
+create and execute functions written in languages like C#, JavaScript, Python.
+Similar to Google, they also harness the power of containers to execute these
+functions.
 
 <!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
 <!-- Challenges associated with FaaS, including cold start latency -->
@@ -191,11 +181,11 @@ traditional deployment methods. -->
 WebAssembly (Wasm) is a binary instruction format designed as a stack-based
 virtual machine. It aims to be a portable target for the compilation of
 high-level languages like Rust, C++, Go and many others, enabling deployment on
-the web for client and server applications. [x](https://webassembly.org/)
-Originally designed and developed to complement JavaScript in the browser, it
-now expands its scope to server-side applications, thanks to projects like
-WebAssembly System Interface (WASI), which provides a standarized interface for
-WebAssembly modules to interface with a system.
+the web for client and server applications. Originally designed and developed to
+complement JavaScript in the browser, it now expands its scope to server-side
+applications, thanks to projects like WebAssembly System Interface (WASI), which
+provides a standarized interface for WebAssembly modules to interface with a
+system.
 
 WebAssembly's design provides advantages over traditional deployments methods in
 the context of cloud native applications:
@@ -229,17 +219,12 @@ security, and portability, can potentially offer an attractive alternative
 deployment method for building and running cloud native applications, like the
 "Academemes" service we will explore in this essay.
 
-<!-- Discuss advantages to introducing Wasm+Wasi component modules as an
-alternative way to deploy and host FaaS platforms. Focus on startup times and
-energy efficiency. Runtime efficiency is also nice, but _maybe_ not a focus for
-this thesis -->
-
 ### Wasm+WASI: Towards Energy-efficient FaaS Platforms
 
-WebAssembly (Wasm) and WebAssembly System Interface (WASI) present promising
-alternatives to traditional ways of deploying and hosting Function as a Service
-(FaaS) platforms, offering several notable advantages, especially in terms of
-startup times and energy efficiency.
+WebAssembly (Wasm) and [WebAssembly System Interface (WASI)][16] present
+promising alternatives to traditional ways of deploying and hosting Function as
+a Service (FaaS) platforms, offering several notable advantages, especially in
+terms of startup times and energy efficiency.
 
 _Reduced Startup Times_: One of the greatest strengths of Wasm is its compact
 binary format designed for quick decoding and efficient execution. It offers
@@ -285,10 +270,11 @@ platform.
 ### The CAP Theorem and Its Relevance to This Thesis
 
 As mentioned in the hypothesis, the CAP theorem was a theorem proposed by Eric
-Brewer in 2000 that states it is impossible for a distributed data store to
+Brewer in 1999 that states it is impossible for a distributed data store to
 simultaneously provide all three of the following guarantees: _Consistency_,
-_Availability_, and _Partition Tolerance_ (CAP). Most distributed systems can
-only guarantee two out of these three properties at any given time.
+_Availability_, and _Partition Tolerance_ (CAP)[(Brewer, Fox. 1999)][5]. Most
+distributed systems can only guarantee two out of these three properties at any
+given time.
 
 In the context of this thesis, the hypothesis is that it is possible to develop
 a FaaS platform that scales to near-zero resource usage without suffering from
@@ -323,10 +309,10 @@ using Rust and compiled to Wasm and Wasi that operates on the Wasmtime runtime.
 This platform will serve purely WebAssembly modules, narrowing down the
 execution to pure functions compiled to Wasm.
 
-Spin, an open-source offering by Fermyon, will be a critical point of reference.
-It facilitates the development and deployment of applications, compiled to Wasm,
-on either Fermyon's own cloud, or any self-hosted variant. While Spin does
-manage side effects, our prototype will focus on pure functions.
+[Spin][17], an open-source offering by Fermyon, will be a critical point of
+reference. It facilitates the development and deployment of applications,
+compiled to Wasm, on either Fermyon's own cloud, or any self-hosted variant.
+While Spin does manage side effects, our prototype will focus on pure functions.
 
 Post-development, "Nebula" will be subject to benchmarking tests using a web
 application "Academeme.com", serving academic memes. These tests will simulate
@@ -353,15 +339,12 @@ the impact of utilizing WebAssembly on the power efficiency of FaaS Platforms.
 
 A wealth of resources will be leveraged to attempt to measure accurate energy
 consumption. Luís Cruz's article provides a comprehensive guide on measuring
-energy on computers
-[\[x\]](https://luiscruz.github.io/2021/07/20/measuring-energy.html),
-recommending tools such as Intel Power Gadget, built on top of Intel RAPL
-(Running Average Power Limit)
-[\[x\]](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/running-average-power-limit-energy-reporting.html),
-a tool that was used in the study "RAPL in Action: Experiences in using RAPL for
-Power Measurements" [\[x\]](http://dx.doi.org/10.1145/3177754). This study
-provides foundational knowledge about the correlation between core frequency,
-load and power consumption for this thesis.
+energy on computers [(Cruz, L. 2021)][18], recommending tools such as Intel
+Power Gadget, built on top of [Intel RAPL (Running Average Power Limit)][19], a
+tool that was used in the study "RAPL in Action: Experiences in using RAPL for
+Power Measurements" [(Khan, et al. 2018)][20]. This study provides foundational
+knowledge about the correlation between core frequency, load and power
+consumption for this thesis.
 
 Powermetrics, a built-in tool on Macbooks, will be used during development to
 give a rough measure of power consumption during development on a Macbook
@@ -427,6 +410,27 @@ Nebula. In the next phase, we'll begin the implementation, continuously testing
 and adjusting these specifications as needed.
 
 ## References
+
+[1]: https://dx.doi.org/10.1016/j.patter.2021.100340
+[2]: https://doi.org/10.1038/s41558-020-0837-6
+[3]: https://www.rust-lang.org/
+[4]: https://webassembly.org/
+[5]: https://ieeexplore.ieee.org/document/798396
+[6]: https://dx.doi.org/10.5381/jot.2009.8.3.c4
+[7]: https://www.gartner.com/smarterwithgartner/6-ways-cloud-migration-costs-go-off-the-rails
+[8]: https://aws.amazon.com/blogs/aws/amazon_ec2_beta/
+[9]: https://dx.doi.org/10.1145/2988336.2988337
+[10]: https://kubernetes.io/
+[11]: https://aws.amazon.com/lambda/
+[12]: https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90
+[13]: https://cloud.google.com/functions
+[14]: https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html
+[15]: https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview
+[16]: https://wasi.dev/
+[17]: https://www.fermyon.com/spin
+[18]: https://luiscruz.github.io/2021/07/20/measuring-energy.html
+[19]: https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/running-average-power-limit-energy-reporting.html
+[20]: http://dx.doi.org/10.1145/3177754
 
 ---
 
