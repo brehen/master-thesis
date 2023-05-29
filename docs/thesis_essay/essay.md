@@ -56,7 +56,7 @@ than predominant alternatives.
 <!-- What is the cloud and its significance in todays web -->
 
 Cloud computing, more commonly known as _the cloud_, refers to the delivery of
-computing services, such as storage, processing power, databases and software,
+computing services, such as storage, processing power, network, and software,
 served over the internet, instead of running on locally owned hardware
 (on-premise). For companies, this has proved to be a super power, where
 businesses can focus on deploying their own applications and services to their
