@@ -16,12 +16,12 @@ consuming enormous amounts of energy. The entire ICT (Information- and
 Communication Technology) industry emits 2.1% to 3.9% of global green gas
 emission. Data centers, which are at the core of cloud computing, consume a
 significant amount of energy, estimated at around 200 TWh/yr or 1% of the worlds
-electricity. [1](http://dx.doi.org/10.1016/j.patter.2021.100340) This energy
+electricity [[1]](http://dx.doi.org/10.1016/j.patter.2021.100340). This energy
 consumption could grow to between 15-30% of electricity consumption in some
 countries by 2030. Allthough data centers strive to reach a net zero sum carbon
 footprint, there are still a lot of electricity genereated by fossil fuels, a
-leading contributer to climate change.
-[2](https://doi.org/10.1038/s41558-020-0837-6)
+leading contributer to climate change
+[[2]](https://doi.org/10.1038/s41558-020-0837-6).
 
 Important to note is that these measurements and estimates comes with some level
 of uncertainty, but give us a rough idea of the current and future situation. As
@@ -29,10 +29,11 @@ demand for cloud services continues to rise, there is a pressing need to explore
 alternative methods that can help improve energy efficiency, while maintaining
 the performance, availability and scalability of these services.
 
-This essay investigates the potential for utilizing technologies like Rust and
-WebAssembly to develop a prototype Function-as-a-Service (FaaS) platform. This
-prototype will aim to address the energy efficiency problem in cloud computing
-by serving academic memes through a web service.
+This essay investigates the potential for utilizing technologies like Rust
+[[3]](https://www.rust-lang.org/) and WebAssembly
+[[4]](https://webassembly.org/) to develop a prototype Function-as-a-Service
+(FaaS) platform. This prototype will aim to address the energy efficiency
+problem in cloud computing by serving academic memes through a web service.
 
 ### Hypothesis
 
