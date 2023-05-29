@@ -44,8 +44,10 @@ This master thesis explores the following hyphothesis:
 
 To test this, we will develop a prototype Pure Functions as a Service written in
 Rust, and attempt to scale to near-zero by implementing a simple service for
-serving memes on the internet that is virtually always available, but also more
-energy efficient than contending alternatives.
+serving memes on the internet that remains consistent, is virtually always
+available, and suffers no issues from partition tolerance (Consistency,
+Availability, Partition Tolerance - CAP) while also being more energy efficient
+than predominant alternatives.
 
 ## Background
 
