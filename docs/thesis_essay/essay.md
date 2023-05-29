@@ -62,105 +62,76 @@ served over the internet, instead of running on locally owned hardware
 businesses can focus on deploying their own applications and services to their
 users without worrying about the underlying infrastructure.
 
-<!-- Introduce benefits and challenges associated with cloud computing. Some
-important points for this thesis: Scalability, cost and energy efficiency -->
+<!-- Some benefits and challenges -->
 
-<!-- TODO: Rewrite these points from lists to paragraph-->
+Some benefits include:
 
-Some benefits:
+- Reduced total cost of ownership: Cloud computing has enabled companies to take
+  their computing needs to the next level. Startups who can't afford neither the
+  cost or time required to build their own infrastructure, and larger companies
+  that want to iterate faster and decrease their lead time from idea to
+  production [[5]](https://www.jot.fm/contents/issue_2009_05/column4.html).
 
-- Cloud computing has enabled companies to take their computing needs to the
-  next level. Startups who can't afford neither the cost or time required to
-  build their own infrastructure, and larger companies that want to iterate
-  faster and decrease their lead time from idea to production. !Source pending.
-- Scalability: With the advent of containerization and orchestration (more on
-  that later), companies are less prone to outages based on varying degrees of
-  usage of their services. Example: Walmart is available in june, as well as on
-  Black Friday. !Source pending.
-- Increased security, with third party vendors putting multi-million dollar
-  efforts into keeping their services secure to keep their customers. !Source
-  pending.
+- Scalability is one of the most significant benefits of cloud computing. As
+  organizations expand, so do their customer needs and the complexity of their
+  application infrastructure. Each additional feature brings with it additional
+  costs, highlighting the importance of efficient resource management to
+  optimize hardware investments in a cloud computing environment
+  [[6]](https://www.jot.fm/contents/issue_2009_05/column4.html).
 
-Some challenges:
+Some challenges include:
 
-- Scalability: How do cloud companies maximize their investment in hardware? Do
-  they let users have their alloted resources on a given piece of hardware sit
-  idly by during periods of low usage?
-- Cost: This relates to energy usage, and with rising energy costs in the world,
-  this becomes an even bigger issue every day. This also includes investment in
-  the actual hardware (storage/cpu/ram)
-- Energy usage: Data centers alone use 1% of the worlds electricity [1]. Are
-  there any ways to reduce this? Reducing energy usage should also lead to
-  reduced costs and lessen the carbon footprint of running the cloud.
+- Cost: Managing the cost of cloud computing is an ongoing challenge, with
+  Gartner predicting that through 2024, 60% of infrastructure and operations
+  (I&O) leaders will encounter cloud costs that are higher than budgeted for.
+  [[8]](https://www.gartner.com/smarterwithgartner/6-ways-cloud-migration-costs-go-off-the-rails).
 
-<!-- What are some major players, and how are they attempting to solve the same
-problems? -->
-
-There doesn't exist any one company that "owns" the cloud, but we have vendors
-that together make up what we have today. These vendors include Amazon,
-Microsoft, Google, Alibaba, DigitalOcean and more. This essay will point the
-light on the three biggest vendors and some challenges they face.
-
-Amazon Web Services (AWS) offers AWS Lambdas which relies on their proprietary
-technology; Firecracker. Firecracker is a lightweight virtualization technology
-that run their functions.
-
-Side note: Amazon's streaming service; Prime Video, moved away from a serverless
-architecture back to running a monolith to meet the service's specific
-requirements. Is this due to serverless being a poor fit for cloud computing, or
-a poor fit for their exact use case? Read some material online on this, that
-their use case was to process videoes frame by frame, which ran up insane costs
-on their sibling companys FaaS, Amazon Lambda. (Marius note: Maybe a FaaS
-running WebAssembly wouldn't rack up these insane costs? 🤷)
-
-Google offers Google Cloud Functions, and allow developers to write functions in
-languages like Node, Python, Go and execute them in response to events. Google
-relies on containers to execute these functions.
-[x](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html)
-
-Microsoft has Azure Functions, a Faas platform that allows developers to create
-and execute functions in C#, JavaScript, Python and more. They also rely on
-containers for executing functions.
+- Energy usage: The challenge of energy usage in cloud computing is a
+  significant concern, with data centers alone accounting for approximately 1%
+  of the world's electricity consumption
+  [[9]](https://www.cisco.com/c/dam/m/en_us/solutions/industries/docs/gov/government-global-energy-divide-white-paper.pdf).
+  This staggering statistic highlights the need to explore strategies and
+  measures to mitigate energy usage in data centers. By reducing energy
+  consumption, not only can costs be reduced, but also the carbon footprint
+  associated with running the cloud can be lessened. Decreasing energy usage in
+  data centers is expected to yield cost savings and contribute to the overall
+  sustainability goals by reducing the cloud's environmental impact.
 
 ### Traditional Deployment Methods: Virtual machines and Containers
 
 <!-- Introduce the concept of "the first two waves of cloud computing" -->
 
-In the era preceding cloud computing, companies were tasked with, buying,
-setting up and managing their own infrastructure. This necessitated having
-in-house infrastructure engineers to oversee their on-premise data centers or
-servers, leading to considerable expenses. During the mid 00s Amazon recognized
-the potential of a market of managed infrastructure and launched its subsidiary,
-Amazon Web Services.
+In the era preceding cloud computing, companies bought, set up and managed their
+own infrastructure. This necessitated having in-house infrastructure engineers
+to maintain on-premise data centers or servers, leading to significant cost.
+Sensing the potential in offering managed infrastructure, Amazon launched its
+subsidiary, Amazon Web Services, during the mid-2000s.
 
-On March 14, 2006, AWS launched Amazon S3 cloud storage, a cloud storage
-service, followed by Elastic Compute Cloud (EC2) in August 2006. The launch of
-these two services revolutionized the landscape of application development and
-deployment, making cloud computing widely accessible.
-[x](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/)
-
-EC2, an Infrastructure-as-a-Service platform, changed the way developers worked
-by enabling them to run virtual machines externally. While other companies had
-ventured into similar services before 2006, Amazon's extensive customer base
-enabled them to attract significant traction. Thus, Amazon is often credited
-with making cloud computing a mainstream concept.
+The launch of AWS's Amazon S3 cloud service in March 2006, followed by Elastic
+Compute Cloud (EC2) in August the same year
+[[15]](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/), marked a major
+turning point in application development and deployment, and popularized cloud
+computing. EC2, as an Infrastructure-as-a-Service platform, empowered developers
+to run virtual machines remotely. While similar services existed before 2006,
+Amazon's large customer base helped them gain significant traction, effectively
+bringing cloud computing to the mainstream.
 
 <!-- The second wave -->
 
-As we entered the 2010s, we saw that the trend began to shift from Virtual
-Machines to containers. This transition was primarily driven by the limitations
-associated with VMs, including efficiency, resource utilization and the speed of
-application deployment. Containers, being a lightweight alternative to VMs, were
-designed to address these issues.
+As we entered the 2010s, the focus shifted from Virtual Machines to containers,
+largely due to the limitations of VMs in efficiency, resource utilization, and
+application deployment speed. Containers, being a lightweight alternative to
+VMs, designed to overcome these hurdles
+[[16]](https://www.researchgate.net/publication/309961613_Containers_and_Virtual_Machines_at_Scale_A_Comparative_Study).
 
-Unlike VMs, which typically required the installation of resource-intensive
-operating systems and took minutes to start up, containers could achive the same
-in seconds. Containers package an application alongside with its required OS
-components and is typically managed using orchastration tools like Kubernetes.
-This approach allows companies to scale their resources in response to varying
-service loads. As such, more and more companies have now established platform
-teams tasked with constructing orchestrated developer platforms to simplify
-application deployment in Kubernetes clusters.
+In contrast to VMs, which require installation of resource-intensive operating
+systems and minutes to start up, containers along with their required OS
+components, could start up in seconds. Typically managed by orchestration tools
+like Kubernetes [[17]](https://kubernetes.io/), containers enabled applications
+to package alongside their required OS components, facilitating scalability in
+response to varying service loads. Consequently, an increasing number of
+companies have since established platform teams to build orchestrated developers
+platforms, thereby simplifying application development in Kubernetes clusters.
 
 ### Serverless and Function-as-a-Service (FaaS)
 
@@ -177,10 +148,42 @@ or FaaS. Companies already in the cloud game decided to develop their own FaaS
 platforms to attract developers interested in running their code, and not worry
 about anything underneath.
 
+### Some major vendors in Serverless
+
+The concept of "the cloud" isn't owned by any single organization, but rather,
+through the collective effort of industry players including Amazon, Microsoft,
+Google, Alibaba and DigitalOcean, among others. This essay delves into some
+challenges faced by the biggest three vendors: Amazon, Google and Microsoft.
+
+Amazon Web Services (AWS) provides AWS Lambdas
+[[10]](https://aws.amazon.com/lambda/), a technology that hinges on their
+proprietary Firecracker - a streamlined virtualization technology for executing
+functions. Interestingly, for this thesis, is that Amazon's Prime Video
+streaming service transitioned recently from a serverless architecture to a
+monolithic system to meet specific service demands. One might question whether
+this reflects the suitability of serverless systems for cloud computing, or for
+specific use cases like theirs
+[[11]](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90).
+Some discussions suggest that their need to process videos frame by frame led to
+astronomical costs on their sibling company's FaaS, Amazon Lambda.
+
+Google provides Google Cloud Functions
+[[12]](https://cloud.google.com/functions), which allow developers to write and
+execute functions in languages such as Node.js, Python, Go and execute them in
+response to events. Google's approach to function execution centeres around
+container technology
+[[13]](https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html).
+
+Microsoft's Azure Functions
+[[14]](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview?pivots=programming-language-csharp)
+is a Faas platform that enables developers to create and execute functions
+written in languages like C#, JavaScript, Python. Similar to Google, they also
+harness the power of containers to execute these functions.
+
 <!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
 <!-- Challenges associated with FaaS, including cold start latency -->
 
-### WebAssembly: A new paradigm
+### WebAssembly: A new paradigm?
 
 <!-- Provide an overview of WebAssembly, its purpose, and its advantages over
 traditional deployment methods. -->
@@ -279,18 +282,6 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-## Methodology
-
-This thesis will use an experimental research design to investigate the power
-consumption under load of a FaaS platform developed with pure functions written
-in Rust.
-
-### System development
-
-The first stage will involve developing a prototype PFaaS dubbet "Purify". This
-platform will be developed using Rust and (might) compile to Wasm and Wasi that
-runs on the Wasmtime runtime. This platform will require some way of "deploying"
-functions compiled to Wasm that need to be pure.
 
 ### Benchmarking
 
