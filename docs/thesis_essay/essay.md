@@ -282,80 +282,149 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
+### The CAP Theorem and Its Relevance to This Thesis
 
-### Benchmarking
+As mentioned in the hypothesis, the CAP theorem was a theorem proposed by Eric
+Brewer in 2000 that states it is impossible for a distributed data store to
+simultaneously provide all three of the following guarantees: _Consistency_,
+_Availability_, and _Partition Tolerance_ (CAP). Most distributed systems can
+only guarantee two out of these three properties at any given time.
 
-Once the platform is developed, a series of benchmarking tests will be
-conduncted. The intended web application that will test this platform, is
-"Academemes.com", a web page that serves academic memes. These tests will
-emulate users accessing academic memes through scripts and measure the
-performance of the system under varying loads, capturing data on startup time,
-execution time and (hopefully) energy consumption.
+In the context of this thesis, the hypothesis is that it is possible to develop
+a FaaS platform that scales to near-zero resource usage without suffering from
+the constraints of the CAP theorem. This implies that the proposed system would
+maintain high availability and consistency even while scaling down to minimal
+resource usage, without sacrificing partition tolerance.
 
-If there is enough interest and other students begin using the service, there
-might be data from "real-life" use cases that would be interesting to compare.
+Developing a system that achieves this balance would involve navigating the
+inherent trade-offs described by the CAP theorem. However, the unique
+characteristics of a FaaS platform and the benefits of using Rust and
+WebAssembly may provide opportunities for novel approaches to this challenge.
 
-### Energy measurement
+By focusing on executing pure functions without side effects (an approach often
+associated with functional programming), the proposed FaaS platform could
+minimize dependencies between operations, reducing the potential for conflicts
+and easing the enforcement of consistency. Meanwhile, the efficient startup
+times and lower runtime costs enabled by Rust and WebAssembly could allow the
+system to quickly scale up resources when needed, contributing to high
+availability even at times of peak demand.
 
-The energy consumption of the system is a key focus of this thesis. To measure
-this, I will rely on a device that's plugged into the computers motherboard
-through its power pins that should be able to measure specific parts of the CPU.
-These energy readings would then transmit to a USB device connected to the same
-device, and feed the data to the benchmarking tools.
+Further exploration of these ideas, along with rigorous testing and validation,
+will be key components of this research project.
 
-### Comparison
+## Methodology and preliminary ideas
 
-The power consumption of the "Purify" platform will be compared to either
-existing FaaS platforms that can install locally, e.g. serverless.com, or by
-replicating existing platforms built on top of Docker and Kubernetes. If this is
-the case, the scope of the research will expand to learning these technologies,
-and attempt to build a simple FaaS on top of these.
+To explore the central hypothesis of this thesis and gather pertinent data, we
+will follow an experimental research design that combines the development of a
+FaaS platform with comprehensive testing and data analysis.
 
-### Data Analysis
+Our focus will be on creating a prototype _PFaaS_ named "Nebula" , developed
+using Rust and compiled to Wasm and Wasi that operates on the Wasmtime runtime.
+This platform will serve purely WebAssembly modules, narrowing down the
+execution to pure functions compiled to Wasm.
 
-The data gathered from the benchmarking and energy measurement stages will be
-analyzed to provide insights into the relationship between load, performance,
-and energy consumption. The aim is to understand the impact of relying on
-WebAssembly on the power efficiency of FaaS platforms.
+Spin, an open-source offering by Fermyon, will be a critical point of reference.
+It facilitates the development and deployment of applications, compiled to Wasm,
+on either Fermyon's own cloud, or any self-hosted variant. While Spin does
+manage side effects, our prototype will focus on pure functions.
 
-By following this methodology, the thesi aims to contribute a practical analysis
-of the potential for Rust and WebAssembly to enhance the power efficiency of
-cloud computing platforms.
+Post-development, "Nebula" will be subject to benchmarking tests using a web
+application "Academeme.com", serving academic memes. These tests will simulate
+users accessing the website and measure the system's performance under varying
+loads, capturing data on startup time, execution time, and hopefully energy
+consumption. If "Purfity" garners interest and usage from other students, we may
+incorporate data from "real-life" use cases.
 
-## Preliminary ideas and future direction
+We will gather energy consumption measurements through a device connected to the
+motherboard of a testing device in UiO's "Energy Labs". This device will gather
+readings from specific parts of the CPU, transmitting this data through the
+Z-wave protocol to a USB device for integration into our benchmarking tools.
 
-### Design specification
+To contextualize our findings, we'll compare the power consumption to
+locally-installable FaaS platforms, such as serverless.com, or potentially
+replicated platforms built atop Docker and Kubernetes. This comparison could
+require an expansion of the research scope, including understanding and building
+a simple FaaS using these technologies.
 
-`What will my experiments look like?`
+Following this, we'll undertake data analysis, interpreting the information
+gathered during benchmarking and energy measurement to explore the relationship
+between load, performance, and energy consumption. The ultimate goal is to gauge
+the impact of utilizing WebAssembly on the power efficiency of FaaS Platforms.
 
-Some key points:
+A wealth of resources will be leveraged to attempt to measure accurate energy
+consumption. Luís Cruz's article provides a comprehensive guide on measuring
+energy on computers
+[\[x\]](https://luiscruz.github.io/2021/07/20/measuring-energy.html),
+recommending tools such as Intel Power Gadget, built on top of Intel RAPL
+(Running Average Power Limit)
+[\[x\]](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/running-average-power-limit-energy-reporting.html),
+a tool that was used in the study "RAPL in Action: Experiences in using RAPL for
+Power Measurements" [\[x\]](http://dx.doi.org/10.1145/3177754). This study
+provides foundational knowledge about the correlation between core frequency,
+load and power consumption for this thesis.
 
-- Language: Rust
-- Compilation target: Wasm+Wasi
-- Runtime: Wasmtime or Wasmer
-- Database required to store memes (Or fetch them from other locations)
-- A frontend either written in Rust and server-rendered, or a separate client
-  side Svelte application that interfaces with the functions through http.
+Powermetrics, a built-in tool on Macbooks, will be used during development to
+give a rough measure of power consumption during development on a Macbook
+running an M2 chip, which doesn't support the Intel tools mentioned above.
 
-<!--More specifically, how will we setup a academemes webpage that provides academic
-memes through a serverless application? Should I make both an implementation in
-Docker with Node as a backend and one version written in Rust that gets compiled
-into webassembly and deployed as [[WebAssembly Modules]]?-->
+The formula for calculating energy consumption, as Cruz notes in his article, is
+E = P . Δt, where E denotes energy consumption, P signifies average power in
+watts, and Δt represents the given sample in seconds. This calculation will be
+central to our power measurements.
 
-### Energy
+By following this methodology and making use of these tools and technologies,
+the aim is to generate a practical analysis of the potential for WebAssembly to
+enhance the power efficiency of cloud computing platforms.
 
-> Is it possible to measure how much energy a serverless architecture spends on
-> spinning up, running and spinning down services?
+## Design Specification
 
----
+The design and development of the experiments for this thesis revolve around the
+creation and testing of "Nebula", a Pure Function as a Service platform. The
+experiments are primarily focused on testing the power efficiency of this
+platform, its responsiveness, and scalability under varying loads. Here, we
+detail the key aspects of these experiments:
 
-CAP theorem states that distributed systems can only choose 2 from:
+### Development Environment
 
-- Consistency
-- Availability
-- Partition tolerance
+The core development language for Nebula will be Rust, a language known for its
+memory safety and high performance. Its unique ownership semantics allow
+fine-grained control over memory management, which aligns with our pursuit of
+energy efficiency.
 
-However, restricting ourselves pure functions guarantee all three
+### Compilation Target
+
+The functions developed in Rust will be compiled to WebAssembly (Wasm) with the
+WASI target. WebAssembly is a binary instruction format designed as a portable
+target for the compilation of high-level languages. WASI, or WebAssembly System
+Interface, is a system interface for the WebAssembly platform. This combination
+allows us to run sandboxed service functions anywhere, making our platform both
+secure and widely compatible. The
+
+### Database Integration
+
+In the Nebula system, the concept of pure functions is central but accommodating
+a database is critical for real-world application functionality, such as storing
+and fetching memes. To reconcile this, Nebula's design will incorporate a
+separate layer for interacting with the database. This layer retrieves necessary
+data, passes it to the pure functions for processing, and then handles
+subsequent operations like updating the database or passing results to other
+services.
+
+### Frontend Development
+
+For the user interface, there are two potential directions. One approach is to
+use Rust for server-rendered pages, maintaining a uniformity in the tech stack.
+This approach could use a Rust framework like Yew.
+
+The alternative approach is to develop a separate client-side application using
+Svelte or Elm, which will interface with our pure functions via HTTP. Svelte,
+being a JavaScript framework, offers the advantage of a more dynamic user
+interface. On the other hand, Elm, a purely functional language for frontend
+development, aligns more with our platform's philosophy of pure functions.
+
+The above specifications will serve as a guide throughout the development of
+Nebula. In the next phase, we'll begin the implementation, continuously testing
+and adjusting these specifications as needed.
 
 ## References
 
