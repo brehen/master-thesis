@@ -4,8 +4,7 @@
 > That's how important it is. Webassembly on the server is the future of
 > computing. A standardized system interface was the missing link. Let's hope
 > WASI is up to the task!
->
-> &mdash;
+
 > [_Solomon Hykes, founder of Docker_](https://twitter.com/solomonstre/status/1111004913222324225?lang=en)
 
 ## Introduction
