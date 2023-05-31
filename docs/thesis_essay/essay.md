@@ -37,15 +37,18 @@ cloud computing by serving academic memes through a web service.
 
 This master thesis explores the following hyphothesis:
 
-> It is possible to develop a FaaS platform that scale to near-zero resource
-> usage without suffering the CAP-theorem.
+> It is possible to develop a Pure FaaS platform that scale to near-zero
+> resource usage, using WebAssembly modules, without sacrificing availability.
 
 To test this, we will develop a prototype Pure Functions as a Service written in
 Rust, and attempt to scale to near-zero by implementing a simple service for
-serving memes on the internet that remains consistent, is virtually always
-available, and suffers no issues from partition tolerance (Consistency,
-Availability, Partition Tolerance - CAP)[(Brewer, Fox. 1999)][5] while also
-being more energy efficient than predominant alternatives.
+serving memes on the internet that is able to scale down to near-zero and start
+up at fastly.
+
+Furthermore, we hypothesise that the service will remain consistent, be
+virtually always available, and suffer no issues from partition tolerance
+(Consistency, Availability, Partition Tolerance - CAP) [(Brewer, Fox. 1999)][5]
+while also being more energy efficient than predominant alternatives.
 
 ## Background
 
@@ -431,16 +434,3 @@ and adjusting these specifications as needed.
 [18]: https://luiscruz.github.io/2021/07/20/measuring-energy.html
 [19]: https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/running-average-power-limit-energy-reporting.html
 [20]: http://dx.doi.org/10.1145/3177754
-
----
-
-## Related resources
-
-<https://techmonitor.ai/focus/how-green-is-your-cloud>
-
-<https://www.redhat.com/en/blog/history-containers>
-
-<https://theshiftproject.org/en/article/lean-ict-our-new-report/>
-
-```
-```
