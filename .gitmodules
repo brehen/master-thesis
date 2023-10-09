@@ -1,0 +1,3 @@
+[submodule "nebula"]
+	path = nebula
+	url = https://github.uio.no/mariunkl/nebula
