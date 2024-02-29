@@ -1,7 +1,7 @@
 <!-- Super rough first draft of the template and contents of the final thesis.
 -->
 
-# Title of the thesis
+# Nebula - A comparison between two waves of cloud computing
 
 Author's name, Date, Institution
 
@@ -15,7 +15,29 @@ Author's name, Date, Institution
 Express gratitude to advisors, colleagues, and others who have supported and
 helped throughout the research process.
 
-## Table of Contents
+\pagebreak
+
+<!--toc:start-->
+
+- [Contents](#title-of-the-thesis)
+  - [Abstract](#abstract)
+  - [Acknowledgments](#acknowledgments)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Background](#background)
+    - [Cloud Computing: An Overview](#cloud-computing-an-overview)
+    - [Traditional Deployment Methods: Virtual Machines and Containers](#traditional-deployment-methods-virtual-machines-and-containers)
+    - [Function-as-a-Service (FaaS)](#function-as-a-service-faas)
+    - [WebAssembly: A New Paradigm](#webassembly-a-new-paradigm)
+    - [Hypothesis Revisited](#hypothesis-revisited)
+  - [Method](#methodology)
+  - [Results](#results)
+  - [Discussion](#discussion)
+  - [Conclusion](#conclusion)
+  - [References](#references)
+  - [Appendices](#appendices)
+
+<!--toc:end-->
 
 List the main sections and subsections of the thesis, along with their
 corresponding page numbers.
