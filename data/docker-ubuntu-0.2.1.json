@@ -1,0 +1,6986 @@
+[
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 7.0,
+    "startup_time": 245483,
+    "total_runtime": 3649186
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 7.0,
+    "startup_time": 259996,
+    "total_runtime": 3719327
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 7.0,
+    "startup_time": 263795,
+    "total_runtime": 3723694
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 8.0,
+    "startup_time": 290717,
+    "total_runtime": 3683228
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 7.0,
+    "startup_time": 267398,
+    "total_runtime": 3673829
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 373258,
+    "total_runtime": 3797572
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 9.0,
+    "startup_time": 318898,
+    "total_runtime": 3750311
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 365781,
+    "total_runtime": 3803991
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "45",
+    "base_image": "ubuntu",
+    "startup_percentage": 7.0,
+    "startup_time": 258912,
+    "total_runtime": 3660850
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 11.0,
+    "startup_time": 278894,
+    "total_runtime": 2441633
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 259221,
+    "total_runtime": 2484095
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 251579,
+    "total_runtime": 2397967
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 13.0,
+    "startup_time": 316253,
+    "total_runtime": 2475590
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 255032,
+    "total_runtime": 2488670
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 251085,
+    "total_runtime": 2408349
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 11.0,
+    "startup_time": 257543,
+    "total_runtime": 2408166
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 11.0,
+    "startup_time": 260468,
+    "total_runtime": 2408629
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "44",
+    "base_image": "ubuntu",
+    "startup_percentage": 10.0,
+    "startup_time": 243008,
+    "total_runtime": 2394571
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 15.0,
+    "startup_time": 252441,
+    "total_runtime": 1642473
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 15.0,
+    "startup_time": 259234,
+    "total_runtime": 1723179
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 15.0,
+    "startup_time": 243150,
+    "total_runtime": 1637796
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 16.0,
+    "startup_time": 264666,
+    "total_runtime": 1690889
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 17.0,
+    "startup_time": 289389,
+    "total_runtime": 1666439
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 15.0,
+    "startup_time": 243540,
+    "total_runtime": 1642278
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 16.0,
+    "startup_time": 258851,
+    "total_runtime": 1648756
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 16.0,
+    "startup_time": 266424,
+    "total_runtime": 1672377
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "43",
+    "base_image": "ubuntu",
+    "startup_percentage": 18.0,
+    "startup_time": 304318,
+    "total_runtime": 1709751
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 259329,
+    "total_runtime": 1191605
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 21.0,
+    "startup_time": 250756,
+    "total_runtime": 1167415
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 252495,
+    "total_runtime": 1168403
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 21.0,
+    "startup_time": 256829,
+    "total_runtime": 1202147
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 260707,
+    "total_runtime": 1183149
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 255371,
+    "total_runtime": 1158074
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 253614,
+    "total_runtime": 1176215
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 22.0,
+    "startup_time": 254922,
+    "total_runtime": 1172667
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "42",
+    "base_image": "ubuntu",
+    "startup_percentage": 23.0,
+    "startup_time": 273282,
+    "total_runtime": 1190673
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 31.0,
+    "startup_time": 300478,
+    "total_runtime": 959584
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 32.0,
+    "startup_time": 289811,
+    "total_runtime": 905024
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 30.0,
+    "startup_time": 273520,
+    "total_runtime": 907306
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 31.0,
+    "startup_time": 281103,
+    "total_runtime": 894176
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 32.0,
+    "startup_time": 299910,
+    "total_runtime": 932254
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 33.0,
+    "startup_time": 319786,
+    "total_runtime": 964104
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 34.0,
+    "startup_time": 327649,
+    "total_runtime": 976807
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 31.0,
+    "startup_time": 290790,
+    "total_runtime": 927469
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "41",
+    "base_image": "ubuntu",
+    "startup_percentage": 31.0,
+    "startup_time": 288710,
+    "total_runtime": 918992
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 36.0,
+    "startup_time": 264052,
+    "total_runtime": 739240
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 39.0,
+    "startup_time": 297062,
+    "total_runtime": 767594
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 36.0,
+    "startup_time": 288981,
+    "total_runtime": 813707
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 37.0,
+    "startup_time": 279845,
+    "total_runtime": 750826
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 40.0,
+    "startup_time": 295470,
+    "total_runtime": 745622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 37.0,
+    "startup_time": 320159,
+    "total_runtime": 869817
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 40.0,
+    "startup_time": 304373,
+    "total_runtime": 768927
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 45.0,
+    "startup_time": 367048,
+    "total_runtime": 814741
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 38.0,
+    "startup_time": 280998,
+    "total_runtime": 743817
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 45.0,
+    "startup_time": 279333,
+    "total_runtime": 620656
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 44.0,
+    "startup_time": 276560,
+    "total_runtime": 627039
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 48.0,
+    "startup_time": 323262,
+    "total_runtime": 675451
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 45.0,
+    "startup_time": 303726,
+    "total_runtime": 672880
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 41.0,
+    "startup_time": 257978,
+    "total_runtime": 629405
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 45.0,
+    "startup_time": 276239,
+    "total_runtime": 610302
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 45.0,
+    "startup_time": 305213,
+    "total_runtime": 676161
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 46.0,
+    "startup_time": 281775,
+    "total_runtime": 615283
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "39",
+    "base_image": "ubuntu",
+    "startup_percentage": 46.0,
+    "startup_time": 294141,
+    "total_runtime": 637966
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 51.0,
+    "startup_time": 286978,
+    "total_runtime": 565474
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 51.0,
+    "startup_time": 263454,
+    "total_runtime": 519664
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 51.0,
+    "startup_time": 290855,
+    "total_runtime": 570171
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 53.0,
+    "startup_time": 284633,
+    "total_runtime": 541382
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 52.0,
+    "startup_time": 283338,
+    "total_runtime": 549431
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 339357,
+    "total_runtime": 587540
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 46.0,
+    "startup_time": 234338,
+    "total_runtime": 504897
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 48.0,
+    "startup_time": 245262,
+    "total_runtime": 508492
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "38",
+    "base_image": "ubuntu",
+    "startup_percentage": 49.0,
+    "startup_time": 234214,
+    "total_runtime": 475475
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 55.0,
+    "startup_time": 238072,
+    "total_runtime": 436752
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 283275,
+    "total_runtime": 472564
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 290997,
+    "total_runtime": 500894
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 56.0,
+    "startup_time": 249106,
+    "total_runtime": 445727
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 56.0,
+    "startup_time": 256980,
+    "total_runtime": 454902
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 57.0,
+    "startup_time": 273331,
+    "total_runtime": 478073
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 296724,
+    "total_runtime": 491463
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 57.0,
+    "startup_time": 273583,
+    "total_runtime": 478467
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "37",
+    "base_image": "ubuntu",
+    "startup_percentage": 56.0,
+    "startup_time": 263965,
+    "total_runtime": 472140
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 243981,
+    "total_runtime": 409193
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 261513,
+    "total_runtime": 439333
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 57.0,
+    "startup_time": 251425,
+    "total_runtime": 438901
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 275127,
+    "total_runtime": 447684
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 284589,
+    "total_runtime": 489482
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 285767,
+    "total_runtime": 465244
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 55.0,
+    "startup_time": 261085,
+    "total_runtime": 471314
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 248426,
+    "total_runtime": 428028
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "36",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 255306,
+    "total_runtime": 430534
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 257632,
+    "total_runtime": 412523
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 253989,
+    "total_runtime": 425192
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 253135,
+    "total_runtime": 425009
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 263696,
+    "total_runtime": 431348
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 243349,
+    "total_runtime": 402819
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 352798,
+    "total_runtime": 577309
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 264263,
+    "total_runtime": 448973
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 262842,
+    "total_runtime": 454640
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "35",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 283198,
+    "total_runtime": 444030
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 239260,
+    "total_runtime": 389575
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 304592,
+    "total_runtime": 456902
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 239317,
+    "total_runtime": 386480
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 253612,
+    "total_runtime": 389633
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 252385,
+    "total_runtime": 393945
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 249643,
+    "total_runtime": 398999
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 271932,
+    "total_runtime": 422564
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 286214,
+    "total_runtime": 436294
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "34",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 242979,
+    "total_runtime": 389997
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 255211,
+    "total_runtime": 411754
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 270970,
+    "total_runtime": 419221
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 240261,
+    "total_runtime": 383353
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 251174,
+    "total_runtime": 390744
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 270803,
+    "total_runtime": 420428
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 267383,
+    "total_runtime": 438005
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 285000,
+    "total_runtime": 447779
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 259238,
+    "total_runtime": 404357
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "33",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 265504,
+    "total_runtime": 426129
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 248291,
+    "total_runtime": 378767
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 267002,
+    "total_runtime": 392617
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 283821,
+    "total_runtime": 414096
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 239447,
+    "total_runtime": 380472
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 285186,
+    "total_runtime": 444214
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 255317,
+    "total_runtime": 399429
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 353267,
+    "total_runtime": 513024
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251215,
+    "total_runtime": 384071
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "32",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 260861,
+    "total_runtime": 415650
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 222320,
+    "total_runtime": 353925
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 239066,
+    "total_runtime": 378913
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 288891,
+    "total_runtime": 427949
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 239809,
+    "total_runtime": 363550
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247854,
+    "total_runtime": 381919
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 260333,
+    "total_runtime": 437048
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256781,
+    "total_runtime": 393646
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 234964,
+    "total_runtime": 367216
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "31",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 248661,
+    "total_runtime": 384799
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 279877,
+    "total_runtime": 408558
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 247543,
+    "total_runtime": 385935
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 292498,
+    "total_runtime": 426873
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 230848,
+    "total_runtime": 365195
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 249388,
+    "total_runtime": 412137
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 302518,
+    "total_runtime": 437285
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 245317,
+    "total_runtime": 380576
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 220376,
+    "total_runtime": 376873
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 259180,
+    "total_runtime": 388997
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 251323,
+    "total_runtime": 391838
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 249774,
+    "total_runtime": 381622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 262176,
+    "total_runtime": 405736
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 247100,
+    "total_runtime": 384452
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 246900,
+    "total_runtime": 419136
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256008,
+    "total_runtime": 393850
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 261576,
+    "total_runtime": 401948
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 260312,
+    "total_runtime": 386257
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "29",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 243210,
+    "total_runtime": 369966
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 299032,
+    "total_runtime": 463382
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 267324,
+    "total_runtime": 400142
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 258668,
+    "total_runtime": 386276
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 257965,
+    "total_runtime": 384337
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 271679,
+    "total_runtime": 406304
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 239820,
+    "total_runtime": 386024
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 243155,
+    "total_runtime": 377648
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 255417,
+    "total_runtime": 395504
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "28",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 238167,
+    "total_runtime": 382078
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 240335,
+    "total_runtime": 392097
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 267002,
+    "total_runtime": 403071
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 321365,
+    "total_runtime": 475883
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 273083,
+    "total_runtime": 409746
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 263722,
+    "total_runtime": 396125
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 279601,
+    "total_runtime": 431612
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 266866,
+    "total_runtime": 406265
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 244863,
+    "total_runtime": 379072
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "27",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250223,
+    "total_runtime": 377913
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260575,
+    "total_runtime": 398621
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 278093,
+    "total_runtime": 417086
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 267136,
+    "total_runtime": 402554
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 259043,
+    "total_runtime": 390758
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 256424,
+    "total_runtime": 415257
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 261647,
+    "total_runtime": 398800
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 292341,
+    "total_runtime": 438243
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 249160,
+    "total_runtime": 389474
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "26",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251377,
+    "total_runtime": 382807
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245910,
+    "total_runtime": 380586
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 293993,
+    "total_runtime": 423619
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 237129,
+    "total_runtime": 385471
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 245511,
+    "total_runtime": 393421
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 244524,
+    "total_runtime": 376150
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 260668,
+    "total_runtime": 413132
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 252831,
+    "total_runtime": 402009
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 294460,
+    "total_runtime": 448983
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "25",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 253899,
+    "total_runtime": 400916
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 252012,
+    "total_runtime": 396679
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 235995,
+    "total_runtime": 376694
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 253296,
+    "total_runtime": 393044
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 285504,
+    "total_runtime": 433100
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 281968,
+    "total_runtime": 446322
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 254146,
+    "total_runtime": 389491
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 235103,
+    "total_runtime": 362192
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 295366,
+    "total_runtime": 430634
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "24",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 225815,
+    "total_runtime": 368333
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 249877,
+    "total_runtime": 395374
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 246429,
+    "total_runtime": 379622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 255277,
+    "total_runtime": 396244
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 273603,
+    "total_runtime": 417944
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 251123,
+    "total_runtime": 397520
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 56.0,
+    "startup_time": 232486,
+    "total_runtime": 412144
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 228556,
+    "total_runtime": 368347
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 283085,
+    "total_runtime": 421219
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "23",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256299,
+    "total_runtime": 397215
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 273703,
+    "total_runtime": 432333
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 329103,
+    "total_runtime": 466518
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 264275,
+    "total_runtime": 390662
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 286117,
+    "total_runtime": 418093
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 275397,
+    "total_runtime": 402447
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247613,
+    "total_runtime": 381399
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 260008,
+    "total_runtime": 395398
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 239591,
+    "total_runtime": 394560
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "22",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 291897,
+    "total_runtime": 436616
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 276543,
+    "total_runtime": 403153
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 270154,
+    "total_runtime": 396268
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243193,
+    "total_runtime": 371506
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 283173,
+    "total_runtime": 407070
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 248974,
+    "total_runtime": 377629
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 242263,
+    "total_runtime": 367921
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251579,
+    "total_runtime": 389935
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 253199,
+    "total_runtime": 380240
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "21",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237002,
+    "total_runtime": 369362
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251450,
+    "total_runtime": 375861
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 239820,
+    "total_runtime": 369035
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 246929,
+    "total_runtime": 371001
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 255241,
+    "total_runtime": 395663
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 310753,
+    "total_runtime": 445750
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 231238,
+    "total_runtime": 374846
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 232678,
+    "total_runtime": 356216
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 258848,
+    "total_runtime": 401158
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 246998,
+    "total_runtime": 395688
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243028,
+    "total_runtime": 374562
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 243853,
+    "total_runtime": 401473
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 248932,
+    "total_runtime": 404855
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 243068,
+    "total_runtime": 390722
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 235638,
+    "total_runtime": 369204
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 251015,
+    "total_runtime": 402337
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 233104,
+    "total_runtime": 368263
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245497,
+    "total_runtime": 379777
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "19",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237880,
+    "total_runtime": 371010
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 253948,
+    "total_runtime": 386005
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251772,
+    "total_runtime": 386108
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 238386,
+    "total_runtime": 370608
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 236348,
+    "total_runtime": 372901
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 277652,
+    "total_runtime": 401514
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 239036,
+    "total_runtime": 393651
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 262845,
+    "total_runtime": 395063
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245540,
+    "total_runtime": 378846
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "18",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 259695,
+    "total_runtime": 407068
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247839,
+    "total_runtime": 377670
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 296390,
+    "total_runtime": 494313
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 275746,
+    "total_runtime": 408590
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 244303,
+    "total_runtime": 371618
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 246658,
+    "total_runtime": 421347
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 242190,
+    "total_runtime": 372211
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 263484,
+    "total_runtime": 399090
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 276005,
+    "total_runtime": 400578
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "17",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 268953,
+    "total_runtime": 402156
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 248244,
+    "total_runtime": 398805
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 270485,
+    "total_runtime": 413116
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251664,
+    "total_runtime": 377520
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 239346,
+    "total_runtime": 372979
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 241375,
+    "total_runtime": 378653
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251539,
+    "total_runtime": 386313
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 296127,
+    "total_runtime": 417032
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 243384,
+    "total_runtime": 369592
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "16",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 236116,
+    "total_runtime": 360879
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 252672,
+    "total_runtime": 382882
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247687,
+    "total_runtime": 383306
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251947,
+    "total_runtime": 389305
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243489,
+    "total_runtime": 375978
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251577,
+    "total_runtime": 389147
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 257303,
+    "total_runtime": 435818
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 253570,
+    "total_runtime": 423835
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 237340,
+    "total_runtime": 392182
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "15",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 239345,
+    "total_runtime": 368500
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237666,
+    "total_runtime": 371453
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 261323,
+    "total_runtime": 438599
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 308870,
+    "total_runtime": 432917
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 294671,
+    "total_runtime": 429088
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 278647,
+    "total_runtime": 404348
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 262935,
+    "total_runtime": 391726
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 246051,
+    "total_runtime": 382070
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 256798,
+    "total_runtime": 398356
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "14",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 229087,
+    "total_runtime": 353142
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 255086,
+    "total_runtime": 420900
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 241953,
+    "total_runtime": 375237
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 242584,
+    "total_runtime": 374577
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 243026,
+    "total_runtime": 394679
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254748,
+    "total_runtime": 385090
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 261366,
+    "total_runtime": 388408
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 259634,
+    "total_runtime": 394905
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 255153,
+    "total_runtime": 386081
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "13",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 261857,
+    "total_runtime": 398381
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254665,
+    "total_runtime": 386155
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 273666,
+    "total_runtime": 416387
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 274467,
+    "total_runtime": 405212
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 255946,
+    "total_runtime": 434514
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251469,
+    "total_runtime": 383675
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 231921,
+    "total_runtime": 373151
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 244917,
+    "total_runtime": 373942
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247497,
+    "total_runtime": 379666
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247350,
+    "total_runtime": 376979
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251759,
+    "total_runtime": 386483
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 249165,
+    "total_runtime": 374060
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 255351,
+    "total_runtime": 413216
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 247573,
+    "total_runtime": 387276
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251200,
+    "total_runtime": 388786
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 235796,
+    "total_runtime": 361898
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243034,
+    "total_runtime": 375320
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 266213,
+    "total_runtime": 411769
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "11",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 252863,
+    "total_runtime": 390622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251424,
+    "total_runtime": 377262
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 266501,
+    "total_runtime": 409030
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251041,
+    "total_runtime": 384979
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 235250,
+    "total_runtime": 361139
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 243383,
+    "total_runtime": 382028
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 248696,
+    "total_runtime": 394220
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 238842,
+    "total_runtime": 389493
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251136,
+    "total_runtime": 376625
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 319519,
+    "total_runtime": 453434
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251707,
+    "total_runtime": 382462
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 236832,
+    "total_runtime": 377970
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247627,
+    "total_runtime": 378049
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 240251,
+    "total_runtime": 376602
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 250832,
+    "total_runtime": 370720
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 310867,
+    "total_runtime": 449055
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 252941,
+    "total_runtime": 416035
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242300,
+    "total_runtime": 380360
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "9",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 274356,
+    "total_runtime": 426956
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 253581,
+    "total_runtime": 392626
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 257685,
+    "total_runtime": 391598
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 272255,
+    "total_runtime": 408104
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 257988,
+    "total_runtime": 389352
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 252990,
+    "total_runtime": 389605
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 252110,
+    "total_runtime": 391204
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 325441,
+    "total_runtime": 463933
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 250816,
+    "total_runtime": 383784
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "8",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243328,
+    "total_runtime": 372257
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 241593,
+    "total_runtime": 373775
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 271886,
+    "total_runtime": 419650
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 245128,
+    "total_runtime": 367615
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 225407,
+    "total_runtime": 360847
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 313482,
+    "total_runtime": 480183
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251262,
+    "total_runtime": 376681
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 262924,
+    "total_runtime": 399718
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 279317,
+    "total_runtime": 422623
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "7",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 265118,
+    "total_runtime": 399528
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254912,
+    "total_runtime": 387527
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251629,
+    "total_runtime": 384286
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 249156,
+    "total_runtime": 379595
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 314527,
+    "total_runtime": 469147
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 261973,
+    "total_runtime": 410334
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 57.0,
+    "startup_time": 251357,
+    "total_runtime": 438135
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 239701,
+    "total_runtime": 394865
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 282392,
+    "total_runtime": 414765
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "6",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251818,
+    "total_runtime": 378764
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 244840,
+    "total_runtime": 376195
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 262923,
+    "total_runtime": 438876
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 262790,
+    "total_runtime": 391955
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 255139,
+    "total_runtime": 380977
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 238922,
+    "total_runtime": 385538
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 233180,
+    "total_runtime": 362590
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 239387,
+    "total_runtime": 366620
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 266834,
+    "total_runtime": 393222
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "5",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 261354,
+    "total_runtime": 398016
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 253696,
+    "total_runtime": 383485
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 238677,
+    "total_runtime": 370429
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 252751,
+    "total_runtime": 384160
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 256435,
+    "total_runtime": 398265
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 268522,
+    "total_runtime": 440278
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 235990,
+    "total_runtime": 358969
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 255434,
+    "total_runtime": 378545
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 221981,
+    "total_runtime": 349684
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "4",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 267285,
+    "total_runtime": 406352
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 244448,
+    "total_runtime": 405133
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 258318,
+    "total_runtime": 383627
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 235108,
+    "total_runtime": 361265
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 319659,
+    "total_runtime": 448341
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 283064,
+    "total_runtime": 408457
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 249467,
+    "total_runtime": 380758
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251456,
+    "total_runtime": 377242
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 259239,
+    "total_runtime": 381712
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "3",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 243970,
+    "total_runtime": 387332
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 321060,
+    "total_runtime": 492533
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 252062,
+    "total_runtime": 386748
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 234215,
+    "total_runtime": 360374
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 259045,
+    "total_runtime": 388307
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 275525,
+    "total_runtime": 412629
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 289129,
+    "total_runtime": 421526
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 295463,
+    "total_runtime": 460910
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 243254,
+    "total_runtime": 382370
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "2",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 251927,
+    "total_runtime": 398939
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256989,
+    "total_runtime": 395947
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 267443,
+    "total_runtime": 402085
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 267313,
+    "total_runtime": 432071
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251419,
+    "total_runtime": 378418
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 290880,
+    "total_runtime": 427310
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 284798,
+    "total_runtime": 416132
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 337770,
+    "total_runtime": 484665
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 333165,
+    "total_runtime": 554812
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "1",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 257529,
+    "total_runtime": 391603
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 244759,
+    "total_runtime": 388300
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 259568,
+    "total_runtime": 397257
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250876,
+    "total_runtime": 382468
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 279002,
+    "total_runtime": 438244
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 259785,
+    "total_runtime": 383385
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 246818,
+    "total_runtime": 385751
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 311059,
+    "total_runtime": 491431
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 347569,
+    "total_runtime": 555461
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Docker",
+    "input": "0",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 368184,
+    "total_runtime": 573236
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 259750,
+    "total_runtime": 392586
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 256572,
+    "total_runtime": 380326
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 264233,
+    "total_runtime": 403212
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260619,
+    "total_runtime": 403253
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 238766,
+    "total_runtime": 367065
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 241725,
+    "total_runtime": 361554
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 255301,
+    "total_runtime": 394746
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247589,
+    "total_runtime": 378550
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260237,
+    "total_runtime": 400305
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 247867,
+    "total_runtime": 392712
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 248325,
+    "total_runtime": 372101
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 232145,
+    "total_runtime": 362010
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247492,
+    "total_runtime": 382796
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 234203,
+    "total_runtime": 371590
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 252893,
+    "total_runtime": 378924
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 247028,
+    "total_runtime": 383122
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 244943,
+    "total_runtime": 386461
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 241163,
+    "total_runtime": 379667
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 238979,
+    "total_runtime": 364668
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 306762,
+    "total_runtime": 437880
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 236977,
+    "total_runtime": 357869
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 236183,
+    "total_runtime": 363486
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 291531,
+    "total_runtime": 471332
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 294892,
+    "total_runtime": 454185
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 235130,
+    "total_runtime": 371713
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 239660,
+    "total_runtime": 366263
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 237769,
+    "total_runtime": 368505
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 242635,
+    "total_runtime": 374392
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 225666,
+    "total_runtime": 352827
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 237805,
+    "total_runtime": 366270
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 269043,
+    "total_runtime": 409988
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 273987,
+    "total_runtime": 397272
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 295964,
+    "total_runtime": 453291
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 241758,
+    "total_runtime": 373315
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 262700,
+    "total_runtime": 399391
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 234301,
+    "total_runtime": 367338
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 312277,
+    "total_runtime": 451082
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 240216,
+    "total_runtime": 378353
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 232729,
+    "total_runtime": 363772
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 239844,
+    "total_runtime": 369897
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 228790,
+    "total_runtime": 377505
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 261369,
+    "total_runtime": 388385
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 238866,
+    "total_runtime": 379546
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 269379,
+    "total_runtime": 418880
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 226669,
+    "total_runtime": 356053
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 240367,
+    "total_runtime": 382459
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 229818,
+    "total_runtime": 381549
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 274708,
+    "total_runtime": 406327
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 239801,
+    "total_runtime": 373576
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 246947,
+    "total_runtime": 382560
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242947,
+    "total_runtime": 381798
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 253925,
+    "total_runtime": 382130
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 230939,
+    "total_runtime": 369778
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 252827,
+    "total_runtime": 390265
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 262900,
+    "total_runtime": 392981
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 271836,
+    "total_runtime": 402323
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 272986,
+    "total_runtime": 433402
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 266446,
+    "total_runtime": 398240
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 244281,
+    "total_runtime": 370010
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 250504,
+    "total_runtime": 403376
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 243357,
+    "total_runtime": 397052
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 240351,
+    "total_runtime": 373952
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 236169,
+    "total_runtime": 365967
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 267174,
+    "total_runtime": 400429
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 253299,
+    "total_runtime": 401162
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 254214,
+    "total_runtime": 391311
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 252705,
+    "total_runtime": 391511
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 252969,
+    "total_runtime": 375405
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245118,
+    "total_runtime": 375541
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 248886,
+    "total_runtime": 382549
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 249449,
+    "total_runtime": 384480
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 276433,
+    "total_runtime": 434531
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 266185,
+    "total_runtime": 404555
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 245804,
+    "total_runtime": 373821
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 259420,
+    "total_runtime": 390420
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 253042,
+    "total_runtime": 397217
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 264808,
+    "total_runtime": 405225
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 226215,
+    "total_runtime": 363239
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 236222,
+    "total_runtime": 364148
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 252207,
+    "total_runtime": 398173
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250199,
+    "total_runtime": 379058
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 250424,
+    "total_runtime": 387658
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 302867,
+    "total_runtime": 442797
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 243466,
+    "total_runtime": 376055
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 255485,
+    "total_runtime": 403662
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 250822,
+    "total_runtime": 397353
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 242317,
+    "total_runtime": 371924
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 230822,
+    "total_runtime": 357534
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 244170,
+    "total_runtime": 387653
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 258683,
+    "total_runtime": 378607
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242598,
+    "total_runtime": 376565
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 233760,
+    "total_runtime": 378491
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 270070,
+    "total_runtime": 399984
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242833,
+    "total_runtime": 379583
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245612,
+    "total_runtime": 377690
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 272315,
+    "total_runtime": 409840
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 218608,
+    "total_runtime": 347924
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 258486,
+    "total_runtime": 386415
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 248274,
+    "total_runtime": 379599
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 256571,
+    "total_runtime": 380425
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 242643,
+    "total_runtime": 390059
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 240176,
+    "total_runtime": 369632
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 230624,
+    "total_runtime": 381437
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245123,
+    "total_runtime": 378499
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 256803,
+    "total_runtime": 405853
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247563,
+    "total_runtime": 379283
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 243194,
+    "total_runtime": 391427
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 225928,
+    "total_runtime": 360462
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 232529,
+    "total_runtime": 360638
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 304888,
+    "total_runtime": 466975
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 250718,
+    "total_runtime": 393843
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 249561,
+    "total_runtime": 415715
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 231560,
+    "total_runtime": 370211
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 248774,
+    "total_runtime": 377623
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 233414,
+    "total_runtime": 367789
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 260602,
+    "total_runtime": 384450
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254500,
+    "total_runtime": 387745
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 251925,
+    "total_runtime": 387432
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 273925,
+    "total_runtime": 406462
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242444,
+    "total_runtime": 379697
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 249597,
+    "total_runtime": 393939
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 283290,
+    "total_runtime": 426008
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 261521,
+    "total_runtime": 428528
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 260883,
+    "total_runtime": 386380
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 253876,
+    "total_runtime": 408304
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 255546,
+    "total_runtime": 377554
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242989,
+    "total_runtime": 377705
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 244331,
+    "total_runtime": 368659
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 72.0,
+    "startup_time": 334822,
+    "total_runtime": 466162
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 230038,
+    "total_runtime": 352300
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 251273,
+    "total_runtime": 397693
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242005,
+    "total_runtime": 378180
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 260376,
+    "total_runtime": 397080
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 239605,
+    "total_runtime": 380392
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256297,
+    "total_runtime": 396383
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 244577,
+    "total_runtime": 380818
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 290882,
+    "total_runtime": 439057
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 254692,
+    "total_runtime": 395955
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 282163,
+    "total_runtime": 425786
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247366,
+    "total_runtime": 382044
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 265170,
+    "total_runtime": 407856
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 252488,
+    "total_runtime": 396911
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 223856,
+    "total_runtime": 361439
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 225391,
+    "total_runtime": 358488
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 270994,
+    "total_runtime": 414576
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 258969,
+    "total_runtime": 394506
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245533,
+    "total_runtime": 379502
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 245749,
+    "total_runtime": 397936
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 249457,
+    "total_runtime": 378296
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 235715,
+    "total_runtime": 359061
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250665,
+    "total_runtime": 378438
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 244330,
+    "total_runtime": 378221
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 252729,
+    "total_runtime": 398315
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 266866,
+    "total_runtime": 421860
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 237324,
+    "total_runtime": 383049
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 268385,
+    "total_runtime": 402064
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 249745,
+    "total_runtime": 386367
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 253236,
+    "total_runtime": 390035
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 233812,
+    "total_runtime": 359470
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 260025,
+    "total_runtime": 394027
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 272788,
+    "total_runtime": 423806
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 265434,
+    "total_runtime": 413662
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 254161,
+    "total_runtime": 394087
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260178,
+    "total_runtime": 400322
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 256677,
+    "total_runtime": 387732
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 254884,
+    "total_runtime": 381556
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 234702,
+    "total_runtime": 374494
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 235318,
+    "total_runtime": 400287
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 242689,
+    "total_runtime": 383468
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247534,
+    "total_runtime": 377348
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 245115,
+    "total_runtime": 370011
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 245077,
+    "total_runtime": 383240
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 235464,
+    "total_runtime": 368485
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 237081,
+    "total_runtime": 374781
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 265997,
+    "total_runtime": 405670
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 257776,
+    "total_runtime": 387527
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 237458,
+    "total_runtime": 363839
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 229151,
+    "total_runtime": 361065
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 235017,
+    "total_runtime": 360250
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 248423,
+    "total_runtime": 383019
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 283065,
+    "total_runtime": 409790
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 257689,
+    "total_runtime": 395014
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 223167,
+    "total_runtime": 357572
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250299,
+    "total_runtime": 378035
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 260837,
+    "total_runtime": 393160
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 253266,
+    "total_runtime": 385258
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 230717,
+    "total_runtime": 358145
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 278033,
+    "total_runtime": 412803
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247994,
+    "total_runtime": 381193
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 234836,
+    "total_runtime": 367679
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 256852,
+    "total_runtime": 385818
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 246442,
+    "total_runtime": 384418
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 251995,
+    "total_runtime": 379447
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 263585,
+    "total_runtime": 391124
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 259028,
+    "total_runtime": 399905
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 320108,
+    "total_runtime": 456744
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 313798,
+    "total_runtime": 442802
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 315348,
+    "total_runtime": 521175
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 291347,
+    "total_runtime": 481514
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 255661,
+    "total_runtime": 395392
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 266552,
+    "total_runtime": 406428
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 72.0,
+    "startup_time": 353413,
+    "total_runtime": 493475
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 242686,
+    "total_runtime": 377411
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 254787,
+    "total_runtime": 391949
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 349309,
+    "total_runtime": 569163
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 261331,
+    "total_runtime": 406931
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 309932,
+    "total_runtime": 477870
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 335024,
+    "total_runtime": 528257
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 330871,
+    "total_runtime": 509131
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 238398,
+    "total_runtime": 366891
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 246101,
+    "total_runtime": 394347
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 246531,
+    "total_runtime": 370766
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 311883,
+    "total_runtime": 454668
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 261662,
+    "total_runtime": 394677
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 327819,
+    "total_runtime": 516872
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 263100,
+    "total_runtime": 399615
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 335064,
+    "total_runtime": 485490
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 312517,
+    "total_runtime": 497640
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 348649,
+    "total_runtime": 549783
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 255871,
+    "total_runtime": 389020
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260636,
+    "total_runtime": 400682
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 260644,
+    "total_runtime": 405322
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 265520,
+    "total_runtime": 400343
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 266994,
+    "total_runtime": 395923
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 345880,
+    "total_runtime": 512729
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 289459,
+    "total_runtime": 433679
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 300639,
+    "total_runtime": 470700
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 328484,
+    "total_runtime": 517191
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 344525,
+    "total_runtime": 518916
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 255120,
+    "total_runtime": 378934
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 256005,
+    "total_runtime": 398902
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 56.0,
+    "startup_time": 242688,
+    "total_runtime": 430254
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 259097,
+    "total_runtime": 395928
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 281783,
+    "total_runtime": 423369
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 356907,
+    "total_runtime": 555512
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 273223,
+    "total_runtime": 435019
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 280934,
+    "total_runtime": 440546
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 288383,
+    "total_runtime": 458117
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 59.0,
+    "startup_time": 345122,
+    "total_runtime": 586284
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 258403,
+    "total_runtime": 387060
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 251487,
+    "total_runtime": 390731
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 236258,
+    "total_runtime": 379876
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 266666,
+    "total_runtime": 394553
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 241356,
+    "total_runtime": 387716
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 292276,
+    "total_runtime": 480497
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 260802,
+    "total_runtime": 407575
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 290450,
+    "total_runtime": 429822
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 346837,
+    "total_runtime": 528913
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 322084,
+    "total_runtime": 484289
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 246727,
+    "total_runtime": 376152
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 251016,
+    "total_runtime": 395552
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 235196,
+    "total_runtime": 366019
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 263657,
+    "total_runtime": 436301
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 258214,
+    "total_runtime": 398443
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 288876,
+    "total_runtime": 456637
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 265136,
+    "total_runtime": 427290
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 337685,
+    "total_runtime": 525993
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 313893,
+    "total_runtime": 487901
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 294637,
+    "total_runtime": 473046
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 231829,
+    "total_runtime": 361196
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 231293,
+    "total_runtime": 367516
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 263160,
+    "total_runtime": 417722
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 234829,
+    "total_runtime": 372561
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247491,
+    "total_runtime": 383206
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 249194,
+    "total_runtime": 379304
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 254624,
+    "total_runtime": 390242
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 242949,
+    "total_runtime": 371334
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 260221,
+    "total_runtime": 400391
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 302820,
+    "total_runtime": 441791
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 250405,
+    "total_runtime": 380033
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 256431,
+    "total_runtime": 402168
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 269839,
+    "total_runtime": 409520
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237997,
+    "total_runtime": 372118
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 281734,
+    "total_runtime": 437904
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 320231,
+    "total_runtime": 525935
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 239382,
+    "total_runtime": 380930
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 245275,
+    "total_runtime": 386756
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 303824,
+    "total_runtime": 476585
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "100",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 295677,
+    "total_runtime": 451999
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 274669,
+    "total_runtime": 418546
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 245063,
+    "total_runtime": 398818
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 275652,
+    "total_runtime": 411377
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 311078,
+    "total_runtime": 460944
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 308502,
+    "total_runtime": 453981
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 307301,
+    "total_runtime": 479604
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 261701,
+    "total_runtime": 396507
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247315,
+    "total_runtime": 374952
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "90",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 335020,
+    "total_runtime": 524577
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 305174,
+    "total_runtime": 509103
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 271393,
+    "total_runtime": 417680
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 261324,
+    "total_runtime": 402341
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 259038,
+    "total_runtime": 389557
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 264226,
+    "total_runtime": 407544
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 317396,
+    "total_runtime": 462522
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 338093,
+    "total_runtime": 531329
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 257946,
+    "total_runtime": 387297
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "80",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237890,
+    "total_runtime": 374254
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 70.0,
+    "startup_time": 310846,
+    "total_runtime": 443096
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 306562,
+    "total_runtime": 477770
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 256115,
+    "total_runtime": 393549
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 268587,
+    "total_runtime": 417712
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 232072,
+    "total_runtime": 358993
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 263485,
+    "total_runtime": 399184
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 260074,
+    "total_runtime": 403244
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 298273,
+    "total_runtime": 466643
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "70",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254272,
+    "total_runtime": 387641
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 241489,
+    "total_runtime": 367428
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 69.0,
+    "startup_time": 310053,
+    "total_runtime": 450099
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 334427,
+    "total_runtime": 506619
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 254282,
+    "total_runtime": 389927
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 269205,
+    "total_runtime": 409168
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 247528,
+    "total_runtime": 373293
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 61.0,
+    "startup_time": 269793,
+    "total_runtime": 445094
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 294090,
+    "total_runtime": 430643
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "60",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 317690,
+    "total_runtime": 513927
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 245244,
+    "total_runtime": 376344
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 254767,
+    "total_runtime": 385930
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 316441,
+    "total_runtime": 462062
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 57.0,
+    "startup_time": 289321,
+    "total_runtime": 508060
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 268210,
+    "total_runtime": 408129
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 241390,
+    "total_runtime": 377656
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 260292,
+    "total_runtime": 385965
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 268615,
+    "total_runtime": 406786
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "50",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 301428,
+    "total_runtime": 459598
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 62.0,
+    "startup_time": 297842,
+    "total_runtime": 481797
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 68.0,
+    "startup_time": 247764,
+    "total_runtime": 363342
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247215,
+    "total_runtime": 378307
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 348883,
+    "total_runtime": 578348
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 296921,
+    "total_runtime": 453407
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 271224,
+    "total_runtime": 419970
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 60.0,
+    "startup_time": 246107,
+    "total_runtime": 409115
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 321576,
+    "total_runtime": 450823
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "40",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 282319,
+    "total_runtime": 427290
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 275748,
+    "total_runtime": 437527
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 327886,
+    "total_runtime": 510365
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 254715,
+    "total_runtime": 379962
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 266020,
+    "total_runtime": 401260
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 72.0,
+    "startup_time": 354794,
+    "total_runtime": 494492
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 342276,
+    "total_runtime": 511071
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 273394,
+    "total_runtime": 415219
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 246200,
+    "total_runtime": 390785
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "30",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 247718,
+    "total_runtime": 382784
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 292021,
+    "total_runtime": 439986
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 258326,
+    "total_runtime": 390817
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 253366,
+    "total_runtime": 385964
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 237481,
+    "total_runtime": 371716
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 235984,
+    "total_runtime": 367827
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 237688,
+    "total_runtime": 364686
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 274020,
+    "total_runtime": 430572
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 221825,
+    "total_runtime": 353509
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "20",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 253495,
+    "total_runtime": 405372
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 63.0,
+    "startup_time": 240226,
+    "total_runtime": 378631
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 255901,
+    "total_runtime": 380945
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 251931,
+    "total_runtime": 374145
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 66.0,
+    "startup_time": 245972,
+    "total_runtime": 375196
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 58.0,
+    "startup_time": 246204,
+    "total_runtime": 426927
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 256571,
+    "total_runtime": 385047
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 263669,
+    "total_runtime": 393711
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 67.0,
+    "startup_time": 289473,
+    "total_runtime": 429232
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Docker",
+    "input": "10",
+    "base_image": "ubuntu",
+    "startup_percentage": 65.0,
+    "startup_time": 238687,
+    "total_runtime": 367604
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 64.0,
+    "startup_time": 264168,
+    "total_runtime": 410248
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Docker",
+    "input": "12",
+    "base_image": "ubuntu",
+    "startup_percentage": 71.0,
+    "startup_time": 295978,
+    "total_runtime": 414921
+  }
+]

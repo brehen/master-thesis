@@ -1,0 +1,6290 @@
+[
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "59",
+    "startup_time": 186380,
+    "startup_percentage": 100.0,
+    "total_runtime": 186959
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 187185,
+    "startup_percentage": 100.0,
+    "total_runtime": 187693
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 185216,
+    "startup_percentage": 100.0,
+    "total_runtime": 185752
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183489,
+    "startup_percentage": 100.0,
+    "total_runtime": 183986
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 205446,
+    "startup_percentage": 100.0,
+    "total_runtime": 206098
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 208368,
+    "startup_percentage": 100.0,
+    "total_runtime": 208877
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 182731,
+    "startup_percentage": 100.0,
+    "total_runtime": 183263
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 182974,
+    "startup_percentage": 100.0,
+    "total_runtime": 183470
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183107,
+    "startup_percentage": 100.0,
+    "total_runtime": 183613
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183026,
+    "startup_percentage": 100.0,
+    "total_runtime": 183545
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183023,
+    "startup_percentage": 100.0,
+    "total_runtime": 183566
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 186076,
+    "startup_percentage": 100.0,
+    "total_runtime": 186591
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118455,
+    "startup_percentage": 3.0,
+    "total_runtime": 4575530
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118368,
+    "startup_percentage": 2.0,
+    "total_runtime": 4738584
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 120417,
+    "startup_percentage": 3.0,
+    "total_runtime": 4576254
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 124912,
+    "startup_percentage": 3.0,
+    "total_runtime": 4594518
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118318,
+    "startup_percentage": 3.0,
+    "total_runtime": 4565515
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118427,
+    "startup_percentage": 3.0,
+    "total_runtime": 4580622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118319,
+    "startup_percentage": 3.0,
+    "total_runtime": 4564681
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 148209,
+    "startup_percentage": 3.0,
+    "total_runtime": 4654638
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "45",
+    "startup_time": 118342,
+    "startup_percentage": 3.0,
+    "total_runtime": 4578139
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118416,
+    "startup_percentage": 4.0,
+    "total_runtime": 2889566
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118511,
+    "startup_percentage": 4.0,
+    "total_runtime": 2886454
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118643,
+    "startup_percentage": 4.0,
+    "total_runtime": 2883315
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118351,
+    "startup_percentage": 4.0,
+    "total_runtime": 2867989
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118578,
+    "startup_percentage": 4.0,
+    "total_runtime": 2872943
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 122767,
+    "startup_percentage": 4.0,
+    "total_runtime": 2874779
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 117901,
+    "startup_percentage": 4.0,
+    "total_runtime": 2885953
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 117403,
+    "startup_percentage": 4.0,
+    "total_runtime": 2864372
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "44",
+    "startup_time": 118368,
+    "startup_percentage": 4.0,
+    "total_runtime": 2868463
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 121364,
+    "startup_percentage": 7.0,
+    "total_runtime": 1842340
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 119484,
+    "startup_percentage": 7.0,
+    "total_runtime": 1826337
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 119643,
+    "startup_percentage": 6.0,
+    "total_runtime": 1854852
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 119454,
+    "startup_percentage": 6.0,
+    "total_runtime": 1847836
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 120896,
+    "startup_percentage": 7.0,
+    "total_runtime": 1854836
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 119049,
+    "startup_percentage": 7.0,
+    "total_runtime": 1822803
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 125426,
+    "startup_percentage": 7.0,
+    "total_runtime": 1867115
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 120393,
+    "startup_percentage": 7.0,
+    "total_runtime": 1839046
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "43",
+    "startup_time": 130051,
+    "startup_percentage": 7.0,
+    "total_runtime": 1902733
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 131871,
+    "startup_percentage": 11.0,
+    "total_runtime": 1210874
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 119385,
+    "startup_percentage": 10.0,
+    "total_runtime": 1175347
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 119192,
+    "startup_percentage": 10.0,
+    "total_runtime": 1176842
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118859,
+    "startup_percentage": 10.0,
+    "total_runtime": 1176458
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118982,
+    "startup_percentage": 10.0,
+    "total_runtime": 1182701
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118458,
+    "startup_percentage": 10.0,
+    "total_runtime": 1171013
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118469,
+    "startup_percentage": 10.0,
+    "total_runtime": 1170404
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118988,
+    "startup_percentage": 10.0,
+    "total_runtime": 1174610
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "42",
+    "startup_time": 118774,
+    "startup_percentage": 10.0,
+    "total_runtime": 1175548
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 124972,
+    "startup_percentage": 16.0,
+    "total_runtime": 803584
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 117822,
+    "startup_percentage": 15.0,
+    "total_runtime": 767470
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 118142,
+    "startup_percentage": 15.0,
+    "total_runtime": 768479
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 119215,
+    "startup_percentage": 15.0,
+    "total_runtime": 771097
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 117828,
+    "startup_percentage": 15.0,
+    "total_runtime": 768130
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 117869,
+    "startup_percentage": 15.0,
+    "total_runtime": 766866
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 118637,
+    "startup_percentage": 15.0,
+    "total_runtime": 767756
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 124173,
+    "startup_percentage": 16.0,
+    "total_runtime": 781361
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "41",
+    "startup_time": 118034,
+    "startup_percentage": 15.0,
+    "total_runtime": 771816
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 121447,
+    "startup_percentage": 23.0,
+    "total_runtime": 536187
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 118818,
+    "startup_percentage": 22.0,
+    "total_runtime": 529043
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 119654,
+    "startup_percentage": 23.0,
+    "total_runtime": 525244
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 118291,
+    "startup_percentage": 23.0,
+    "total_runtime": 519871
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 117745,
+    "startup_percentage": 22.0,
+    "total_runtime": 526122
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 122409,
+    "startup_percentage": 23.0,
+    "total_runtime": 540537
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 121399,
+    "startup_percentage": 23.0,
+    "total_runtime": 523439
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 145867,
+    "startup_percentage": 26.0,
+    "total_runtime": 563935
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 120770,
+    "startup_percentage": 23.0,
+    "total_runtime": 526494
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 125236,
+    "startup_percentage": 33.0,
+    "total_runtime": 381446
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 119113,
+    "startup_percentage": 32.0,
+    "total_runtime": 368962
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 117962,
+    "startup_percentage": 32.0,
+    "total_runtime": 366757
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 120594,
+    "startup_percentage": 32.0,
+    "total_runtime": 376225
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 118607,
+    "startup_percentage": 32.0,
+    "total_runtime": 368018
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 119721,
+    "startup_percentage": 32.0,
+    "total_runtime": 369445
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 118660,
+    "startup_percentage": 32.0,
+    "total_runtime": 367961
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 118986,
+    "startup_percentage": 32.0,
+    "total_runtime": 368537
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "39",
+    "startup_time": 119689,
+    "startup_percentage": 32.0,
+    "total_runtime": 369117
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 125663,
+    "startup_percentage": 44.0,
+    "total_runtime": 286165
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 121020,
+    "startup_percentage": 44.0,
+    "total_runtime": 276618
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 120204,
+    "startup_percentage": 44.0,
+    "total_runtime": 274270
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 118058,
+    "startup_percentage": 43.0,
+    "total_runtime": 272786
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 118726,
+    "startup_percentage": 44.0,
+    "total_runtime": 272447
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 120414,
+    "startup_percentage": 44.0,
+    "total_runtime": 276501
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 119249,
+    "startup_percentage": 44.0,
+    "total_runtime": 273836
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 118948,
+    "startup_percentage": 43.0,
+    "total_runtime": 275045
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "38",
+    "startup_time": 125105,
+    "startup_percentage": 44.0,
+    "total_runtime": 284890
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 118007,
+    "startup_percentage": 55.0,
+    "total_runtime": 213256
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 117810,
+    "startup_percentage": 55.0,
+    "total_runtime": 212903
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 121605,
+    "startup_percentage": 54.0,
+    "total_runtime": 225666
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 121037,
+    "startup_percentage": 55.0,
+    "total_runtime": 218332
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 131610,
+    "startup_percentage": 58.0,
+    "total_runtime": 227586
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 119192,
+    "startup_percentage": 53.0,
+    "total_runtime": 225928
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 120261,
+    "startup_percentage": 56.0,
+    "total_runtime": 215649
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 123343,
+    "startup_percentage": 56.0,
+    "total_runtime": 221398
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "37",
+    "startup_time": 118863,
+    "startup_percentage": 55.0,
+    "total_runtime": 214474
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 121816,
+    "startup_percentage": 67.0,
+    "total_runtime": 181079
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 119692,
+    "startup_percentage": 67.0,
+    "total_runtime": 179684
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 120290,
+    "startup_percentage": 67.0,
+    "total_runtime": 179952
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 129302,
+    "startup_percentage": 68.0,
+    "total_runtime": 190866
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 118545,
+    "startup_percentage": 67.0,
+    "total_runtime": 177612
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 120843,
+    "startup_percentage": 66.0,
+    "total_runtime": 183583
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 119030,
+    "startup_percentage": 67.0,
+    "total_runtime": 178442
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 118507,
+    "startup_percentage": 66.0,
+    "total_runtime": 178777
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "36",
+    "startup_time": 117856,
+    "startup_percentage": 67.0,
+    "total_runtime": 176927
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 117967,
+    "startup_percentage": 76.0,
+    "total_runtime": 155473
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 118117,
+    "startup_percentage": 76.0,
+    "total_runtime": 155473
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 119229,
+    "startup_percentage": 76.0,
+    "total_runtime": 156881
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 125459,
+    "startup_percentage": 77.0,
+    "total_runtime": 163730
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 120421,
+    "startup_percentage": 77.0,
+    "total_runtime": 157294
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 121714,
+    "startup_percentage": 71.0,
+    "total_runtime": 170746
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 122874,
+    "startup_percentage": 77.0,
+    "total_runtime": 160001
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 120531,
+    "startup_percentage": 77.0,
+    "total_runtime": 157329
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "35",
+    "startup_time": 123691,
+    "startup_percentage": 77.0,
+    "total_runtime": 160326
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 118947,
+    "startup_percentage": 84.0,
+    "total_runtime": 141916
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 118894,
+    "startup_percentage": 84.0,
+    "total_runtime": 141934
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 119708,
+    "startup_percentage": 84.0,
+    "total_runtime": 142788
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 120189,
+    "startup_percentage": 84.0,
+    "total_runtime": 143230
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 120405,
+    "startup_percentage": 84.0,
+    "total_runtime": 143458
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 119908,
+    "startup_percentage": 84.0,
+    "total_runtime": 143340
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 118898,
+    "startup_percentage": 84.0,
+    "total_runtime": 141889
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 119220,
+    "startup_percentage": 84.0,
+    "total_runtime": 142196
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "34",
+    "startup_time": 119220,
+    "startup_percentage": 84.0,
+    "total_runtime": 142258
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 119063,
+    "startup_percentage": 89.0,
+    "total_runtime": 133514
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 120756,
+    "startup_percentage": 89.0,
+    "total_runtime": 135150
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 119860,
+    "startup_percentage": 89.0,
+    "total_runtime": 134214
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 123272,
+    "startup_percentage": 90.0,
+    "total_runtime": 137664
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 122421,
+    "startup_percentage": 90.0,
+    "total_runtime": 136758
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 119846,
+    "startup_percentage": 89.0,
+    "total_runtime": 134319
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 118853,
+    "startup_percentage": 89.0,
+    "total_runtime": 133266
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 120153,
+    "startup_percentage": 89.0,
+    "total_runtime": 134733
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "33",
+    "startup_time": 119002,
+    "startup_percentage": 84.0,
+    "total_runtime": 141227
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 156935,
+    "startup_percentage": 94.0,
+    "total_runtime": 167102
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 152068,
+    "startup_percentage": 88.0,
+    "total_runtime": 171988
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 118897,
+    "startup_percentage": 93.0,
+    "total_runtime": 128025
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 119877,
+    "startup_percentage": 93.0,
+    "total_runtime": 128967
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 128259,
+    "startup_percentage": 93.0,
+    "total_runtime": 137926
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 125068,
+    "startup_percentage": 93.0,
+    "total_runtime": 134594
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 118678,
+    "startup_percentage": 93.0,
+    "total_runtime": 127767
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 136755,
+    "startup_percentage": 94.0,
+    "total_runtime": 145861
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "32",
+    "startup_time": 119647,
+    "startup_percentage": 93.0,
+    "total_runtime": 128749
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 119152,
+    "startup_percentage": 95.0,
+    "total_runtime": 124984
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 119171,
+    "startup_percentage": 95.0,
+    "total_runtime": 124960
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 120516,
+    "startup_percentage": 95.0,
+    "total_runtime": 127158
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 122893,
+    "startup_percentage": 95.0,
+    "total_runtime": 128759
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 119007,
+    "startup_percentage": 95.0,
+    "total_runtime": 124861
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 119252,
+    "startup_percentage": 95.0,
+    "total_runtime": 125125
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 120991,
+    "startup_percentage": 95.0,
+    "total_runtime": 127185
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 126546,
+    "startup_percentage": 96.0,
+    "total_runtime": 132467
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "31",
+    "startup_time": 119332,
+    "startup_percentage": 95.0,
+    "total_runtime": 125146
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 118006,
+    "startup_percentage": 97.0,
+    "total_runtime": 121817
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 124356,
+    "startup_percentage": 97.0,
+    "total_runtime": 128273
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 118850,
+    "startup_percentage": 97.0,
+    "total_runtime": 122651
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 119911,
+    "startup_percentage": 97.0,
+    "total_runtime": 123679
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 121400,
+    "startup_percentage": 97.0,
+    "total_runtime": 125213
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 118296,
+    "startup_percentage": 97.0,
+    "total_runtime": 122107
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 118439,
+    "startup_percentage": 97.0,
+    "total_runtime": 122237
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 119215,
+    "startup_percentage": 97.0,
+    "total_runtime": 123004
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 130398,
+    "startup_percentage": 97.0,
+    "total_runtime": 134202
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 122300,
+    "startup_percentage": 98.0,
+    "total_runtime": 124841
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 127320,
+    "startup_percentage": 98.0,
+    "total_runtime": 129871
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 123164,
+    "startup_percentage": 98.0,
+    "total_runtime": 125797
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 118372,
+    "startup_percentage": 98.0,
+    "total_runtime": 120909
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 119716,
+    "startup_percentage": 98.0,
+    "total_runtime": 122246
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 118650,
+    "startup_percentage": 98.0,
+    "total_runtime": 121168
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 126099,
+    "startup_percentage": 98.0,
+    "total_runtime": 128638
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 120009,
+    "startup_percentage": 98.0,
+    "total_runtime": 122549
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "29",
+    "startup_time": 118689,
+    "startup_percentage": 98.0,
+    "total_runtime": 121216
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 118828,
+    "startup_percentage": 99.0,
+    "total_runtime": 120575
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 118914,
+    "startup_percentage": 99.0,
+    "total_runtime": 120689
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 118714,
+    "startup_percentage": 99.0,
+    "total_runtime": 120493
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 119032,
+    "startup_percentage": 98.0,
+    "total_runtime": 120854
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 123547,
+    "startup_percentage": 99.0,
+    "total_runtime": 125297
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 125342,
+    "startup_percentage": 99.0,
+    "total_runtime": 127119
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 119513,
+    "startup_percentage": 99.0,
+    "total_runtime": 121274
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 119545,
+    "startup_percentage": 98.0,
+    "total_runtime": 122182
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "28",
+    "startup_time": 159623,
+    "startup_percentage": 99.0,
+    "total_runtime": 161373
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 121182,
+    "startup_percentage": 99.0,
+    "total_runtime": 122461
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 118897,
+    "startup_percentage": 99.0,
+    "total_runtime": 120189
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 118996,
+    "startup_percentage": 99.0,
+    "total_runtime": 120265
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 119290,
+    "startup_percentage": 99.0,
+    "total_runtime": 120581
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 119455,
+    "startup_percentage": 99.0,
+    "total_runtime": 120728
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 119164,
+    "startup_percentage": 99.0,
+    "total_runtime": 120446
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 122381,
+    "startup_percentage": 99.0,
+    "total_runtime": 123728
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 120662,
+    "startup_percentage": 99.0,
+    "total_runtime": 121971
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "27",
+    "startup_time": 118619,
+    "startup_percentage": 99.0,
+    "total_runtime": 119911
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 120446,
+    "startup_percentage": 99.0,
+    "total_runtime": 121474
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 120990,
+    "startup_percentage": 99.0,
+    "total_runtime": 121986
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 118369,
+    "startup_percentage": 99.0,
+    "total_runtime": 119365
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 122634,
+    "startup_percentage": 99.0,
+    "total_runtime": 123638
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 119278,
+    "startup_percentage": 99.0,
+    "total_runtime": 120284
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 119180,
+    "startup_percentage": 99.0,
+    "total_runtime": 120203
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 119925,
+    "startup_percentage": 99.0,
+    "total_runtime": 120953
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 119500,
+    "startup_percentage": 99.0,
+    "total_runtime": 120560
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "26",
+    "startup_time": 122351,
+    "startup_percentage": 99.0,
+    "total_runtime": 123359
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 120432,
+    "startup_percentage": 99.0,
+    "total_runtime": 121232
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 118709,
+    "startup_percentage": 99.0,
+    "total_runtime": 119526
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 118448,
+    "startup_percentage": 99.0,
+    "total_runtime": 119242
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 120774,
+    "startup_percentage": 99.0,
+    "total_runtime": 121580
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 119172,
+    "startup_percentage": 99.0,
+    "total_runtime": 120002
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 120190,
+    "startup_percentage": 99.0,
+    "total_runtime": 121000
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 121081,
+    "startup_percentage": 99.0,
+    "total_runtime": 121879
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 122842,
+    "startup_percentage": 99.0,
+    "total_runtime": 123617
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "25",
+    "startup_time": 119286,
+    "startup_percentage": 99.0,
+    "total_runtime": 120108
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 129316,
+    "startup_percentage": 99.0,
+    "total_runtime": 129985
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 119996,
+    "startup_percentage": 99.0,
+    "total_runtime": 120673
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 119528,
+    "startup_percentage": 99.0,
+    "total_runtime": 120207
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 118910,
+    "startup_percentage": 99.0,
+    "total_runtime": 119576
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 119311,
+    "startup_percentage": 99.0,
+    "total_runtime": 120009
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 122259,
+    "startup_percentage": 99.0,
+    "total_runtime": 122948
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 126077,
+    "startup_percentage": 99.0,
+    "total_runtime": 126795
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 124068,
+    "startup_percentage": 99.0,
+    "total_runtime": 124790
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "24",
+    "startup_time": 117828,
+    "startup_percentage": 99.0,
+    "total_runtime": 118541
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 117929,
+    "startup_percentage": 99.0,
+    "total_runtime": 118548
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 119129,
+    "startup_percentage": 100.0,
+    "total_runtime": 119722
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 123796,
+    "startup_percentage": 100.0,
+    "total_runtime": 124402
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 126085,
+    "startup_percentage": 99.0,
+    "total_runtime": 126737
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 119007,
+    "startup_percentage": 99.0,
+    "total_runtime": 119606
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 129481,
+    "startup_percentage": 99.0,
+    "total_runtime": 130151
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 118460,
+    "startup_percentage": 99.0,
+    "total_runtime": 119133
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 118324,
+    "startup_percentage": 99.0,
+    "total_runtime": 118926
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "23",
+    "startup_time": 123265,
+    "startup_percentage": 100.0,
+    "total_runtime": 123857
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 125763,
+    "startup_percentage": 100.0,
+    "total_runtime": 126359
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 119529,
+    "startup_percentage": 100.0,
+    "total_runtime": 120114
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 134024,
+    "startup_percentage": 99.0,
+    "total_runtime": 134907
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 118719,
+    "startup_percentage": 100.0,
+    "total_runtime": 119294
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 120696,
+    "startup_percentage": 99.0,
+    "total_runtime": 121330
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 126073,
+    "startup_percentage": 100.0,
+    "total_runtime": 126650
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 122256,
+    "startup_percentage": 100.0,
+    "total_runtime": 122837
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 124264,
+    "startup_percentage": 100.0,
+    "total_runtime": 124868
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "22",
+    "startup_time": 120207,
+    "startup_percentage": 100.0,
+    "total_runtime": 120782
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 123712,
+    "startup_percentage": 100.0,
+    "total_runtime": 124252
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 119927,
+    "startup_percentage": 100.0,
+    "total_runtime": 120500
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 118852,
+    "startup_percentage": 100.0,
+    "total_runtime": 119400
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 120721,
+    "startup_percentage": 100.0,
+    "total_runtime": 121309
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 122475,
+    "startup_percentage": 100.0,
+    "total_runtime": 123067
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 118067,
+    "startup_percentage": 100.0,
+    "total_runtime": 118600
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 118621,
+    "startup_percentage": 100.0,
+    "total_runtime": 119177
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 122764,
+    "startup_percentage": 100.0,
+    "total_runtime": 123359
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "21",
+    "startup_time": 122299,
+    "startup_percentage": 100.0,
+    "total_runtime": 122861
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 118774,
+    "startup_percentage": 100.0,
+    "total_runtime": 119333
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 125141,
+    "startup_percentage": 100.0,
+    "total_runtime": 125676
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 118204,
+    "startup_percentage": 100.0,
+    "total_runtime": 118765
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 131704,
+    "startup_percentage": 100.0,
+    "total_runtime": 132263
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 118465,
+    "startup_percentage": 100.0,
+    "total_runtime": 119013
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 118741,
+    "startup_percentage": 100.0,
+    "total_runtime": 119258
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 119129,
+    "startup_percentage": 100.0,
+    "total_runtime": 119664
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 118487,
+    "startup_percentage": 100.0,
+    "total_runtime": 119013
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 119461,
+    "startup_percentage": 100.0,
+    "total_runtime": 119981
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 119984,
+    "startup_percentage": 100.0,
+    "total_runtime": 120516
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 150185,
+    "startup_percentage": 100.0,
+    "total_runtime": 150873
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 126918,
+    "startup_percentage": 100.0,
+    "total_runtime": 127444
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 118222,
+    "startup_percentage": 100.0,
+    "total_runtime": 118738
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 120717,
+    "startup_percentage": 100.0,
+    "total_runtime": 121266
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 118766,
+    "startup_percentage": 100.0,
+    "total_runtime": 119286
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 118433,
+    "startup_percentage": 100.0,
+    "total_runtime": 118937
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 119511,
+    "startup_percentage": 100.0,
+    "total_runtime": 120078
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "19",
+    "startup_time": 118880,
+    "startup_percentage": 100.0,
+    "total_runtime": 119425
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 121067,
+    "startup_percentage": 100.0,
+    "total_runtime": 121584
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 119599,
+    "startup_percentage": 100.0,
+    "total_runtime": 120106
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 123883,
+    "startup_percentage": 100.0,
+    "total_runtime": 124398
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 118625,
+    "startup_percentage": 100.0,
+    "total_runtime": 119164
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 119187,
+    "startup_percentage": 100.0,
+    "total_runtime": 119689
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 124757,
+    "startup_percentage": 100.0,
+    "total_runtime": 125287
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 122343,
+    "startup_percentage": 100.0,
+    "total_runtime": 122867
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 120240,
+    "startup_percentage": 100.0,
+    "total_runtime": 120735
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "18",
+    "startup_time": 119845,
+    "startup_percentage": 100.0,
+    "total_runtime": 120357
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 119062,
+    "startup_percentage": 100.0,
+    "total_runtime": 119557
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 122368,
+    "startup_percentage": 100.0,
+    "total_runtime": 122888
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 117850,
+    "startup_percentage": 100.0,
+    "total_runtime": 118383
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 118492,
+    "startup_percentage": 100.0,
+    "total_runtime": 119003
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 119838,
+    "startup_percentage": 100.0,
+    "total_runtime": 120374
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 120588,
+    "startup_percentage": 100.0,
+    "total_runtime": 121096
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 118145,
+    "startup_percentage": 100.0,
+    "total_runtime": 118635
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 119058,
+    "startup_percentage": 100.0,
+    "total_runtime": 119556
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "17",
+    "startup_time": 118438,
+    "startup_percentage": 100.0,
+    "total_runtime": 118945
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 118284,
+    "startup_percentage": 100.0,
+    "total_runtime": 118825
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 117960,
+    "startup_percentage": 100.0,
+    "total_runtime": 118469
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 117685,
+    "startup_percentage": 100.0,
+    "total_runtime": 118180
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 119843,
+    "startup_percentage": 100.0,
+    "total_runtime": 120335
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 118654,
+    "startup_percentage": 100.0,
+    "total_runtime": 119155
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 118368,
+    "startup_percentage": 100.0,
+    "total_runtime": 118924
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 118273,
+    "startup_percentage": 100.0,
+    "total_runtime": 118771
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 119708,
+    "startup_percentage": 100.0,
+    "total_runtime": 120190
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "16",
+    "startup_time": 120876,
+    "startup_percentage": 100.0,
+    "total_runtime": 121476
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 128186,
+    "startup_percentage": 100.0,
+    "total_runtime": 128734
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 119258,
+    "startup_percentage": 100.0,
+    "total_runtime": 119731
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 118799,
+    "startup_percentage": 100.0,
+    "total_runtime": 119293
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 118157,
+    "startup_percentage": 100.0,
+    "total_runtime": 118656
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 120040,
+    "startup_percentage": 100.0,
+    "total_runtime": 120537
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 119444,
+    "startup_percentage": 100.0,
+    "total_runtime": 119955
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 118685,
+    "startup_percentage": 100.0,
+    "total_runtime": 119231
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 118563,
+    "startup_percentage": 100.0,
+    "total_runtime": 119071
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "15",
+    "startup_time": 120026,
+    "startup_percentage": 100.0,
+    "total_runtime": 120546
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 120294,
+    "startup_percentage": 100.0,
+    "total_runtime": 120790
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 118851,
+    "startup_percentage": 100.0,
+    "total_runtime": 119338
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 120070,
+    "startup_percentage": 100.0,
+    "total_runtime": 120562
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 118055,
+    "startup_percentage": 100.0,
+    "total_runtime": 118539
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 124006,
+    "startup_percentage": 100.0,
+    "total_runtime": 124499
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 118297,
+    "startup_percentage": 100.0,
+    "total_runtime": 118808
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 128677,
+    "startup_percentage": 99.0,
+    "total_runtime": 130053
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 127416,
+    "startup_percentage": 100.0,
+    "total_runtime": 127920
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "14",
+    "startup_time": 119777,
+    "startup_percentage": 100.0,
+    "total_runtime": 120307
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 118513,
+    "startup_percentage": 100.0,
+    "total_runtime": 119008
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 125795,
+    "startup_percentage": 100.0,
+    "total_runtime": 126347
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 118401,
+    "startup_percentage": 100.0,
+    "total_runtime": 118906
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 127968,
+    "startup_percentage": 100.0,
+    "total_runtime": 128509
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 118418,
+    "startup_percentage": 100.0,
+    "total_runtime": 118929
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 123219,
+    "startup_percentage": 100.0,
+    "total_runtime": 123718
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 119523,
+    "startup_percentage": 100.0,
+    "total_runtime": 120025
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 123036,
+    "startup_percentage": 100.0,
+    "total_runtime": 123588
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "13",
+    "startup_time": 120490,
+    "startup_percentage": 100.0,
+    "total_runtime": 121006
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 118701,
+    "startup_percentage": 100.0,
+    "total_runtime": 119202
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 120000,
+    "startup_percentage": 100.0,
+    "total_runtime": 120490
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 119961,
+    "startup_percentage": 100.0,
+    "total_runtime": 120477
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 119711,
+    "startup_percentage": 99.0,
+    "total_runtime": 120321
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 119277,
+    "startup_percentage": 100.0,
+    "total_runtime": 119774
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 119926,
+    "startup_percentage": 100.0,
+    "total_runtime": 120439
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 119694,
+    "startup_percentage": 100.0,
+    "total_runtime": 120216
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 121329,
+    "startup_percentage": 100.0,
+    "total_runtime": 121839
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "12",
+    "startup_time": 120741,
+    "startup_percentage": 100.0,
+    "total_runtime": 121264
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 120167,
+    "startup_percentage": 100.0,
+    "total_runtime": 120683
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 118854,
+    "startup_percentage": 100.0,
+    "total_runtime": 119360
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 123793,
+    "startup_percentage": 100.0,
+    "total_runtime": 124280
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 120283,
+    "startup_percentage": 100.0,
+    "total_runtime": 120778
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 119240,
+    "startup_percentage": 100.0,
+    "total_runtime": 119730
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 119732,
+    "startup_percentage": 100.0,
+    "total_runtime": 120259
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 122419,
+    "startup_percentage": 100.0,
+    "total_runtime": 122941
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 120542,
+    "startup_percentage": 100.0,
+    "total_runtime": 121058
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "11",
+    "startup_time": 145741,
+    "startup_percentage": 100.0,
+    "total_runtime": 146415
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 127587,
+    "startup_percentage": 100.0,
+    "total_runtime": 128125
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 119379,
+    "startup_percentage": 100.0,
+    "total_runtime": 119876
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 119669,
+    "startup_percentage": 100.0,
+    "total_runtime": 120166
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 119091,
+    "startup_percentage": 100.0,
+    "total_runtime": 119585
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 131499,
+    "startup_percentage": 100.0,
+    "total_runtime": 132096
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 120658,
+    "startup_percentage": 100.0,
+    "total_runtime": 121193
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 120358,
+    "startup_percentage": 100.0,
+    "total_runtime": 120844
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 138192,
+    "startup_percentage": 99.0,
+    "total_runtime": 138897
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 120578,
+    "startup_percentage": 100.0,
+    "total_runtime": 121065
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 118749,
+    "startup_percentage": 100.0,
+    "total_runtime": 119249
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 127268,
+    "startup_percentage": 100.0,
+    "total_runtime": 127804
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 123627,
+    "startup_percentage": 100.0,
+    "total_runtime": 124120
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 120750,
+    "startup_percentage": 100.0,
+    "total_runtime": 121264
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 122402,
+    "startup_percentage": 100.0,
+    "total_runtime": 122904
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 118957,
+    "startup_percentage": 100.0,
+    "total_runtime": 119441
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 125896,
+    "startup_percentage": 100.0,
+    "total_runtime": 126393
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 119824,
+    "startup_percentage": 100.0,
+    "total_runtime": 120344
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "9",
+    "startup_time": 120855,
+    "startup_percentage": 100.0,
+    "total_runtime": 121380
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 121929,
+    "startup_percentage": 100.0,
+    "total_runtime": 122419
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 119258,
+    "startup_percentage": 100.0,
+    "total_runtime": 119791
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 121521,
+    "startup_percentage": 100.0,
+    "total_runtime": 122021
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 120713,
+    "startup_percentage": 100.0,
+    "total_runtime": 121233
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 119415,
+    "startup_percentage": 100.0,
+    "total_runtime": 119963
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 121567,
+    "startup_percentage": 100.0,
+    "total_runtime": 122062
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 125938,
+    "startup_percentage": 100.0,
+    "total_runtime": 126452
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 119208,
+    "startup_percentage": 100.0,
+    "total_runtime": 119691
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "8",
+    "startup_time": 123803,
+    "startup_percentage": 100.0,
+    "total_runtime": 124308
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 119939,
+    "startup_percentage": 100.0,
+    "total_runtime": 120417
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 119424,
+    "startup_percentage": 100.0,
+    "total_runtime": 119960
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 120329,
+    "startup_percentage": 100.0,
+    "total_runtime": 120824
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 120163,
+    "startup_percentage": 100.0,
+    "total_runtime": 120643
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 118683,
+    "startup_percentage": 100.0,
+    "total_runtime": 119169
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 119362,
+    "startup_percentage": 100.0,
+    "total_runtime": 119859
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 120456,
+    "startup_percentage": 100.0,
+    "total_runtime": 120984
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 120573,
+    "startup_percentage": 100.0,
+    "total_runtime": 121078
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "7",
+    "startup_time": 118954,
+    "startup_percentage": 100.0,
+    "total_runtime": 119455
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 118730,
+    "startup_percentage": 100.0,
+    "total_runtime": 119226
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 118899,
+    "startup_percentage": 100.0,
+    "total_runtime": 119379
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 119246,
+    "startup_percentage": 100.0,
+    "total_runtime": 119805
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 120018,
+    "startup_percentage": 100.0,
+    "total_runtime": 120537
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 117836,
+    "startup_percentage": 100.0,
+    "total_runtime": 118335
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 128031,
+    "startup_percentage": 100.0,
+    "total_runtime": 128514
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 118041,
+    "startup_percentage": 100.0,
+    "total_runtime": 118536
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 118548,
+    "startup_percentage": 100.0,
+    "total_runtime": 119041
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "6",
+    "startup_time": 117956,
+    "startup_percentage": 100.0,
+    "total_runtime": 118441
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 117815,
+    "startup_percentage": 100.0,
+    "total_runtime": 118330
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 118238,
+    "startup_percentage": 100.0,
+    "total_runtime": 118727
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 118109,
+    "startup_percentage": 100.0,
+    "total_runtime": 118591
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 121040,
+    "startup_percentage": 100.0,
+    "total_runtime": 121535
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 118114,
+    "startup_percentage": 100.0,
+    "total_runtime": 118593
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 117937,
+    "startup_percentage": 100.0,
+    "total_runtime": 118408
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 119985,
+    "startup_percentage": 100.0,
+    "total_runtime": 120481
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 120403,
+    "startup_percentage": 100.0,
+    "total_runtime": 120923
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "5",
+    "startup_time": 127774,
+    "startup_percentage": 100.0,
+    "total_runtime": 128264
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 120050,
+    "startup_percentage": 100.0,
+    "total_runtime": 120542
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 118120,
+    "startup_percentage": 100.0,
+    "total_runtime": 118602
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 118903,
+    "startup_percentage": 100.0,
+    "total_runtime": 119391
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 121973,
+    "startup_percentage": 100.0,
+    "total_runtime": 122454
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 120684,
+    "startup_percentage": 100.0,
+    "total_runtime": 121218
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 126691,
+    "startup_percentage": 100.0,
+    "total_runtime": 127203
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 121592,
+    "startup_percentage": 100.0,
+    "total_runtime": 122088
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 117737,
+    "startup_percentage": 100.0,
+    "total_runtime": 118240
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "4",
+    "startup_time": 121942,
+    "startup_percentage": 100.0,
+    "total_runtime": 122453
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 118777,
+    "startup_percentage": 100.0,
+    "total_runtime": 119281
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 120072,
+    "startup_percentage": 100.0,
+    "total_runtime": 120554
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 127208,
+    "startup_percentage": 100.0,
+    "total_runtime": 127724
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 131279,
+    "startup_percentage": 100.0,
+    "total_runtime": 131772
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 118833,
+    "startup_percentage": 100.0,
+    "total_runtime": 119357
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 120686,
+    "startup_percentage": 100.0,
+    "total_runtime": 121177
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 120135,
+    "startup_percentage": 100.0,
+    "total_runtime": 120622
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 119149,
+    "startup_percentage": 100.0,
+    "total_runtime": 119653
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "3",
+    "startup_time": 119641,
+    "startup_percentage": 100.0,
+    "total_runtime": 120137
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 130298,
+    "startup_percentage": 100.0,
+    "total_runtime": 130807
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 132601,
+    "startup_percentage": 100.0,
+    "total_runtime": 133096
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 119050,
+    "startup_percentage": 100.0,
+    "total_runtime": 119546
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 121477,
+    "startup_percentage": 100.0,
+    "total_runtime": 121967
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 118062,
+    "startup_percentage": 100.0,
+    "total_runtime": 118540
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 119369,
+    "startup_percentage": 100.0,
+    "total_runtime": 119845
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 120505,
+    "startup_percentage": 100.0,
+    "total_runtime": 120998
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 138472,
+    "startup_percentage": 100.0,
+    "total_runtime": 139026
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "2",
+    "startup_time": 131417,
+    "startup_percentage": 98.0,
+    "total_runtime": 134675
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 122458,
+    "startup_percentage": 100.0,
+    "total_runtime": 122987
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 119579,
+    "startup_percentage": 100.0,
+    "total_runtime": 120101
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 119676,
+    "startup_percentage": 100.0,
+    "total_runtime": 120168
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 121489,
+    "startup_percentage": 100.0,
+    "total_runtime": 122018
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 119259,
+    "startup_percentage": 100.0,
+    "total_runtime": 119734
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 122168,
+    "startup_percentage": 100.0,
+    "total_runtime": 122667
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 119597,
+    "startup_percentage": 100.0,
+    "total_runtime": 120097
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 119529,
+    "startup_percentage": 100.0,
+    "total_runtime": 120018
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "1",
+    "startup_time": 118286,
+    "startup_percentage": 100.0,
+    "total_runtime": 118773
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 118606,
+    "startup_percentage": 100.0,
+    "total_runtime": 119119
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 120778,
+    "startup_percentage": 100.0,
+    "total_runtime": 121322
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 122514,
+    "startup_percentage": 100.0,
+    "total_runtime": 123052
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 121994,
+    "startup_percentage": 100.0,
+    "total_runtime": 122496
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 118511,
+    "startup_percentage": 100.0,
+    "total_runtime": 119028
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 120373,
+    "startup_percentage": 100.0,
+    "total_runtime": 120861
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 118999,
+    "startup_percentage": 100.0,
+    "total_runtime": 119489
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 118783,
+    "startup_percentage": 100.0,
+    "total_runtime": 119340
+  },
+  {
+    "func_name": "fibonacci-recursive",
+    "func_type": "Wasm",
+    "input": "0",
+    "startup_time": 119536,
+    "startup_percentage": 100.0,
+    "total_runtime": 120024
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 185948,
+    "startup_percentage": 100.0,
+    "total_runtime": 186483
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 188512,
+    "startup_percentage": 100.0,
+    "total_runtime": 189037
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 196878,
+    "startup_percentage": 100.0,
+    "total_runtime": 197632
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 208606,
+    "startup_percentage": 100.0,
+    "total_runtime": 209135
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 203908,
+    "startup_percentage": 100.0,
+    "total_runtime": 204623
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 195648,
+    "startup_percentage": 100.0,
+    "total_runtime": 196141
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 206631,
+    "startup_percentage": 100.0,
+    "total_runtime": 207147
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 197104,
+    "startup_percentage": 100.0,
+    "total_runtime": 197623
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 198492,
+    "startup_percentage": 100.0,
+    "total_runtime": 199013
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 206618,
+    "startup_percentage": 100.0,
+    "total_runtime": 207132
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 185642,
+    "startup_percentage": 100.0,
+    "total_runtime": 186148
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 186239,
+    "startup_percentage": 100.0,
+    "total_runtime": 186769
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 187585,
+    "startup_percentage": 100.0,
+    "total_runtime": 188127
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 186759,
+    "startup_percentage": 100.0,
+    "total_runtime": 187273
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 188393,
+    "startup_percentage": 100.0,
+    "total_runtime": 188905
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 189260,
+    "startup_percentage": 100.0,
+    "total_runtime": 189802
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 188913,
+    "startup_percentage": 100.0,
+    "total_runtime": 189483
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 191621,
+    "startup_percentage": 100.0,
+    "total_runtime": 192197
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 188127,
+    "startup_percentage": 100.0,
+    "total_runtime": 188657
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 196850,
+    "startup_percentage": 100.0,
+    "total_runtime": 197385
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 190543,
+    "startup_percentage": 100.0,
+    "total_runtime": 191062
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 188457,
+    "startup_percentage": 100.0,
+    "total_runtime": 188959
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 188275,
+    "startup_percentage": 100.0,
+    "total_runtime": 188797
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 192064,
+    "startup_percentage": 100.0,
+    "total_runtime": 192573
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 187514,
+    "startup_percentage": 100.0,
+    "total_runtime": 188052
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 189333,
+    "startup_percentage": 100.0,
+    "total_runtime": 189847
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 189336,
+    "startup_percentage": 100.0,
+    "total_runtime": 189867
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 185515,
+    "startup_percentage": 100.0,
+    "total_runtime": 186028
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 186217,
+    "startup_percentage": 100.0,
+    "total_runtime": 186743
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 187823,
+    "startup_percentage": 100.0,
+    "total_runtime": 188352
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 196706,
+    "startup_percentage": 100.0,
+    "total_runtime": 197266
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 188113,
+    "startup_percentage": 100.0,
+    "total_runtime": 188618
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 186608,
+    "startup_percentage": 100.0,
+    "total_runtime": 187136
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 186883,
+    "startup_percentage": 100.0,
+    "total_runtime": 187419
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 186800,
+    "startup_percentage": 100.0,
+    "total_runtime": 187365
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 186492,
+    "startup_percentage": 100.0,
+    "total_runtime": 186992
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 186455,
+    "startup_percentage": 100.0,
+    "total_runtime": 186986
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 186448,
+    "startup_percentage": 100.0,
+    "total_runtime": 186975
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 188661,
+    "startup_percentage": 100.0,
+    "total_runtime": 189189
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 192493,
+    "startup_percentage": 100.0,
+    "total_runtime": 193029
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 188230,
+    "startup_percentage": 100.0,
+    "total_runtime": 188745
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 186902,
+    "startup_percentage": 100.0,
+    "total_runtime": 187419
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 188236,
+    "startup_percentage": 100.0,
+    "total_runtime": 188728
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 217135,
+    "startup_percentage": 100.0,
+    "total_runtime": 217636
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 194116,
+    "startup_percentage": 100.0,
+    "total_runtime": 194605
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186631,
+    "startup_percentage": 100.0,
+    "total_runtime": 187137
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 187721,
+    "startup_percentage": 100.0,
+    "total_runtime": 188219
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 187388,
+    "startup_percentage": 100.0,
+    "total_runtime": 187890
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 197726,
+    "startup_percentage": 100.0,
+    "total_runtime": 198233
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186139,
+    "startup_percentage": 100.0,
+    "total_runtime": 186637
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 189762,
+    "startup_percentage": 100.0,
+    "total_runtime": 190268
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186583,
+    "startup_percentage": 100.0,
+    "total_runtime": 187100
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 191730,
+    "startup_percentage": 100.0,
+    "total_runtime": 192247
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 190884,
+    "startup_percentage": 100.0,
+    "total_runtime": 191381
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 188242,
+    "startup_percentage": 100.0,
+    "total_runtime": 188753
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 187249,
+    "startup_percentage": 100.0,
+    "total_runtime": 187781
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 197560,
+    "startup_percentage": 100.0,
+    "total_runtime": 198250
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 187631,
+    "startup_percentage": 100.0,
+    "total_runtime": 188149
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 196497,
+    "startup_percentage": 100.0,
+    "total_runtime": 197074
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 190630,
+    "startup_percentage": 100.0,
+    "total_runtime": 191151
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 193966,
+    "startup_percentage": 100.0,
+    "total_runtime": 194486
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 192655,
+    "startup_percentage": 100.0,
+    "total_runtime": 193153
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 208042,
+    "startup_percentage": 100.0,
+    "total_runtime": 208701
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 188922,
+    "startup_percentage": 100.0,
+    "total_runtime": 189431
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 196704,
+    "startup_percentage": 100.0,
+    "total_runtime": 197220
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 194136,
+    "startup_percentage": 100.0,
+    "total_runtime": 194648
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 187528,
+    "startup_percentage": 100.0,
+    "total_runtime": 188095
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 189762,
+    "startup_percentage": 100.0,
+    "total_runtime": 190263
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 191349,
+    "startup_percentage": 100.0,
+    "total_runtime": 191876
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 200310,
+    "startup_percentage": 100.0,
+    "total_runtime": 200831
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 198633,
+    "startup_percentage": 100.0,
+    "total_runtime": 199141
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 201575,
+    "startup_percentage": 100.0,
+    "total_runtime": 202098
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 188269,
+    "startup_percentage": 100.0,
+    "total_runtime": 188765
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 197267,
+    "startup_percentage": 100.0,
+    "total_runtime": 197780
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 195520,
+    "startup_percentage": 100.0,
+    "total_runtime": 196003
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 195993,
+    "startup_percentage": 100.0,
+    "total_runtime": 196541
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 187346,
+    "startup_percentage": 100.0,
+    "total_runtime": 187846
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 195952,
+    "startup_percentage": 100.0,
+    "total_runtime": 196440
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 186159,
+    "startup_percentage": 100.0,
+    "total_runtime": 186649
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 189363,
+    "startup_percentage": 100.0,
+    "total_runtime": 189866
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 192120,
+    "startup_percentage": 100.0,
+    "total_runtime": 192651
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 207056,
+    "startup_percentage": 100.0,
+    "total_runtime": 207552
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 187014,
+    "startup_percentage": 100.0,
+    "total_runtime": 187557
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 203993,
+    "startup_percentage": 100.0,
+    "total_runtime": 204529
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 187722,
+    "startup_percentage": 100.0,
+    "total_runtime": 188245
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 185533,
+    "startup_percentage": 100.0,
+    "total_runtime": 186018
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 192055,
+    "startup_percentage": 100.0,
+    "total_runtime": 192558
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 186528,
+    "startup_percentage": 100.0,
+    "total_runtime": 187029
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 187459,
+    "startup_percentage": 100.0,
+    "total_runtime": 187939
+  },
+  {
+    "func_name": "prime-number",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 186962,
+    "startup_percentage": 100.0,
+    "total_runtime": 187460
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 128690,
+    "startup_percentage": 100.0,
+    "total_runtime": 129196
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 130345,
+    "startup_percentage": 100.0,
+    "total_runtime": 130867
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 129732,
+    "startup_percentage": 100.0,
+    "total_runtime": 130222
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 129125,
+    "startup_percentage": 100.0,
+    "total_runtime": 129659
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 128599,
+    "startup_percentage": 100.0,
+    "total_runtime": 129114
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 129006,
+    "startup_percentage": 100.0,
+    "total_runtime": 129509
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 129861,
+    "startup_percentage": 100.0,
+    "total_runtime": 130361
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 128989,
+    "startup_percentage": 100.0,
+    "total_runtime": 129485
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 130615,
+    "startup_percentage": 100.0,
+    "total_runtime": 131134
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 134962,
+    "startup_percentage": 100.0,
+    "total_runtime": 135477
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 128972,
+    "startup_percentage": 100.0,
+    "total_runtime": 129468
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 129016,
+    "startup_percentage": 100.0,
+    "total_runtime": 129503
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 129681,
+    "startup_percentage": 100.0,
+    "total_runtime": 130202
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 140715,
+    "startup_percentage": 100.0,
+    "total_runtime": 141286
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 136430,
+    "startup_percentage": 100.0,
+    "total_runtime": 136974
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 131875,
+    "startup_percentage": 100.0,
+    "total_runtime": 132373
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 129883,
+    "startup_percentage": 100.0,
+    "total_runtime": 130383
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 133975,
+    "startup_percentage": 100.0,
+    "total_runtime": 134474
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 129095,
+    "startup_percentage": 100.0,
+    "total_runtime": 129618
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 129746,
+    "startup_percentage": 100.0,
+    "total_runtime": 130239
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 133383,
+    "startup_percentage": 100.0,
+    "total_runtime": 133913
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 128295,
+    "startup_percentage": 100.0,
+    "total_runtime": 128799
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 139318,
+    "startup_percentage": 100.0,
+    "total_runtime": 139858
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 146445,
+    "startup_percentage": 100.0,
+    "total_runtime": 147137
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 133242,
+    "startup_percentage": 100.0,
+    "total_runtime": 133755
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 131832,
+    "startup_percentage": 100.0,
+    "total_runtime": 132426
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 131027,
+    "startup_percentage": 100.0,
+    "total_runtime": 131531
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 129384,
+    "startup_percentage": 100.0,
+    "total_runtime": 129931
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 131100,
+    "startup_percentage": 100.0,
+    "total_runtime": 131613
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 129344,
+    "startup_percentage": 100.0,
+    "total_runtime": 129852
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 132994,
+    "startup_percentage": 100.0,
+    "total_runtime": 133514
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 130850,
+    "startup_percentage": 100.0,
+    "total_runtime": 131335
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 132010,
+    "startup_percentage": 100.0,
+    "total_runtime": 132510
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 147033,
+    "startup_percentage": 100.0,
+    "total_runtime": 147585
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 131764,
+    "startup_percentage": 100.0,
+    "total_runtime": 132270
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 128126,
+    "startup_percentage": 100.0,
+    "total_runtime": 128631
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 127950,
+    "startup_percentage": 100.0,
+    "total_runtime": 128440
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 147759,
+    "startup_percentage": 100.0,
+    "total_runtime": 148286
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 128345,
+    "startup_percentage": 100.0,
+    "total_runtime": 128856
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 130554,
+    "startup_percentage": 100.0,
+    "total_runtime": 131109
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 128940,
+    "startup_percentage": 100.0,
+    "total_runtime": 129436
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 130514,
+    "startup_percentage": 100.0,
+    "total_runtime": 131059
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 132321,
+    "startup_percentage": 100.0,
+    "total_runtime": 132857
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 128297,
+    "startup_percentage": 100.0,
+    "total_runtime": 128806
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 155115,
+    "startup_percentage": 100.0,
+    "total_runtime": 155746
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 130054,
+    "startup_percentage": 100.0,
+    "total_runtime": 130564
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 139949,
+    "startup_percentage": 100.0,
+    "total_runtime": 140451
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 131243,
+    "startup_percentage": 100.0,
+    "total_runtime": 131800
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 129311,
+    "startup_percentage": 100.0,
+    "total_runtime": 129825
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 128706,
+    "startup_percentage": 100.0,
+    "total_runtime": 129245
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 129932,
+    "startup_percentage": 100.0,
+    "total_runtime": 130431
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 128256,
+    "startup_percentage": 100.0,
+    "total_runtime": 128758
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 131190,
+    "startup_percentage": 100.0,
+    "total_runtime": 131763
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 137747,
+    "startup_percentage": 100.0,
+    "total_runtime": 138272
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 129761,
+    "startup_percentage": 100.0,
+    "total_runtime": 130274
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 130064,
+    "startup_percentage": 100.0,
+    "total_runtime": 130618
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 128768,
+    "startup_percentage": 100.0,
+    "total_runtime": 129264
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 128850,
+    "startup_percentage": 100.0,
+    "total_runtime": 129343
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 129405,
+    "startup_percentage": 100.0,
+    "total_runtime": 129890
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 127653,
+    "startup_percentage": 100.0,
+    "total_runtime": 128158
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 132062,
+    "startup_percentage": 100.0,
+    "total_runtime": 132578
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 133968,
+    "startup_percentage": 100.0,
+    "total_runtime": 134509
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 134576,
+    "startup_percentage": 100.0,
+    "total_runtime": 135084
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 135147,
+    "startup_percentage": 100.0,
+    "total_runtime": 135677
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 134123,
+    "startup_percentage": 100.0,
+    "total_runtime": 134613
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 134281,
+    "startup_percentage": 100.0,
+    "total_runtime": 134768
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 128964,
+    "startup_percentage": 100.0,
+    "total_runtime": 129452
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 130223,
+    "startup_percentage": 100.0,
+    "total_runtime": 130736
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 129168,
+    "startup_percentage": 100.0,
+    "total_runtime": 129671
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 131023,
+    "startup_percentage": 100.0,
+    "total_runtime": 131519
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 130158,
+    "startup_percentage": 100.0,
+    "total_runtime": 130682
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 130148,
+    "startup_percentage": 100.0,
+    "total_runtime": 130676
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 130671,
+    "startup_percentage": 100.0,
+    "total_runtime": 131176
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 129462,
+    "startup_percentage": 100.0,
+    "total_runtime": 129955
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 133956,
+    "startup_percentage": 100.0,
+    "total_runtime": 134484
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 128474,
+    "startup_percentage": 100.0,
+    "total_runtime": 128989
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 137084,
+    "startup_percentage": 100.0,
+    "total_runtime": 137605
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 128558,
+    "startup_percentage": 100.0,
+    "total_runtime": 129087
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 148106,
+    "startup_percentage": 100.0,
+    "total_runtime": 148593
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 128263,
+    "startup_percentage": 100.0,
+    "total_runtime": 128759
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 129676,
+    "startup_percentage": 100.0,
+    "total_runtime": 130180
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 130003,
+    "startup_percentage": 100.0,
+    "total_runtime": 130491
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 128859,
+    "startup_percentage": 100.0,
+    "total_runtime": 129378
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 133013,
+    "startup_percentage": 100.0,
+    "total_runtime": 133541
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 131877,
+    "startup_percentage": 100.0,
+    "total_runtime": 132371
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 128487,
+    "startup_percentage": 100.0,
+    "total_runtime": 128981
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 129684,
+    "startup_percentage": 100.0,
+    "total_runtime": 130178
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 128495,
+    "startup_percentage": 100.0,
+    "total_runtime": 129027
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 129138,
+    "startup_percentage": 100.0,
+    "total_runtime": 129624
+  },
+  {
+    "func_name": "fibonacci",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 140397,
+    "startup_percentage": 100.0,
+    "total_runtime": 140910
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 185401,
+    "startup_percentage": 100.0,
+    "total_runtime": 185903
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 188495,
+    "startup_percentage": 100.0,
+    "total_runtime": 189010
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 186859,
+    "startup_percentage": 100.0,
+    "total_runtime": 187410
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 187247,
+    "startup_percentage": 100.0,
+    "total_runtime": 187759
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 206078,
+    "startup_percentage": 100.0,
+    "total_runtime": 206724
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 195884,
+    "startup_percentage": 100.0,
+    "total_runtime": 196366
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 190838,
+    "startup_percentage": 100.0,
+    "total_runtime": 191331
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 184322,
+    "startup_percentage": 100.0,
+    "total_runtime": 184859
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 184104,
+    "startup_percentage": 100.0,
+    "total_runtime": 184626
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 183611,
+    "startup_percentage": 100.0,
+    "total_runtime": 184127
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 183454,
+    "startup_percentage": 100.0,
+    "total_runtime": 184039
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 196546,
+    "startup_percentage": 100.0,
+    "total_runtime": 197062
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 188056,
+    "startup_percentage": 100.0,
+    "total_runtime": 188592
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 184202,
+    "startup_percentage": 100.0,
+    "total_runtime": 184721
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 193541,
+    "startup_percentage": 100.0,
+    "total_runtime": 194114
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 187314,
+    "startup_percentage": 100.0,
+    "total_runtime": 187877
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 197596,
+    "startup_percentage": 99.0,
+    "total_runtime": 198976
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 187381,
+    "startup_percentage": 100.0,
+    "total_runtime": 187890
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 185242,
+    "startup_percentage": 100.0,
+    "total_runtime": 185741
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 186194,
+    "startup_percentage": 100.0,
+    "total_runtime": 186678
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 182363,
+    "startup_percentage": 100.0,
+    "total_runtime": 182864
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 184138,
+    "startup_percentage": 100.0,
+    "total_runtime": 184636
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 183757,
+    "startup_percentage": 100.0,
+    "total_runtime": 184278
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 184036,
+    "startup_percentage": 100.0,
+    "total_runtime": 184559
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 189999,
+    "startup_percentage": 100.0,
+    "total_runtime": 190517
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 184415,
+    "startup_percentage": 100.0,
+    "total_runtime": 184932
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 184832,
+    "startup_percentage": 100.0,
+    "total_runtime": 185362
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 182739,
+    "startup_percentage": 100.0,
+    "total_runtime": 183250
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 183308,
+    "startup_percentage": 100.0,
+    "total_runtime": 183883
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 183464,
+    "startup_percentage": 100.0,
+    "total_runtime": 183988
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 187930,
+    "startup_percentage": 100.0,
+    "total_runtime": 188487
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 183068,
+    "startup_percentage": 100.0,
+    "total_runtime": 183600
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 188700,
+    "startup_percentage": 100.0,
+    "total_runtime": 189231
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 189432,
+    "startup_percentage": 100.0,
+    "total_runtime": 189920
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 184346,
+    "startup_percentage": 100.0,
+    "total_runtime": 184850
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 187531,
+    "startup_percentage": 100.0,
+    "total_runtime": 188044
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 195288,
+    "startup_percentage": 100.0,
+    "total_runtime": 195848
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 192966,
+    "startup_percentage": 99.0,
+    "total_runtime": 194986
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 193104,
+    "startup_percentage": 100.0,
+    "total_runtime": 193605
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 190635,
+    "startup_percentage": 100.0,
+    "total_runtime": 191152
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183997,
+    "startup_percentage": 100.0,
+    "total_runtime": 184522
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183768,
+    "startup_percentage": 100.0,
+    "total_runtime": 184288
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 187259,
+    "startup_percentage": 100.0,
+    "total_runtime": 187782
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 183723,
+    "startup_percentage": 100.0,
+    "total_runtime": 184261
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 188582,
+    "startup_percentage": 100.0,
+    "total_runtime": 189079
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186869,
+    "startup_percentage": 100.0,
+    "total_runtime": 187368
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 211937,
+    "startup_percentage": 100.0,
+    "total_runtime": 212459
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 183980,
+    "startup_percentage": 100.0,
+    "total_runtime": 184507
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 185223,
+    "startup_percentage": 100.0,
+    "total_runtime": 185747
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 188128,
+    "startup_percentage": 100.0,
+    "total_runtime": 188638
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186680,
+    "startup_percentage": 100.0,
+    "total_runtime": 187173
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 184435,
+    "startup_percentage": 100.0,
+    "total_runtime": 184971
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 186165,
+    "startup_percentage": 100.0,
+    "total_runtime": 186696
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 189622,
+    "startup_percentage": 100.0,
+    "total_runtime": 190151
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 186354,
+    "startup_percentage": 100.0,
+    "total_runtime": 186870
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 183642,
+    "startup_percentage": 100.0,
+    "total_runtime": 184171
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 194569,
+    "startup_percentage": 100.0,
+    "total_runtime": 195147
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 185838,
+    "startup_percentage": 100.0,
+    "total_runtime": 186348
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 187886,
+    "startup_percentage": 100.0,
+    "total_runtime": 188412
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 182740,
+    "startup_percentage": 100.0,
+    "total_runtime": 183228
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 185736,
+    "startup_percentage": 100.0,
+    "total_runtime": 186219
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 183676,
+    "startup_percentage": 100.0,
+    "total_runtime": 184197
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 185231,
+    "startup_percentage": 100.0,
+    "total_runtime": 185883
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 183698,
+    "startup_percentage": 100.0,
+    "total_runtime": 184224
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 183497,
+    "startup_percentage": 100.0,
+    "total_runtime": 183986
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 193350,
+    "startup_percentage": 100.0,
+    "total_runtime": 193832
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 192717,
+    "startup_percentage": 100.0,
+    "total_runtime": 193226
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 190779,
+    "startup_percentage": 100.0,
+    "total_runtime": 191311
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 185342,
+    "startup_percentage": 100.0,
+    "total_runtime": 185857
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 197381,
+    "startup_percentage": 100.0,
+    "total_runtime": 197983
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 184023,
+    "startup_percentage": 100.0,
+    "total_runtime": 184538
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 186405,
+    "startup_percentage": 100.0,
+    "total_runtime": 186905
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 182225,
+    "startup_percentage": 100.0,
+    "total_runtime": 182733
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 184402,
+    "startup_percentage": 100.0,
+    "total_runtime": 184971
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 183949,
+    "startup_percentage": 100.0,
+    "total_runtime": 184441
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 184030,
+    "startup_percentage": 100.0,
+    "total_runtime": 184527
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 191037,
+    "startup_percentage": 100.0,
+    "total_runtime": 191525
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 183241,
+    "startup_percentage": 100.0,
+    "total_runtime": 183748
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 187154,
+    "startup_percentage": 100.0,
+    "total_runtime": 187721
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 188078,
+    "startup_percentage": 100.0,
+    "total_runtime": 188565
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 183050,
+    "startup_percentage": 100.0,
+    "total_runtime": 183556
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 186614,
+    "startup_percentage": 100.0,
+    "total_runtime": 187147
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 188584,
+    "startup_percentage": 100.0,
+    "total_runtime": 189108
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 183300,
+    "startup_percentage": 100.0,
+    "total_runtime": 183819
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 187816,
+    "startup_percentage": 100.0,
+    "total_runtime": 188329
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 188763,
+    "startup_percentage": 100.0,
+    "total_runtime": 189323
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 190294,
+    "startup_percentage": 100.0,
+    "total_runtime": 190837
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 192966,
+    "startup_percentage": 100.0,
+    "total_runtime": 193484
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 193606,
+    "startup_percentage": 100.0,
+    "total_runtime": 194134
+  },
+  {
+    "func_name": "factorial",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 197923,
+    "startup_percentage": 100.0,
+    "total_runtime": 198452
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 222898,
+    "startup_percentage": 100.0,
+    "total_runtime": 223425
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 220449,
+    "startup_percentage": 100.0,
+    "total_runtime": 220992
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 219719,
+    "startup_percentage": 100.0,
+    "total_runtime": 220252
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 220171,
+    "startup_percentage": 100.0,
+    "total_runtime": 220705
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 230354,
+    "startup_percentage": 100.0,
+    "total_runtime": 230911
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 225628,
+    "startup_percentage": 100.0,
+    "total_runtime": 226195
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 228850,
+    "startup_percentage": 100.0,
+    "total_runtime": 229398
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 220169,
+    "startup_percentage": 100.0,
+    "total_runtime": 220730
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "100",
+    "startup_time": 238461,
+    "startup_percentage": 100.0,
+    "total_runtime": 238982
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 224831,
+    "startup_percentage": 100.0,
+    "total_runtime": 225338
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 224442,
+    "startup_percentage": 100.0,
+    "total_runtime": 224965
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 234631,
+    "startup_percentage": 100.0,
+    "total_runtime": 235176
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 223273,
+    "startup_percentage": 100.0,
+    "total_runtime": 223798
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 233146,
+    "startup_percentage": 100.0,
+    "total_runtime": 234177
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 224793,
+    "startup_percentage": 100.0,
+    "total_runtime": 225324
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 234011,
+    "startup_percentage": 100.0,
+    "total_runtime": 234592
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 234111,
+    "startup_percentage": 100.0,
+    "total_runtime": 234654
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "90",
+    "startup_time": 233546,
+    "startup_percentage": 100.0,
+    "total_runtime": 234098
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 233032,
+    "startup_percentage": 100.0,
+    "total_runtime": 233599
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 224543,
+    "startup_percentage": 100.0,
+    "total_runtime": 225080
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 231208,
+    "startup_percentage": 100.0,
+    "total_runtime": 231819
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 226042,
+    "startup_percentage": 100.0,
+    "total_runtime": 226579
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 226652,
+    "startup_percentage": 100.0,
+    "total_runtime": 227196
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 232300,
+    "startup_percentage": 100.0,
+    "total_runtime": 232820
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 226088,
+    "startup_percentage": 100.0,
+    "total_runtime": 226646
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 220705,
+    "startup_percentage": 100.0,
+    "total_runtime": 221253
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "80",
+    "startup_time": 233058,
+    "startup_percentage": 100.0,
+    "total_runtime": 233627
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 224176,
+    "startup_percentage": 100.0,
+    "total_runtime": 224700
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 224326,
+    "startup_percentage": 100.0,
+    "total_runtime": 224874
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 227778,
+    "startup_percentage": 100.0,
+    "total_runtime": 228317
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 221250,
+    "startup_percentage": 100.0,
+    "total_runtime": 221797
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 223386,
+    "startup_percentage": 100.0,
+    "total_runtime": 223911
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 224643,
+    "startup_percentage": 100.0,
+    "total_runtime": 225180
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 219436,
+    "startup_percentage": 100.0,
+    "total_runtime": 219972
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 219304,
+    "startup_percentage": 100.0,
+    "total_runtime": 219865
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "70",
+    "startup_time": 230127,
+    "startup_percentage": 100.0,
+    "total_runtime": 230702
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 223013,
+    "startup_percentage": 100.0,
+    "total_runtime": 223525
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 225868,
+    "startup_percentage": 100.0,
+    "total_runtime": 226432
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 226962,
+    "startup_percentage": 100.0,
+    "total_runtime": 227481
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 233046,
+    "startup_percentage": 100.0,
+    "total_runtime": 233615
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 229679,
+    "startup_percentage": 100.0,
+    "total_runtime": 230232
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 221832,
+    "startup_percentage": 100.0,
+    "total_runtime": 222343
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 220987,
+    "startup_percentage": 100.0,
+    "total_runtime": 221539
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 226417,
+    "startup_percentage": 100.0,
+    "total_runtime": 226976
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "60",
+    "startup_time": 225586,
+    "startup_percentage": 100.0,
+    "total_runtime": 226143
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 219932,
+    "startup_percentage": 100.0,
+    "total_runtime": 220461
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 219735,
+    "startup_percentage": 100.0,
+    "total_runtime": 220264
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 220568,
+    "startup_percentage": 100.0,
+    "total_runtime": 221147
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 220656,
+    "startup_percentage": 100.0,
+    "total_runtime": 221210
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 234458,
+    "startup_percentage": 100.0,
+    "total_runtime": 235008
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 224515,
+    "startup_percentage": 100.0,
+    "total_runtime": 225041
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 219664,
+    "startup_percentage": 100.0,
+    "total_runtime": 220185
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 220103,
+    "startup_percentage": 100.0,
+    "total_runtime": 220640
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "50",
+    "startup_time": 221832,
+    "startup_percentage": 100.0,
+    "total_runtime": 222354
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 224117,
+    "startup_percentage": 100.0,
+    "total_runtime": 224707
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 222641,
+    "startup_percentage": 100.0,
+    "total_runtime": 223173
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 225713,
+    "startup_percentage": 100.0,
+    "total_runtime": 226264
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 227756,
+    "startup_percentage": 100.0,
+    "total_runtime": 228323
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 225107,
+    "startup_percentage": 100.0,
+    "total_runtime": 225659
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 219517,
+    "startup_percentage": 100.0,
+    "total_runtime": 220033
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 219319,
+    "startup_percentage": 100.0,
+    "total_runtime": 219867
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 230601,
+    "startup_percentage": 100.0,
+    "total_runtime": 231133
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "40",
+    "startup_time": 223236,
+    "startup_percentage": 100.0,
+    "total_runtime": 223781
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 222302,
+    "startup_percentage": 100.0,
+    "total_runtime": 222833
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 232462,
+    "startup_percentage": 100.0,
+    "total_runtime": 233021
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 218762,
+    "startup_percentage": 100.0,
+    "total_runtime": 219274
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 220011,
+    "startup_percentage": 100.0,
+    "total_runtime": 220559
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 222455,
+    "startup_percentage": 100.0,
+    "total_runtime": 223024
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 228218,
+    "startup_percentage": 100.0,
+    "total_runtime": 228734
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 230938,
+    "startup_percentage": 100.0,
+    "total_runtime": 231483
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 222449,
+    "startup_percentage": 100.0,
+    "total_runtime": 223003
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "30",
+    "startup_time": 228416,
+    "startup_percentage": 100.0,
+    "total_runtime": 228970
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 230236,
+    "startup_percentage": 100.0,
+    "total_runtime": 230792
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 222173,
+    "startup_percentage": 100.0,
+    "total_runtime": 222717
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 229041,
+    "startup_percentage": 100.0,
+    "total_runtime": 229606
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 226513,
+    "startup_percentage": 100.0,
+    "total_runtime": 227062
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 223299,
+    "startup_percentage": 100.0,
+    "total_runtime": 223842
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 244111,
+    "startup_percentage": 100.0,
+    "total_runtime": 244658
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 219097,
+    "startup_percentage": 100.0,
+    "total_runtime": 219616
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 221193,
+    "startup_percentage": 100.0,
+    "total_runtime": 221707
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "20",
+    "startup_time": 219333,
+    "startup_percentage": 100.0,
+    "total_runtime": 219857
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 219725,
+    "startup_percentage": 100.0,
+    "total_runtime": 220253
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 218654,
+    "startup_percentage": 100.0,
+    "total_runtime": 219172
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 222642,
+    "startup_percentage": 100.0,
+    "total_runtime": 223153
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 220237,
+    "startup_percentage": 100.0,
+    "total_runtime": 220775
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 222819,
+    "startup_percentage": 100.0,
+    "total_runtime": 223373
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 221986,
+    "startup_percentage": 100.0,
+    "total_runtime": 222544
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 226978,
+    "startup_percentage": 100.0,
+    "total_runtime": 227513
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 221781,
+    "startup_percentage": 100.0,
+    "total_runtime": 222339
+  },
+  {
+    "func_name": "exponential",
+    "func_type": "Wasm",
+    "input": "10",
+    "startup_time": 229744,
+    "startup_percentage": 100.0,
+    "total_runtime": 230346
+  }
+]
