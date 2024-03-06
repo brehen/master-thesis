@@ -1,15 +1,20 @@
 ---
 title: Nebula 
 subtitle: Comparing two waves of cloud computing 
-author: Marius Nilsen Kluften
+author: Marius Nilsen Kluften  
 date: 2024
-output: pdf_document
+output: 
+  pdf_document:
+    latex_engine: xelatex
 header-includes: 
-  - \pagenumbering{gobble}
   - \AtBeginDocument{\let\maketitle\relax}
   - \usepackage{fancyhdr}
   - \usepackage{lastpage}
+  - \usepackage{geometry}
+  - \usepackage{tocbibind}
+  - \usepackage{graphicx}
   - \usepackage{setspace}
+  - \usepackage{lipsum}
   - \onehalfspacing
   - \pagestyle{fancy}
   - \fancyhf{}
@@ -18,8 +23,16 @@ header-includes:
 
   - \usepackage{epigraph}
   - \setlength\epigraphwidth{.6\textwidth}
-  
-fontsize: 12pt
+
+  - \usepackage[fontsize=12pt]{scrextend}
+  - \usepackage{fontspec}
+  - \setmainfont{Georgia}
+  - \usepackage{titlesec}
+  - \newfontfamily\headingfont{Avenir}
+  - \titleformat*{\section}{\LARGE\headingfont}
+  - \titleformat*{\subsection}{\Large\headingfont}
+  - \titleformat*{\subsubsection}{\large\headingfont}
+
 ---
 
 
@@ -33,7 +46,6 @@ fontsize: 12pt
 \thispagestyle{fancy}
 \fancyfoot[C]{2024}
 \centering
-
 {\Huge\bfseries Nebula\par}
 
 \vspace{0.5cm}
@@ -89,7 +101,6 @@ fontsize: 12pt
 
 \newpage
 
-\epigraph{\itshape If WASM+WASI existed in 2008, we wouldn't have needed to created Docker. That's how important it is. Webassembly on the server is the future of computing. A standardized system interface was the missing link. Let's hope WASI is up to the task!}{---Solomon Hykes, \textit{Founder of Docker}}
 
 \null\vfill
 \begin{flushleft}
@@ -100,76 +111,162 @@ fontsize: 12pt
 \end{flushleft}
 
 \newpage
+\fancyfoot[C]{ \thepage\ }
+\pagenumbering{roman}
 
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.75\textwidth}
 
-\newpage
-
-## Abstract
+\section{Abstract}
 
 The ever increasing demand for cloud services has resulted in the expansion of
-energy-intensive data centers, the ICT industry accounts for about 1% of global
-electricity use, highlighting a need for sustainable alternatives
+energy-intensive data centers, the ICT industry accounts for about 1 \% of global 
+electricity use, highlighting a need for sustainable options
 in cloud computing architectures. 
 
-This thesis investigates WebAssembly, a potential contender in the space of technlogies to
-consider in cloud native applications, to challenge conventional cloud paradigms
-through energy-efficient solutions. Leveraging the inherent efficiency,
-portability and lower startup times of WebAssembly modules, the study presents a
-novel approach that not only aligns with green energy principles, but also
-maintains the performance and scalability, essential for cloud services. 
+\vspace{0.25cm}
 
-Preliminary findings suggest that programs compiled to WebAssembly modules have
-significantly reduced startup and runtimes, which hopefully leads to less energy
-consumption and offering a viable pathway towards more sustainable cloud
-computing.
+This project investigates WebAssembly, a technology originally intended for running 
+in the browser, as a potential contender in the space of technologies to
+consider in cloud native applications. Leveraging the inherent efficiency,
+portability and lower startup times of WebAssembly modules, this thesis presents an
+approach that aligns with green energy principles, while maintaining performance and
+scalability, essential for cloud services. 
+
+\vspace{0.25cm}
+
+Preliminary findings suggest that programs compiled to WebAssembly modules have 
+reduced startup and runtimes, which hopefully leads to less energy
+consumption and offering a viable pathway towards a more sustainable cloud.
+
+\end{minipage}
+\end{center}
+\vspace*{\fill}
 
 \newpage
 
-## Acknowledgments
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.75\textwidth}
+\section{Acknowledgments}
 
-Express gratitude to advisors, colleagues, and others who have supported and
-helped throughout the research process.
+
+The idea for the topic for this thesis appeared in an episode of the podcast
+"Rustacean station". Matt Butcher, the CEO of Fermyon, told the story of his
+journey through the different waves of cloud computing, and why Fermyon 
+decided to bet on WebAssembly for the next big wave of cloud compute.
+
+\vspace{0.25cm}
+
+The capabilities of WebAssembly running on the server, with the aid of
+the WebAssembly System Interface (WASI) project, caught my interest and started 
+the snowball that ended up as the avalanche that is this thesis. 
+
+\vspace{0.25cm}
+
+I'd like to thank Matt Butcher and the people over at Fermyon for inadvertently 
+inspiring my topic. 
+
+Furthermore I'd like to thank my two supervisors Joachim T. Kristensen and 
+Marcus Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
+through such a cutting edge topic Their guidance and insight have been
+invaluable the past semesters.
+
+\end{minipage}
+\end{center}
+\vspace*{\fill}
 
 \newpage
+
+\epigraph{\itshape 
+  If WASM+WASI existed in 2008, we wouldn't have needed to created Docker. 
+  That's how important it is. Webassembly on the server is the future of computing.
+  A standardized system interface was the missing link. 
+  Let's hope WASI is up to the task!
+}{---Solomon Hykes, \textit{Founder of Docker}}
+
+\\newgeometry{left=3cm, right=3cm, top=3cm, bottom=3cm} 
+\newpage
+
 
 \tableofcontents
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+\listoftables
 
 \newpage
 
 \pagenumbering{arabic}
 \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
 
-## Introduction
 
-The rapid growth of cloud computing the past decade has led to the cloud
-consuming enormous amounts of energy. The entire ICT (Information- and
-Communication Technology) industry emits 2.1% to 3.9% of global green gas
-emission. Data centers, which are at the core of cloud computing, consume a
-significant amount of energy, estimated at around 200 TWh/yr or 1% of the worlds
-electricity [(Freitag et al. 2021)][1]. This energy consumption could grow to
-between 15-30% of electricity consumption in some countries by 2030. Allthough
-data centers strive to reach a net zero sum carbon footprint, there are still a
-lot of electricity genereated by fossil fuels, a leading contributer to climate
-change [(Mytton, D. 2021)][2].
+\section{Introduction}
 
-Important to note is that these measurements and estimates comes with some level
-of uncertainty, but give us a rough idea of the current and future situation. As
-demand for cloud services continues to rise, there is a pressing need to explore
-alternative methods that can help improve energy efficiency, while maintaining
-the performance, availability and scalability of these services.
+In the digital age, cloud computing has emerged as a foundational technology in the
+technological landscape, driving innovation and increased efficiency across
+various sectors. Its growth over the past decade has not only transformed how consumers 
+store, process, and access data, but also raised environmental concerns. 
 
-This essay investigates the potential for utilizing technologies like [Rust][3]
-and [WebAssembly][4] to develop a prototype Function-as-a-Service (FaaS)
-platform. This prototype will aim to address the energy efficiency problem in
-cloud computing by serving academic memes through a web service.
+The Information and Communication Technology (ICT) industry, with cloud computing at
+its core, is estimated to contribute between 2.1\% to 3.9\% of global greenhouse gas
+emissions. Data centers, which are crucial to cloud computing infrastructures, 
+account for about 200 TWh/yr, or about 1\% of the global electricity consumption. [(Freitag
+et al., 2021)][1]. This consumption is projected to increase dramatically increase, 
+potentially accounting for  15\% to 30\% of electricity consumption in some countries by 2030. 
+
+In Norway, for example, Google is in the process of constructing a data center in Skien, 
+expected to be fully operational by 2026. This facility alone is estimated to require 
+7.5TWh/yr, amounting to 25% of Google's total power consumption world wide.(TODO: SRC) 
+Google has commited to powering this data center entirely with renewable energy, aiming 
+for a net-zero carbon footprint. However, this commitment is not universally
+adopted, and many data centers still rely on electricity generated by fossil fuels, 
+a leading contributor to climate change [(Mytton, D. 2021)][2]
+
+It is important to note is that these measurements and estimates comes with a
+certain level of uncertainty, yet they offer a glimpse into the current and future
+challenges of cloud computing's energy consumption. As demand for cloud services 
+continues to rise, there is a pressing need to explore alternative technologies that 
+can enhance energy efficiency without compromising on the performance, availability 
+and scalability of that the users expect.
+
+One prevalent method for building cloud applications today involves using
+serverless computing platforms, such as Amazon's *AWS Lambdas*, or Google's *Cloud Functions*.
+These platforms let developers deploy code into containers executed
+upon request. Despite the benefits, such as the ability to run software across
+different architectures, this approach introduces a startup latency for the
+containers. This latency is negligible for long-running services, but
+significant for on-demand functions. 
+
+This thesis proposes exploring WebAssembly and the WebAssembly System Interface
+(WASI) as innovative choices for deploying functions to public cloud
+services. WebAssembly, originally developed for efficient execution in web
+browsers, combined with WASI, enables WebAssembly to run on servers, potentially
+offering a more efficient way to package and deploy functions.
+
+
+\subsection{Problem Statement}
+
+1. Investigate potential optimization by employing an alternative 
+way of deploying functions on a Functions-as-a-Service platform. 
+
+2. Investigate potential energy savings from employing more efficient compute on
+   cloud. 
+
+\subsection{Outline}
 
 \pagebreak
 
-## Background
+\section{Background}
 
-### Cloud Computing: An Overview
+\subsection{Cloud Computing: An Overview}
 
-<!-- What is the cloud and its significance in todays web -->
+<!-- What is the cloud and its significance in web -->
 
 Cloud computing, more commonly known as _the cloud_, refers to the delivery of
 computing services, such as storage, processing power, network, and software,
@@ -212,7 +309,9 @@ Some challenges include:
   expected to yield cost savings and contribute to the overall sustainability
   goals by reducing the cloud's environmental impact.
 
-### Traditional Deployment Methods: Virtual machines and Containers
+\subsection{Three waves of cloud compute}
+
+\subsubsection{The first wave: Virtual machines}
 
 <!-- Introduce the concept of "the first two waves of cloud computing" -->
 
@@ -230,7 +329,7 @@ to run virtual machines remotely. While similar services existed before 2006,
 Amazon's large customer base helped them gain significant traction, effectively
 bringing cloud computing to the mainstream.
 
-<!-- The second wave -->
+\subsubsection{The second wave: Containerization}
 
 As we entered the 2010s, the focus shifted from Virtual Machines to containers,
 largely due to the limitations of VMs in efficiency, resource utilization, and
@@ -246,7 +345,9 @@ service loads. Consequently, an increasing number of companies have since
 established platform teams to build orchestrated developers platforms, thereby
 simplifying application development in Kubernetes clusters.
 
-### Serverless and Function-as-a-Service (FaaS)
+\subsubsection{The third wave: WebAssembly}
+
+\subsection{Serverless and Function-as-a-Service (FaaS)}
 
 Building your own developer platform on top of Kubernetes, much like building
 your own infrastructure, also entails a significant cost. Often, developers wish
@@ -261,7 +362,7 @@ or FaaS. Companies already in the cloud game decided to develop their own FaaS
 platforms to attract developers interested in just writing their functions and
 running them, and not worry about anything underneath.
 
-### Some major vendors in Serverless
+\subsubsection{Major vendors in Serverless}
 
 The concept of "the cloud" isn't owned by any single organization, but rather,
 through the collective effort of industry players including Amazon, Microsoft,
@@ -291,7 +392,7 @@ functions.
 <!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
 <!-- Challenges associated with FaaS, including cold start latency -->
 
-### WebAssembly: A new paradigm?
+\subsection{WebAssembly}
 
 <!-- Provide an overview of WebAssembly, its purpose, and its advantages over
 traditional deployment methods. -->
@@ -337,11 +438,11 @@ security, and portability, can potentially offer an attractive alternative
 deployment method for building and running cloud native applications, like the
 "Academemes" service we will explore in this essay.
 
-### Wasm+WASI: Towards Energy-efficient FaaS Platforms
+\subsubsection{WASM+WASI: Towards Energy-efficient FaaS Platforms}
 
-WebAssembly (Wasm) and [WebAssembly System Interface (WASI)][16] present
-promising alternatives to traditional ways of deploying and hosting Function as
-a Service (FaaS) platforms, offering several notable advantages, especially in
+WebAssembly (WASM) and [WebAssembly System Interface (WASI)][16] present
+promising choices to traditional ways of deploying and hosting Function as
+a Service (FaaS) platforms, offering several notable advantages, in
 terms of startup times and energy efficiency.
 
 _Reduced Startup Times_: One of the greatest strengths of Wasm is its compact
@@ -378,40 +479,55 @@ worth mentioning that the efficient execution of Wasm modules does contribute to
 the overall operational efficiency and energy savings of Wasm-based FaaS
 platforms.
 
-In summary, introducing Wasm+WASI as a component for deploying and hosting FaaS
-platforms can offer significant benefits. Focusing on energy efficiency and
-reduced startup times, this approach could pave the way for more sustainable,
+In summary, introducing WASM+WASI as a component for deploying and hosting FaaS
+platforms can offer significant benefits. Focusing on energy efficiency and reduced startup times, this approach could pave the way for more sustainable,
 efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-### Hypothesis Revisited
+\newpage
 
-### Some graphs
+\section{Approach}
 
-```{r}
-library(tidyverse)
-library(gcookbook) # Load gcookbook for the cabbage_exp data set
-library(dplyr)
+\newpage
 
-cabbage_exp
+\section{Design}
 
-# Take a subset of the cabbage_exp data for this example
-ce_mod <- cabbage_exp %>%
-  filter(Cultivar == "c39")
+\subsection{Methodology?}
 
-# With a bar graph
-ggplot(ce_mod, aes(x = Date, y = Weight)) +
-  geom_col(fill = "white", colour = "black") +
-  geom_errorbar(aes(ymin = Weight - se, ymax = Weight + se), width = .2)
-```
+\newpage
+
+\section{Implementation}
+
+This is the chapter on implementing Nebula.
+
+\subsection{Tech stack}
+
+Rust/Docker/Etc.
+
+\newpage
+
+\section{Results/observations}
+
+\subsection{Some Graphs}
+
+
+\begin{table}
+\centering
+\begin{tabular}{ll}
+Header 1 & Header 2 \\
+\hline
+Row 1 & Data \\
+Row 2 & Data \\
+\end{tabular}
+\caption{Example Table}
+\end{table}
+
 
 \label{CustomLastPage}
 
 
-## Methodology
-
-## References
+\section{References}
 
 [1]: https://dx.doi.org/10.1016/j.patter.2021.100340
 [2]: https://doi.org/10.1038/s41558-020-0837-6
