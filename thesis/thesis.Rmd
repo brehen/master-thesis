@@ -9,33 +9,33 @@ output:
     latex_engine: xelatex
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
-  - \usepackage{fancyhdr}
   - \usepackage{lastpage}
-  - \usepackage{geometry}
   - \usepackage{tocbibind}
   - \usepackage{graphicx}
   - \usepackage{setspace}
   - \usepackage{lipsum}
+  - \usepackage[fontsize=12pt]{scrextend}
+  - \usepackage{fontspec}
   - \onehalfspacing
+
+  - \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+  - \usepackage{fancyhdr}
   - \pagestyle{fancy}
+  - \fancyhf{}
+  - \fancyfoot[C]{}
 
   # - \usepackage{tocloft}
   # - \renewcommand\cftchapaftersnum{.}
   # - \renewcommand\cftsecaftersnum{.}
   #
-  - \renewcommand\thepart{\Roman{part}}
   # - \renewcommand\thesection{\arabic{section}}
   # - \renewcommand\thesubsection{(\alph{subsection})}
 
-  - \fancyhf{}
   - \renewcommand{\headrulewidth}{0pt}
-  - \fancyfoot[C]{}
 
   - \usepackage{epigraph}
   - \setlength\epigraphwidth{.6\textwidth}
 
-  - \usepackage[fontsize=12pt]{scrextend}
-  - \usepackage{fontspec}
   - \setmainfont{Georgia}
   - \usepackage{titlesec}
   - \newfontfamily\headingfont{Avenir}
@@ -189,16 +189,6 @@ invaluable the past semesters.
 
 \newpage
 
-\epigraph{\itshape 
-  If WASM+WASI existed in 2008, we wouldn't have needed to created Docker. 
-  That's how important it is. Webassembly on the server is the future of computing.
-  A standardized system interface was the missing link. 
-  Let's hope WASI is up to the task!
-}{---Solomon Hykes, \textit{Founder of Docker}}
-
-\newgeometry{left=3cm, right=3cm, top=3cm, bottom=3cm} 
-
-\newpage
 
 
 \tableofcontents
@@ -214,10 +204,17 @@ invaluable the past semesters.
 \newpage
 
 \pagenumbering{arabic}
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
 
 \part{Overview}
 
+\epigraph{\itshape 
+  If WASM+WASI existed in 2008, we wouldn't have needed to created Docker. 
+  That's how important it is. Webassembly on the server is the future of computing.
+  A standardized system interface was the missing link. 
+  Let's hope WASI is up to the task!
+}{---Solomon Hykes, \textit{Founder of Docker}}
+
+\newpage
 
 \chapter{Introduction}
 
@@ -339,6 +336,7 @@ chapters:
 topic that is explored in this thesis. The concept of *three waves* of cloud
 computing is introduced, and other vendors in the market are explored.
 - Chapter 3 - 
+\lipsum[2]
 
 \newpage
 

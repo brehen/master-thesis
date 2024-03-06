@@ -1,29 +1,29 @@
 \contentsline {section}{Abstract}{i}{section*.1}%
 \contentsline {section}{Acknowledgments}{ii}{section*.2}%
-\contentsline {chapter}{Contents}{iv}{chapter*.3}%
-\contentsline {chapter}{List of Figures}{vi}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{vii}{chapter*.5}%
+\contentsline {chapter}{Contents}{iii}{chapter*.3}%
+\contentsline {chapter}{List of Figures}{v}{chapter*.4}%
+\contentsline {chapter}{List of Tables}{vi}{chapter*.5}%
 \contentsline {part}{Overview}{1}{section*.6}%
-\contentsline {chapter}{Introduction}{2}{chapter*.7}%
-\contentsline {section}{Motivation}{3}{section*.8}%
+\contentsline {chapter}{Introduction}{3}{chapter*.7}%
+\contentsline {section}{Motivation}{4}{section*.8}%
 \contentsline {section}{Methodology}{4}{section*.9}%
-\contentsline {section}{Problem Statement}{4}{section*.10}%
+\contentsline {section}{Problem Statement}{5}{section*.10}%
 \contentsline {section}{Outline}{5}{section*.11}%
-\contentsline {chapter}{Background}{6}{chapter*.12}%
-\contentsline {section}{Cloud Computing: An Overview}{6}{section*.13}%
-\contentsline {subsection}{Three waves of cloud compute}{7}{subsection*.14}%
-\contentsline {subsubsection}{The first wave: Virtual machines}{7}{subsubsection*.15}%
-\contentsline {subsubsection}{The second wave: Containerization}{7}{subsubsection*.16}%
-\contentsline {subsubsection}{The third wave: WebAssembly}{8}{subsubsection*.17}%
-\contentsline {subsection}{Serverless and Function-as-a-Service (FaaS)}{8}{subsection*.18}%
-\contentsline {subsubsection}{Major vendors in Serverless}{8}{subsubsection*.19}%
-\contentsline {subsection}{WebAssembly}{9}{subsection*.20}%
-\contentsline {subsubsection}{WASM+WASI: Towards Energy-efficient FaaS Platforms}{10}{subsubsection*.21}%
-\contentsline {part}{Project}{12}{section*.22}%
-\contentsline {chapter}{Approach}{13}{chapter*.23}%
-\contentsline {chapter}{Design}{14}{chapter*.24}%
-\contentsline {chapter}{Implementation}{15}{chapter*.25}%
-\contentsline {section}{Tech stack}{15}{section*.26}%
-\contentsline {part}{Discussions and future works}{16}{section*.27}%
-\contentsline {subsection}{Some Graphs}{17}{subsection*.28}%
-\contentsline {section}{References}{17}{section*.29}%
+\contentsline {chapter}{Background}{7}{chapter*.12}%
+\contentsline {section}{Cloud Computing: An Overview}{7}{section*.13}%
+\contentsline {subsection}{Three waves of cloud compute}{8}{subsection*.14}%
+\contentsline {subsubsection}{The first wave: Virtual machines}{8}{subsubsection*.15}%
+\contentsline {subsubsection}{The second wave: Containerization}{8}{subsubsection*.16}%
+\contentsline {subsubsection}{The third wave: WebAssembly}{9}{subsubsection*.17}%
+\contentsline {subsection}{Serverless and Function-as-a-Service (FaaS)}{9}{subsection*.18}%
+\contentsline {subsubsection}{Major vendors in Serverless}{9}{subsubsection*.19}%
+\contentsline {subsection}{WebAssembly}{10}{subsection*.20}%
+\contentsline {subsubsection}{WASM+WASI: Towards Energy-efficient FaaS Platforms}{11}{subsubsection*.21}%
+\contentsline {part}{Project}{13}{section*.22}%
+\contentsline {chapter}{Approach}{14}{chapter*.23}%
+\contentsline {chapter}{Design}{15}{chapter*.24}%
+\contentsline {chapter}{Implementation}{16}{chapter*.25}%
+\contentsline {section}{Tech stack}{16}{section*.26}%
+\contentsline {part}{Discussions and future works}{17}{section*.27}%
+\contentsline {subsection}{Some Graphs}{18}{subsection*.28}%
+\contentsline {section}{References}{18}{section*.29}%
