@@ -128,7 +128,7 @@ header-includes:
 \begin{center}
 \begin{minipage}{0.75\textwidth}
 
-\section{Abstract}
+\chapter{Abstract}
 
 The ever increasing demand for cloud services has resulted in the expansion of
 energy-intensive data centers, the ICT industry accounts for about 1 \% of global 
@@ -159,7 +159,7 @@ consumption and offering a viable pathway towards a more sustainable cloud.
 \vspace*{\fill}
 \begin{center}
 \begin{minipage}{0.75\textwidth}
-\section{Acknowledgments}
+\chapter{Acknowledgments}
 
 
 The idea for the topic for this thesis appeared in an episode of the podcast
@@ -177,6 +177,8 @@ the snowball that ended up as the avalanche that is this thesis.
 
 I'd like to thank Matt Butcher and the people over at Fermyon for inadvertently 
 inspiring my topic. 
+
+\vspace{0.25cm}
 
 Furthermore I'd like to thank my two supervisors Joachim T. Kristensen and 
 Marcus Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
@@ -330,11 +332,11 @@ discussions about the findings and future work. Each part is divided into
 chapters: 
 
 - Chapter 1 - Introduction, where the project is introduced, the motivation
-  lying behind it, the problem statement provided and the methodology used for
-  the project work.
+lying behind it, the problem statement provided and the methodology used for
+the project work.
 - Chapter 2 - Background, where the history of cloud computing has led to the
-topic that is explored in this thesis. The concept of *three waves* of cloud
-computing is introduced, and other vendors in the market are explored.
+topic explored in this thesis is laid out. The concept of *three waves* of cloud
+computing is introduced, and other vendors in the market are presented.
 - Chapter 3 - 
 \lipsum[2]
 
@@ -342,11 +344,16 @@ computing is introduced, and other vendors in the market are explored.
 
 \chapter{Background}
 
-\section{Cloud Computing: An Overview}
+This chapter delves into the historical evolution of cloud computing,
+illustrating how its development has led to the exploration of WebAssembly as a
+potential paradigm shift in cloud services. We explore the concept of the first
+two "*waves*" of cloud computing, each representing a significant technological
+advancement and shifting industry practices. Additionally, we discuss the role
+of major vendors in shaping cloud computing landscape.
 
-<!-- What is the cloud and its significance in web -->
+\section{Cloud Computing: An quick summary}
 
-Cloud computing, more commonly known as _the cloud_, refers to the delivery of
+Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
 computing services, such as storage, processing power, network, and software,
 served over the internet, instead of running on locally owned hardware
 (on-premise). For companies, this has proved to be a super power, where
@@ -357,27 +364,27 @@ users without worrying about the underlying infrastructure.
 
 Some benefits include:
 
-- Reduced total cost of ownership: Cloud computing has enabled companies to take
+- *Reduced total cost of ownership*: Cloud computing has enabled companies to take
   their computing needs to the next level. Startups who can't afford neither the
   cost or time required to build their own infrastructure, and larger companies
   that want to iterate faster and decrease their lead time from idea to
   production [(Thomas, Dave. 2009)][6].
 
-- Scalability is one of the most significant benefits of cloud computing. As
+- *Scalability* is one of the most significant benefits of cloud computing. As
   organizations expand, so do their customer needs and the complexity of their
   application infrastructure. Each additional feature brings with it additional
   costs, highlighting the importance of efficient resource management to
   optimize hardware investments in a cloud computing environment
   [(Thomas, Dave. 2008)][6].
 
-Some challenges include:
+Yet, challenges persist:
 
-- Cost: Managing the cost of cloud computing is an ongoing challenge, with
+- *Cost management*: Managing the cost of cloud computing is an ongoing challenge, with
   Gartner predicting that through 2024, 60% of infrastructure and operations
   (I&O) leaders will encounter cloud costs that are higher than budgeted for
   [(Rimol, M. 2021)][7].
 
-- Energy usage: The challenge of energy usage in cloud computing is a
+- *Energy consumption*: The challenge of energy usage in cloud computing is a
   significant concern, with data centers alone accounting for approximately 1%
   of the world's electricity consumption [(Freitag et al. 2021)][1]. This
   staggering statistic highlights the need to explore strategies and measures to
@@ -387,27 +394,29 @@ Some challenges include:
   expected to yield cost savings and contribute to the overall sustainability
   goals by reducing the cloud's environmental impact.
 
-\subsection{Three waves of cloud compute}
+\section{The Evolution of Cloud Computing}
 
-\subsubsection{The first wave: Virtual machines}
+As cloud computing matured, its journey first unfolded in two significant waves,
+each marking a new age of innovation and addressing the dynamic needs and
+challenges of digital infrastructure. This evolution reflects the industry's
+efforts to optimize resource efficiency, reducing operational costs, and
+minimize environmental impacts.
 
-<!-- Introduce the concept of "the first two waves of cloud computing" -->
+\subsection{The First Wave: Virtualization}
 
-In the era preceding cloud computing, companies bought, set up and managed their
-own infrastructure. This necessitated having in-house infrastructure engineers
-to maintain on-premise data centers or servers, leading to significant cost.
-Sensing the potential in offering managed infrastructure, Amazon launched its
-subsidiary, Amazon Web Services, during the mid-2000s.
+The dawn of cloud computing can be traced back to the push for virtualization, a
+response to the costly and complex nature of managin traditional, on-premise
+data centers. During the mid-2000s, Amazon launched its subsidiary, Amazon Web
+Services (AWS), who in turn launched Amazon S3 in March 2006, followed by
+Elastic Compute Cloud (EC2) in August the same year.[(Barr, J. 2006)][8] With
+these services, AWS positioned itself as a pioneer in this space, marking a
+major turning point in application development and deployment, and popularized
+cloud computing. EC2, as an Infrastructure-as-a-Service (IaaS) platform,
+empowered developers to run virtual machines remotely. While similar services
+existed before 2006, with Amazon's existing large customer base helped them gain
+significant traction, and ushered in a the first era, or wave, of *cloud computing*.
 
-The launch of AWS's Amazon S3 cloud service in March 2006, followed by Elastic
-Compute Cloud (EC2) in August the same year [(Barr, J. 2006)][8], marked a major
-turning point in application development and deployment, and popularized cloud
-computing. EC2, as an Infrastructure-as-a-Service platform, empowered developers
-to run virtual machines remotely. While similar services existed before 2006,
-Amazon's large customer base helped them gain significant traction, effectively
-bringing cloud computing to the mainstream.
-
-\subsubsection{The second wave: Containerization}
+\subsection{The Second Wave: Containerization}
 
 As we entered the 2010s, the focus shifted from Virtual Machines to containers,
 largely due to the limitations of VMs in efficiency, resource utilization, and
@@ -423,9 +432,9 @@ service loads. Consequently, an increasing number of companies have since
 established platform teams to build orchestrated developers platforms, thereby
 simplifying application development in Kubernetes clusters.
 
-\subsubsection{The third wave: WebAssembly}
+\subsection{The Third Wave: WebAssembly modules}
 
-\subsection{Serverless and Function-as-a-Service (FaaS)}
+\section{Serverless and Function-as-a-Service (FaaS)}
 
 Building your own developer platform on top of Kubernetes, much like building
 your own infrastructure, also entails a significant cost. Often, developers wish
@@ -440,7 +449,7 @@ or FaaS. Companies already in the cloud game decided to develop their own FaaS
 platforms to attract developers interested in just writing their functions and
 running them, and not worry about anything underneath.
 
-\subsubsection{Major vendors in Serverless}
+\section{Major vendors in Serverless}
 
 The concept of "the cloud" isn't owned by any single organization, but rather,
 through the collective effort of industry players including Amazon, Microsoft,
@@ -467,13 +476,8 @@ create and execute functions written in languages like C#, JavaScript, Python.
 Similar to Google, they also harness the power of containers to execute these
 functions.
 
-<!-- Introduce FaaS as a concept and its role in "serverless" cloud computing  -->
-<!-- Challenges associated with FaaS, including cold start latency -->
+\section{WebAssembly}
 
-\subsection{WebAssembly}
-
-<!-- Provide an overview of WebAssembly, its purpose, and its advantages over
-traditional deployment methods. -->
 
 WebAssembly (Wasm) is a binary instruction format designed as a stack-based
 virtual machine. It aims to be a portable target for the compilation of
