@@ -45,6 +45,9 @@ header-includes:
   - \titleformat*{\subsection}{\large\headingfont}
   - \titleformat*{\subsubsection}{\large\headingfont}
 
+
+  - \hyphenation{Web-Assembly}
+
 ---
 
 
