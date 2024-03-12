@@ -133,7 +133,8 @@ header-includes:
 \begin{center}
 \begin{minipage}{0.75\textwidth}
 
-\chapter{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
 
 The ever increasing demand for cloud services has resulted in the expansion of
 energy-intensive data centers, the ICT industry accounts for about 1 \% of global 
@@ -164,7 +165,9 @@ consumption and offering a viable pathway towards a more sustainable cloud.
 \vspace*{\fill}
 \begin{center}
 \begin{minipage}{0.75\textwidth}
-\chapter{Acknowledgments}
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\chapter*{Acknowledgments}
 
 
 The idea for the topic for this thesis appeared in an episode of the podcast
