@@ -333,55 +333,14 @@ results from the experiments, and finally a chapter suggesting future works.
 
 \chapter{Background}
 
-This chapter delves into the historical evolution of cloud computing,
-illustrating how its development has led to the exploration of WebAssembly as a
-potential paradigm shift in cloud services. We explore the concept of the first
-two "*waves*" of cloud computing, each representing a significant technological
-advancement and shifting industry practices. Additionally, we discuss the role
-of major vendors in shaping cloud computing landscape.
-
-\section{Cloud Computing: An quick summary}
-
-Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
-computing services, such as storage, processing power, network, and software,
-served over the internet, instead of running on locally owned hardware
-(on-premise). For companies, this has proved to be a super power, where
-businesses can focus on deploying their own applications and services to their
-users without worrying about the underlying infrastructure.
-
-<!-- Some benefits and challenges -->
-
-Some benefits include:
-
-- *Reduced total cost of ownership*: Cloud computing has enabled companies to take
-  their computing needs to the next level. Startups who can't afford neither the
-  cost or time required to build their own infrastructure, and larger companies
-  that want to iterate faster and decrease their lead time from idea to
-  production [(Thomas, Dave. 2009)][6].
-
-- *Scalability* is one of the most significant benefits of cloud computing. As
-  organizations expand, so do their customer needs and the complexity of their
-  application infrastructure. Each additional feature brings with it additional
-  costs, highlighting the importance of efficient resource management to
-  optimize hardware investments in a cloud computing environment
-  [(Thomas, Dave. 2008)][6].
-
-Yet, challenges persist:
-
-- *Cost management*: Managing the cost of cloud computing is an ongoing challenge, with
-  Gartner predicting that through 2024, 60% of infrastructure and operations
-  (I&O) leaders will encounter cloud costs that are higher than budgeted for
-  [(Rimol, M. 2021)][7].
-
-- *Energy consumption*: The challenge of energy usage in cloud computing is a
-  significant concern, with data centers alone accounting for approximately 1%
-  of the world's electricity consumption [(Freitag et al. 2021)][1]. This
-  staggering statistic highlights the need to explore strategies and measures to
-  mitigate energy usage in data centers. By reducing energy consumption, not
-  only can costs be reduced, but also the carbon footprint associated with
-  running the cloud can be lessened. Decreasing energy usage in data centers is
-  expected to yield cost savings and contribute to the overall sustainability
-  goals by reducing the cloud's environmental impact.
+The evolution of cloud computing represents a transformative quest, driven by
+the relentless pursuit for efficiency, scalability and innovation. This chapter
+introduces the concept of cloud, then goes back in time to what can be deemed as
+"the dawn of cloud" and navigates the evolution through introducing the concept
+of "Three waves of cloud computing", coined by the WebAssembly community. (TODO:
+SRC, Matt B?) Some benefits and challenges to cloud are discussed, ultimately
+leading to the exploriation of WebAssembly as a potential solution for driving
+down the carbon footprint of cloud services.
 
 \section{The Evolution of Cloud Computing}
 
@@ -422,6 +381,51 @@ established platform teams to build orchestrated developers platforms, thereby
 simplifying application development in Kubernetes clusters.
 
 \subsection{The Third Wave: WebAssembly modules}
+
+
+\section{Cloud Computing: An quick summary}
+
+Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
+computing services, such as storage, processing power, network, and software,
+served over the internet, instead of running on locally owned hardware
+(on-premise). For companies, this has proved to be a super power, where
+businesses can focus on deploying their own applications and services to their
+users without worrying about the underlying infrastructure.
+
+<!-- Some benefits and challenges -->
+
+Some benefits include:
+
+- *Reduced total cost of ownership*: Cloud computing has enabled companies to take
+  their computing needs to the next level. Startups who can't afford neither the
+  cost or time required to build their own infrastructure, and larger companies
+  that want to iterate faster and decrease their lead time from idea to
+  production [(Thomas, Dave. 2009)][6].
+
+- *Scalability* is one of the most significant benefits of cloud computing. As
+  organizations expand, so do their customer needs and the complexity of their
+  application infrastructure. Each additional feature brings with it additional
+  costs, highlighting the importance of efficient resource management to
+  optimize hardware investments in a cloud computing environment
+  [(Thomas, Dave. 2008)][6].
+
+However, some challenges persist:
+
+- *Cost management*: Managing the cost of cloud computing is an ongoing challenge, with
+  Gartner predicting that through 2024, 60% of infrastructure and operations
+  (I&O) leaders will encounter cloud costs that are higher than budgeted for
+  [(Rimol, M. 2021)][7].
+
+- *Energy consumption*: The challenge of energy usage in cloud computing is a
+  significant concern, with data centers alone accounting for approximately 1%
+  of the world's electricity consumption [(Freitag et al. 2021)][1]. This
+  staggering statistic highlights the need to explore strategies and measures to
+  mitigate energy usage in data centers. By reducing energy consumption, not
+  only can costs be reduced, but also the carbon footprint associated with
+  running the cloud can be lessened. Decreasing energy usage in data centers is
+  expected to yield cost savings and contribute to the overall sustainability
+  goals by reducing the cloud's environmental impact.
+
 
 \section{Serverless and Function-as-a-Service (FaaS)}
 
@@ -466,6 +470,16 @@ Similar to Google, they also harness the power of containers to execute these
 functions.
 
 \section{WebAssembly}
+
+WebAssembly, originally designed for running demanding computations in web
+browsers, present a promising technology that could help reduce the energy
+consumption of cloud services. It offers an interesting option for packaging
+functions with its compact binary format and fast execution time. This has the
+potiential to significantly reduce startup latency and resource overhead
+associated with traditional serverless platforms. This increased efficiency
+could lead to a direct decrease in energy consumption for cloud services, which
+in turn could motivate the industry to adopt alternative technology that enable
+a more sustainable cloud.
 
 
 WebAssembly (Wasm) is a binary instruction format designed as a stack-based
@@ -560,6 +574,7 @@ platform.
 
 \part{Project}
 \chapter{Approach}
+\chapter{Analysis}
 
 \newpage
 
@@ -577,27 +592,21 @@ Rust/Docker/Etc.
 
 \newpage
 
-\part{Discussions and future works}
+\part{Results}
 
-\subsection{Some Graphs}
+\newpage
+\chapter{Evaulation}
 
+\newpage
+\chapter{Discussion}
 
-\begin{table}
-\centering
-\begin{tabular}{ll}
-Header 1 & Header 2 \\
-\hline
-Row 1 & Data \\
-Row 2 & Data \\
-\end{tabular}
-\caption{Example Table}
-\end{table}
-
+\newpage
+\chapter{Conclusion}
 
 \label{CustomLastPage}
 
 
-\section{References}
+\chapter{References}
 
 [1]: https://dx.doi.org/10.1016/j.patter.2021.100340
 [2]: https://doi.org/10.1038/s41558-020-0837-6
