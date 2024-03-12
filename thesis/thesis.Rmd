@@ -11,12 +11,12 @@ output:
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
   - \usepackage{lastpage}
-  - \usepackage{tocbibind}
-  - \usepackage{graphicx}
+  - \usepackage{tocbibind} 
+  - \usepackage{graphicx} % import figure
   - \usepackage{setspace}
   - \usepackage{lipsum}
   - \usepackage[fontsize=12pt]{scrextend}
-  - \usepackage{fontspec}
+  - \usepackage{fontspec} % change to system font
   - \onehalfspacing
 
   - \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
