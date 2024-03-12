@@ -6,6 +6,7 @@ documentclass: report
 date: 2024
 output: 
   pdf_document:
+    number_sections: true
     latex_engine: xelatex
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
