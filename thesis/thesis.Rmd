@@ -40,8 +40,9 @@ header-includes:
   - \setmainfont{Georgia}
   - \usepackage{titlesec}
   - \newfontfamily\headingfont{Avenir}
-  - \titleformat*{\section}{\LARGE\headingfont}
-  - \titleformat*{\subsection}{\Large\headingfont}
+  - \titleformat{\chapter}[display]{\headingfont\large}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  - \titleformat*{\section}{\Large\headingfont}
+  - \titleformat*{\subsection}{\large\headingfont}
   - \titleformat*{\subsubsection}{\large\headingfont}
 
 ---
