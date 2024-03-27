@@ -29,3 +29,11 @@ _Hopefully_, there will also be time to set up Nebula to run on a Raspberry PI
 that I can measure power consumption of during load of the web server, but this
 is paragraph won't make it into the final paper, it's more of a TODO to me, to
 not forget (how could I) to attempt to measure power consumption as well.
+
+---
+
+As cloud computing matured, its journey first unfolded in two significant waves,
+each marking a new age of innovation and addressing the dynamic needs and
+challenges of digital infrastructure. This evolution reflects the industry's
+efforts to optimize resource efficiency, reducing operational costs, and
+minimize environmental impacts.
