@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.7)  27 MAR 2024 19:29
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.7)  27 MAR 2024 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1450,7 +1450,12 @@ Underfull \hbox (badness 1360) in paragraph at lines 740--745
 SI)[] present
  []
 
-[14] [15] [16
+[14]
+Underfull \hbox (badness 1824) in paragraph at lines 790--790
+|[]\TU/Avenir(0)/m/n/17.28 Energy efficiency and Sustainability in Cloud
+ []
+
+[15] [16
 
 ]
 Chapter 4.
@@ -1499,10 +1504,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31059 strings out of 476683
- 618089 string characters out of 5804048
+ 31067 strings out of 476683
+ 618128 string characters out of 5804048
  1855018 words of memory out of 5000000
- 50737 multiletter control sequences out of 15000+600000
+ 50745 multiletter control sequences out of 15000+600000
  520892 words of font info for 126 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  108i,12n,122p,1195b,487s stack positions out of 10000i,1000n,20000p,200000b,200000s

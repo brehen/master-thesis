@@ -513,7 +513,7 @@ environmental impact of ICT.
 \epigraph{\itshape 
 Data has gravity, and that gravity pulls hard
 }{David Flanagan}
-\section{Cloud Computing: An quick summary}
+\section{Cloud Computing Overview}
 
 Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
 computing resources served over the internet, instead of running on locally owned hardware
@@ -586,16 +586,13 @@ Energy consumption & The environmental impact and energy usage of data centers p
 
 \newpage
 
-\section{Virtualization}
+\section{Virtualization and Container}
 
+\subsection{Virtual Machines}
+\subsection{Containers and Docker}
+\subsection{Container orchestration}
 
-\section{Virtual Machines}
-
-\section{Containers and Docker}
-
-\section{Container orchestration}
-
-\section{Serverless and Function-as-a-Service (FaaS)}
+\section{Serverless Computing}
 
 Building your own developer platform on top of Kubernetes, much like building
 your own infrastructure, also entails a significant cost. Often, developers wish
@@ -610,7 +607,7 @@ or FaaS. Companies already in the cloud game decided to develop their own FaaS
 platforms to attract developers interested in just writing their functions and
 running them, and not worry about anything underneath.
 
-\section{Major vendors in Serverless}
+\subsection{Major vendors in Serverless}
 
 The concept of "the cloud" isn't owned by any single organization, but rather,
 through the collective effort of industry players including Amazon, Microsoft,
@@ -637,7 +634,7 @@ create and execute functions written in languages like C#, JavaScript, Python.
 Similar to Google, they also harness the power of containers to execute these
 functions.
 
-\section{WebAssembly}
+\section{WebAssembly and WASI}
 
 WebAssembly, originally designed for running demanding computations in web
 browsers, present a promising technology that could help reduce the energy
@@ -649,6 +646,7 @@ could lead to a direct decrease in energy consumption for cloud services, which
 in turn could motivate the industry to adopt alternative technology that enable
 a more sustainable cloud.
 
+\subsection{WebAssembly}
 
 WebAssembly (Wasm) is a binary instruction format designed as a stack-based
 virtual machine. It aims to be a portable target for the compilation of
@@ -691,7 +689,7 @@ security, and portability, can potentially offer an attractive alternative
 deployment method for building and running cloud native applications, like the
 "Academemes" service we will explore in this essay.
 
-\subsubsection{WASM+WASI: Towards Energy-efficient FaaS Platforms}
+\subsection{WebAssembly System Interface}
 
 WebAssembly (WASM) and [WebAssembly System Interface (WASI)][16] present
 promising choices to traditional ways of deploying and hosting Function as
@@ -737,6 +735,15 @@ platforms can offer significant benefits. Focusing on energy efficiency and redu
 efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
+
+\section{Energy efficiency and Sustainability in Cloud Computing}
+
+\section{Functions-as-a-Service (FaaS) Platforms}
+
+\section{Rust programming language}
+\subsection{Introduction to Rust}
+\subsection{Rust and WebAssembly}
+\subsection{Building Nebula with Rust}
 
 \newpage
 
