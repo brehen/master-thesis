@@ -256,14 +256,18 @@ WasmIO 2024 and showed me how to reduce my startup times by a further 100 times.
 
 \part{Overview}
 
+
+\newpage
+
+\chapter{Introduction}
+\label{chap:intro}
+
 \epigraph{\itshape 
   If WASM+WASI existed in 2008, we wouldn't have needed to created Docker. 
   That's how important it is. Webassembly on the server is the future of computing.
   A standardized system interface was the missing link. 
   Let's hope WASI is up to the task!
 }{---Solomon Hykes, \textit{Founder of Docker}}
-
-\newpage
 
 \chapter{Introduction}
 \label{chap:intro}
