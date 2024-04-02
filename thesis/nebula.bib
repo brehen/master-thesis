@@ -1,86 +1,141 @@
 @article{aaron2021,
   title = {An {{Empirical Study}} of {{Real-World WebAssembly Binaries}}: {{Security}}, {{Languages}}, {{Use Cases}}},
   author = {{Aaron Hilbig} and {Daniel Lehmann} and {Michael Pradel}},
-  year = {2021},
-  journal = {The Web Conference},
+  date = {2021},
+  journaltitle = {The Web Conference},
   doi = {10.1145/3442381.3450138},
   abstract = {WebAssembly has emerged as a low-level language for the web and beyond. Despite its popularity in different domains, little is known about WebAssembly binaries that occur in the wild. This paper presents a comprehensive empirical study of 8,461 unique WebAssembly binaries gathered from a wide range of sources, including source code repositories, package managers, and live websites. We study the security properties, source languages, and use cases of the binaries and how they influence the security of the WebAssembly ecosystem. Our findings update some previously held assumptions about real-world WebAssembly and highlight problems that call for future research. For example, we show that vulnerabilities that propagate from insecure source languages potentially affect a wide range of binaries (e.g., two thirds of the binaries are compiled from memory unsafe languages, such as C and C++) and that 21\% of all binaries import potentially dangerous APIs from their host environment. We also show that cryptomining, which once accounted for the majority of all WebAssembly code, has been marginalized (less than 1\% of all binaries found on the web) and gives way to a diverse set of use cases. Finally, 29\% of all binaries on the web are minified, calling for techniques to decompile and reverse engineer WebAssembly. Overall, our results show that WebAssembly has left its infancy and is growing up into a language that powers a diverse ecosystem, with new challenges and opportunities for security researchers and practitioners. Besides these insights, we also share the dataset underlying our study, which is 58 times larger than the largest previously reported benchmark.},
   annotation = {S2ID: 53859511943c1cc1da713b436cea1f502ce64c10}
 }
 
+@online{addictDataStackShow,
+  title = {The {{Data Stack Show}} - 172: {{How WebAssembly}} Is {{Enabling}} the {{Third Wave}} of {{Cloud Compute}} with {{Matt Butcher}} of {{Fermyon Technologies}}},
+  shorttitle = {The {{Data Stack Show}} - 172},
+  author = {Addict, Podcast},
+  url = {https://podcastaddict.com/the-data-stack-show/episode/169557423},
+  urldate = {2024-04-01},
+  abstract = {Highlights from this week’s conversation include:Matt’s background and journey with Fermyon (2:32)WebAssembly and enhanced security models (3:43)The IOT Startup and Google Acquisition (10:49)Google's Early Containers (11:50)Scaling and anticipating requests (20:22)Introduction to WebAssembly and its importance (23:32)The Benefits of WebAssembly (30:57)Comparison of Virtual Mach},
+  langid = {english},
+  organization = {Podcast Addict},
+  file = {/Users/mariuskluften/Zotero/storage/YPK34HU6/169557423.html}
+}
+
 @article{bao2016,
   title = {Static and {{Dynamic Frequency Scaling}} on {{Multicore CPUs}}},
-  author = {Bao, Wenlei and Hong, Changwan and {Sudheer Chunduri} and Chunduri, Sudheer and Krishnamoorthy, Sriram and {Sriram Krishnamoorthy} and {Sriram Krishnamoorthy} and Pouchet, Louis-No{\"e}l and Rastello, Fabrice and Sadayappan, P.},
-  year = {2016},
-  month = dec,
-  journal = {ACM Transactions on Architecture and Code Optimization},
+  author = {Bao, Wenlei and Hong, Changwan and {Sudheer Chunduri} and Chunduri, Sudheer and Krishnamoorthy, Sriram and {Sriram Krishnamoorthy} and {Sriram Krishnamoorthy} and Pouchet, Louis-Noël and Rastello, Fabrice and Sadayappan, P.},
+  date = {2016-12-28},
+  journaltitle = {ACM Transactions on Architecture and Code Optimization},
   volume = {13},
   number = {4},
   pages = {51},
   doi = {10.1145/3011017},
-  abstract = {Dynamic Voltage and Frequency Scaling (DVFS) typically adapts CPU power consumption by modifying a processor's operating frequency (and the associated voltage). Typical DVFS approaches include using default strategies such as running at the lowest or the highest frequency or reacting to the CPU's runtime load to reduce or increase frequency based on the CPU usage. In this article, we argue that a compile-time approach to CPU frequency selection is achievable for affine program regions and can significantly outperform runtime-based approaches. We first propose a lightweight runtime approach that can exploit the properties of the power profile specific to a processor, outperforming classical Linux governors such as powersave or on-demand for computational kernels. We then demonstrate that, for affine kernels in the application, a purely compile-time approach to CPU frequency and core count selection is achievable, providing significant additional benefits over the runtime approach. Our framework relies on a one-time profiling of the target CPU, along with a compile-time categorization of loop-based code segments in the application. These are combined to determine at compile-time the frequency and the number of cores to use to execute each affine region to optimize energy or energy-delay product. Extensive evaluation on 60 benchmarks and 5 multi-core CPUs show that our approach systematically outperforms the powersave Linux governor while also improving overall performance.},
+  abstract = {Dynamic Voltage and Frequency Scaling (DVFS) typically adapts CPU power consumption by modifying a processor’s operating frequency (and the associated voltage). Typical DVFS approaches include using default strategies such as running at the lowest or the highest frequency or reacting to the CPU’s runtime load to reduce or increase frequency based on the CPU usage. In this article, we argue that a compile-time approach to CPU frequency selection is achievable for affine program regions and can significantly outperform runtime-based approaches. We first propose a lightweight runtime approach that can exploit the properties of the power profile specific to a processor, outperforming classical Linux governors such as powersave or on-demand for computational kernels. We then demonstrate that, for affine kernels in the application, a purely compile-time approach to CPU frequency and core count selection is achievable, providing significant additional benefits over the runtime approach. Our framework relies on a one-time profiling of the target CPU, along with a compile-time categorization of loop-based code segments in the application. These are combined to determine at compile-time the frequency and the number of cores to use to execute each affine region to optimize energy or energy-delay product. Extensive evaluation on 60 benchmarks and 5 multi-core CPUs show that our approach systematically outperforms the powersave Linux governor while also improving overall performance.},
   annotation = {MAG ID: 2567319156 S2ID: 7ee529c7a72f7f228ba1e60011d5e1d5078730d6}
 }
 
-@misc{benpopper2023,
+@online{barrAmazonEC2Beta2006,
+  title = {Amazon {{EC2 Beta}} | {{AWS News Blog}}},
+  author = {Barr, Jeff},
+  date = {2006-08-25T12:30:18-07:00},
+  url = {https://aws.amazon.com/blogs/aws/amazon_ec2_beta/},
+  urldate = {2024-04-01},
+  langid = {american},
+  file = {/Users/mariuskluften/Zotero/storage/7D468CSQ/amazon_ec2_beta.html}
+}
+
+@online{benpopper2023,
   title = {Are Clouds Having Their On-Prem Moment? - {{Stack Overflow}}},
-  urldate = {2024-03-20},
-  howpublished = {https://stackoverflow.blog/2023/02/20/are-companies-shifting-away-from-public-clouds/}
+  url = {https://stackoverflow.blog/2023/02/20/are-companies-shifting-away-from-public-clouds/},
+  urldate = {2024-03-20}
 }
 
 @article{bharanidharan2020,
   title = {Energy {{Efficient Next-Gen}} of {{Virtualization}} for {{Cloud-native Applications}} in {{Modern Data Centres}}},
-  author = {G, {\relax BharaniDharan}. and S, {\relax Jayalakshmi}.},
-  year = {2020},
-  journal = {2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)},
+  author = {family=G, given=BharaniDharan., given-i={{BharaniDharan}} and family=S, given=Jayalakshmi., given-i={{Jayalakshmi}}},
+  date = {2020},
+  journaltitle = {2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)},
   doi = {10.1109/i-smac49090.2020.9243497},
   abstract = {In the new software-driven world this is the need of the hour to achieve success by accelerating development, delivery of applications and services rapidly that make customers happy and business competitive. To achieve faster delivery of resources and applications to strengthen the business with more transformations containers have been introduced. At the existing scenario, the hyper-converged data centre uses the concept of virtualization which creates software abstraction of the underlying hardware using Hypervisor software that enables to execute several Virtual Machines (VMs) with dissimilar Operating System (OS) flavours. But virtualization is heavyweight and it may take more time to boot. The proposed containerization and docker in hybrid cloud composable data centre is lightweight supports Operating System (OS) level virtualization that isolates resources, libraries and other binaries bundled into a single package for agile modern scalable workloads. This paper focuses on the container-based virtualization to shape the future cloud-based modern data centre for supporting the micro-services based applications for faster deployment to Developer Operations (DevOps) teams in IT with resiliency, High Availability and better resource management with energy savings.},
   annotation = {MAG ID: 3100549319 S2ID: 39a745e7774f63b3a015650112f15a3b7e61216d}
 }
 
+@report{crisman1963,
+  title = {Computer {{Time-Sharing System}}},
+  author = {Crisman, P. A.},
+  date = {1963},
+  pages = {106},
+  institution = {MIT},
+  url = {https://people.csail.mit.edu/saltzer/Multics/CTSS-Documents/CTSS_ProgrammersGuide_1963.pdf},
+  urldate = {2024-03-29},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/76H38T8U/CTSS_ProgrammersGuide_1963.pdf}
+}
+
+@online{DataStackShow,
+  title = {‎{{The Data Stack Show}}: 172: {{How WebAssembly}} Is {{Enabling}} the {{Third Wave}} of {{Cloud Compute}} with {{Matt Butcher}} of {{Fermyon Technologies}} on {{Apple Podcasts}}},
+  shorttitle = {‎{{The Data Stack Show}}},
+  url = {https://podcasts.apple.com/us/podcast/172-how-webassembly-is-enabling-the-third-wave-of/id1526164119?i=1000641148427},
+  urldate = {2024-04-01},
+  abstract = {‎Show The Data Stack Show, Ep 172: How WebAssembly is Enabling the Third Wave of Cloud Compute with Matt Butcher of Fermyon Technologies - Jan 10, 2024},
+  langid = {american},
+  organization = {Apple Podcasts},
+  file = {/Users/mariuskluften/Zotero/storage/4YRV93ZK/id1526164119.html}
+}
+
 @article{davethomas2009,
-  title = {Cloud {{Computing}} --- {{Benefits}} and {{Challenges}}!},
+  title = {Cloud {{Computing}} — {{Benefits}} and {{Challenges}}!},
   author = {Thomas, Dave},
-  year = {2009},
-  journal = {JOT},
+  date = {2009},
+  journaltitle = {JOT},
   volume = {8},
   number = {3},
   pages = {37},
   issn = {1660-1769},
   doi = {10.5381/jot.2009.8.3.c4},
+  url = {http://www.jot.fm/contents/issue_2009_05/column4.html},
   urldate = {2023-05-28},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/CCFDYUTV/Thomas - 2009 - Cloud Computing — Benefits and Challenges!.pdf}
 }
 
-@misc{durieux2023,
+@online{durieux2023,
   title = {Empirical {{Study}} of the {{Docker Smells Impact}} on the {{Image Size}}},
   author = {Durieux, Thomas},
-  year = {2024},
-  month = mar,
+  date = {2024-03-12},
   eprint = {2312.13888},
-  primaryclass = {cs},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
   doi = {10.1145/3597503.3639143},
+  url = {http://arxiv.org/abs/2312.13888},
   urldate = {2024-03-27},
   abstract = {Docker, a widely adopted tool for packaging and deploying applications leverages Dockerfiles to build images. However, creating an optimal Dockerfile can be challenging, often leading to "Docker smells" or deviations from best practices. This paper presents a study of the impact of 14 Docker smells on the size of Docker images. To assess the size impact of Docker smells, we identified and repaired 16 145 Docker smells from 11 313 open-source Dockerfiles. We observe that the smells result in an average increase of 48.06 MB (4.6\%) per smelly image. Depending on the smell type, the size increase can be up to 10\%, and for some specific cases, the smells can represent 89\% of the image size. Interestingly, the most impactful smells are related to package managers which are commonly encountered and are relatively easy to fix. To collect the perspective of the developers regarding the size impact of the Docker smells, we submitted 34 pull requests that repair the smells and we reported their impact on the Docker image to the developers. 26/34 (76.5\%) of the pull requests have been merged and they contribute to a saving of 3.46 GB (16.4\%). The developer's comments demonstrate a positive interest in addressing those Docker smells even when the pull requests have been rejected},
-  archiveprefix = {arxiv},
+  pubstate = {preprint},
   keywords = {Computer Science - Software Engineering},
   note = {Comment: Accepted at ICSE'24. arXiv admin note: text overlap with arXiv:2302.01707},
   file = {/Users/mariuskluften/Zotero/storage/F3BG9Z6L/Durieux - 2024 - Empirical Study of the Docker Smells Impact on the.pdf;/Users/mariuskluften/Zotero/storage/PKBWW49P/2312.html}
 }
 
+@unpublished{favaloroInternetSolutionsDivision1996,
+  title = {Internet {{Solutions Division Strategy}} for {{Cloud Computing}}},
+  author = {Favaloro, George and O’Sullivan, Sean},
+  date = {1996-11-14},
+  url = {https://s3.amazonaws.com/files.technologyreview.com/p/pub/legacy/compaq_cst_1996_0.pdf},
+  urldate = {2024-04-01},
+  file = {/Users/mariuskluften/Zotero/storage/3G3FWH7M/compaq_cst_1996_0.pdf}
+}
+
 @article{freitag2021,
   title = {The Real Climate and Transformative Impact of {{ICT}}: {{A}} Critique of Estimates, Trends, and Regulations},
   shorttitle = {The Real Climate and Transformative Impact of {{ICT}}},
-  author = {Freitag, Charlotte and {Berners-Lee}, Mike and Widdicks, Kelly and Knowles, Bran and Blair, Gordon S. and Friday, Adrian},
-  year = {2021},
-  month = sep,
-  journal = {Patterns},
+  author = {Freitag, Charlotte and Berners-Lee, Mike and Widdicks, Kelly and Knowles, Bran and Blair, Gordon S. and Friday, Adrian},
+  date = {2021-09},
+  journaltitle = {Patterns},
   volume = {2},
   number = {9},
   pages = {100340},
   issn = {26663899},
   doi = {10.1016/j.patter.2021.100340},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S2666389921001884},
   urldate = {2023-05-29},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/VMBV89VW/Freitag et al. - 2021 - The real climate and transformative impact of ICT.pdf}
@@ -88,10 +143,9 @@
 
 @article{haas2017,
   title = {Bringing the Web up to Speed with {{WebAssembly}}},
-  author = {Haas, Andreas and Rossberg, Andreas and {Derek L. Schuff} and Schuff, Derek L. and Titzer, Ben L. and Holman, Michael and Gohman, Dan and Wagner, Luke and Zakai, Alon and Bastien, {\relax JF}},
-  year = {2017},
-  month = jun,
-  journal = {ACM-SIGPLAN Symposium on Programming Language Design and Implementation},
+  author = {Haas, Andreas and Rossberg, Andreas and {Derek L. Schuff} and Schuff, Derek L. and Titzer, Ben L. and Holman, Michael and Gohman, Dan and Wagner, Luke and Zakai, Alon and family=Bastien, given=JF, given-i=JF},
+  date = {2017-06-14},
+  journaltitle = {ACM-SIGPLAN Symposium on Programming Language Design and Implementation},
   volume = {52},
   number = {6},
   pages = {185--200},
@@ -100,12 +154,19 @@
   annotation = {MAG ID: 2625141509 S2ID: f9420023ec1ee6d7d61d8f61f3c7df33b59afe61}
 }
 
+@audio{HowWebAssemblyEnabling,
+  title = {How {{WebAssembly}} Is {{Enabling}} the {{Third Wave}} of {{Cloud Compute}} with {{Matt Butcher}} of {{Fermyon Technologies}}},
+  url = {https://datastackshow.com/podcast/how-webassembly-is-enabling-the-third-wave-of-cloud-compute-with-matt-butcher-of-fermyon-technologies/},
+  urldate = {2024-03-30},
+  langid = {american},
+  file = {/Users/mariuskluften/Zotero/storage/9HDIQ9AM/how-webassembly-is-enabling-the-third-wave-of-cloud-compute-with-matt-butcher-of-fermyon-techno.html}
+}
+
 @article{james2015,
   title = {Data Dependent Energy Modelling for Worst Case Energy Consumption Analysis},
   author = {{James Pallister} and Pallister, James and Kerrison, Steve and Morse, Jeremy and Eder, Kerstin},
-  year = {2015},
-  month = may,
-  journal = {Software and Compilers for Embedded Systems},
+  date = {2015-05-13},
+  journaltitle = {Software and Compilers for Embedded Systems},
   doi = {10.1145/3078659.3078666},
   abstract = {Safely meeting Worst Case Energy Consumption (WCEC) criteria requires accurate energy modeling of software. We investigate the impact of instruction operand values upon energy consumption in cacheless embedded processors. Existing instruction-level energy models typically use measurements from random input data, providing estimates unsuitable for safe WCEC analysis.   We examine probabilistic energy distributions of instructions and propose a model for composing instruction sequences using distributions, enabling WCEC analysis on program basic blocks. The worst case is predicted with statistical analysis. Further, we verify that the energy of embedded benchmarks can be characterised as a distribution, and compare our proposed technique with other methods of estimating energy consumption.},
   annotation = {ARXIV\_ID: 1505.03374 MAG ID: 870973925 S2ID: d2fcbc41ed383c0971ffef51c5621e9dc0e52671}
@@ -114,9 +175,8 @@
 @article{kansal2010,
   title = {Virtual Machine Power Metering and Provisioning},
   author = {Kansal, Aman and Zhao, Feng and Liu, Jie and Kothari, Nupur and Bhattacharya, Arka},
-  year = {2010},
-  month = jun,
-  journal = {ACM Symposium on Cloud Computing},
+  date = {2010-06-10},
+  journaltitle = {ACM Symposium on Cloud Computing},
   pages = {39--50},
   doi = {10.1145/1807128.1807136},
   abstract = {Virtualization is often used in cloud computing platforms for its several advantages in efficiently managing resources. However, virtualization raises certain additional challenges, and one of them is lack of power metering for virtual machines (VMs). Power management requirements in modern data centers have led to most new servers providing power usage measurement in hardware and alternate solutions exist for older servers using circuit and outlet level measurements. However, VM power cannot be measured purely in hardware. We present a solution for VM power metering, named Joulemeter. We build power models to infer power consumption from resource usage at runtime and identify the challenges that arise when applying such models for VM power metering. We show how existing instrumentation in server hardware and hypervisors can be used to build the required power models on real platforms with low error. Our approach is designed to operate with extremely low runtime overhead while providing practically useful accuracy. We illustrate the use of the proposed metering capability for VM power capping, a technique to reduce power provisioning costs in data centers. Experiments are performed on server traces from several thousand production servers, hosting Microsoft's real-world applications such as Windows Live Messenger. The results show that not only does VM power metering allows virtualized data centers to achieve the same savings that non-virtualized data centers achieved through physical server power capping, but also that it enables further savings in provisioning costs with virtualization.},
@@ -126,26 +186,39 @@
 @article{kashif2020,
   title = {{{RAPL}} in {{Action}}: {{Experiences}} in {{Using RAPL}} for {{Power Measurements}}},
   author = {{Kashif Nizam Khan} and {Mikael Hirki} and {T. Niemi}},
-  year = {2020},
+  date = {2020},
   abstract = {KASHIF NIZAM KHAN, Helsinki Institute of Physics and Aalto University, Finland MIKAEL HIRKI, Helsinki Institute of Physics and Aalto University, Finland TAPIO NIEMI, Helsinki Institute of Physics and University of Lausanne, Switzerland JUKKA K. NURMINEN, Helsinki Institute of Physics, Aalto University and VTT Technical Research Centre of Finland ZHONGHONG OU, Beijing University of Posts and Telecommunications, China},
   annotation = {S2ID: dc20ad0c2161e4d49b880c3d02277ecaf8f10c52}
 }
 
-@misc{kubernetes2024,
+@online{kubernetes2024,
   title = {Kubernetes},
+  url = {https://kubernetes.io/},
   urldate = {2024-03-27},
   abstract = {Production-Grade Container Orchestration},
-  howpublished = {https://kubernetes.io/},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/49BAYYWR/kubernetes.io.html}
+}
+
+@book{lelekSoftwareMistakesTradeoffs2022,
+  title = {Software Mistakes and Tradeoffs: How to Make Good Programming Decisions},
+  shorttitle = {Software Mistakes and Tradeoffs},
+  author = {Lelek, Tomasz and Skeet, Jon},
+  date = {2022},
+  publisher = {Manning},
+  location = {Shelter Island, NY},
+  isbn = {978-1-61729-920-9},
+  langid = {english},
+  pagetotal = {388},
+  note = {Includes bibliographical references and index},
+  file = {/Users/mariuskluften/Zotero/storage/XZJTNN5T/Lelek and Skeet - 2022 - Software mistakes and tradeoffs how to make good .pdf}
 }
 
 @article{merkel2014,
   title = {Docker: Lightweight {{Linux}} Containers for Consistent Development and Deployment},
   author = {Merkel, Dirk},
-  year = {2014},
-  month = mar,
-  journal = {Linux Journal},
+  date = {2014-03-01},
+  journaltitle = {Linux Journal},
   volume = {2014},
   number = {239},
   pages = {2},
@@ -156,8 +229,8 @@
 @article{monica2022,
   title = {Towards {{Greener Applications}}: {{Enabling Sustainable-aware Cloud Native Applications Design}}},
   author = {{Monica Vitali}},
-  year = {2022},
-  journal = {International Conference on Advanced Information Systems Engineering},
+  date = {2022},
+  journaltitle = {International Conference on Advanced Information Systems Engineering},
   doi = {10.1007/978-3-031-07472-1_6},
   annotation = {S2ID: 070a317d1dad663809bd4773552a44e02baa069c}
 }
@@ -165,17 +238,16 @@
 @article{mytton2020,
   title = {Hiding Greenhouse Gas Emissions in the Cloud},
   author = {Mytton, David},
-  year = {2020},
-  month = aug,
-  journal = {Nat. Clim. Chang.},
+  date = {2020-08},
+  journaltitle = {Nat. Clim. Chang.},
   volume = {10},
   number = {8},
   pages = {701--701},
   publisher = {Nature Publishing Group},
   issn = {1758-6798},
   doi = {10.1038/s41558-020-0837-6},
+  url = {https://www.nature.com/articles/s41558-020-0837-6},
   urldate = {2024-03-27},
-  copyright = {2020 Springer Nature Limited},
   langid = {english},
   keywords = {Energy and society,Energy supply and demand,Environmental impact,Technology},
   file = {/Users/mariuskluften/Zotero/storage/CCZ3G4ZB/Mytton - 2020 - Hiding greenhouse gas emissions in the cloud.pdf}
@@ -188,12 +260,39 @@
   file = {/Users/mariuskluften/Zotero/storage/RKGYSAUQ/Mell and Grance - The NIST Definition of Cloud Computing.pdf}
 }
 
+@online{rimolCloudMigrationCosts2021,
+  title = {Cloud {{Migration Costs}} and {{Avoiding Overspend}}},
+  author = {Rimol, Meghan},
+  date = {2021-07-07},
+  url = {https://www.gartner.com/smarterwithgartner/6-ways-cloud-migration-costs-go-off-the-rails},
+  urldate = {2024-04-01},
+  abstract = {According to Gartner research, more than 70\% of companies have now migrated at least some workloads into the public cloud. Read on for the 6 common mistakes that cause cloud migration costs to go off the rails. \#GartnerIO \#CloudMigration},
+  langid = {english},
+  organization = {Gartner},
+  file = {/Users/mariuskluften/Zotero/storage/6EW4B832/6-ways-cloud-migration-costs-go-off-the-rails.html}
+}
+
+@article{subashiniSurveySecurityIssues2011,
+  title = {A Survey on Security Issues in Service Delivery Models of Cloud Computing},
+  author = {Subashini, S. and Kavitha, V.},
+  date = {2011-01-01},
+  journaltitle = {Journal of Network and Computer Applications},
+  volume = {34},
+  number = {1},
+  pages = {1--11},
+  issn = {1084-8045},
+  doi = {10.1016/j.jnca.2010.07.006},
+  url = {https://www.sciencedirect.com/science/article/pii/S1084804510001281},
+  urldate = {2024-04-01},
+  abstract = {Cloud computing is a way to increase the capacity or add capabilities dynamically without investing in new infrastructure, training new personnel, or licensing new software. It extends Information Technology’s (IT) existing capabilities. In the last few years, cloud computing has grown from being a promising business concept to one of the fast growing segments of the IT industry. But as more and more information on individuals and companies are placed in the cloud, concerns are beginning to grow about just how safe an environment it is. Despite of all the hype surrounding the cloud, enterprise customers are still reluctant to deploy their business in the cloud. Security is one of the major issues which reduces the growth of cloud computing and complications with data privacy and data protection continue to plague the market. The advent of an advanced model should not negotiate with the required functionalities and capabilities present in the current model. A new model targeting at improving features of an existing model must not risk or threaten other important features of the current model. The architecture of cloud poses such a threat to the security of the existing technologies when deployed in a cloud environment. Cloud service users need to be vigilant in understanding the risks of data breaches in this new environment. In this paper, a survey of the different security risks that pose a threat to the cloud is presented. This paper is a survey more specific to the different security issues that has emanated due to the nature of the service delivery models of a cloud computing system.},
+  keywords = {Cloud computing,Data privacy,Data protection,Security,Virtualization}
+}
+
 @article{tapio2018,
   title = {Towards {{Green Big Data}} at {{CERN}}},
   author = {{Tapio Niemi} and {Tapio Niemi} and Niemi, Tapio and Nurminen, Jukka K. and Liukkonen, Juha-Matti and Hameri, Ari-Pekka},
-  year = {2018},
-  month = apr,
-  journal = {Future Generation Computer Systems},
+  date = {2018-04-01},
+  journaltitle = {Future Generation Computer Systems},
   volume = {81},
   pages = {103--113},
   doi = {10.1016/j.future.2017.11.001},
@@ -201,18 +300,28 @@
   annotation = {MAG ID: 2769156526 S2ID: 97130f7a6d1bd7ee6a8d3e3707124a6edb97756a}
 }
 
+@online{WhoCoinedCloud,
+  title = {Who {{Coined}} '{{Cloud Computing}}'?},
+  url = {https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/},
+  urldate = {2024-03-29},
+  abstract = {Now that every technology company in America seems to be selling cloud computing, we decided to find out where it all began.},
+  langid = {english},
+  organization = {MIT Technology Review},
+  file = {/Users/mariuskluften/Zotero/storage/8MKE7JEQ/who-coined-cloud-computing.html}
+}
+
 @article{yung2011,
-  title = {{{GBOOST}}: A {{GPU-based}} Tool for Detecting Gene--Gene Interactions in Genome--Wide Case Control Studies},
+  title = {{{GBOOST}}: A {{GPU-based}} Tool for Detecting Gene–Gene Interactions in Genome–Wide Case Control Studies},
   author = {Yung, Ling Sing S. and Yang, Can and Wan, Xiang and Yu, Weichuan},
-  year = {2011},
-  month = may,
-  journal = {Bioinformatics},
+  date = {2011-05-01},
+  journaltitle = {Bioinformatics},
   volume = {27},
   number = {9},
+  eprint = {21372087},
+  eprinttype = {pmid},
   pages = {1309--1310},
   doi = {10.1093/bioinformatics/btr114},
-  abstract = {Motivation: Collecting millions of genetic variations is feasible with the advanced genotyping technology. With a huge amount of genetic variations data in hand, developing efficient algorithms to carry out the gene--gene interaction analysis in a timely manner has become one of the key problems in genome-wide association studies (GWAS). Boolean operation-based screening and testing (BOOST), a recent work in GWAS, completes gene--gene interaction analysis in 2.5 days on a desktop computer. Compared with central processing units (CPUs), graphic processing units (GPUs) are highly parallel hardware and provide massive computing resources. We are, therefore, motivated to use GPUs to further speed up the analysis of gene--gene interactions. Results: We implement the BOOST method based on a GPU framework and name it GBOOST. GBOOST achieves a 40-fold speedup compared with BOOST. It completes the analysis of Wellcome Trust Case Control Consortium Type 2 Diabetes (WTCCC T2D) genome data within 1.34 h on a desktop computer equipped with Nvidia GeForce GTX 285 display card. Availability: GBOOST code is available at http://bioinformatics.ust.hk/BOOST.html\#GBOOST. Contact: kh.tsu@gnuymit; kh.tsu@uyee Supplementary information: Supplementary data are avaliable at Bioinformatics online.},
+  abstract = {Motivation: Collecting millions of genetic variations is feasible with the advanced genotyping technology. With a huge amount of genetic variations data in hand, developing efficient algorithms to carry out the gene–gene interaction analysis in a timely manner has become one of the key problems in genome-wide association studies (GWAS). Boolean operation-based screening and testing (BOOST), a recent work in GWAS, completes gene–gene interaction analysis in 2.5 days on a desktop computer. Compared with central processing units (CPUs), graphic processing units (GPUs) are highly parallel hardware and provide massive computing resources. We are, therefore, motivated to use GPUs to further speed up the analysis of gene–gene interactions. Results: We implement the BOOST method based on a GPU framework and name it GBOOST. GBOOST achieves a 40-fold speedup compared with BOOST. It completes the analysis of Wellcome Trust Case Control Consortium Type 2 Diabetes (WTCCC T2D) genome data within 1.34 h on a desktop computer equipped with Nvidia GeForce GTX 285 display card. Availability: GBOOST code is available at http://bioinformatics.ust.hk/BOOST.html\#GBOOST. Contact: kh.tsu@gnuymit; kh.tsu@uyee Supplementary information: Supplementary data are avaliable at Bioinformatics online.},
   pmcid = {3105448},
-  pmid = {21372087},
   annotation = {MAG ID: 2117138514 S2ID: 8df46fa634b1e3312acd38086d85c62d346de795}
 }
