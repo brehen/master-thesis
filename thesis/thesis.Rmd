@@ -226,6 +226,12 @@ Michael Kirkedal Thomsen, whom I somehow managed to convinced to help guide me
 through such a cutting edge topic. Their guidance and insight have been
 invaluable the past semesters. 
 
+\vspace{0.25cm}
+
+
+Finally I would like to thank Syrus Akbary, founder of Wasmer, whom I met at
+WasmIO 2024 and showed me how to reduce my startup times by a further 100 times.
+
 \end{minipage}
 \end{center}
 \vspace*{\fill}
