@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.2.7)  2 APR 2024 10:47
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.2.7)  2 APR 2024 12:06
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -1756,42 +1756,44 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 ]
+Chapter 1.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 273.
+(Font)              scaled to size 10.95pt on input line 284.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 273.
+(Font)              scaled to size 10.95pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.23152pt on input line 273.
+(Font)              scaled to size 12.23152pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.93628pt on input line 273.
+(Font)              scaled to size 8.93628pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.23286pt on input line 273.
+(Font)              scaled to size 12.23286pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.93726pt on input line 273.
+(Font)              scaled to size 8.93726pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.23035pt on input line 273.
+(Font)              scaled to size 12.23035pt on input line 284.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.93542pt on input line 273.
+(Font)              scaled to size 8.93542pt on input line 284.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Font shape `TU/Georgia(0)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 313.
+
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
-[2]
-Chapter 1.
-[3
+[2
 
 ]
 LaTeX Font Info:    Font shape `TU/Avenir(0)/m/n' will be
-(Font)              scaled to size 17.77649pt on input line 318.
-[4]
+(Font)              scaled to size 17.77649pt on input line 331.
+[3] [4]
 Chapter 2.
 <assets/2.1-before-the-waves.jpg, id=175, 200.75pt x 210.7875pt>
 File: assets/2.1-before-the-waves.jpg Graphic file (type jpg)
 <use assets/2.1-before-the-waves.jpg>
-Package luatex.def Info: assets/2.1-before-the-waves.jpg  used on input line 39
-5.
+Package luatex.def Info: assets/2.1-before-the-waves.jpg  used on input line 40
+9.
 (luatex.def)             Requested size: 200.75255pt x 210.79019pt.
 [5
 
@@ -1799,39 +1801,37 @@ Package luatex.def Info: assets/2.1-before-the-waves.jpg  used on input line 39
 <assets/2.2-first-wave.jpg, id=183, 200.75pt x 188.705pt>
 File: assets/2.2-first-wave.jpg Graphic file (type jpg)
 <use assets/2.2-first-wave.jpg>
-Package luatex.def Info: assets/2.2-first-wave.jpg  used on input line 428.
+Package luatex.def Info: assets/2.2-first-wave.jpg  used on input line 442.
 (luatex.def)             Requested size: 200.7495pt x 188.70453pt.
 [6<./assets/2.1-before-the-waves.jpg>]
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 434.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 8.4pt on input line 447.
+(Font)              scaled to size 8.4pt on input line 461.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 447.
+(Font)              scaled to size 10.0pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.17035pt on input line 447.
+(Font)              scaled to size 11.17035pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.81924pt on input line 447.
+(Font)              scaled to size 7.81924pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.58517pt on input line 447.
+(Font)              scaled to size 5.58517pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.17157pt on input line 447.
+(Font)              scaled to size 11.17157pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.8201pt on input line 447.
+(Font)              scaled to size 7.8201pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.58578pt on input line 447.
+(Font)              scaled to size 5.58578pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.16928pt on input line 447.
+(Font)              scaled to size 11.16928pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.8185pt on input line 447.
+(Font)              scaled to size 7.8185pt on input line 461.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.58464pt on input line 447.
+(Font)              scaled to size 5.58464pt on input line 461.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 447.
+(Font)              scaled to size 7.0pt on input line 461.
 <assets/2.3-second-wave-ill.jpg, id=193, 200.75pt x 217.81375pt>
 File: assets/2.3-second-wave-ill.jpg Graphic file (type jpg)
 <use assets/2.3-second-wave-ill.jpg>
-Package luatex.def Info: assets/2.3-second-wave-ill.jpg  used on input line 456
+Package luatex.def Info: assets/2.3-second-wave-ill.jpg  used on input line 470
 .
 (luatex.def)             Requested size: 200.7495pt x 217.8132pt.
 [7<./assets/2.2-first-wave.jpg>] [8<./assets/2.3-second-wave-ill.jpg>] [9]
@@ -1839,7 +1839,7 @@ Chapter 3.
 [10
 
 ] [11] [12] [13] [14] [15]
-Underfull \hbox (badness 2080) in paragraph at lines 809--809
+Underfull \hbox (badness 2080) in paragraph at lines 823--823
 |[]\TU/Avenir(0)/m/n/17.28 En-ergy ef-fi-ciency and Sus-tain-abil-ity in Cloud
  []
 
@@ -1898,9 +1898,9 @@ Here is how much of LuaTeX's memory you used:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 6 glue, 4 kern, 1 penalty, 3 glyph, 17
  attribute, 75 glue_spec, 17 attribute_list, 2 write, 1 user_defined, 6 pdf_acti
 on nodes
-   avail lists: 1:2,2:626,3:1214,4:80,5:210,6:68,7:6293,8:136,9:477,10:20,11:531
+   avail lists: 1:1,2:626,3:1214,4:83,5:210,6:68,7:6293,8:136,9:477,10:20,11:539
  59608 multiletter control sequences out of 65536+600000
- 117 fonts using 30856379 bytes
+ 117 fonts using 30856179 bytes
  108i,11n,122p,1686b,5042s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
@@ -1908,7 +1908,7 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 f></System/Library/Fonts/Avenir.ttc></System/Library/Fonts/Supplemental/Georgia.
 ttf></System/Library/Fonts/Supplemental/Georgia Italic.ttf></System/Library/Font
 s/Supplemental/Georgia Bold.ttf>
-Output written on thesis.pdf (38 pages, 518453 bytes).
+Output written on thesis.pdf (38 pages, 519304 bytes).
 
 PDF statistics: 518 PDF objects out of 1000 (max. 8388607)
  453 compressed objects within 5 object streams
