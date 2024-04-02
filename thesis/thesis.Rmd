@@ -221,9 +221,9 @@ inspiring my topic.
 
 \vspace{0.25cm}
 
-Furthermore I'd like to thank my two supervisors Joachim T. Kristensen and 
-Marcus Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
-through such a cutting edge topic Their guidance and insight have been
+Furthermore I'd like to thank my two supervisors Joachim Tilsted Kristensen and 
+Michael Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
+through such a cutting edge topic. Their guidance and insight have been
 invaluable the past semesters. 
 
 \end{minipage}
