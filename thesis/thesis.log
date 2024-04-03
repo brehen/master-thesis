@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.2.7)  2 APR 2024 12:06
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2024.2.7)  3 APR 2024 14:26
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -1789,101 +1789,124 @@ LaTeX Font Info:    Font shape `TU/Avenir(0)/m/n' will be
 (Font)              scaled to size 17.77649pt on input line 331.
 [3] [4]
 Chapter 2.
-<assets/2.1-before-the-waves.jpg, id=175, 200.75pt x 210.7875pt>
+<assets/2.1-before-the-waves.jpg, id=179, 200.75pt x 210.7875pt>
 File: assets/2.1-before-the-waves.jpg Graphic file (type jpg)
 <use assets/2.1-before-the-waves.jpg>
-Package luatex.def Info: assets/2.1-before-the-waves.jpg  used on input line 40
-9.
+Package luatex.def Info: assets/2.1-before-the-waves.jpg  used on input line 41
+0.
 (luatex.def)             Requested size: 200.75255pt x 210.79019pt.
 [5
 
 ]
-<assets/2.2-first-wave.jpg, id=183, 200.75pt x 188.705pt>
+<assets/2.2-first-wave.jpg, id=187, 200.75pt x 188.705pt>
 File: assets/2.2-first-wave.jpg Graphic file (type jpg)
 <use assets/2.2-first-wave.jpg>
-Package luatex.def Info: assets/2.2-first-wave.jpg  used on input line 442.
+Package luatex.def Info: assets/2.2-first-wave.jpg  used on input line 444.
 (luatex.def)             Requested size: 200.7495pt x 188.70453pt.
 [6<./assets/2.1-before-the-waves.jpg>]
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 8.4pt on input line 461.
+(Font)              scaled to size 8.4pt on input line 464.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 461.
+(Font)              scaled to size 10.0pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.17035pt on input line 461.
+(Font)              scaled to size 11.17035pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.81924pt on input line 461.
+(Font)              scaled to size 7.81924pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.58517pt on input line 461.
+(Font)              scaled to size 5.58517pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.17157pt on input line 461.
+(Font)              scaled to size 11.17157pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.8201pt on input line 461.
+(Font)              scaled to size 7.8201pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.58578pt on input line 461.
+(Font)              scaled to size 5.58578pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.16928pt on input line 461.
+(Font)              scaled to size 11.16928pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.8185pt on input line 461.
+(Font)              scaled to size 7.8185pt on input line 464.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.58464pt on input line 461.
+(Font)              scaled to size 5.58464pt on input line 464.
 LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 461.
-<assets/2.3-second-wave-ill.jpg, id=193, 200.75pt x 217.81375pt>
+(Font)              scaled to size 7.0pt on input line 464.
+<assets/2.3-second-wave-ill.jpg, id=197, 200.75pt x 217.81375pt>
 File: assets/2.3-second-wave-ill.jpg Graphic file (type jpg)
 <use assets/2.3-second-wave-ill.jpg>
-Package luatex.def Info: assets/2.3-second-wave-ill.jpg  used on input line 470
+Package luatex.def Info: assets/2.3-second-wave-ill.jpg  used on input line 473
 .
 (luatex.def)             Requested size: 200.7495pt x 217.8132pt.
 [7<./assets/2.2-first-wave.jpg>] [8<./assets/2.3-second-wave-ill.jpg>] [9]
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 552--557
+
+ []
+
 [10
 
-] [11] [12] [13] [14] [15]
-Underfull \hbox (badness 2080) in paragraph at lines 823--823
+] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
+
+ []
+
+<assets/3.2-vm-figure.png, id=250, 2071.74pt x 1900.09875pt>
+File: assets/3.2-vm-figure.png Graphic file (type png)
+<use assets/3.2-vm-figure.png>
+Package luatex.def Info: assets/3.2-vm-figure.png  used on input line 692.
+(luatex.def)             Requested size: 426.76425pt x 391.40732pt.
+[13]
+<assets/3.3-container-figure.png, id=257, 2026.57124pt x 1809.76125pt>
+File: assets/3.3-container-figure.png Graphic file (type png)
+<use assets/3.3-container-figure.png>
+Package luatex.def Info: assets/3.3-container-figure.png  used on input line 70
+0.
+(luatex.def)             Requested size: 426.7676pt x 381.11044pt.
+[14<./assets/3.2-vm-figure.png>] [15<./assets/3.3-container-figure.png>] [16] [
+17] [18]
+Underfull \hbox (badness 2080) in paragraph at lines 872--872
 |[]\TU/Avenir(0)/m/n/17.28 En-ergy ef-fi-ciency and Sus-tain-abil-ity in Cloud
  []
 
-[16] [17
+[19] [20
 
 ]
 Chapter 4.
-[18
+[21
 
 ]
 Chapter 5.
-[19
+[22
 
 ]
 Chapter 6.
-[20
-
-]
-Chapter 7.
-[21
-
-] [22
-
-]
-Chapter 8.
 [23
 
 ]
-Chapter 9.
+Chapter 7.
 [24
+
+] [25
+
+]
+Chapter 8.
+[26
+
+]
+Chapter 9.
+[27
 
 ]
 Chapter 10.
-[25
+[28
 
-] [26
+] [29
 
 ]
 Chapter 11.
-[27
+[30
 
-] [28
+] [31
 
-] [29] 
+] [32] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./thesis.aux)
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1892,14 +1915,14 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40933 strings out of 478285
+ 40986 strings out of 478285
  125086,2373549 words of node,token memory allocated
- 746 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 local_par, 6 glue, 4 kern, 1 penalty, 3 glyph, 17
- attribute, 75 glue_spec, 17 attribute_list, 2 write, 1 user_defined, 6 pdf_acti
+ 756 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 6 glue, 4 kern, 1 penalty, 3 glyph, 18
+ attribute, 75 glue_spec, 18 attribute_list, 2 write, 1 user_defined, 7 pdf_acti
 on nodes
-   avail lists: 1:1,2:626,3:1214,4:83,5:210,6:68,7:6293,8:136,9:477,10:20,11:539
- 59608 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:632,3:1256,4:76,5:212,6:67,7:6293,8:136,9:366,10:23,11:531
+ 59642 multiletter control sequences out of 65536+600000
  117 fonts using 30856179 bytes
  108i,11n,122p,1686b,5042s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1908,10 +1931,10 @@ warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 f></System/Library/Fonts/Avenir.ttc></System/Library/Fonts/Supplemental/Georgia.
 ttf></System/Library/Fonts/Supplemental/Georgia Italic.ttf></System/Library/Font
 s/Supplemental/Georgia Bold.ttf>
-Output written on thesis.pdf (38 pages, 519304 bytes).
+Output written on thesis.pdf (41 pages, 706631 bytes).
 
-PDF statistics: 518 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 131072)
+PDF statistics: 545 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 131072)
  360 words of extra memory for PDF output out of 10000 (max. 100000000)
 
