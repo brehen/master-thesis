@@ -1,2 +1,7 @@
 % preamble.tex
 \usepackage[table]{xcolor}
+\DeclareCiteCommand{\citeinstitutionyear} 
+  {\usebibmacro{prenote}}
+  {\printnames{institution}\setunit*{\addspace}\printdate}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}

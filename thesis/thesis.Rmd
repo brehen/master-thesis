@@ -40,6 +40,7 @@ header-includes:
   - \addbibresource{manual-nebula.bib}
   - \DefineBibliographyExtras{english}{}
 
+
   - \usepackage{hyperref}
   - \usepackage{booktabs}
   - \usepackage{array} 
@@ -230,7 +231,7 @@ invaluable the past semesters.
 
 
 Finally I would like to thank Syrus Akbary, founder of Wasmer, whom I met at
-WasmIO 2024 and showed me how to reduce my startup times by a further 100 times.
+WasmIO 2024 who showed me how to reduce my startup times by a further 100 times.
 
 \end{minipage}
 \end{center}
@@ -272,15 +273,15 @@ WasmIO 2024 and showed me how to reduce my startup times by a further 100 times.
 In the digital age \citep{freitag2021}, cloud computing has emerged as a
 foundational technology in the technological landscape, driving innovation and
 increased efficiency across various sectors. Its growth over the past decade has
-not only transformed how consumers store, process, and access data. However,
-this growth has also also raised environmental concerns as more and more data
-centers are built around the globe to accommodate the traffic, consuming vast
-amounts of power. The Information and Communication Technology (ICT) industry,
-with cloud computing at its core, accounts for an estimated 2.1\% to 3.9\% of
-global greenhouse gas emissions. Data centers, the backbone of cloud computing
-infrastructures, are responsible for about 200 TWh/yr, or about 1\% of the global
-electricity consumption, a figure projected to escalate, potentially reaching
-15\% to 30\% of electricity consumption in some countries by 2030
+not only transformed how consumers store, process, and access data, but it has
+also raised environmental concerns as more and more data centers are built
+around the globe to accommodate the traffic, consuming vast amounts of power.
+The Information and Communication Technology (ICT) industry, with cloud
+computing at its core, accounts for an estimated 2.1\% to 3.9\% of global
+greenhouse gas emissions. Data centers, the backbone of cloud computing
+infrastructures, are responsible for about 200 TWh/yr, or about 1\% of the
+global electricity consumption, a figure projected to escalate, potentially
+reaching 15\% to 30\% of electricity consumption in some countries by 2030
 \citep{freitag2021}.
 
 The sustainability of cloud computing is thus under scrutiny, and while some
@@ -359,18 +360,15 @@ computing ecosystem.
 \section{Problem Statement}
 \label{sect:problems}
 
-This thesis focuses on two primary objectives:
+The goal of the thesis is to:
 
-1. Assessing the potential for optimizing cloud service deployments using
-   WebAssembly, with an eye towards the trade-offs in energy consumption
-   associated with different deployment strategies.
-2. Evaluate the potential energy savings and potential performance gains by
-   employing WebAssembly for function execution in cloud environments.
+1. Develop a prototype cloud computing platform for the Functions-as-a-Service
+   (FaaS) paradigm
+2. Use this platform for conducting experiments that either prove or disprove
+   the claim that WebAssembly is the more energy efficient choice
 
-The goal of the thesis is to develop a prototype cloud computing platform for
-the Functions-as-a-Service (FaaS) paradigm, and to use this platform for
-conducting experiments that either prove or disprove the claim that
-WebAssembly is the more energy efficient choice.
+By achieving these goals this thesis seeks to shed light on the feasibility and
+implications of adopting WebAssembly and WASI for a greener cloud.
 
 \section{Outline}
 
@@ -385,6 +383,7 @@ results from the experiments, and ending with a chapter suggesting future works.
 
 
 \chapter{Three waves of cloud compute}
+\label{chap:three-waves}
 
 \setlength\epigraphwidth{.35\textwidth}
 
@@ -403,6 +402,7 @@ Interface (WASI) to build the next era of cloud compute with the potential to
 significantly reduce the carbon footprint.
 
 \section{Ashore: Before the waves}
+\label{sect:ashore}
 
 Before delving into the waves themselves, it's essential to understand the
 landscape that preceded cloud computing. Prior to the cloud era, companies were
@@ -432,6 +432,7 @@ Virtual machines that allowed more flexibility, and lowered the bar to new
 companies.
 
 \section{The First Wave: Virtual Machines}
+\label{sect:first-wave}
 
 The start of cloud computing can be traced back to the emergence of
 virtualization, more specifically virtual machines, a response to the costly and
@@ -456,6 +457,7 @@ customer base helped them gain significant traction, and ushered in a the first
 era, or wave, of *cloud computing*.
 
 \section{The Second Wave: Containerization}
+\label{sect:second-wave}
 
 As we entered the 2010s, the focus shifted from Virtual Machines to containers,
 largely due to the limitations of VMs in efficiency, resource utilization, and
@@ -487,6 +489,7 @@ WebAssembly System Interface, as mentioned in epigraph of this thesis can pose a
 promising alternative?
 
 \section{The Third Wave: WebAssembly}
+\label{sect:third-wave}
 
 WebAssembly has had a surge of popularity the past three to four years when
 developers discovered that what it was designed for - to truly run safely
@@ -529,10 +532,14 @@ environmental impact of ICT.
 \newpage
 
 \chapter{Background}
+\label{chap:background}
+
 \epigraph{\itshape 
 Data has gravity, and that gravity pulls hard
 }{David Flanagan}
+
 \section{Cloud Computing Overview}
+\label{sect:cloud-overview}
 
 Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
 computing resources served over the internet, instead of running on locally owned hardware
@@ -548,7 +555,9 @@ Cloud computing is a model for enabling ubiquitous, convenient, on-demand
 network access to a shared pool of configurable computing re- sources (e.g.,
 networks, servers, storage, applications, and services) that can be rapidly
 provisioned and released with minimal management effort or service provider
-interaction.
+interaction. \\
+
+\hfill \citep{nist-def}
 
 \end{tcolorbox}
 
@@ -566,10 +575,10 @@ the modern cloud computing paradigm.
 
 Modern cloud computing saw its emergence in the late 1990s and early 2000s, and
 while the first usage of the term *Cloud computing* can be traced back to Compaq
-in 1996 \citep{favaloroInternetSolutionsDivision1996}, it was companies like Amazon and
-Salesforce that brought the cloud to the masses in the late 2000s. The launch of
-Amazon Web Services in 2006 marks the point when cloud computing started gaining
-traction.
+in 1996 \citep{favaloroInternetSolutionsDivision1996}, it was companies like
+Amazon and Salesforce that brought the cloud to the masses in the late 2000s.
+The launch of Amazon Web Services in 2006 marks the point when cloud computing
+gained serious traction.
 
 For many companies, the cloud has proved to be a super power, where companies
 can focus on deploying their own applications and services to their users
@@ -605,13 +614,15 @@ with greater freedom. \\
 \label{table:benefits}
 \end{table}
 
-However, in the field of ICT, one truth prevails: the inevitability of trade-offs. Every
-decision in software engineering involves weighing different factors against
-each other, such as performance against simplicity, or between speed of delivery
-and robustness \citep{lelekSoftwareMistakesTradeoffs2022}. This rings especially true in the world of
-cloud computing where, depending on the scale of your company, the way you set
-up your services on the cloud can have large implications. Some of these
-trade-offs include: 
+However, in the field of ICT, one truth prevails: the inevitability of
+trade-offs. Every decision in software engineering involves weighing different
+factors against each other, such as performance against simplicity, or between
+speed of delivery and robustness \citep{lelekSoftwareMistakesTradeoffs2022}.
+This rings especially true in the world of cloud computing where, depending on
+the scale of your company, the way you set up your services on the cloud can
+have large implications. Some of these trade-offs include: 
+
+\newpage
 
 \begin{table}[ht]
 \centering
@@ -636,7 +647,7 @@ Performance and Latency issues & With slow internet access, the experience of
 using a cloud service can vary. Loss of data, wrong data saved, depending on the
 companies strategies.\\
 
-Data security and Privacy risks & Storing senstiive data on a
+Data security and Privacy risks & Storing sensitive data on a
 third-party cloud servers can raise concerns about data privacy, security
 breaches, and compliance with regional and national regulations
 \citep{subashiniSurveySecurityIssues2011}. \\
@@ -646,12 +657,50 @@ breaches, and compliance with regional and national regulations
 \label{table:tradeoffs}
 \end{table}
 
+Weighing these benefits and trade-offs against each other is part of any
+companies cloud strategy, but more and more companies opt for adopting cloud in
+some shape or form in their portfolio. 
+
+
 \newpage
 
 \section{Virtualization and Container}
 
+Cloud would be difficult to reach the scale it has without the creation of
+virtualization. Virtualization is a process that allows for more efficient usage
+of physical hardware, by using software to create an abstraction layer over
+computer hardware. 
+
+\begin{tcolorbox}[
+  definitionstyle,
+  title=NIST definition of Virtualization,
+]
+A methodology for emulation or abstraction of hardware resources that enables
+complete execution stacks including software applications to run on it. \\
+
+\hfill \citep{nistDefintionVirtualization}
+
+\end{tcolorbox}
+
+As mentioned briefly in \autoref{sect:first-wave}, the emergence of
+virtualization, and more specifically Virtual Machines
+
 \subsection{Virtual Machines}
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.2-vm-figure.png}
+  \caption{DevOps engineer deploying services as containers on AWS}
+\end{figure}
+
 \subsection{Containers and Docker}
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.3-container-figure.png}
+  \caption{DevOps engineer deploying services as containers on AWS}
+\end{figure}
+
 \subsection{Container orchestration}
 
 \section{Serverless Computing}

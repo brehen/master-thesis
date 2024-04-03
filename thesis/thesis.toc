@@ -15,29 +15,29 @@
 \contentsline {section}{\numberline {2.4}The Third Wave: WebAssembly}{8}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Background}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cloud Computing Overview}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Virtualization and Container}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Virtual Machines}{12}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Containers and Docker}{12}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Container orchestration}{12}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Serverless Computing}{12}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Major vendors in Serverless}{13}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}WebAssembly and WASI}{13}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}WebAssembly}{14}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}WebAssembly System Interface}{15}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Energy efficiency and Sustainability in Cloud Computing}{16}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Functions-as-a-Service (FaaS) Platforms}{16}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Rust programming language}{16}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Introduction to Rust}{16}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Rust and WebAssembly}{16}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Building Nebula with Rust}{16}{subsection.3.7.3}%
-\contentsline {part}{II\hspace {1em}Project}{17}{part.2}%
-\contentsline {chapter}{\numberline {4}Approach}{18}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Analysis}{19}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Design}{20}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Implementation}{21}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tech stack}{21}{section.7.1}%
-\contentsline {part}{III\hspace {1em}Results}{22}{part.3}%
-\contentsline {chapter}{\numberline {8}Evaulation}{23}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Discussion}{24}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusion}{25}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Appendices}{27}{chapter.11}%
+\contentsline {section}{\numberline {3.2}Virtualization and Container}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Virtual Machines}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Containers and Docker}{15}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Container orchestration}{15}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Serverless Computing}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Major vendors in Serverless}{16}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}WebAssembly and WASI}{16}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}WebAssembly}{17}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}WebAssembly System Interface}{18}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Energy efficiency and Sustainability in Cloud Computing}{19}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Functions-as-a-Service (FaaS) Platforms}{19}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Rust programming language}{19}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Introduction to Rust}{19}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Rust and WebAssembly}{19}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Building Nebula with Rust}{19}{subsection.3.7.3}%
+\contentsline {part}{II\hspace {1em}Project}{20}{part.2}%
+\contentsline {chapter}{\numberline {4}Approach}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Analysis}{22}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Design}{23}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Implementation}{24}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tech stack}{24}{section.7.1}%
+\contentsline {part}{III\hspace {1em}Results}{25}{part.3}%
+\contentsline {chapter}{\numberline {8}Evaulation}{26}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Discussion}{27}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Conclusion}{28}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Appendices}{30}{chapter.11}%
