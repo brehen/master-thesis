@@ -37,3 +37,42 @@ each marking a new age of innovation and addressing the dynamic needs and
 challenges of digital infrastructure. This evolution reflects the industry's
 efforts to optimize resource efficiency, reducing operational costs, and
 minimize environmental impacts.
+
+---
+
+Building your own developer platform on top of Kubernetes, much like building
+your own infrastructure, also entails a significant cost. Often, developers wish
+to launch specialized smaller services without having to grapple with
+complicated orchestration, and this wish is what spawned _serverless_ computing.
+Despite its somewhat misleading name, serverless doesn't imply the absence of a
+server. Instead, it means that the responsibility of server management has
+shifted from the developer to a third party provider.
+
+\subsection{Major vendors in Serverless}
+
+The concept of "the cloud" isn't owned by any single organization, but rather,
+through the collective effort of industry players including Amazon, Microsoft,
+Google, Alibaba and DigitalOcean, among others. This essay delves into some
+challenges faced by the biggest three vendors: Amazon, Google and Microsoft.
+
+Amazon Web Services (AWS) provides [AWS Lambdas][11], a technology that hinges
+on their proprietary Firecracker - a streamlined virtualization technology for
+executing functions. Interestingly, for this thesis, is that Amazon's Prime
+Video streaming service transitioned recently from a serverless architecture to
+a monolithic system to meet specific service demands. One might question whether
+this reflects the suitability of serverless systems for cloud computing, or for
+specific use cases like theirs [(Kolny, M. 2023. Accessed 29.05.23)][12]. Some
+discussions suggest that their need to process videos frame by frame led to
+astronomical costs on their sibling company's FaaS, Amazon Lambda.
+
+Google provides [Google Cloud Functions][13], which allow developers to write
+and execute functions in languages such as Node.js, Python, Go and execute them
+in response to events. Google's approach to function execution centeres around
+container technology [(Wayner, P. 2018. Accessed 29.05.23)][14].
+
+Microsoft's [Azure Functions][15] is a Faas platform that enables developers to
+create and execute functions written in languages like C#, JavaScript, Python.
+Similar to Google, they also harness the power of containers to execute these
+functions.
+
+---

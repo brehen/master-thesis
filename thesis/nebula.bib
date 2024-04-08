@@ -20,6 +20,18 @@
   file = {/Users/mariuskluften/Zotero/storage/YPK34HU6/169557423.html}
 }
 
+@online{awsWhatVirtualizationCloud,
+  title = {What Is {{Virtualization}}? - {{Cloud Computing Virtualization Explained}} - {{AWS}}},
+  shorttitle = {What Is {{Virtualization}}?},
+  author = {AWS},
+  url = {https://aws.amazon.com/what-is/virtualization/},
+  urldate = {2024-04-03},
+  abstract = {Find out what is virtualization, how and why businesses use virtualization, and how to use compute services with AWS.},
+  langid = {american},
+  organization = {Amazon Web Services, Inc.},
+  file = {/Users/mariuskluften/Zotero/storage/4N2FCFDF/virtualization.html}
+}
+
 @article{bao2016,
   title = {Static and {{Dynamic Frequency Scaling}} on {{Multicore CPUs}}},
   author = {Bao, Wenlei and Hong, Changwan and {Sudheer Chunduri} and Chunduri, Sudheer and Krishnamoorthy, Sriram and {Sriram Krishnamoorthy} and {Sriram Krishnamoorthy} and Pouchet, Louis-Noël and Rastello, Fabrice and Sadayappan, P.},
@@ -191,6 +203,25 @@
   annotation = {S2ID: dc20ad0c2161e4d49b880c3d02277ecaf8f10c52}
 }
 
+@article{katalEnergyEfficiencyCloud2023,
+  title = {Energy Efficiency in Cloud Computing Data Centers: A Survey on Software Technologies},
+  shorttitle = {Energy Efficiency in Cloud Computing Data Centers},
+  author = {Katal, Avita and Dahiya, Susheela and Choudhury, Tanupriya},
+  date = {2023-06-01},
+  journaltitle = {Cluster Comput},
+  volume = {26},
+  number = {3},
+  pages = {1845--1875},
+  issn = {1573-7543},
+  doi = {10.1007/s10586-022-03713-0},
+  url = {https://doi.org/10.1007/s10586-022-03713-0},
+  urldate = {2024-04-04},
+  abstract = {Cloud computing is a commercial and economic paradigm that has gained traction since 2006 and is presently the most significant technology in IT sector. From the notion of cloud computing to its energy efficiency, cloud has been the subject of much discussion. The energy consumption of data centres alone will rise from 200 TWh in 2016 to 2967 TWh in 2030. The data centres require a lot of power to provide services, which increases CO2 emissions. In this survey paper, software-based technologies that can be used for building green data centers and include power management at individual software level has been discussed. The paper discusses the energy efficiency in containers and problem-solving approaches used for reducing power consumption in data centers. Further, the paper also gives details about the impact of data centers on environment that includes the e-waste and the various standards opted by different countries for giving rating to the data centers. This article goes beyond just demonstrating new green cloud computing possibilities. Instead, it focuses the attention and resources of academia and society on a critical issue: long-term technological advancement. The article covers the new technologies that can be applied at the individual software level that includes techniques applied at virtualization level, operating system level and application level. It clearly defines different measures at each level to reduce the energy consumption that clearly adds value to the current environmental problem of pollution reduction. This article also addresses the difficulties, concerns, and needs that cloud data centres and cloud organisations must grasp, as well as some of the factors and case studies that influence green cloud usage.},
+  langid = {english},
+  keywords = {Cloud Computing,Containerization,Data center,Load balancing,Workload categorization},
+  file = {/Users/mariuskluften/Zotero/storage/TEB3KEQV/Katal et al. - 2023 - Energy efficiency in cloud computing data centers.pdf}
+}
+
 @online{kubernetes2024,
   title = {Kubernetes},
   url = {https://kubernetes.io/},
@@ -253,11 +284,28 @@
   file = {/Users/mariuskluften/Zotero/storage/CCZ3G4ZB/Mytton - 2020 - Hiding greenhouse gas emissions in the cloud.pdf}
 }
 
-@article{nist-def,
+@misc{nist-def,
   title = {The {{NIST Definition}} of {{Cloud Computing}}},
   author = {Mell, Peter and Grance, Timothy},
+  date = {2011-09-01},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/RKGYSAUQ/Mell and Grance - The NIST Definition of Cloud Computing.pdf}
+}
+
+@report{nistDefintionVirtualization,
+  title = {Security Recommendations for Hypervisor Deployment on Servers},
+  author = {Chandramouli, Ramaswamy},
+  date = {2018-01-23},
+  number = {NIST SP 800-125A},
+  pages = {NIST SP 800-125A},
+  institution = {{National Institute of Standards and Technology}},
+  location = {Gaithersburg, MD},
+  doi = {10.6028/NIST.SP.800-125A},
+  url = {https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-125A.pdf},
+  urldate = {2024-04-03},
+  abstract = {The Hypervisor is a collection of software modules that provides virtualization of hardware resources (such as CPU/GPU, Memory, Network and Storage) and thus enables multiple computing stacks (made of an operating system (OS) and Application programs) called Virtual Machines (VMs) to be run on a single physical host. In addition, it may have the functionality to define a network within the single physical host (called virtual network) to enable communication among the VMs resident on that host as well as with physical and virtual machines outside the host. With all this functionality, the hypervisor has the responsibility to mediate access to physical resources, provide run time isolation among resident VMs and enable a virtual network that provides security-preserving communication flow among the VMs and between the VMs and the external network. The architecture of a hypervisor can be classified in different ways. The security recommendations in this document relate to ensuring the secure execution of baseline functions of the hypervisor and are therefore agnostic to the hypervisor architecture. Further, the recommendations are in the context of a hypervisor deployed for server virtualization and not for other use cases such as embedded systems and desktops. Recommendations for secure configuration of a virtual network are dealt with in a separate NIST document (Special Publication 800-125B).},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/G7TKQGX5/Chandramouli - 2018 - Security recommendations for hypervisor deployment.pdf}
 }
 
 @online{rimolCloudMigrationCosts2021,
@@ -298,6 +346,15 @@
   doi = {10.1016/j.future.2017.11.001},
   abstract = {High-energy physics studies collisions of particles traveling near the speed of light. For statistically significant results, physicists need to analyze a huge number of such events. One analysis job can take days and process tens of millions of collisions. Today the experiments of the large hadron collider (LHC) create 10 GB of data per second and a future upgrade will cause a ten-fold increase in data. The data analysis requires not only massive hardware but also a lot of electricity. In this article, we discuss energy efficiency in scientific computing and review a set of intermixed approaches we have developed in our Green Big Data project to improve energy efficiency of CERN computing. These approaches include making energy consumption visible to developers and users, architectural improvements, smarter management of computing jobs, and benefits of cloud technologies. The open and innovative environment at CERN is an excellent playground for different energy efficiency ideas which can later find use in mainstream computing. We show how energy efficiency is a large challenge in scientific computing at CERN.Making energy consumption visible for stakeholders motivates improving energy efficiency.Energy efficiency can be improved by applying operations management methodology.},
   annotation = {MAG ID: 2769156526 S2ID: 97130f7a6d1bd7ee6a8d3e3707124a6edb97756a}
+}
+
+@online{WebAssembly2024,
+  title = {{{WebAssembly}}},
+  date = {2024},
+  url = {https://webassembly.org/},
+  urldate = {2024-04-04},
+  organization = {webassembly.org},
+  file = {/Users/mariuskluften/Zotero/storage/VDD563KW/webassembly.org.html}
 }
 
 @online{WhoCoinedCloud,
