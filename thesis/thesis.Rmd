@@ -409,11 +409,11 @@ landscape that preceded cloud computing. Prior to the cloud era, companies were
 required to building and mantaining their digital services in-house. This
 required companies to invest heavily into both expensive hardware and expensive
 engineers to buy, upkeep and oversee their own physical servers and network
-hardware. (See figure \ref{myspeis} for an example)
+hardware. (See figure \ref{fig:myspeis} for an example)
 
 
 \begin{figure}[H]
-\label{myspeis}
+\label{fig:myspeis}
 \centering
   \includegraphics{assets/2.1-before-the-waves.jpg}
   \caption{Example of a company that host their own infrastructure.}
@@ -507,8 +507,8 @@ world, meaning that it can't access the underlying system. This means that a
 "vanilla" WebAssembly module can't write to the file system, update a Redis
 cache or transmit a POST request to another service. 
 
-To enable this, the WebAssembly System Interface project was birthed. This
-project allows developers to write code that compiles to WebAssembly that
+To make this possible, the WebAssembly System Interface project was created.
+This project allows developers to write code that compiles to WebAssembly that
 can access the underlying system. This is the key project that turned many
 developers onto the path of exploring WebAssembly as a potential contender for
 building cloud applications. With WebAssembly, developers can write programs in
@@ -629,7 +629,7 @@ have large implications. Some of these trade-offs include:
 \caption{Cloud Computing Trade-offs}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.6\linewidth}}
 \toprule
-\textbf{Benefit} & \textbf{Description} \\
+\textbf{Trade-off} & \textbf{Description} \\
 \midrule
 
 \rowcolor{red!10} 
@@ -666,6 +666,13 @@ some shape or form in their portfolio.
 
 \section{Virtualization and Container}
 
+\epigraph{\itshape 
+What do I want to convey here? This chapter is going to start introducing
+virtualization as a concept, and move on to virtual machines, and try to explain
+the technical details of the first wave of cloud compute.
+}{TODO}
+
+
 Cloud would be difficult to reach the scale it has without the creation of
 virtualization. Virtualization is a process that allows for more efficient usage
 of physical hardware, by using software to create an abstraction layer over
@@ -673,19 +680,35 @@ computer hardware.
 
 \begin{tcolorbox}[
   definitionstyle,
-  title=NIST definition of Virtualization,
+  title=AWS definition of Virtualization,
 ]
-A methodology for emulation or abstraction of hardware resources that enables
-complete execution stacks including software applications to run on it. \\
+Virtualization is technology that you can use to create virtual representations
+of servers, storage, networks, and other physical machines. Virtual software
+mimics the functions of physical hardware to run multiple virtual machines
+simultaneously on a single physical machine. Businesses use virtualization to
+use their hardware resources efficiently and get greater returns from their
+investment. It also powers cloud computing services that help organizations
+manage infrastructure more efficiently. \\
 
-\hfill \citep{nistDefintionVirtualization}
+\hfill \citep{awsWhatVirtualizationCloud}
 
 \end{tcolorbox}
 
-As mentioned briefly in \autoref{sect:first-wave}, the emergence of
-virtualization, and more specifically Virtual Machines
+As mentioned in \autoref{sect:first-wave}, the emergence of virtualization and
+consequently the creation of Virtual Machines, laid the foundation that allowed 
+the cloud ecosystem to evolve. 
+
 
 \subsection{Virtual Machines}
+
+\epigraph{\itshape 
+Write about virtual machines, the technical details of it, and how it relates to
+my project. I'm not using a VM directly, but it might be interesting to know how
+it lays the foundation for moving onto containers/docker for deploying
+applications.
+
+Keywords: Hypervisor, Host hardware, Host Os, internal OS, application.
+}{TODO}
 
 \begin{figure}[H]
 \centering
@@ -695,57 +718,122 @@ virtualization, and more specifically Virtual Machines
 
 \subsection{Containers and Docker}
 
+\epigraph{\itshape 
+Go into containers, reference to the figure and lay out how containers has a
+smaller footprint and better performance for running applications compared to
+hoisting entire virtual machines.
+Keywords: Host hardware / VM, Host OS, Docker engine, bins/libs and application.
+}{TODO}
+
 \begin{figure}[H]
 \centering
   \includegraphics{assets/3.3-container-figure.png}
   \caption{DevOps engineer deploying services as containers on AWS}
 \end{figure}
 
-\subsection{Container orchestration}
+\subsubsection{Container orchestration}
+
+\epigraph{\itshape 
+Get into Docker swarm and Kubernetes, and how applications are meant to be
+built, deployed and finally orchestrated on top of X amount of machines.
+Keywords: K8s, Dockerswarm, networking, energy consumtion, 60% idle.  
+}{TODO}
+
+\newpage
 
 \section{Serverless Computing}
 
-Building your own developer platform on top of Kubernetes, much like building
-your own infrastructure, also entails a significant cost. Often, developers wish
-to launch specialized smaller services, without having to grapple with
-complicated orchestration. This led to the emergence of the Serverless model.
-Despite its somewhat misleading name, serverless doesn't imply the absence of a
-server. Instead, it means that the responsibility of server management has
-shifted from the developer to a third party provider.
+While building developer platforms atop orchestration tools like Kubernetes has
+gained popularity due to improved efficiency over managing physical
+infrastructure, this approach still entails significant operational overhead. In
+certain situations, developers could greatly benefit from the ability to develop
+and deploy smaller services without incurring the operational costs associated
+with expanding the company's existing platform to accommodate them. This need
+paved the way for the emergence of serverless computing.
 
-From the advancements of serverless, we get its subset, Functions-as-a-Service,
-or FaaS. Companies already in the cloud game decided to develop their own FaaS
-platforms to attract developers interested in just writing their functions and
-running them, and not worry about anything underneath.
+Despite its somewhat misleading name, serverless computing doesn’t imply the
+absence of servers. Instead, it means that the underlying infrastructure is
+abstraced away, enabling developers to focus solely on writing code and
+dpeloying functions without worrying about provisioning or managing servers.
+This paradigm shift alleviates the operational burden and allows for more
+efficient resource utilization, as resources are dynamically allocated based on
+demand, and the provider handles scaling and maintenance. 
 
-\subsection{Major vendors in Serverless}
+The serverless model promotes a more granular approach to application
+development, where individual functions can be deployed independently, promoting
+modularity and scalability. Developers can focus on building and iterating on
+specific features without the complexities of infrastructure management. 
 
-The concept of "the cloud" isn't owned by any single organization, but rather,
-through the collective effort of industry players including Amazon, Microsoft,
-Google, Alibaba and DigitalOcean, among others. This essay delves into some
-challenges faced by the biggest three vendors: Amazon, Google and Microsoft.
+By embracing serverless computing, organizations can achieve faster
+time-to-market, reduced operational costs, and improved developer productivity.
+However, it's important to note that while serverless architectures eliminate
+the need for server management, they introduce their own set of considerations,
+such as potential vendor lock-in, cold start latencies, and the need for a
+well-designed event-driven architecture. 
 
-Amazon Web Services (AWS) provides [AWS Lambdas][11], a technology that hinges
-on their proprietary Firecracker - a streamlined virtualization technology for
-executing functions. Interestingly, for this thesis, is that Amazon's Prime
-Video streaming service transitioned recently from a serverless architecture to
-a monolithic system to meet specific service demands. One might question whether
-this reflects the suitability of serverless systems for cloud computing, or for
-specific use cases like theirs [(Kolny, M. 2023. Accessed 29.05.23)][12]. Some
-discussions suggest that their need to process videos frame by frame led to
-astronomical costs on their sibling company's FaaS, Amazon Lambda.
+From serverless computing, we can derive a subset - Functions-as-a-Service - a
+popular format for third-party vendors to offer serverless computiation to their
+customers.
 
-Google provides [Google Cloud Functions][13], which allow developers to write
-and execute functions in languages such as Node.js, Python, Go and execute them
-in response to events. Google's approach to function execution centeres around
-container technology [(Wayner, P. 2018. Accessed 29.05.23)][14].
+\subsection{Functions-as-a-Service (FaaS)}
 
-Microsoft's [Azure Functions][15] is a Faas platform that enables developers to
-create and execute functions written in languages like C#, JavaScript, Python.
-Similar to Google, they also harness the power of containers to execute these
-functions.
+Functions-as-a-Service (FaaS) focuses on the execution of individual functions
+in response to events or triggers. Major cloud providers, including Amazon Web
+Services (AWS Lambda), Google (Cloud Functions), and Microsoft (Azure Functions),
+offer FaaS platforms, allowing developers to write and deploy functions without
+managing the underlying infrastructure.
+
+FaaS platforms typically employ container technology to execute functions, with
+each function running in an isolated container environment. This approach
+provides security, scalability, and efficient resource utilization. However, the
+startup overhead associated with containers can introduce latency, particularly
+for on-demand applications with strict performance requirements.
+
+This overhead and the lack of a *true* platform-agnostic way to run containers
+culminated in the quote cited in the epigraph of \autoref{chap:intro}, where
+the creator of Docker saw WebAssembly and WebAssembly System Interface as a
+promising way to package and run application code across all platforms. 
 
 \section{WebAssembly and WASI}
+\label{sect:wasmwasi}
+
+WebAssembly, commonly referred to as Wasm, is a modern binary instruction format
+that has risen to prominence as a versatile technology across a diverse amount
+of computing environments, originating in the web browser. This section
+introduces the project that WebAssembly evolved from - *asm.js* - and illustrate
+how WebAssembly lets developers write programs in a high-level language and
+run them across a multitude of platforms.
+
+
+\subsection{asm.js}
+\label{subsect:asm}
+
+Mozilla released the first version of asm.js in 2013 and designed it to be a
+subset of JavaScript, designed to allow web applications written in other
+languages than JavaScript, such as C or C++, to run in the browser. The
+intention of asm.js is to allow for web applications to run at performance
+closer to native code than applications written in standard JavaScript can
+achieve. A simplified flow for how source code written in C/C++ is compiled to
+bytecode that can be executed in the browser can be found in figure
+\ref{fig:asm-figure} below.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/asm.js-figure.png}
+\caption{Source code in C/C++ compiled to asm.js and run in browser}\label{fig:asm-figure}
+\end{figure}
+
+While asm.js was a great leap forward, being a subset of JavaScript limited it
+greatly, leading to the development of a more efficient and portable format. The
+team at Mozilla built upon the lessons learned from asm.js and went on to
+develop WebAssembly and launch the first public version in 2017.
+
+\subsection{WebAssembly}
+
+WebAssembly (Wasm) is a low-level code format designed to serve as a compilation
+target for high-level programming languages. It is a binary format that gets
+executed by a stack-based virtual machine, comparable to how Java bytecode runs
+on the Java Virtual Machine (JVM).
 
 WebAssembly, originally designed for running demanding computations in web
 browsers, present a promising technology that could help reduce the energy
@@ -757,41 +845,69 @@ could lead to a direct decrease in energy consumption for cloud services, which
 in turn could motivate the industry to adopt alternative technology that enable
 a more sustainable cloud.
 
-\subsection{WebAssembly}
+The WebAssembly team defines WebAssembly as such:
 
-WebAssembly (Wasm) is a binary instruction format designed as a stack-based
-virtual machine. It aims to be a portable target for the compilation of
-high-level languages like Rust, C++, Go and many others, enabling deployment on
-the web for client and server applications. Originally designed and developed to
-complement JavaScript in the browser, it now expands its scope to server-side
-applications, thanks to projects like WebAssembly System Interface (WASI), which
-provides a standarized interface for WebAssembly modules to interface with a
-system.
+\begin{tcolorbox}[
+  definitionstyle,
+  title=WebAssembly definition,
+]
+WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based
+virtual machine. Wasm is designed as a portable compilation target for
+programming languages, enabling deployment on the web for client and server
+applications.
 
-WebAssembly's design provides advantages over traditional deployments methods in
-the context of cloud native applications:
+\hfill \href{https://webassembly.org}{webassembly.org}
 
-_Efficiency and Speed_: Wasm was designed to be fast, enabling near-native
+\end{tcolorbox}
+
+In other words, WebAssembly is a low-level code format designed to serve as a
+compilation target for high-level programming languages. It's a binary format
+that gets executed by a stack-based virtual machine, similar to how Java
+bytecode runs on the Java Virtual Machine (JVM). It was originally designed for
+running in a browser environment, and every major browser has implemented a way
+for running it. 
+
+
+WebAssembly have promising properties that makes it interesting to investigate
+if it can find a home outside the browser environment it was designed for:
+
+\begin{table}[ht]
+\centering
+\caption{Properties of WebAssembly}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.6\linewidth}}
+\toprule
+\textbf{Benefit} & \textbf{Description} \\
+\midrule
+
+\rowcolor{green!10} 
+Efficiency and Speed & WebAssembly was designed to be fast, enabling near-native
 performance. Its binary format is compact and designed for quick decoding,
-contributing to quicker startup times, an important aspect for server-side
-applications. The performance gains could lead to less CPU usage, thereby
-improving energy efficiency.
+contributing to quicker startup times, important aspects of cloud native 
+applications. \\
 
-_Safety and Security_: WebAssembly is designed to be safe and sandboxed. Each
-WebAssembly module executes within a confined environment without direct access
-to the host system's resources. This isolation of processes is inherent in
-WebAssembly's design, promoting secure practices.
+Safety and Security & WebAssembly is designed to run safely in a secure sandbox.
+Each WebAssembly module executes within a confined environment without direct
+access to the host system's resources. This isolation of processes is inherent
+in WebAssembly's design, promoting secure practices. \\
 
-_Portability_: WebAssembly's platform-agnostic design makes it highly portable.
+\rowcolor{green!10} 
+Portability & WebAssembly's platform-agnostic design makes it highly portable.
 It can run across a variety of different system architectures. For cloud native
 applications, this means WebAssembly modules, once compiled, can run anywhere -
-from the edge to the server, irrespective of the environment.
+from the edge to the server - on any environment. \\
 
-_Language Support_: A large amount of programming langauages can already target
+Language Support & A large amount of programming languages can already target
 WebAssembly. This means developers are not restricted to a particular language
 when developing applications intended to be deployed as WebAssembly modules.
 This provides greater flexibility to leverage the most suitable languages for
-particular tasks.
+particular tasks. \\
+
+\bottomrule
+\end{tabular}
+\label{table:wasm-aspects}
+\end{table}
+
+
 
 In contrast, traditional methods such as deployment with containers or VMs can
 be resource-intensive, slower to boot up, less secure due to a larger surface
@@ -849,7 +965,6 @@ platform.
 
 \section{Energy efficiency and Sustainability in Cloud Computing}
 
-\section{Functions-as-a-Service (FaaS) Platforms}
 
 \section{Rust programming language}
 \subsection{Introduction to Rust}

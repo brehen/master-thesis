@@ -18,26 +18,26 @@
 \contentsline {section}{\numberline {3.2}Virtualization and Container}{13}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Virtual Machines}{14}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Containers and Docker}{15}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Container orchestration}{15}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Serverless Computing}{15}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Major vendors in Serverless}{16}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}WebAssembly and WASI}{16}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}WebAssembly}{17}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}WebAssembly System Interface}{18}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Energy efficiency and Sustainability in Cloud Computing}{19}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Functions-as-a-Service (FaaS) Platforms}{19}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Rust programming language}{19}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Introduction to Rust}{19}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Rust and WebAssembly}{19}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Building Nebula with Rust}{19}{subsection.3.7.3}%
-\contentsline {part}{II\hspace {1em}Project}{20}{part.2}%
-\contentsline {chapter}{\numberline {4}Approach}{21}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Analysis}{22}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Design}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Implementation}{24}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tech stack}{24}{section.7.1}%
-\contentsline {part}{III\hspace {1em}Results}{25}{part.3}%
-\contentsline {chapter}{\numberline {8}Evaulation}{26}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Discussion}{27}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusion}{28}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Appendices}{30}{chapter.11}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Container orchestration}{16}{subsubsection.3.2.2.1}%
+\contentsline {section}{\numberline {3.3}Serverless Computing}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Functions-as-a-Service (FaaS)}{17}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}WebAssembly and WASI}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}asm.js}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}WebAssembly}{19}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}WebAssembly System Interface}{20}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Energy efficiency and Sustainability in Cloud Computing}{22}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Rust programming language}{22}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Introduction to Rust}{22}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Rust and WebAssembly}{22}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Building Nebula with Rust}{22}{subsection.3.6.3}%
+\contentsline {part}{II\hspace {1em}Project}{23}{part.2}%
+\contentsline {chapter}{\numberline {4}Approach}{24}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Analysis}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Design}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Implementation}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tech stack}{27}{section.7.1}%
+\contentsline {part}{III\hspace {1em}Results}{28}{part.3}%
+\contentsline {chapter}{\numberline {8}Evaulation}{29}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Discussion}{30}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Conclusion}{31}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Appendices}{33}{chapter.11}%
