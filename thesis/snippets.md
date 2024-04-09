@@ -76,3 +76,69 @@ Similar to Google, they also harness the power of containers to execute these
 functions.
 
 ---
+
+For many companies, the cloud has proved to be a super power, where companies
+can focus on deploying their own applications and services to their users
+without worrying about the underlying infrastructure. Some of these benefits
+include:
+
+\begin{table}[ht] \centering \caption{Cloud Computing Benefits}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}
+>{\raggedright\arraybackslash}p{0.6\linewidth}} \toprule \textbf{Benefit} &
+\textbf{Description} \\ \midrule
+
+\rowcolor{green!10} Cost efficiency & Cloud computing can help companies by
+reducing upfront infrastructure costs and optimize expenses as they scale.
+\citep{davethomas2009}. \\
+
+Scalability & Offers the ability to efficiently scale operations and resources
+in response to changing demand \citep{davethomas2009}. \\
+
+\rowcolor{green!10} Reduced IT overhead & Cloud providers manage the underlying
+infrastructure, allowing companies to focus on software.\\
+
+Accessibility & Cloud computing enables companies to serve their services to
+anyone that can connect to the internet, enabling consumers to access services
+with greater freedom. \\
+
+\bottomrule \end{tabular} \label{table:benefits} \end{table}
+
+However, in the field of ICT, one truth prevails: the inevitability of
+trade-offs. Every decision in software engineering involves weighing different
+factors against each other, such as performance against simplicity, or between
+speed of delivery and robustness \citep{lelekSoftwareMistakesTradeoffs2022}.
+This rings especially true in the world of cloud computing where, depending on
+the scale of your company, the way you set up your services on the cloud can
+have large implications. Some of these trade-offs include:
+
+\newpage
+
+\begin{table}[ht] \centering \caption{Cloud Computing Trade-offs}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}
+>{\raggedright\arraybackslash}p{0.6\linewidth}} \toprule \textbf{Trade-off} &
+\textbf{Description} \\ \midrule
+
+\rowcolor{red!10} Cost management & Despite its potential for cost savings,
+managing and optimizing cloud expenses remains a challenge for many
+organizations \citep{rimolCloudMigrationCosts2021}. \\
+
+Energy consumption & The environmental impact and energy usage of data centers
+pose significant sustainability challenges. Data centers alone account for
+approximately 1\% of the world's energy consumption \citep{freitag2021}. \\
+
+\rowcolor{red!10} Performance and Latency issues & With slow internet access,
+the experience of using a cloud service can vary. Loss of data, wrong data
+saved, depending on the companies strategies.\\
+
+Data security and Privacy risks & Storing sensitive data on a third-party cloud
+servers can raise concerns about data privacy, security breaches, and compliance
+with regional and national regulations
+\citep{subashiniSurveySecurityIssues2011}. \\
+
+\bottomrule \end{tabular} \label{table:tradeoffs} \end{table}
+
+Weighing these benefits and trade-offs against each other is part of any
+companies cloud strategy, but more and more companies opt for adopting cloud in
+some shape or form in their portfolio.
+
+---

@@ -541,10 +541,10 @@ Data has gravity, and that gravity pulls hard
 \section{Cloud Computing Overview}
 \label{sect:cloud-overview}
 
-Cloud computing, more commonly known as "*the cloud*", refers to the delivery of
-computing resources served over the internet, instead of running on locally owned hardware
-(on-premise). The National Institute of Standards and Technology (NIST) defines
-Cloud computing like so: 
+Cloud computing, commonly referred to as "*the cloud*", refers to the delivery of
+computing resources served over the internet, as opposed to traditional
+on-premise hardware setups. The National Institute of Standards and Technology
+(NIST) defines Cloud computing like so: 
 
 
 \begin{tcolorbox}[
@@ -561,105 +561,48 @@ interaction. \\
 
 \end{tcolorbox}
 
-The foundations required for this paradigm can be traced back to the early
-1960s, when projects like the Compatible Time-Sharing System (CTSS) at MIT
-demonstrated the potential for multiple users to access and share computing
-resources simultaneously \citep{crisman1963}. While CTSS was a localized system,
-it paved the way for the concept of shared computing resources, a fundamental
-principle of cloud computing.
+Cloud computing traces its root back to the 1960s, with the Compatible
+Time-Sharing System (CTSS) project at MIT, which demonstrated the potential for
+multiple users accessing and sharing computing resources simultaneously
+\citep{crisman1963}. While CTSS was a localized system, it paved the way for the
+concept of shared computing resources, a fundamental principle of cloud
+computing.
 
-During the following decades, advancements in networking, virtualization and the
-popularity of the internet led to the development of more advanced systems that
-allowed remote access to shared computing resources, ultimately culminating in
-the modern cloud computing paradigm. 
+Over the following decades, advancements in networking, virtualization and the
+ubiquity of the internet led to the development of today's sophisticated cloud
+services. The term "cloud computing" was first coined in the year 1996 by
+Compaq, \citep{favaloroInternetSolutionsDivision1996}, but it wasn't until
+Amazon launched its subsidiary Amazon Web Services in the 2006 that the adoption
+became wide spread. 
 
-Modern cloud computing saw its emergence in the late 1990s and early 2000s, and
-while the first usage of the term *Cloud computing* can be traced back to Compaq
-in 1996 \citep{favaloroInternetSolutionsDivision1996}, it was companies like
-Amazon and Salesforce that brought the cloud to the masses in the late 2000s.
-The launch of Amazon Web Services in 2006 marks the point when cloud computing
-gained serious traction.
+Alongside the founding of AWS a suite of cloud services launched, including
+Elastic Compute Cloud (EC2) for virtual servers \citep{barrAmazonEC2Beta2006},
+Simple Storage Service (S3) for object storage. By providing these services over
+the internet on a pay-as-you-go basis, AWS drastically lowered the bar for
+accessing computing resources, making it easier and more cost-effective for
+businesses and developers to build and deploy applications without the need for
+considerable upfront investment in hardware and infrastructure.
 
-For many companies, the cloud has proved to be a super power, where companies
-can focus on deploying their own applications and services to their users
-without worrying about the underlying infrastructure. Some of these benefits
-include:
+With the success of AWS, other major technology companies saw their fit to enter
+the cloud computing market. In 2008, Google launched the Google App Engine
+\citep{mcdonaldIntroducingGoogleApp2008}, a platform for building and hosting
+web applications in Google's data centers. Microsoft followed with the launch of
+Azure in 2010, its cloud computing platform that offers a range of services
+comparable to AWS.
 
-\begin{table}[ht]
-\centering
-\caption{Cloud Computing Benefits}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.6\linewidth}}
-\toprule
-\textbf{Benefit} & \textbf{Description} \\
-\midrule
+The rapid growth of cloud computing also fueled the rise of DevOps practices and
+containerization technologies like Docker, which facilitate the development,
+deployment and management of applications on the cloud . Orchestration tools
+like Docker Swarm and Kubernetes further simplify the process of managing and
+scaling containerized applications across cloud enviroments
+\citep{bernsteinContainersCloudLXC2014}. 
 
-\rowcolor{green!10} 
-Cost efficiency & Cloud computing can help companies by
-reducing upfront infrastructure costs and optimize expenses as they scale.
-\citep{davethomas2009}. \\
+Today, cloud computing has become an essential part of modern IT infrastructure,
+where major cloud provides, like AWS, Microsoft and Google, continue to innovate
+and expand their offerings. Cloud computing has also enable new paradigms like
+serverless computing and edge computing, allowing for even more efficient and
+distributed computing models.
 
-Scalability & Offers the ability to efficiently scale operations and resources
-in response to changing demand \citep{davethomas2009}. \\
-
-\rowcolor{green!10} 
-Reduced IT overhead & Cloud providers manage the underlying infrastructure,
-allowing companies to focus on software.\\
-
-Accessibility & Cloud computing enables companies to serve their services to
-anyone that can connect to the internet, enabling consumers to access services
-with greater freedom. \\
-
-\bottomrule
-\end{tabular}
-\label{table:benefits}
-\end{table}
-
-However, in the field of ICT, one truth prevails: the inevitability of
-trade-offs. Every decision in software engineering involves weighing different
-factors against each other, such as performance against simplicity, or between
-speed of delivery and robustness \citep{lelekSoftwareMistakesTradeoffs2022}.
-This rings especially true in the world of cloud computing where, depending on
-the scale of your company, the way you set up your services on the cloud can
-have large implications. Some of these trade-offs include: 
-
-\newpage
-
-\begin{table}[ht]
-\centering
-\caption{Cloud Computing Trade-offs}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.6\linewidth}}
-\toprule
-\textbf{Trade-off} & \textbf{Description} \\
-\midrule
-
-\rowcolor{red!10} 
-Cost management & Despite its potential for cost savings,
-managing and optimizing cloud expenses remains a challenge for many
-organizations \citep{rimolCloudMigrationCosts2021}. \\ 
-
-Energy consumption & The environmental impact
-and energy usage of data centers pose significant sustainability challenges.
-Data centers alone account for approximately 1\% of the world's energy
-consumption \citep{freitag2021}. \\ 
-
-\rowcolor{red!10} 
-Performance and Latency issues & With slow internet access, the experience of
-using a cloud service can vary. Loss of data, wrong data saved, depending on the
-companies strategies.\\
-
-Data security and Privacy risks & Storing sensitive data on a
-third-party cloud servers can raise concerns about data privacy, security
-breaches, and compliance with regional and national regulations
-\citep{subashiniSurveySecurityIssues2011}. \\
-
-\bottomrule
-\end{tabular}
-\label{table:tradeoffs}
-\end{table}
-
-Weighing these benefits and trade-offs against each other is part of any
-companies cloud strategy, but more and more companies opt for adopting cloud in
-some shape or form in their portfolio. 
 
 
 \newpage
@@ -713,7 +656,8 @@ Keywords: Hypervisor, Host hardware, Host Os, internal OS, application.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/3.2-vm-figure.png}
-  \caption{DevOps engineer deploying services as containers on AWS}
+  \caption{Virtual Machines running on top of Hypervisor on a computer}
+  \label{vm-figure}
 \end{figure}
 
 \subsection{Containers and Docker}
@@ -728,7 +672,7 @@ Keywords: Host hardware / VM, Host OS, Docker engine, bins/libs and application.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/3.3-container-figure.png}
-  \caption{DevOps engineer deploying services as containers on AWS}
+  \caption{Containers running on the Docker Engine}
 \end{figure}
 
 \subsubsection{Container orchestration}
