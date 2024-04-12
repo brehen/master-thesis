@@ -34,6 +34,7 @@ header-includes:
       }
     }
 
+  - \usepackage{todonotes}
 
   - \usepackage[style=apa, natbib=true]{biblatex}
   - \addbibresource{nebula.bib}
@@ -148,6 +149,8 @@ header-includes:
 <!--    COPYRIGHT PAGE    -->
 <!-- -------------------- -->
 
+\newpage
+\listoftodos
 \newpage
 
 
