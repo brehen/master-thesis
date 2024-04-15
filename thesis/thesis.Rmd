@@ -298,41 +298,6 @@ associated with containerized serverless functions pose a challenge,
 particularly for on-demand applications. To mitigate this, vendors
 often opt for keeping the underlying servers *warm* to keep the startup latency
 as low as possible for serving functions. Reducing the startup time for serving
-
-This thesis proposes exploring WebAssembly with WebAssembly System Interface
-(WASI) as an innovative choice for deploying functions to the cloud, through
-developing a prototype Functions-as-a-Service platform named Nebula. This
-platform will run functions compiled to WebAssembly, originally designed for
-high-performance tasks in web browsers, which coupled with WASI, allows us to
-give WebAssembly programs access to the underlying system. This holds potential
-for a more efficient way to package and deploy functions, potentially reducing
-the startup latency and the overhead associated with traditional serverless
-platforms. WebAssembly and WASI offers a pathway where the demands of today is
-met, while reducing the carbon footprint for cloud applications.
-
-<!--
-It is important to note is that these measurements and estimates comes with a
-certain level of uncertainty, yet they offer a glimpse into the current and
-future challenges of cloud computing's energy consumption. As demand for cloud
-services continues to rise, there is a pressing need to explore alternative
-technologies that can enhance energy efficiency without compromising on the
-performance, availability and scalability of that the users expect.
-
-
-One prevalent method for building cloud applications today involves using
-serverless computing platforms, such as Amazon's *AWS Lambdas*, or Google's
-*Cloud Functions*. These platforms let developers deploy code into containers
-executed upon request. Despite the benefits, such as the ability to run software
-across different architectures, this approach introduces a startup latency for
-the containers. This latency is negligible for long-running services, but
-significant for on-demand functions. 
-
-This thesis proposes exploring WebAssembly and the WebAssembly System Interface
-(WASI) as innovative choices for deploying functions to public cloud services.
-WebAssembly, originally developed for efficient execution in web browsers,
-combined with WASI, enables WebAssembly to run on servers, potentially offering
-a more efficient way to package and deploy functions.
--->
 a function should reduce the need for keeping servers warm and therefore reduce
 the standby power consumption of serverless architectures.
 
