@@ -272,19 +272,18 @@ WasmIO 2024 who showed me how to reduce my startup times by a further 100 times.
   Let's hope WASI is up to the task!
 }{---Solomon Hykes, \textit{Founder of Docker}}
 
-In the digital age \citep{freitag2021}, cloud computing has emerged as a
-foundational technology in the technological landscape, driving innovation and
-increased efficiency across various sectors. Its growth over the past decade has
-not only transformed how consumers store, process, and access data, but it has
-also raised environmental concerns as more and more data centers are built
-around the globe to accommodate the traffic, consuming vast amounts of power.
-The Information and Communication Technology (ICT) industry, with cloud
-computing at its core, accounts for an estimated 2.1\% to 3.9\% of global
-greenhouse gas emissions. Data centers, the backbone of cloud computing
-infrastructures, are responsible for about 200 TWh/yr, or about 1\% of the
-global electricity consumption, a figure projected to escalate, potentially
-reaching 15\% to 30\% of electricity consumption in some countries by 2030
-\citep{freitag2021}.
+In the digital age, cloud computing has emerged as a foundational technology in
+the technological landscape, driving innovation and increased efficiency across
+various sectors. Its growth over the past decade has not only transformed how
+consumers store, process, and access data, but it has also raised environmental
+concerns as more and more data centers are built around the globe to accommodate
+the traffic, consuming vast amounts of power. The Information and Communication
+Technology (ICT) industry, with cloud computing at its core, accounts for an
+estimated 2.1\% to 3.9\% of global greenhouse gas emissions. Data centers, the
+backbone of cloud computing infrastructures, are responsible for about 200
+TWh/yr, or about 1\% of the global electricity consumption, a figure projected
+to escalate, potentially reaching 15\% to 30\% of electricity consumption in
+some countries by 2030 \citep{freitag2021}.
 
 The sustainability of cloud computing is thus under scrutiny, and while some
 vendors strive to achieve a net-zero carbon footprint for their cloud computing
