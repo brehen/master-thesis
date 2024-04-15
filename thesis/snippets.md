@@ -142,3 +142,28 @@ companies cloud strategy, but more and more companies opt for adopting cloud in
 some shape or form in their portfolio.
 
 ---
+
+<!--
+It is important to note is that these measurements and estimates comes with a
+certain level of uncertainty, yet they offer a glimpse into the current and
+future challenges of cloud computing's energy consumption. As demand for cloud
+services continues to rise, there is a pressing need to explore alternative
+technologies that can enhance energy efficiency without compromising on the
+performance, availability and scalability of that the users expect.
+
+One prevalent method for building cloud applications today involves using
+serverless computing platforms, such as Amazon's *AWS Lambdas*, or Google's
+*Cloud Functions*. These platforms let developers deploy code into containers
+executed upon request. Despite the benefits, such as the ability to run software
+across different architectures, this approach introduces a startup latency for
+the containers. This latency is negligible for long-running services, but
+significant for on-demand functions.
+
+This thesis proposes exploring WebAssembly and the WebAssembly System Interface
+(WASI) as innovative choices for deploying functions to public cloud services.
+WebAssembly, originally developed for efficient execution in web browsers,
+combined with WASI, enables WebAssembly to run on servers, potentially offering
+a more efficient way to package and deploy functions.
+-->
+
+---
