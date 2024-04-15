@@ -295,11 +295,9 @@ serverless computing has emerged as a compelling paradigm, offering scalability
 and flexibility by enabling functions to execute in response to requests, rather
 than having a server running all the time. However, the inherent startup latency
 associated with containerized serverless functions pose a challenge,
-particularly for on-demand applications and to mitigate this, vendors
+particularly for on-demand applications. To mitigate this, vendors
 often opt for keeping the underlying servers *warm* to keep the startup latency
 as low as possible for serving functions. Reducing the startup time for serving
-a function significantly should mitigate the need for keeping servers warm and
-therefore reduce the standby power consumption of serverless architectures.
 
 This thesis proposes exploring WebAssembly with WebAssembly System Interface
 (WASI) as an innovative choice for deploying functions to the cloud, through
@@ -335,6 +333,8 @@ WebAssembly, originally developed for efficient execution in web browsers,
 combined with WASI, enables WebAssembly to run on servers, potentially offering
 a more efficient way to package and deploy functions.
 -->
+a function should reduce the need for keeping servers warm and therefore reduce
+the standby power consumption of serverless architectures.
 
 \section{Motivation}
 \label{sect:motivation}
@@ -349,16 +349,28 @@ deployment methods that promise to reduce energy consumption without sacrificing
 performance, thereby contributing to the development of a more sustainable cloud
 computing ecosystem.
 
+\section{The Project}
+\label{sect:project}
+
+This thesis explores WebAssembly with WebAssembly System Interface (WASI) as an
+innovative choice for deploying functions to the cloud, through developing a
+prototype \ac{FaaS} platform named Nebula. This platform will run
+functions compiled to WebAssembly, originally designed for high-performance
+tasks in web browsers, which coupled with WASI, allows us to give WebAssembly
+programs access to the underlying system. This holds potential for a more
+efficient way to package and deploy functions, potentially reducing the startup
+latency and the overhead associated with traditional serverless platforms.
+WebAssembly and WASI offers a pathway, where the demands of today is met, while
+reducing the carbon footprint for cloud applications.
 
 \section{Problem Statement}
 \label{sect:problems}
 
 The goal of the thesis is to:
 
-1. Develop a prototype cloud computing platform for the Functions-as-a-Service
-   (FaaS) paradigm
+1. Develop a prototype cloud computing platform for the \ac{FaaS} paradigm.
 2. Use this platform for conducting experiments that either prove or disprove
-   the claim that WebAssembly is the more energy efficient choice
+   the claim that WebAssembly is the more energy efficient choice.
 
 By achieving these goals this thesis seeks to shed light on the feasibility and
 implications of adopting WebAssembly and WASI for a greener cloud.
@@ -370,7 +382,9 @@ through the background for how cloud computing got to this point, a chapter
 dedicated to the process of building Nebula, a chapter for discussing the
 results from the experiments, and ending with a chapter suggesting future works.
 
-<!-- TODO: update outline to match final version before handing in -->
+\todo[inline=true]{Feedback from Michael: When I write this, use it to point the reader to
+the most important parts of the thesis. Avoid listing the chapters; you already
+have a table-of-contents.}
 
 \newpage
 
@@ -397,32 +411,34 @@ significantly reduce the carbon footprint.
 \section{Ashore: Before the waves}
 \label{sect:ashore}
 
-Before delving into the waves themselves, it's essential to understand the
+Before delving into the waves themselves, it is essential to understand the
 landscape that preceded cloud computing. Prior to the cloud era, companies were
 required to building and mantaining their digital services in-house. This
 required companies to invest heavily into both expensive hardware and expensive
 engineers to buy, upkeep and oversee their own physical servers and network
-hardware. (See figure \ref{fig:myspeis} for an example)
+hardware. (See \Cref{fig:myspeis} for an example)
 
 
 \begin{figure}[H]
-\label{fig:myspeis}
 \centering
   \includegraphics{assets/2.1-before-the-waves.jpg}
   \caption{Example of a company that host their own infrastructure.}
+  \label{fig:myspeis}
 \end{figure}
 
-This sort of setup mandates a significant upfront costs involved in setting up and
+This setup mandates a significant upfront costs involved in setting up and
 maintaining such an infrastructure, which puts a considerable financial strain
 on organizations, and kept smaller companies that were unable to invest in this,
 at an disadvantage. 
 
 As a response to this, some companies found a market for taking on the
-responsibility of managing infrastructure, and offer Infrastructure-as-a-Service
-(IaaS) services to an evolving ecosystem of companies with a digital landscape.
-On these managed infrastructures companies could deploy their services on top of
-Virtual machines that allowed more flexibility, and lowered the bar to new
-companies.
+responsibility of managing infrastructure, and offer \ac{IaaS} to an evolving
+market that relies more and more on digital solutions. \ac{IaaS} provides
+consumers with the ability to provision computing resources where they can
+deploy and run software, including operating systems and applications
+\citep{nist-def}. On these managed infrastructures companies could deploy their
+services on top of virtual machines that allowed more flexibility, and lowered
+the bar to new companies.
 
 \section{The First Wave: Virtual Machines}
 \label{sect:first-wave}
@@ -432,17 +448,16 @@ virtualization, more specifically virtual machines, a response to the costly and
 complex nature of managing traditional, on-premise data centers. During the
 mid-2000s, Amazon launched its subsidiary, Amazon Web Services (AWS), who in
 turn launched Amazon S3 in March 2006, followed by Elastic Compute Cloud (EC2)
-in August the same year \citep{barrAmazonEC2Beta2006}. With these services, AWS positioned
-itself as a pioneer in this space, marking a major turning point in application
-development and deployment, and popularized cloud computing. EC2, as an
-Infrastructure-as-a-Service (IaaS) platform, empowered developers to run virtual
-machines remotely. 
+in August the same year \citep{barrAmazonEC2Beta2006}. With these services, AWS
+positioned itself as a pioneer in this space, marking a major turning point in
+application development and deployment, and popularized cloud computing. EC2, as
+an \ac{IaaS} platform, empowered developers to run virtual machines remotely. 
 
 \begin{figure}[H]
 \label{feisbook}
 \centering
   \includegraphics{assets/2.2-first-wave.jpg}
-  \caption{Example of "Feisbook" building their services on EC2}
+  \caption{Example of ``Feisbook`` building their services on EC2.}
 \end{figure}
 
 While similar services existed before 2006, with Amazon's existing large
@@ -452,7 +467,7 @@ era, or wave, of *cloud computing*.
 \section{The Second Wave: Containerization}
 \label{sect:second-wave}
 
-As we entered the 2010s, the focus shifted from Virtual Machines to containers,
+As we entered the 2010s, the focus shifted from virtual machines to containers,
 largely due to the limitations of VMs in efficiency, resource utilization, and
 application deployment speed. Containers, being a lightweight alternative to
 VMs, designed to overcome these hurdles \citep{bao2016}. 
@@ -460,7 +475,7 @@ VMs, designed to overcome these hurdles \citep{bao2016}.
 In contrast to VMs, which require installation of resource-intensive operating
 systems and minutes to start up, containers along with their required OS
 components, could start up in seconds. Typically managed by orchestration tools
-like Kubernetes ^[https://kubernetes.io], containers enabled applications to
+like Kubernetes^[https://kubernetes.io], containers enabled applications to
 package alongside their required OS components, facilitating scalability in
 response to varying service loads. Consequently, an increasing number of
 companies have since established platform teams to build orchestrated developers
@@ -474,30 +489,31 @@ platforms, thereby simplifying application development in Kubernetes clusters.
 
 Containers are not a perfect solution however, and while they simplify the means
 of developing and deploying applications, docker images can easily reach
-Gigabytes in image size \citep{durieux2023}, and can take a long time to start up.
+Gigabytes in image size \citep{durieux2023}, can take a long time to start up,
+and building applications that target multiple platforms can be difficult.
+
 These solutions are more efficient than manually installing an operating system
-on a machine, but they still have leave a large footprint, is there a more
-efficient way to package and deploy our programs? Maybe WebAssembly and
-WebAssembly System Interface, as mentioned in epigraph of this thesis can pose a
-promising alternative?
+on a machine, but they still have leave a large footprint. Is there a more
+efficient way to package and deploy our programs? \ac{Wasm} and \ac{WASI}, as
+mentioned in epigraph of \cref{chap:intro}, has positioned itself as a potential
+contender for how applications are built, packaged and deployed to the cloud.
 
 \section{The Third Wave: WebAssembly}
 \label{sect:third-wave}
 
 WebAssembly has had a surge of popularity the past three to four years when
-developers discovered that what it was designed for - to truly run safely
-inside the browser - translated well into a cloud native environment as well.
-Containers has had a positive shift on the cloud native landscape as a whole,
-but while a lot better than the previous iterations of cloud applications, some
-shortcomings remain. The image sizes can get quite large, starting up a docker
-image can be a costly affair, and the abstraction layer between the underlying
-computer and the code running in the container increases the resources required
-to run programs.
+developers discovered that what it was designed for - to truly run safely inside
+the browser - translated well into a cloud native environment as well.
+Containers have, with the benefits mentioned in \cref{sect:second-wave}, had a
+positive impact on the cloud native landscape. However, with the limitations -
+like large image sizes, slow startups and complexity of cross-platform - there
+is space for exploring alternative technologies for building our cloud-native
+applications.
 
 WebAssembly is a compilation target with many languages adopting support, and by
 itself, it is sandboxed to run in a WebAssembly VM without access to the outside
-world, meaning that it can't access the underlying system. This means that a
-"vanilla" WebAssembly module can't write to the file system, update a Redis
+world, meaning that it cannot access the underlying system. This means that a
+"vanilla" WebAssembly module cannot write to the file system, update a Redis
 cache or transmit a POST request to another service. 
 
 To make this possible, the WebAssembly System Interface project was created.
@@ -516,9 +532,9 @@ compute with a lower impact on the environment.
 In summary, the three waves of cloud computing - virtual machines, containers,
 and now WebAssembly with WASI - represent the industry's pursuit of more
 efficient, scalable and reliable solutions for building cloud applications.
-While each wave has attempted to tackle pressing challenges of its time, it's
+While each wave has attempted to tackle pressing challenges of its time, it is
 exciting to see how WebAssembly and WASI can be leveraged in this third wave and
-see if it's promise of more efficient applications can lead to reducing the
+see if it is promise of more efficient applications can lead to reducing the
 environmental impact of ICT.
 
 
@@ -536,8 +552,7 @@ Data has gravity, and that gravity pulls hard
 
 Cloud computing, commonly referred to as "*the cloud*", refers to the delivery of
 computing resources served over the internet, as opposed to traditional
-on-premise hardware setups. The National Institute of Standards and Technology
-(NIST) defines Cloud computing like so: 
+on-premise hardware setups. The \ac{NIST} defines cloud computing like so: 
 
 
 \begin{tcolorbox}[
@@ -564,17 +579,19 @@ computing.
 Over the following decades, advancements in networking, virtualization and the
 ubiquity of the internet led to the development of today's sophisticated cloud
 services. The term "cloud computing" was first coined in the year 1996 by
-Compaq, \citep{favaloroInternetSolutionsDivision1996}, but it wasn't until
-Amazon launched its subsidiary Amazon Web Services in the 2006 that the adoption
+Compaq, \citep{favaloroInternetSolutionsDivision1996}, but it was not until
+Amazon launched its subsidiary \ac{AWS} in the 2006 that the adoption
 became wide spread. 
 
-Alongside the founding of AWS a suite of cloud services launched, including
-Elastic Compute Cloud (EC2) for virtual servers \citep{barrAmazonEC2Beta2006},
-Simple Storage Service (S3) for object storage. By providing these services over
-the internet on a pay-as-you-go basis, AWS drastically lowered the bar for
-accessing computing resources, making it easier and more cost-effective for
-businesses and developers to build and deploy applications without the need for
-considerable upfront investment in hardware and infrastructure.
+The launch of AWS's Amazon S3 cloud service in March 2006, followed by Elastic
+Compute Cloud (EC2) in August the same year \citep{barrAmazonEC2Beta2006},
+marked a major turning point in application development and deployment, and
+popularized cloud computing. EC2, as an Infrastructure-as-a-Service platform,
+empowered developers to run virtual machines remotely. By providing these
+services over the internet on a pay-as-you-go basis, AWS drastically lowered the
+bar for accessing computing resources, making it easier and more cost-effective
+for businesses and developers to build and deploy applications without the need
+for considerable upfront investment in hardware and infrastructure.
 
 With the success of AWS, other major technology companies saw their fit to enter
 the cloud computing market. In 2008, Google launched the Google App Engine
@@ -585,7 +602,7 @@ comparable to AWS.
 
 The rapid growth of cloud computing also fueled the rise of DevOps practices and
 containerization technologies like Docker, which facilitate the development,
-deployment and management of applications on the cloud . Orchestration tools
+deployment and management of applications on the cloud. Orchestration tools
 like Docker Swarm and Kubernetes further simplify the process of managing and
 scaling containerized applications across cloud enviroments
 \citep{bernsteinContainersCloudLXC2014}. 
