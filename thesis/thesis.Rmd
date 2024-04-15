@@ -86,6 +86,11 @@ header-includes:
 
 ---
 
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+library(scales)
+```
 
 <!-- -------------------- -->
 <!--      COVER PAGE      -->
