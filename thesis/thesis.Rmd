@@ -20,6 +20,7 @@ header-includes:
   - \usepackage{float} % Allow for more granular control of float of figures
   - \usepackage{setspace}
   - \usepackage{lipsum} % Generate lorem ipsum text
+  - \usepackage{acronym}
   - \usepackage[fontsize=12pt]{scrextend}
   - \usepackage{fontspec} % change to system font
   - \usepackage{tcolorbox} % Fancy text boxes that are pretty
@@ -42,6 +43,7 @@ header-includes:
 
 
   - \usepackage{hyperref}
+  - \usepackage{cleveref}
   - \usepackage{booktabs}
   - \usepackage{array} 
 
