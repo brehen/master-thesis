@@ -461,8 +461,7 @@ their container workflow)
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\columnwidth]{assets/2.3-second-wave-2.png}
-  \caption{DevOps engineer deploying services as containers on Google Cloud
-Platform (GCP).}
+  \caption{DevOps engineer deploying services as containers on \ac{GCP}.}
   \label{fig:docker}
 \end{figure}
 
@@ -490,7 +489,7 @@ is space for exploring alternative technologies for building our cloud-native
 applications.
 
 WebAssembly is a compilation target with many languages adopting support, and by
-itself, it is sandboxed to run in a WebAssembly VM without access to the outside
+itself, it is sandboxed to run in a WebAssembly \ac{VM} without access to the outside
 world, meaning that it cannot access the underlying system. This means that a
 "vanilla" WebAssembly module cannot write to the file system, update a Redis
 cache or transmit a POST request to another service. 
@@ -698,11 +697,11 @@ enabling more efficient resource utilization and consolidation.
 One of the most common forms of virtualization is the creation of \ac{VMs}.
 \citet{barhamXenArtVirtualization2003} described that a virtual machine is a
 software-based emulation of a physical computer system, including its processor,
-memory, storage, and network interfaces. Furthermore they describe that VMs run
+memory, storage, and network interfaces. Furthermore they describe that \ac{VMs} run
 on top of a hypervisor, a software layer that manages and allocates the physical
 hardware resources to the virtual machines.
 
-\Cref{fig:vm-figure} below illustrates virtual machines running in such an
+\Cref{vm-figure} below illustrates virtual machines running in such an
 environment.
 
 \begin{figure}[H]
@@ -733,7 +732,9 @@ Docker is one of the most widely adopted container platforms, providing tools
 for building, shipping, and running applications in containers
 \citep{merkelDockerLightweightLinux2014}. Docker containers are based on open
 standards and can run on various operating systems and cloud platforms
-\citep{sergeevDockerContainerPerformance2022}.
+\citep{sergeevDockerContainerPerformance2022}. \Cref{container-figure} below
+illustrates how containers run ontop of a Docker Engine on a virtual or physical
+machine.
 
 \begin{figure}[H]
 \centering
@@ -860,19 +861,16 @@ isolated environment for each function execution. Containers offer several
 benefits, such as fast startup times, efficient resource utilization, and the
 ability to package functions with their dependencies
 \citep{vaneykServerlessMorePaaS2018}. However, the use of containers in FaaS
-also introduce some challenges including, cold start latency and the lack of a
-standardized approach to container execution across different platforms
-\citep{missing}. 
+also introduce some challenges including, cold start latency and the overhead
+associated with container initialization and management
+\citep{wangPeekingCurtainsServerless2018}.
+
 
 Cold start latency refers to the time it takes for a FaaS platform to provision
 a new container instance when a function is invoked after a period of
 inactivity. This latency can be significant, especially for applications with
-strict performance requirements \citep{missing}. Additiionally, the lack of a
-standardized approach to container execution means that developers may need to
-create platform-specific configurations and optimizations, reducing the
-portability of their functions across different FaaS providers \citep{missing}.
-
-The limitations of container in FaaS environments have led to the exploration of
+strict performance requirements \citep{wangPeekingCurtainsServerless2018}. The
+limitations of containers in FaaS environments have led to the exploration of
 alternative approaches, such as using \ac{Wasm} and \{WASI}. As Solomon Hykes,
 the creator of Docker, stated: 
 
@@ -885,7 +883,7 @@ is up to the task.`` \citep{hykesOne2019} }
 
 This statement highlights the potential of \ac{Wasm} and \ac{WASI} to face the
 challenges with containers in FaaS and to provide a more efficient and
-platform-agnostic approach to serverless computing, a potential is explored and
+platform-agnostic approach to serverless computing, a potential explored and
 supported by \citet{kjorveziroskiEvaluatingWebAssemblyOrchestrated2022}.
 
 \section{WebAssembly and WASI}
@@ -919,7 +917,7 @@ bytecode that can be executed in the browser can be found in figure
 
 While asm.js was a great leap forward, being a subset of JavaScript limited the
 scope of what it could become, leading to its deprecation in 2017 and the
-development of a more efficient and portable format \citep{wasmFaq}. 
+development of a more efficient and portable format \citep{webassembly.orgFAQWebAssembly}. 
 
 
 \subsection{WebAssembly}
