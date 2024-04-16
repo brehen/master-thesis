@@ -641,6 +641,12 @@ ggplot(energy_data, aes(x = "", y = Energy_Consumption, fill = Category)) +
   scale_fill_manual(values = c("#1a338f", "#FF7F0E"))
 ```
 
+\todo[inline=true]{Consider this feedback from Michael: Google also does not
+make it rain more. If Google come and buys all the green energy in the area, it
+will just mean that others will use more black energy. They don't build new
+infrastructure. And this is only for Googles "usage". Not the users and network
+infrastructure.}
+
 The flipside of this, is that Google is commited to reach a net-zero carbon
 footprint by 2030, and the data center in Skien is built to reflect this. Google
 has been carbon neutral since 2007 and has matched 100% of its annual

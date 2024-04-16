@@ -17,12 +17,12 @@
 \contentsline {chapter}{\numberline {3}Background}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cloud Computing Overview}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Energy consumption and Sustainability in Cloud Computing}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Virtualization and Virtual Machines}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Virtualization and Virtual Machines}{14}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Containers and Container orchestration}{14}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Serverless Computing}{16}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Functions-as-a-Service}{17}{subsection.3.5.1}%
 \contentsline {section}{\numberline {3.6}WebAssembly and WASI}{18}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}asm.js}{18}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}asm.js}{19}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}WebAssembly}{19}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{21}{subsection.3.6.3}%
 \contentsline {section}{\numberline {3.7}Energy monitoring}{22}{section.3.7}%
