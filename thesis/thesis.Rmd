@@ -11,6 +11,7 @@ output:
     number_sections: true
     latex_engine: lualatex
     citation_package: biblatex
+    fig_caption: true
 
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
@@ -40,6 +41,7 @@ header-includes:
   - \addbibresource{nebula.bib}
   - \addbibresource{manual-nebula.bib}
   - \DefineBibliographyExtras{english}{}
+  - \usepackage{csquotes}
 
 
   - \usepackage{hyperref}
@@ -221,7 +223,7 @@ decided to bet on WebAssembly for the next big wave of cloud compute.
 \vspace{0.25cm}
 
 The capabilities of WebAssembly running on the server, with the aid of
-the WebAssembly System Interface (WASI) project, caught my interest and started 
+the WebAssembly System Interface project, caught my interest and started 
 the snowball that ended up as the avalanche that is this thesis. 
 
 \vspace{0.25cm}
@@ -316,7 +318,7 @@ of data centers, is a pressing issue. As the digital landscape continues to
 evolve, the quest for sustainable solutions has never been more critical. This
 thesis is motivated by the need to reconcile the growing demand for cloud
 services with the pressing need for environmental sustainability. Through the
-lens of WebAssembly and WASI, this thesis aims to investigate innovative
+lens of WebAssembly and \ac{WASI}, this thesis aims to investigate innovative
 deployment methods that promise to reduce energy consumption without sacrificing
 performance, thereby contributing to the development of a more sustainable cloud
 computing ecosystem.
@@ -324,15 +326,15 @@ computing ecosystem.
 \section{The Project}
 \label{sect:project}
 
-This thesis explores WebAssembly with WebAssembly System Interface (WASI) as an
+This thesis explores \ac{Wasm} with \ac{WASI} as an
 innovative choice for deploying functions to the cloud, through developing a
 prototype \ac{FaaS} platform named Nebula. This platform will run
-functions compiled to WebAssembly, originally designed for high-performance
-tasks in web browsers, which coupled with WASI, allows us to give WebAssembly
+functions compiled to \ac{Wasm}, originally designed for high-performance
+tasks in web browsers, which coupled with \ac{WASI}, allows us to give WebAssembly
 programs access to the underlying system. This holds potential for a more
 efficient way to package and deploy functions, potentially reducing the startup
 latency and the overhead associated with traditional serverless platforms.
-WebAssembly and WASI offers a pathway, where the demands of today is met, while
+\ac{Wasm} and \ac{WASI} offers a pathway, where the demands of today is met, while
 reducing the carbon footprint for cloud applications.
 
 \section{Problem Statement}
@@ -345,7 +347,7 @@ The goal of the thesis is to:
    the claim that WebAssembly is the more energy efficient choice.
 
 By achieving these goals this thesis seeks to shed light on the feasibility and
-implications of adopting WebAssembly and WASI for a greener cloud.
+implications of adopting \ac{Wasm} and \ac{WASI} for a greener cloud.
 
 \section{Outline}
 
@@ -376,8 +378,7 @@ poses challenges, notably it's environmental impact. This chapter steps through 
 adventure by introducing the concept of the "Three waves of cloud computing", coined
 by the WebAssembly community \citep*{butcherDodds2024}. Where the two first waves of
 cloud compute represent the shit from Virtual Machines to Containerization, the
-third wave encompasses utilizing WebAssembly and the WebAssembly System
-Interface (WASI) to build the next era of cloud compute with the potential to
+third wave encompasses utilizing \ac{Wasm} and \ac{WASI} to build the next era of cloud compute with the potential to
 significantly reduce the carbon footprint.
 
 \section{Ashore: Before the waves}
@@ -393,7 +394,7 @@ hardware. (See \Cref{fig:myspeis} for an example)
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/2.1-before-the-waves.jpg}
+  \includegraphics[width=0.7\columnwidth]{assets/2.1-before-the-waves-2.png}
   \caption{Example of a company that host their own infrastructure.}
   \label{fig:myspeis}
 \end{figure}
@@ -423,13 +424,15 @@ turn launched Amazon S3 in March 2006, followed by Elastic Compute Cloud (EC2)
 in August the same year \citep{barrAmazonEC2Beta2006}. With these services, AWS
 positioned itself as a pioneer in this space, marking a major turning point in
 application development and deployment, and popularized cloud computing. EC2, as
-an \ac{IaaS} platform, empowered developers to run virtual machines remotely. 
+an \ac{IaaS} platform, empowered developers to run virtual machines remotely.
+(See \Cref{fig:feisbook} for an example of this kind of architecture)
 
 \begin{figure}[H]
-\label{feisbook}
 \centering
-  \includegraphics{assets/2.2-first-wave.jpg}
-  \caption{Example of ``Feisbook`` building their services on EC2.}
+  \includegraphics[width=0.7\columnwidth]{assets/2.2-first-wave-2.png}
+  \caption{Example of ``Fæisbook`` building their services on EC2 and using S3
+for storage.}
+  \label{fig:feisbook}
 \end{figure}
 
 While similar services existed before 2006, with Amazon's existing large
@@ -452,11 +455,15 @@ package alongside their required OS components, facilitating scalability in
 response to varying service loads. Consequently, an increasing number of
 companies have since established platform teams to build orchestrated developers
 platforms, thereby simplifying application development in Kubernetes clusters.
+(See \Cref{fig:docker} for an example where a fictive company ``WacDonalds`` and
+their container workflow)
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/2.3-second-wave-ill.jpg}
-  \caption{DevOps engineer deploying services as containers on AWS}
+  \includegraphics[width=0.9\columnwidth]{assets/2.3-second-wave-2.png}
+  \caption{DevOps engineer deploying services as containers on Google Cloud
+Platform (GCP).}
+  \label{fig:docker}
 \end{figure}
 
 Containers are not a perfect solution however, and while they simplify the means
@@ -498,14 +505,14 @@ modules that can run on a WebAssembly runtime. These WebAssembly runtimes can
 run on pretty much any architecture with ease, the resulting binary size are
 quite small, and the performance is near-native. These perks combined with the
 potential for reduced overhead, smaller image sizes, and faster startup times
-make WebAssembly and WASI a promising candidate for the third wave of cloud
+make WebAssembly and \ac{WASI} a promising candidate for the third wave of cloud
 compute with a lower impact on the environment.
 
 In summary, the three waves of cloud computing - virtual machines, containers,
-and now WebAssembly with WASI - represent the industry's pursuit of more
+and now \ac{Wasm} with \ac{WASI} - represent the industry's pursuit of more
 efficient, scalable and reliable solutions for building cloud applications.
 While each wave has attempted to tackle pressing challenges of its time, it is
-exciting to see how WebAssembly and WASI can be leveraged in this third wave and
+exciting to see how \ac{Wasm} and \ac{WASI} can be leveraged in this third wave and
 see if it is promise of more efficient applications can lead to reducing the
 environmental impact of ICT.
 
@@ -607,8 +614,33 @@ TWh globally in 2022 \citep{Google2023Environmental2023}. In other words, in
 Google consumed globally in 2022. The energy consumption in Norway is projected
 to reach 150-158 TWh in 2026 \citep{gunnerodStatnettAnalyse2022}, meaning that
 the data center in Skien could account for 5\% of the energy consumption in the
-country. These examples signify how much energy these data centers can consume,
-and why it is important to explore options for reducing these numbers. 
+country. \Cref{fig:skienvsnorway} below illustrates the amount of energy the new
+data center will consume compared to Norway.
+
+\vspace{0.25cm}
+
+```{r, skienvsnorway,echo=F, eval=T, out.width="80%", fig.align = 'center', fig.cap="Projected energy consumption in 2026: Skien data center and Norway."}
+# Create a data frame with energy consumption values
+energy_data <- data.frame(
+  Category = c("Google Data center in Skien", "Rest of Norway"),
+  Energy_Consumption = c(7.5, 150) # Assuming Norway's total consumption is 140 TWh/year
+)
+
+# Create a pie chart with labels
+ggplot(energy_data, aes(x = "", y = Energy_Consumption, fill = Category)) +
+  geom_col() +
+  geom_label(aes(label = c("7.5 TWh", "150 TWh"), x = 1.3),
+    position = position_stack(vjust = 0.5),
+    color = "#eeeeee",
+    fontface = "bold"
+  ) +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  labs(
+    fill = "Estimated energy consumption 2026"
+  ) +
+  scale_fill_manual(values = c("#1a338f", "#FF7F0E"))
+```
 
 The flipside of this, is that Google is commited to reach a net-zero carbon
 footprint by 2030, and the data center in Skien is built to reflect this. Google
@@ -617,7 +649,7 @@ electricity consumption with renewable energy since 2017
 \citep{googleTrackingOurCarbonFree}. Norway's abundant hydropower, rising wind
 power production, investment into solar energy and other renewable energy
 sources make it an ideal location for building data centers aiming to be powered
-by renewable energy \citep{norwegianenergyElectricityProduction2023}. 
+by renewable energy \citep{norwegian-energyElectricityProduction2023}. 
 
 Like Google, other major cloud providers have set ambitious targets for
 renewable energy adoption and have invested in large-scale renewable projects.
@@ -625,7 +657,7 @@ Microsoft has committed to shifting to 100% renewable energy by 2025 for all its
 data centers, buildings and campuses, and to be carbon *negative* by 2030
 \citep{smithMicrosoftWillBe2020}, while Amazon has pledged to transition to 100%
 renewable energy by 2030 for its cloud subsidiary and to have a net-zero carbon
-footprint by 2040 \citep{amazonstaffClimatePledge2019}. These efforts have
+footprint by 2040 \citep{amazonClimatePledge2019}. These efforts have
 contributed to reducing greenhouse gas emissions in the cloud computing
 industry, but this commitment is not universally adopted, and many data centers
 still rely on electricity generated by fossil fuels, a leading contributor to
@@ -654,139 +686,207 @@ physical servers, cloud providers are able to improve resource utilization and
 reduce the energy consumption of their data centers.
 \citep{beloglazovEnergyawareResourceAllocation2012} 
 
+\section{Virtualization and Virtual Machines}
+\label{sect:virtual}
 
-\newpage
+Virtualization is the process of creating a virtual version of a physical
+resource, such as an operating system, a server, a storage device, or a network
+resource \citep{chiuehSurveyVirtualizationTechnologies2005}. Virtualization
+allows multiple virtual instances to share the underlying physical hardware,
+enabling more efficient resource utilization and consolidation.
 
-\section{Virtualization and Container}
+One of the most common forms of virtualization is the creation of \ac{VMs}.
+\citet{barhamXenArtVirtualization2003} described that a virtual machine is a
+software-based emulation of a physical computer system, including its processor,
+memory, storage, and network interfaces. Furthermore they describe that VMs run
+on top of a hypervisor, a software layer that manages and allocates the physical
+hardware resources to the virtual machines.
 
-\epigraph{\itshape 
-What do I want to convey here? This chapter is going to start introducing
-virtualization as a concept, and move on to virtual machines, and try to explain
-the technical details of the first wave of cloud compute.
-}{TODO}
-
-
-Cloud would be difficult to reach the scale it has without the creation of
-virtualization. Virtualization is a process that allows for more efficient usage
-of physical hardware, by using software to create an abstraction layer over
-computer hardware. 
-
-\begin{tcolorbox}[
-  definitionstyle,
-  title=AWS definition of Virtualization,
-]
-Virtualization is technology that you can use to create virtual representations
-of servers, storage, networks, and other physical machines. Virtual software
-mimics the functions of physical hardware to run multiple virtual machines
-simultaneously on a single physical machine. Businesses use virtualization to
-use their hardware resources efficiently and get greater returns from their
-investment. It also powers cloud computing services that help organizations
-manage infrastructure more efficiently. \\
-
-\hfill \citep{awsWhatVirtualizationCloud}
-
-\end{tcolorbox}
-
-As mentioned in \autoref{sect:first-wave}, the emergence of virtualization and
-consequently the creation of Virtual Machines, laid the foundation that allowed 
-the cloud ecosystem to evolve. 
-
-
-\subsection{Virtual Machines}
-
-\epigraph{\itshape 
-Write about virtual machines, the technical details of it, and how it relates to
-my project. I'm not using a VM directly, but it might be interesting to know how
-it lays the foundation for moving onto containers/docker for deploying
-applications.
-
-Keywords: Hypervisor, Host hardware, Host Os, internal OS, application.
-}{TODO}
+\Cref{fig:vm-figure} below illustrates virtual machines running in such an
+environment.
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/3.2-vm-figure.png}
-  \caption{Virtual Machines running on top of Hypervisor on a computer}
+  \includegraphics[width=0.7\columnwidth]{assets/3.2-vm-figure.png}
+  \caption{Virtual machines running on top of Hypervisor on a computer.}
   \label{vm-figure}
 \end{figure}
 
-\subsection{Containers and Docker}
 
-\epigraph{\itshape 
-Go into containers, reference to the figure and lay out how containers has a
-smaller footprint and better performance for running applications compared to
-hoisting entire virtual machines.
-Keywords: Host hardware / VM, Host OS, Docker engine, bins/libs and application.
-}{TODO}
+\section{Containers and Container orchestration}
+\label{sect:containers}
+
+While virtual machines provide isolation at the hardware level, containers offer
+a more lightweight form of virtualization by isolating applications at the
+operating system level \citep{merkelDockerLightweightLinux2014}. Containers
+share the host operating system's kernel, enabling them to be more lightweight
+and efficient compared to traditional virtual machines. They can run physical
+servers, as well as on \ac{VMs} \citep{bernsteinContainersCloudLXC2014}.
+
+\citet{merkelDockerLightweightLinux2014} also explains that containers package
+an application, along with its dependencies, libraries, and configuration files,
+into a single, self-contained unit. This allows applications to be deployed
+consistently across different environments, ensuring predictable behavior and
+reducing compatibility issues \citep{sergeevDockerContainerPerformance2022}
+
+Docker is one of the most widely adopted container platforms, providing tools
+for building, shipping, and running applications in containers
+\citep{merkelDockerLightweightLinux2014}. Docker containers are based on open
+standards and can run on various operating systems and cloud platforms
+\citep{sergeevDockerContainerPerformance2022}.
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/3.3-container-figure.png}
+  \includegraphics[width=0.7\columnwidth]{assets/3.3-container-figure.png}
   \caption{Containers running on the Docker Engine}
+  \label{container-figure}
 \end{figure}
 
-\subsubsection{Container orchestration}
+As the number of containers in an environment grows, managing and orchestrating
+them becomes increasingly complex. Container orchestration tools, such as
+Kubernetes and Docker Swarm, help automate the deployment, scaling, and
+management of containerized applications across multiple hosts
+\citep{burnsBorgOmegaKubernetes2016}.
 
-\epigraph{\itshape 
-Get into Docker swarm and Kubernetes, and how applications are meant to be
-built, deployed and finally orchestrated on top of X amount of machines.
-Keywords: K8s, Dockerswarm, networking, energy consumtion, 60% idle.  
-}{TODO}
+These tools provide features like:
 
-\newpage
+1. Automated deployment and scaling: Containers can be automatically
+   provisioned, scaled up or down based on demand, and load-balanced across
+multiple hosts \citep{burnsBorgOmegaKubernetes2016}.
+2. Self-healing and monitoring: Orchestration tools can monitor the health of
+   containers and automatically restart or reschedule them in case of failures
+\citep{kubernetesKubernetes}.
+3. Service discovery and load balancing: Applications running in containers can
+   be easily discovered and accessed by other services, enabling microservice
+architectures \citep{kubernetesKubernetes}.
+
+Container orchestration has become an essential component of modern cloud-native
+architectures, enabling efficient management and scaling of containerized
+applications in dynamic environments.
+
 
 \section{Serverless Computing}
 
-While building developer platforms atop orchestration tools like Kubernetes has
-gained popularity due to improved efficiency over managing physical
-infrastructure, this approach still entails significant operational overhead. In
-certain situations, developers could greatly benefit from the ability to develop
-and deploy smaller services without incurring the operational costs associated
-with expanding the company's existing platform to accommodate them. This need
-paved the way for the emergence of serverless computing.
+Serverless computing has emerged as an alternative to traditional infrastructure
+management approahces, such as managing physical servers or building developer
+platforms as described in \Cref{sect:containers}
+\citep{baldiniServerlessComputingCurrent2017}. In serverless computing, the
+underlying infrastrucutre is abstracted away, allowing developers to focus on
+writing code and deploying programs without the need to provision or manage
+servers
+\citep{baldiniServerlessComputingCurrent2017,robertsServerlessArchitectures2018}.
+\citet{castroRiseServerlessComputing2019} defines serverless as such: 
 
-Despite its somewhat misleading name, serverless computing doesn’t imply the
-absence of servers. Instead, it means that the underlying infrastructure is
-abstraced away, enabling developers to focus solely on writing code and
-dpeloying functions without worrying about provisioning or managing servers.
-This paradigm shift alleviates the operational burden and allows for more
-efficient resource utilization, as resources are dynamically allocated based on
-demand, and the provider handles scaling and maintenance. 
+\begin{tcolorbox}[
+  definitionstyle,
+  title=Serverless definition,
+]
+Serverless computing is a platform that hides server usage from
+developers and runs code on-demand automatically scale and billed only for the
+code running. \\
 
-The serverless model promotes a more granular approach to application
-development, where individual functions can be deployed independently, promoting
-modularity and scalability. Developers can focus on building and iterating on
-specific features without the complexities of infrastructure management. 
+\hfill \citep{castroRiseServerlessComputing2019}
 
-By embracing serverless computing, organizations can achieve faster
-time-to-market, reduced operational costs, and improved developer productivity.
-However, it's important to note that while serverless architectures eliminate
-the need for server management, they introduce their own set of considerations,
-such as potential vendor lock-in, cold start latencies, and the need for a
-well-designed event-driven architecture. 
+\end{tcolorbox}
 
-From serverless computing, we can derive a subset - Functions-as-a-Service - a
-popular format for third-party vendors to offer serverless computiation to their
-customers.
 
-\subsection{Functions-as-a-Service (FaaS)}
+According to \citet{baldiniServerlessComputingCurrent2017}, in a serverless
+model, the cloud provider is responsible for managing the infrastructure,
+including resource allocation, scaling, and maintenance. This approach enables
+more efficient resource utilization, as resources are dynamically allocated
+based on demand. Furthermore, developers can deploy containers or functions
+independently, promoting modularity and scalability.
 
-Functions-as-a-Service (FaaS) focuses on the execution of individual functions
-in response to events or triggers. Major cloud providers, including Amazon Web
-Services (AWS Lambda), Google (Cloud Functions), and Microsoft (Azure Functions),
-offer FaaS platforms, allowing developers to write and deploy functions without
-managing the underlying infrastructure.
+On top of this, severless computing offers several more benefits, including:
 
-FaaS platforms typically employ container technology to execute functions, with
-each function running in an isolated container environment. This approach
-provides security, scalability, and efficient resource utilization. However, the
-startup overhead associated with containers can introduce latency, particularly
-for on-demand applications with strict performance requirements.
+1. Reduced operational overhead: Developers do not need to manage servers or
+   infrastructure, freeing up time and resources for application development
+\citep{baldiniServerlessComputingCurrent2017}.
+2. Faster time-to-market: With serverless, developers can quickly deploy and
+   iterate on functions without the need for time consuming infrastructure setup
+\citep{adzicServerlessComputingEconomic2017}.
+3. Cost efficiency: Serverless platforms typically employ a pay-per-use pricing
+   model, where users are charged based on the actual execution time and
+resources consumed by their applications \citep{eismannReviewServerlessUse2021}. 
 
-This overhead and the lack of a *true* platform-agnostic way to run containers
-culminated in the quote cited in the epigraph of \autoref{chap:intro}, where
-the creator of Docker saw WebAssembly and WebAssembly System Interface as a
-promising way to package and run application code across all platforms. 
+However, serverless architectures also introduce certain challenges, such as: 
+
+1. Potential vendor lock-in: Serverless platforms may have provider-specific
+   APIs and services, which can make it challenging to change providers or
+migrate applications \citep{gottliebServerlessDataLockin2018}.
+2. Cold start latencies: Containers or functions that have not beeen invoked
+   recently may experience longer startup times, cold starts, which can impact
+application performance \citep{golecColdStartLatency2023}.
+3. Resource overhead and efficiency: Serverless platforms typically rely on
+   containerization technologies, such as Docker, to encapsulate and isolate
+function executions. The use of containers can introduce resource overhead and
+impact the efficiency of serverless applications
+\citep{akkusSANDHighPerformanceServerless2018}.
+
+Examples of widely used platforms that build on the serverless model can be
+found at the major cloud providers, like Google Cloud
+Run^[https://cloud.google.com/run], \ac{AWS}
+Fargate^[https://aws.amazon.com/fargate/] and Microsoft's
+\ac{ACI}^[https://azure.microsoft.com/en-us/products/container-instances]. These
+three example platforms allow developers to deploy containers onto the cloud
+without worrying about orchestration behind the scenes.
+
+\subsection{Functions-as-a-Service}
+
+\ac{FaaS} is a cloud computing model, derived from serverless, that allows
+developers to execute individual functions in response to events or triggers
+without needing to manage the underlying infrastructure
+\citep{sewakWinningEraServerless2018}. 
+
+Examples of these \ac{FaaS} platforms among the big three cloud providers are;
+\ac{AWS} Lambda^[https://aws.amazon.com/lambda/], Google Cloud
+Functions^[https://cloud.google.com/functions], and Microsoft's Azure
+Functions^[https://azure.microsoft.com/en-us/products/functions]. On FaaS
+platforms like these, developers write and deploy small, self-contained
+functions that perform specific tasks. These functions are typically stateless
+and can be written in various programming languages supported by the FaaS
+provider \citep{baldiniServerlessComputingCurrent2017}.
+
+When a function is triggered, the FaaS platform automatically allocates the
+necessary resources to execute the function, such as CPU, memory, and network
+bandwidth. The platform also handles the scaling of the function based on the
+incoming requests, ensuring that the function can handle varying workloads by
+itself \citep{mcgrathServerlessComputingDesign2017}.
+
+\todo{add citations to rest of text}
+
+FaaS platforms often utilize container technology, like Docker, to provide an
+isolated environment for each function execution. Containers offer several
+benefits, such as fast startup times, efficient resource utilization, and the
+ability to package functions with their dependencies
+\citep{vaneykServerlessMorePaaS2018}. However, the use of containers in FaaS
+also introduce some challenges including, cold start latency and the lack of a
+standardized approach to container execution across different platforms
+\citep{5}. 
+
+Cold start latency refers to the time it takes for a FaaS platform to provision
+a new container instance when a function is invoked after a period of
+inactivity. This latency can be significant, especially for applications with
+strict performance requirements \citep{6}. Additiionally, the lack of a
+standardized approach to container execution means that developers may need to
+create platform-specific configurations and optimizations, reducing the
+portability of their functions across different FaaS providers \citep{7}.
+
+The limitations of container in FaaS environments have led to the exploration of
+alternative approaches, such as using \ac{Wasm} and \{WASI}. As Solomon Hykes,
+the creator of Docker, stated: 
+
+\begin{displayquote}
+\textit{ ``If WASM+WASI existed in 2008, we wouldn't have needed to create Docker.
+That's how important it is. WebAssembly on the server is the future of cloud
+computing. A standardized system interface was the missing link. Let's hope WASI
+is up to the task.`` \citep{hykesOne2019} }
+\end{displayquote} 
+
+This statement highlights the potential of \ac{Wasm} and \ac{WASI} to face the
+challenges with containers in FaaS and to provide a more efficient and
+platform-agnostic approach to serverless computing, a potential is explored and
+supported by \citet{kjorveziroskiEvaluatingWebAssemblyOrchestrated2022}.
 
 \section{WebAssembly and WASI}
 \label{sect:wasmwasi}
@@ -818,17 +918,19 @@ bytecode that can be executed in the browser can be found in figure
 \end{figure}
 
 While asm.js was a great leap forward, being a subset of JavaScript limited the
-scope of what it could become, leading to the development of a more efficient
-and portable format. The team at Mozilla built upon the lessons learned from
-asm.js and went on to develop WebAssembly and launch the first public version in
-2017.
+scope of what it could become, leading to its deprecation in 2017 and the
+development of a more efficient and portable format \citep{wasmFaq}. 
+
 
 \subsection{WebAssembly}
 
-From the ashes of asm.js we get WebAssembly, which is a low-level code format
+The team at Mozilla built upon the lessons learned from asm.js and went on to
+develop WebAssembly and launch the first public version in
+2017. 
+WebAssembly, which is a low-level code format
 designed to serve as a compilation target for high-level programming languages.
 It is a binary format that gets executed by a stack-based virtual machine,
-comparable to how Java bytecode runs on the Java Virtual Machine (JVM). 
+comparable to how Java bytecode runs on the \ac{JVM}. 
 
 \begin{figure}[H]
 \centering
@@ -953,13 +1055,6 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-
-
-\section{Rust programming language}
-\subsection{Introduction to Rust}
-\subsection{Rust and WebAssembly}
-\subsection{Building Nebula with Rust}
-
 \section{Energy monitoring}
 
 \todo{Write about MQTT and Zwave/Oh my Gude}
@@ -1015,6 +1110,8 @@ Rust/Docker/Etc.
 \newpage
 \chapter{Conclusion}
 
+\newpage
+\chapter{Future work}
 \label{CustomLastPage}
 
 
@@ -1047,3 +1144,17 @@ Rust/Docker/Etc.
 
 \chapter{Appendices}
 
+
+\begin{acronym}
+  \acro{IaaS}[IaaS]{Infrastructure-as-a-Service}
+  \acro{FaaS}[FaaS]{Functions-as-a-Service}
+  \acro{Wasm}[Wasm]{WebAssembly}
+  \acro{WASI}[WASI]{WebAssembly System Interface}
+  \acro{VMs}[VMs]{virtual machines}
+  \acro{VM}[VM]{virtual machine}
+  \acro{JVM}[VM]{Java Virtual Machine}
+  \acro{NIST}[NIST]{National Institute of Standards and Technology}
+  \acro{AWS}[AWS]{Amazon Web Services}
+  \acro{GCP}[GCP]{Google Cloud Platform}
+  \acro{ACI}[ACI]{Azure Container Instances}
+\end{acronym}
