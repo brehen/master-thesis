@@ -943,6 +943,9 @@ comparable to how Java bytecode runs on the \ac{JVM}.
   \label{fig:wasm-browser}
 \end{figure}
 
+\newpage
+
+\chapter{Ignore the below for now, it is not ready for review}
 
 WebAssembly, originally designed for running demanding computations in web
 browsers, present a promising technology that could help reduce the energy

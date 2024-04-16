@@ -24,17 +24,18 @@
 \contentsline {section}{\numberline {3.6}WebAssembly and WASI}{18}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}asm.js}{19}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}WebAssembly}{19}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{21}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Energy monitoring}{22}{section.3.7}%
-\contentsline {part}{II\hspace {1em}Project}{23}{part.2}%
-\contentsline {chapter}{\numberline {4}Approach}{24}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Analysis}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Design}{26}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Implementation}{27}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tech stack}{27}{section.7.1}%
-\contentsline {part}{III\hspace {1em}Results}{28}{part.3}%
-\contentsline {chapter}{\numberline {8}Evaulation}{29}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Discussion}{30}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusion}{31}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Future work}{32}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Appendices}{34}{chapter.12}%
+\contentsline {chapter}{\numberline {4}Ignore the below for now, it is not ready for review}{21}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}WebAssembly System Interface}{22}{subsection.4.0.1}%
+\contentsline {section}{\numberline {4.1}Energy monitoring}{23}{section.4.1}%
+\contentsline {part}{II\hspace {1em}Project}{24}{part.2}%
+\contentsline {chapter}{\numberline {5}Approach}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Analysis}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Design}{27}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Implementation}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Tech stack}{28}{section.8.1}%
+\contentsline {part}{III\hspace {1em}Results}{29}{part.3}%
+\contentsline {chapter}{\numberline {9}Evaulation}{30}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Discussion}{31}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Conclusion}{32}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Future work}{33}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Appendices}{35}{chapter.13}%
