@@ -49,9 +49,18 @@
   file = {/Users/mariuskluften/Zotero/storage/FH2GN5SM/Adzic and Chatley - 2017 - Serverless computing economic and architectural i.pdf}
 }
 
-@online{amazonstaffClimatePledge2019,
+@article{akkusSANDHighPerformanceServerless2018,
+  title = {{{SAND}}: {{Towards High-Performance Serverless Computing}}},
+  author = {Akkus, Istemi Ekin and Chen, Ruichuan and Rimac, Ivica and Stein, Manuel and Satzke, Klaus and Beck, Andre and Aditya, Paarijaat and Hilt, Volker},
+  date = {2018-07-12},
+  abstract = {Serverless computing has emerged as a new cloud computing paradigm, where an application consists of individual functions that can be separately managed and executed. However, existing serverless platforms normally isolate and execute functions in separate containers, and do not exploit the interactions among functions for performance. These practices lead to high startup delays for function executions and inefficient resource usage.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/7IX96F9K/Akkus et al. - SAND Towards High-Performance Serverless Computin.pdf}
+}
+
+@online{amazonClimatePledge2019,
   title = {The {{Climate Pledge}}},
-  author = {Amazon staff},
+  author = {Amazon},
   date = {2019-09-25},
   url = {https://www.aboutamazon.eu/news/sustainability/the-climate-pledge},
   urldate = {2024-04-14},
@@ -59,6 +68,20 @@
   langid = {english},
   organization = {EU About Amazon},
   file = {/Users/mariuskluften/Zotero/storage/3CCVM3AC/the-climate-pledge.html}
+}
+
+@book{arundelCloudNativeDevops2019,
+  title = {Cloud {{Native Devops With Kubernetes}}: {{Building}}, {{Deploying}}, and {{Scaling Modern Applications}} in the {{Cloud}}},
+  shorttitle = {Cloud {{Native Devops With Kubernetes}}},
+  author = {Arundel, John and Domingus, Justin},
+  date = {2019-03-21},
+  edition = {1st edition},
+  publisher = {O'Reilly Media},
+  location = {Beijing},
+  abstract = {Kubernetes is the operating system of the cloud native world, providing a reliable and scalable platform for running containerized workloads. In this friendly, pragmatic book, cloud experts John Arundel and Justin Domingus show you what Kubernetes can do—and what you can do with it.You’ll learn all about the Kubernetes ecosystem, and use battle-tested solutions to everyday problems. You’ll build, step by step, an example cloud native application and its supporting infrastructure, along with a development environment and continuous deployment pipeline that you can use for your own applications.Understand containers and Kubernetes from first principles; no experience necessaryRun your own clusters or choose a managed Kubernetes service from Amazon, Google, and othersUse Kubernetes to manage resource usage and the container lifecycleOptimize clusters for cost, performance, resilience, capacity, and scalabilityLearn the best tools for developing, testing, and deploying your applicationsApply the latest industry practices for security, observability, and monitoringAdopt DevOps principles to help make your development teams lean, fast, and effective},
+  isbn = {978-1-4920-4076-7},
+  langid = {english},
+  pagetotal = {317}
 }
 
 @online{awsWhatVirtualizationCloud,
@@ -102,6 +125,15 @@
   doi = {10.1145/3011017},
   abstract = {Dynamic Voltage and Frequency Scaling (DVFS) typically adapts CPU power consumption by modifying a processor’s operating frequency (and the associated voltage). Typical DVFS approaches include using default strategies such as running at the lowest or the highest frequency or reacting to the CPU’s runtime load to reduce or increase frequency based on the CPU usage. In this article, we argue that a compile-time approach to CPU frequency selection is achievable for affine program regions and can significantly outperform runtime-based approaches. We first propose a lightweight runtime approach that can exploit the properties of the power profile specific to a processor, outperforming classical Linux governors such as powersave or on-demand for computational kernels. We then demonstrate that, for affine kernels in the application, a purely compile-time approach to CPU frequency and core count selection is achievable, providing significant additional benefits over the runtime approach. Our framework relies on a one-time profiling of the target CPU, along with a compile-time categorization of loop-based code segments in the application. These are combined to determine at compile-time the frequency and the number of cores to use to execute each affine region to optimize energy or energy-delay product. Extensive evaluation on 60 benchmarks and 5 multi-core CPUs show that our approach systematically outperforms the powersave Linux governor while also improving overall performance.},
   annotation = {MAG ID: 2567319156 S2ID: 7ee529c7a72f7f228ba1e60011d5e1d5078730d6}
+}
+
+@article{barhamXenArtVirtualization2003,
+  title = {Xen and the {{Art}} of {{Virtualization}}},
+  author = {Barham, Paul and Dragovic, Boris and Fraser, Keir and Hand, Steven and Harris, Tim and Ho, Alex and Neugebauer, Rolf and Pratt, Ian and Warfield, Andrew},
+  date = {2003-10-19},
+  abstract = {Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100\% binary compatibility at the expense of performance. Others sacrifice security or functionality for speed. Few offer resource isolation or performance guarantees; most provide only best-effort provisioning, risking denial of service.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/5FPZL437/Barham et al. - Xen and the Art of Virtualization.pdf}
 }
 
 @online{barrAmazonEC2Beta2006,
@@ -167,6 +199,23 @@
   annotation = {MAG ID: 3100549319 S2ID: 39a745e7774f63b3a015650112f15a3b7e61216d}
 }
 
+@article{burnsBorgOmegaKubernetes2016,
+  title = {Borg, {{Omega}}, and {{Kubernetes}}: {{Lessons}} Learned from Three Container-Management Systems over a Decade},
+  shorttitle = {Borg, {{Omega}}, and {{Kubernetes}}},
+  author = {Burns, Brendan and Grant, Brian and Oppenheimer, David and Brewer, Eric and Wilkes, John},
+  date = {2016-01-01},
+  journaltitle = {Queue},
+  volume = {14},
+  number = {1},
+  pages = {70--93},
+  issn = {1542-7730},
+  doi = {10.1145/2898442.2898444},
+  url = {https://dl.acm.org/doi/10.1145/2898442.2898444},
+  urldate = {2024-04-16},
+  abstract = {Though widespread interest in software containers is a relatively recent phenomenon, at Google we have been managing Linux containers at scale for more than ten years and built three different container-management systems in that time. Each system was heavily influenced by its predecessors, even though they were developed for different reasons. This article describes the lessons we’ve learned from developing and operating them.},
+  file = {/Users/mariuskluften/Zotero/storage/4HMGRJ27/Burns et al. - 2016 - Borg, Omega, and Kubernetes Lessons learned from .pdf}
+}
+
 @article{capozzoliCoolingSystemsData2015,
   title = {Cooling {{Systems}} in {{Data Centers}}: {{State}} of {{Art}} and {{Emerging Technologies}}},
   shorttitle = {Cooling {{Systems}} in {{Data Centers}}},
@@ -199,6 +248,15 @@
   urldate = {2024-04-15},
   abstract = {The server is dead, long live the server.},
   file = {/Users/mariuskluften/Zotero/storage/4I8KQIA7/Castro et al. - 2019 - The rise of serverless computing.pdf}
+}
+
+@article{chiuehSurveyVirtualizationTechnologies2005,
+  title = {A {{Survey}} on {{Virtualization Technologies}}},
+  author = {Chiueh, Susanta and Nanda, Tzi-cker},
+  date = {2005},
+  abstract = {Virtualization is a technology that combines or divides computing resources to present one or many operating environments using methodologies like hardware and software partitioning or aggregation, partial or complete machine simulation, emulation, time-sharing, and others.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/GMIMDSZT/Chiueh - A Survey on Virtualization Technologies.pdf}
 }
 
 @report{crisman1963,
@@ -310,6 +368,23 @@
   file = {/Users/mariuskluften/Zotero/storage/VMBV89VW/Freitag et al. - 2021 - The real climate and transformative impact of ICT.pdf}
 }
 
+@online{golecColdStartLatency2023,
+  title = {Cold {{Start Latency}} in {{Serverless Computing}}: {{A Systematic Review}}, {{Taxonomy}}, and {{Future Directions}}},
+  shorttitle = {Cold {{Start Latency}} in {{Serverless Computing}}},
+  author = {Golec, Muhammed and Walia, Guneet Kaur and Kumar, Mohit and Cuadrado, Felix and Gill, Sukhpal Singh and Uhlig, Steve},
+  date = {2023-10-12},
+  eprint = {2310.08437},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2310.08437},
+  urldate = {2024-04-15},
+  abstract = {Recently, academics and the corporate sector have paid attention to serverless computing, which enables dynamic scalability and an economic model. In serverless computing, users pay only for the time they actually spend using the resources. Although zero scaling optimises cost and resource utilisation, it is the fundamental reason for the serverless cold start problem. Various academic and corporate sector studies are being conducted to tackle the cold start problem, which has large research challenges. To study the "cold start" problem in serverless computing, this article provides a comprehensive literature overview of recent research. In addition, we present a detailed taxonomy of several approaches to addressing the issue of cold start latency in serverless computing. Several academic and industrial organisations have proposed methods for cutting down the cold start time and cold start frequency, and this taxonomy is being used to explore these methods. There are several categories in which a current study on cold start latency is organised: caching and application-level optimization-based solutions, as well as AI/ML-based solutions. We have analysed the current methods and grouped them into categories based on their commonalities and features. Finally, we conclude with a review of current challenges and possible future research directions.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Distributed Parallel and Cluster Computing},
+  note = {Comment: 34 Pages, 16 Figures},
+  file = {/Users/mariuskluften/Zotero/storage/H368ADL2/Golec et al. - 2023 - Cold Start Latency in Serverless Computing A Syst.pdf;/Users/mariuskluften/Zotero/storage/IBQ4P4VI/2310.html}
+}
+
 @article{Google2023Environmental2023,
   title = {Google 2023 {{Environmental Report}}},
   date = {2023},
@@ -326,6 +401,17 @@
   langid = {english},
   organization = {Google Sustainability},
   file = {/Users/mariuskluften/Zotero/storage/N8R22MGR/energy.html}
+}
+
+@online{gottliebServerlessDataLockin2018,
+  title = {On Serverless, Data Lock-in and Vendor Choice},
+  author = {Gottlieb, Nick},
+  date = {2018-06-20},
+  url = {https://serverless.com/blog/data-lockin-vendor-choice-portability},
+  urldate = {2024-04-15},
+  abstract = {Vendor choice is the most important thing IT leaders could be thinking about today. And the path to achieving it is data portability.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/T6QSG5ID/data-lockin-vendor-choice-portability.html}
 }
 
 @article{gunnerodStatnettAnalyse2022,
@@ -355,6 +441,18 @@
   urldate = {2024-03-30},
   langid = {american},
   file = {/Users/mariuskluften/Zotero/storage/9HDIQ9AM/how-webassembly-is-enabling-the-third-wave-of-cloud-compute-with-matt-butcher-of-fermyon-techno.html}
+}
+
+@online{hykesOne2019,
+  type = {Tweet},
+  title = {If {{WASM}}+{{WASI}} Existed in 2008, We Wouldn't Have Needed to Created {{Docker}}. {{That}}'s How Important It Is. {{Webassembly}} on the Server Is the Future of Computing. {{A}} Standardized System Interface Was the Missing Link. {{Let}}'s Hope {{WASI}} Is up to the Task!},
+  author = {{Solomon Hykes [@solomonstre]}},
+  date = {2019-03-27},
+  url = {https://twitter.com/solomonstre/status/1111004913222324225},
+  urldate = {2024-04-15},
+  langid = {english},
+  organization = {Twitter},
+  file = {/Users/mariuskluften/Zotero/storage/LYDGKPSX/1111004913222324225.html}
 }
 
 @article{james2015,
@@ -405,6 +503,24 @@
   file = {/Users/mariuskluften/Zotero/storage/TEB3KEQV/Katal et al. - 2023 - Energy efficiency in cloud computing data centers.pdf}
 }
 
+@inproceedings{kjorveziroskiEvaluatingWebAssemblyOrchestrated2022,
+  title = {Evaluating {{WebAssembly}} for {{Orchestrated Deployment}} of {{Serverless Functions}}},
+  booktitle = {2022 30th {{Telecommunications Forum}} ({{TELFOR}})},
+  author = {Kjorveziroski, Vojdan and Filiposka, Sonja and Mishev, Anastas},
+  date = {2022-11-15},
+  pages = {1--4},
+  publisher = {IEEE},
+  location = {Belgrade, Serbia},
+  doi = {10.1109/TELFOR56187.2022.9983733},
+  url = {https://ieeexplore.ieee.org/document/9983733/},
+  urldate = {2024-04-15},
+  abstract = {Serverless computing has made a significant impact in the cloud computing landscape, and has even been extended beyond the cloud, up to the edge of the network. Existing serverless platforms which use containers and micro virtual machines as function runtimes incur a significant startup latency, hindering the performance and scalability of the executed functions. One potential solution to this problem is the use of WebAssembly. In this paper we discuss recent developments which allow WebAssembly to be used for serverside applications, as well as serverless functions, and evaluate potential orchestration options with the end goal of integrating WebAssembly with existing cloud and edge infrastructure. We conclude that while WebAssembly is a solution to the cold start problem, further work is needed in this area. To realize the endgoal of seamless and user-friendly serverless platforms that can be deployed across the edge-cloud continuum and can dynamically adapt to compute and latency requirements, WebAssembly should not be seen as the exclusive technology, and instead multiple runtime environments should be supported in addition to WebAssembly.},
+  eventtitle = {2022 30th {{Telecommunications Forum}} ({{TELFOR}})},
+  isbn = {978-1-66547-273-9},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/XNWJVK4U/Kjorveziroski et al. - 2022 - Evaluating WebAssembly for Orchestrated Deployment.pdf}
+}
+
 @online{kubernetes2024,
   title = {Kubernetes},
   url = {https://kubernetes.io/},
@@ -412,6 +528,16 @@
   abstract = {Production-Grade Container Orchestration},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/49BAYYWR/kubernetes.io.html}
+}
+
+@online{kubernetesKubernetes,
+  title = {Kubernetes},
+  author = {Kubernetes},
+  url = {https://kubernetes.io/},
+  urldate = {2024-04-16},
+  abstract = {Production-Grade Container Orchestration},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/N5MEL4FI/kubernetes.io.html}
 }
 
 @book{lelekSoftwareMistakesTradeoffs2022,
@@ -438,6 +564,23 @@
   file = {/Users/mariuskluften/Zotero/storage/CFP26UY4/introducing-google-app-engine-our-new.html}
 }
 
+@inproceedings{mcgrathServerlessComputingDesign2017,
+  title = {Serverless {{Computing}}: {{Design}}, {{Implementation}}, and {{Performance}}},
+  shorttitle = {Serverless {{Computing}}},
+  booktitle = {2017 {{IEEE}} 37th {{International Conference}} on {{Distributed Computing Systems Workshops}} ({{ICDCSW}})},
+  author = {McGrath, Garrett and Brenner, Paul R.},
+  date = {2017-06},
+  pages = {405--410},
+  issn = {2332-5666},
+  doi = {10.1109/ICDCSW.2017.36},
+  url = {https://ieeexplore.ieee.org/document/7979855},
+  urldate = {2024-04-15},
+  abstract = {We present the design of a novel performance-oriented serverless computing platform implemented in. NET, deployed in Microsoft Azure, and utilizing Windows containers as function execution environments. Implementation challenges such as function scaling and container discovery, lifecycle, and reuse are discussed in detail. We propose metrics to evaluate the execution performance of serverless platforms and conduct tests on our prototype as well as AWS Lambda, Azure Functions, Google Cloud Functions, and IBM's deployment of Apache OpenWhisk. Our measurements show the prototype achieving greater throughput than other platforms at most concurrency levels, and we examine the scaling and instance expiration trends in the implementations. Additionally, we discuss the gaps and limitations in our current design, propose possible solutions, and highlight future research.},
+  eventtitle = {2017 {{IEEE}} 37th {{International Conference}} on {{Distributed Computing Systems Workshops}} ({{ICDCSW}})},
+  keywords = {Apache OpenWhisk,AWS Lambda,Azure Functions,Containers,FaaS,Function-as-a-Service,Google,Google Cloud Functions,IBM OpenWhisk,Metadata,Prototypes,Resource management,Runtime,serverless computing,serverless performance,Web services},
+  file = {/Users/mariuskluften/Zotero/storage/IQAV5L8B/McGrath and Brenner - 2017 - Serverless Computing Design, Implementation, and .pdf;/Users/mariuskluften/Zotero/storage/E5XWEXTW/7979855.html}
+}
+
 @article{merkel2014,
   title = {Docker: Lightweight {{Linux}} Containers for Consistent Development and Deployment},
   author = {Merkel, Dirk},
@@ -448,6 +591,15 @@
   pages = {2},
   abstract = {Docker promises the ability to package applications and their dependencies into lightweight containers that move easily between different distros, start up quickly and are isolated from each other.},
   annotation = {MAG ID: 2296335794 S2ID: 875d90d4f66b07f90687b27ab304e04a3f666fc2}
+}
+
+@online{merkelDockerLightweightLinux2014,
+  title = {Docker: {{Lightweight Linux Containers}} for {{Consistent Development}} and {{Deployment}} | {{Linux Journal}}},
+  author = {Merkel, Dirk},
+  date = {2014-05-09},
+  url = {https://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment},
+  urldate = {2024-04-16},
+  file = {/Users/mariuskluften/Zotero/storage/2GFV9RCI/docker-lightweight-linux-containers-consistent-development-and-deployment.html}
 }
 
 @article{monica2022,
@@ -517,9 +669,9 @@
   file = {/Users/mariuskluften/Zotero/storage/G7TKQGX5/Chandramouli - 2018 - Security recommendations for hypervisor deployment.pdf}
 }
 
-@online{norwegianenergyElectricityProduction2023,
+@online{norwegian-energyElectricityProduction2023,
   title = {Electricity Production},
-  author = {Norwegian Energy},
+  author = {Norwegian-Energy},
   date = {2023-11-08},
   url = {https://energifaktanorge.no/en/norsk-energiforsyning/kraftproduksjon/},
   urldate = {2024-04-14},
@@ -527,6 +679,24 @@
   langid = {english},
   organization = {Norwegian Energy},
   file = {/Users/mariuskluften/Zotero/storage/X3B87A8A/kraftproduksjon.html}
+}
+
+@inproceedings{paladeEvaluationOpenSource2019,
+  title = {An {{Evaluation}} of {{Open Source Serverless Computing Frameworks Support}} at the {{Edge}}},
+  booktitle = {2019 {{IEEE World Congress}} on {{Services}} ({{SERVICES}})},
+  author = {Palade, Andrei and Kazmi, Aqeel and Clarke, Siobhan},
+  date = {2019-07},
+  pages = {206--211},
+  publisher = {IEEE},
+  location = {Milan, Italy},
+  doi = {10.1109/SERVICES.2019.00057},
+  url = {https://ieeexplore.ieee.org/document/8817155/},
+  urldate = {2024-04-15},
+  abstract = {The proliferation of Internet of Things (IoT) and the success of resource-rich cloud services have pushed the data processing horizon towards the edge of the network. This has the potential to address bandwidth costs, and latency, availability and data privacy concerns. Serverless computing, a cloud computing model for stateless and event-driven applications, promises to further improve Quality of Service (QoS) by eliminating the burden of always-on infrastructure through ephemeral containers. Open source serverless frameworks have been introduced to avoid the vendor lock-in and computation restrictions of public cloud platforms and to bring the power of serverless computing to onpremises deployments. In an IoT environment, these frameworks can leverage the computational capabilities of devices in the local network to further improve QoS of applications delivered to the user. However, these frameworks have not been evaluated in a resource-constrained, edge computing environment. In this work we evaluate four open source serverless frameworks, namely, Kubeless, Apache OpenWhisk, OpenFaaS, Knative. Each framework is installed on a bare-metal, single master, Kubernetes cluster. We use the JMeter framework to evaluate the response time, throughput and success rate of functions deployed using these frameworks under different workloads. The evaluation results are presented and open research opportunities are discussed.},
+  eventtitle = {2019 {{IEEE World Congress}} on {{Services}} ({{SERVICES}})},
+  isbn = {978-1-72813-851-0},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/S3R6VBM3/Palade et al. - 2019 - An Evaluation of Open Source Serverless Computing .pdf}
 }
 
 @online{rimolCloudMigrationCosts2021,
@@ -576,6 +746,30 @@
   langid = {british},
   organization = {IEA},
   file = {/Users/mariuskluften/Zotero/storage/LHPAH6Z5/data-centres-and-data-transmission-networks.html}
+}
+
+@inproceedings{sergeevDockerContainerPerformance2022,
+  title = {Docker {{Container Performance Comparison}} on {{Windows}} and {{Linux Operating Systems}}},
+  author = {Sergeev, Anatoliy and Rezedinova, Eugenia and Khakhina, Anna},
+  date = {2022-11-24},
+  pages = {1--4},
+  doi = {10.1109/CIEES55704.2022.9990683},
+  file = {/Users/mariuskluften/Zotero/storage/XH2EC2HP/Sergeev et al. - 2022 - Docker Container Performance Comparison on Windows.pdf}
+}
+
+@inproceedings{sewakWinningEraServerless2018,
+  title = {Winning in the {{Era}} of {{Serverless Computing}} and {{Function}} as a {{Service}}},
+  booktitle = {2018 3rd {{International Conference}} for {{Convergence}} in {{Technology}} ({{I2CT}})},
+  author = {Sewak, Mohit and Singh, Sachchidanand},
+  date = {2018-04},
+  pages = {1--5},
+  doi = {10.1109/I2CT.2018.8529465},
+  url = {https://ieeexplore.ieee.org/document/8529465},
+  urldate = {2024-04-15},
+  abstract = {Serverless Computing and Function as a Service (FaaS) is gaining traction in cloud-based application architectures used by startups and matured organizations alike. Organizations that are keen to leverage modern technology to gain a disruptive edge, optimal efficiency, advanced agility and save cost are adopting these architectural styles rapidly. Cloud service provider offer and dynamically manages the allocation of machine resources in serverless computing. The serverless architectures allows the developers to focus on business logic exclusively without worrying about preparing the runtime, managing deployment and infrastructure related concerns. FaaS may be assumed as a subset of Serverless Computing, in which, instead of coding a full-fledged cloud based application, the developer just writes (often small) functions which are piece of code (in one of the multiple programming languages supported by the platform) dedicated to do a focused, often single task that are invoked by triggers. It offers dynamic allocation and scaling of the resources and innovative trigger based costing model. This paper introduces Serverless Computing, and Function as a Service (FaaS), explores its advantages and limitations, options available with popular cloud and Platform as a Service (PaaS) providers, and emerging use cases and success stories.},
+  eventtitle = {2018 3rd {{International Conference}} for {{Convergence}} in {{Technology}} ({{I2CT}})},
+  keywords = {Amazon AWS Lambda,Apache Open Whisk,Cloud computing,Computer architecture,FAA,Functions as a Service(FaaS),Google,Google Cloud Functions,IBM Cloud Functions,Microservices,Microsoft Azure Functions,Platform as a Service (PaaS),Serverless Computing,Servers,Task analysis},
+  file = {/Users/mariuskluften/Zotero/storage/IY2LCB6K/Sewak and Singh - 2018 - Winning in the Era of Serverless Computing and Fun.pdf;/Users/mariuskluften/Zotero/storage/ZIXT95IP/8529465.html}
 }
 
 @online{smithMicrosoftWillBe2020,
@@ -628,6 +822,23 @@
   doi = {10.1016/j.future.2017.11.001},
   abstract = {High-energy physics studies collisions of particles traveling near the speed of light. For statistically significant results, physicists need to analyze a huge number of such events. One analysis job can take days and process tens of millions of collisions. Today the experiments of the large hadron collider (LHC) create 10 GB of data per second and a future upgrade will cause a ten-fold increase in data. The data analysis requires not only massive hardware but also a lot of electricity. In this article, we discuss energy efficiency in scientific computing and review a set of intermixed approaches we have developed in our Green Big Data project to improve energy efficiency of CERN computing. These approaches include making energy consumption visible to developers and users, architectural improvements, smarter management of computing jobs, and benefits of cloud technologies. The open and innovative environment at CERN is an excellent playground for different energy efficiency ideas which can later find use in mainstream computing. We show how energy efficiency is a large challenge in scientific computing at CERN.Making energy consumption visible for stakeholders motivates improving energy efficiency.Energy efficiency can be improved by applying operations management methodology.},
   annotation = {MAG ID: 2769156526 S2ID: 97130f7a6d1bd7ee6a8d3e3707124a6edb97756a}
+}
+
+@article{vaneykServerlessMorePaaS2018,
+  title = {Serverless Is {{More}}: {{From PaaS}} to {{Present Cloud Computing}}},
+  shorttitle = {Serverless Is {{More}}},
+  author = {Van Eyk, Erwin and Toader, Lucian and Talluri, Sacheendra and Versluis, Laurens and Uta, Alexandru and Iosup, Alexandru},
+  date = {2018-09},
+  journaltitle = {IEEE Internet Comput.},
+  volume = {22},
+  number = {5},
+  pages = {8--17},
+  issn = {1089-7801, 1941-0131},
+  doi = {10.1109/MIC.2018.053681358},
+  url = {https://ieeexplore.ieee.org/document/8481652/},
+  urldate = {2024-04-15},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/WHYFFL8E/Van Eyk et al. - 2018 - Serverless is More From PaaS to Present Cloud Com.pdf}
 }
 
 @online{WebAssembly2024,
