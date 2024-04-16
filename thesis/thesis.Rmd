@@ -862,15 +862,15 @@ ability to package functions with their dependencies
 \citep{vaneykServerlessMorePaaS2018}. However, the use of containers in FaaS
 also introduce some challenges including, cold start latency and the lack of a
 standardized approach to container execution across different platforms
-\citep{5}. 
+\citep{missing}. 
 
 Cold start latency refers to the time it takes for a FaaS platform to provision
 a new container instance when a function is invoked after a period of
 inactivity. This latency can be significant, especially for applications with
-strict performance requirements \citep{6}. Additiionally, the lack of a
+strict performance requirements \citep{missing}. Additiionally, the lack of a
 standardized approach to container execution means that developers may need to
 create platform-specific configurations and optimizations, reducing the
-portability of their functions across different FaaS providers \citep{7}.
+portability of their functions across different FaaS providers \citep{missing}.
 
 The limitations of container in FaaS environments have led to the exploration of
 alternative approaches, such as using \ac{Wasm} and \{WASI}. As Solomon Hykes,
