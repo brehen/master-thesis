@@ -772,6 +772,15 @@
   file = {/Users/mariuskluften/Zotero/storage/IY2LCB6K/Sewak and Singh - 2018 - Winning in the Era of Serverless Computing and Fun.pdf;/Users/mariuskluften/Zotero/storage/ZIXT95IP/8529465.html}
 }
 
+@article{shillakerFAASMLightweightIsolation2020,
+  title = {{{FAASM}}: {{Lightweight Isolation}} for {{Efﬁcient Stateful Serverless Computing}}},
+  author = {Shillaker, Simon and Pietzuch, Peter},
+  date = {2020-07-15},
+  abstract = {Serverless computing is an excellent fit for big data processing because it can scale quickly and cheaply to thousands of parallel functions. Existing serverless platforms isolate functions in ephemeral, stateless containers, preventing them from directly sharing memory. This forces users to duplicate and serialise data repeatedly, adding unnecessary performance and resource costs. We believe that a new lightweight isolation approach is needed, which supports sharing memory directly between functions and reduces resource overheads. We introduce Faaslets, a new isolation abstraction for highperformance serverless computing. Faaslets isolate the memory of executed functions using software-fault isolation (SFI), as provided by WebAssembly, while allowing memory regions to be shared between functions in the same address space. Faaslets can thus avoid expensive data movement when functions are co-located on the same machine. Our runtime for Faaslets, FAASM, isolates other resources, e.g. CPU and network, using standard Linux cgroups, and provides a low-level POSIX host interface for networking, file system access and dynamic loading. To reduce initialisation times, FAASM restores Faaslets from already-initialised snapshots. We compare FAASM to a standard container-based platform and show that, when training a machine learning model, it achieves a 2× speed-up with 10× less memory; for serving machine learning inference, FAASM doubles the throughput and reduces tail latency by 90\%.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/WKZCL7U6/Shillaker and Pietzuch - FAASM Lightweight Isolation for Efﬁcient Stateful.pdf}
+}
+
 @online{smithMicrosoftWillBe2020,
   title = {Microsoft Will Be Carbon Negative by 2030},
   author = {Smith, Brad},
@@ -839,6 +848,23 @@
   urldate = {2024-04-15},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/WHYFFL8E/Van Eyk et al. - 2018 - Serverless is More From PaaS to Present Cloud Com.pdf}
+}
+
+@article{wangPeekingCurtainsServerless2018,
+  title = {Peeking {{Behind}} the {{Curtains}} of {{Serverless Platforms}}},
+  author = {Wang, Liang and Li, Mengyuan and Zhang, Yinqian and Ristenpart, Thomas and Swift, Michael},
+  date = {2018-07-11},
+  abstract = {Serverless computing is an emerging paradigm in which an application’s resource provisioning and scaling are managed by third-party services. Examples include AWS Lambda, Azure Functions, and Google Cloud Functions. Behind these services’ easy-to-use APIs are opaque, complex infrastructure and management ecosystems. Taking on the viewpoint of a serverless customer, we conduct the largest measurement study to date, launching more than 50,000 function instances across these three services, in order to characterize their architectures, performance, and resource management efficiency. We explain how the platforms isolate the functions of different accounts, using either virtual machines or containers, which has important security implications. We characterize performance in terms of scalability, coldstart latency, and resource efficiency, with highlights including that AWS Lambda adopts a bin-packing-like strategy to maximize VM memory utilization, that severe contention between functions can arise in AWS and Azure, and that Google had bugs that allow customers to use resources for free.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/L5QL6ZYI/Wang et al. - Peeking Behind the Curtains of Serverless Platform.pdf}
+}
+
+@online{webassembly.orgFAQWebAssembly,
+  title = {{{FAQ}} - {{WebAssembly}}},
+  author = {WebAssembly.org},
+  url = {https://webassembly.org/docs/faq/},
+  urldate = {2024-04-16},
+  file = {/Users/mariuskluften/Zotero/storage/8YBB5KJC/faq.html}
 }
 
 @online{WebAssembly2024,
