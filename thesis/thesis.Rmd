@@ -860,8 +860,6 @@ bandwidth. The platform also handles the scaling of the function based on the
 incoming requests, ensuring that the function can handle varying workloads by
 itself \citep{mcgrathServerlessComputingDesign2017}.
 
-\todo{add citations to rest of text}
-
 FaaS platforms often utilize container technology, like Docker, to provide an
 isolated environment for each function execution. Containers offer several
 benefits, such as fast startup times, efficient resource utilization, and the
