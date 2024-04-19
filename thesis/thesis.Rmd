@@ -417,7 +417,7 @@ deploy and run software, including operating systems and applications
 services on top of virtual machines that allowed more flexibility, and lowered
 the bar to new companies.
 
-\section{The First Wave: Virtual Machines}
+\section{The First Wave: Virtual machines}
 \label{sect:first-wave}
 
 The start of cloud computing can be traced back to the emergence of
@@ -443,7 +443,7 @@ While similar services existed before 2006, with Amazon's existing large
 customer base helped them gain significant traction, and ushered in a the first
 era, or wave, of *cloud computing*.
 
-\section{The Second Wave: Containerization}
+\section{The Second Wave: Containers}
 \label{sect:second-wave}
 
 As we entered the 2010s, the focus shifted from virtual machines to containers,
@@ -480,7 +480,7 @@ efficient way to package and deploy our programs? \ac{Wasm} and \ac{WASI}, as
 mentioned in epigraph of \cref{chap:intro}, has positioned itself as a potential
 contender for how applications are built, packaged and deployed to the cloud.
 
-\section{The Third Wave: WebAssembly}
+\section{The Third Wave: WebAssembly modules}
 \label{sect:third-wave}
 
 WebAssembly has had a surge of popularity the past three to four years when
@@ -903,7 +903,6 @@ of computing environments, originating in the web browser. This section
 introduces the project that WebAssembly evolved from - *asm.js* - and illustrate
 how WebAssembly lets developers write programs in a high-level language and
 run them across a multitude of platforms.
-
 
 \subsection{asm.js}
 \label{subsect:asm}
