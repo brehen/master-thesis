@@ -1069,24 +1069,21 @@ platform.
 \newpage
 
 \part{Project}
-\chapter{Approach}
-
-To investigate the problem statements posed in \autoref{sect:problems}, roughly
-summarized to exploring if WebAssembly and WebAssembly System Interface can lead
-to a more efficient and energysaving way to build our cloud services, an
-exploratory approach will be used. Different benchmarking experiments will be
-run against a prototype developed for this thesis, where different functions can
-be invoked with different inputs and reveal startup and runtimes of invoking
-functions compiled to WebAssembly modules and compare these with functions
-packaged as Docker images.
-
-
-
-
-
-
-
 \chapter{Analysis}
+\subsection{Approach}
+
+\chapter{Design}
+
+To investigate the problem statements posed in \autoref{sect:problems} a
+prototype \ac{FaaS} platform will created and used to perform
+experiments and try to either prove or disprove that WebAssembly is a more
+energy efficient target for developing cloud native applications.
+
+This chapter will outline the design of the prototype and the tests that will be
+performed to measure energy consumption over multiple function invocations. 
+
+
+\chapter{Implementation}
 
 \newpage
 

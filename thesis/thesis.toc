@@ -28,14 +28,16 @@
 \contentsline {subsection}{\numberline {4.0.1}WebAssembly System Interface}{22}{subsection.4.0.1}%
 \contentsline {section}{\numberline {4.1}Energy monitoring}{23}{section.4.1}%
 \contentsline {part}{II\hspace {1em}Project}{24}{part.2}%
-\contentsline {chapter}{\numberline {5}Approach}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Analysis}{26}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Design}{27}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Implementation}{28}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Tech stack}{28}{section.8.1}%
-\contentsline {part}{III\hspace {1em}Results}{29}{part.3}%
-\contentsline {chapter}{\numberline {9}Evaulation}{30}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Discussion}{31}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusion}{32}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Future work}{33}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Appendices}{35}{chapter.13}%
+\contentsline {chapter}{\numberline {5}Analysis}{25}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Approach}{25}{subsection.5.0.1}%
+\contentsline {chapter}{\numberline {6}Design}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Implementation}{27}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Design}{28}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Implementation}{29}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Tech stack}{29}{section.9.1}%
+\contentsline {part}{III\hspace {1em}Results}{30}{part.3}%
+\contentsline {chapter}{\numberline {10}Evaulation}{31}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Discussion}{32}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Conclusion}{33}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Future work}{34}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Appendices}{36}{chapter.14}%
