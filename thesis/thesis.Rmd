@@ -385,7 +385,7 @@ significantly reduce the carbon footprint.
 \section{Ashore: Before the waves}
 \label{sect:ashore}
 
-Before delving into the waves themselves, it is essential to understand the
+Before delving into the waves themselves, it is useful to understand the
 landscape that preceded cloud computing. Prior to the cloud era, companies were
 required to building and mantaining their digital services in-house. This
 required companies to invest heavily into both expensive hardware and expensive
