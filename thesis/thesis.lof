@@ -2,13 +2,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Example of a company that host their own infrastructure.}}{6}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Example of ``Fæisbook`` building their services on EC2 and using S3 for storage.}}{7}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces DevOps engineer deploying services as containers on \ac {GCP}.}}{8}{figure.2.3}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces DevOps engineer deploying services as containers on \ac {GCP}.}}{9}{figure.2.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Projected energy consumption in 2026: Skien data center and Norway.}}{12}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Virtual machines running on top of Hypervisor on a computer.}}{14}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Containers running on the Docker Engine}}{15}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Source code in C/C++ compiled to asm.js and run in browser}}{19}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Source code compiled to WebAssembly and embedded in browser}}{20}{figure.3.5}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Projected energy consumption in 2026: Skien data center and Norway.}}{13}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Virtual machines running on top of Hypervisor on a computer.}}{15}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Containers running on the Docker Engine}}{16}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Source code in C/C++ compiled to asm.js and run in browser}}{20}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Source code compiled to WebAssembly and embedded in browser}}{21}{figure.3.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
