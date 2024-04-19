@@ -376,10 +376,11 @@ The evolution of cloud computing represents a transformative adventure, driven
 by the pursuit for efficiency, scalability and reliability, yet it also poses
 challenges, notably it's environmental impact. This chapter steps introduces the
 concept of the "Three waves of cloud computing", coined by the WebAssembly
-community \citep*{butcherDodds2024}. Where the two first waves of cloud compute
-represent the shift from virtual machines to containerization, the third wave
-encompasses utilizing \ac{Wasm} and \ac{WASI} to build the next era of cloud
-compute with the potential to significantly reduce the carbon footprint.
+community \citep*{butcherDodds2024, leonardWebAssemblyHeraldsThird2024}. Where
+the two first waves of cloud compute represent the shift from virtual machines
+to containerization, the third wave encompasses utilizing \ac{Wasm} and
+\ac{WASI} to build the next era of cloud compute with the potential to
+significantly reduce the carbon footprint.
 
 \section{Ashore: Before the waves}
 \label{sect:ashore}
