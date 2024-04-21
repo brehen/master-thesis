@@ -29,7 +29,9 @@
 \contentsline {part}{II\hspace {1em}Project}{24}{part.2}%
 \contentsline {chapter}{\numberline {4}Methodology}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Research design}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Experimental framework}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.1.1}Implementation strategy}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Experimental domains}{26}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Experimental framework}{26}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Prototyping}{26}{subsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.1}Hardware specifications}{26}{subsubsection.4.2.1.1}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}Software specification}{26}{subsubsection.4.2.1.2}%
@@ -37,7 +39,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Empirical measurements}{27}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Controlled experimentation}{27}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Comparative analysis}{27}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Data collection and analysis}{27}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.6}Data collection and analysis}{28}{subsection.4.2.6}%
 \contentsline {chapter}{\numberline {5}Designing Nebula}{29}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Prototype implementation}{30}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Requirements}{30}{section.6.1}%

@@ -1098,6 +1098,16 @@ of functions written in Rust when compiled to and deployed as \ac{Wasm} and
 slim Docker containers. The research design will facilitate an evaluation of
 these two environments for running functions in a serverless model.
 
+\subsection{Implementation strategy}
+
+The reserach will be conducted through a series of controlled experiments
+designed to measure startup latencies (cold starts), and energy consumption
+under specified conditions. This experimental approach allows for a for a
+precise evaluation of how \ac{Wasm} technologies stack up against traiditional
+container-based deployments in the context of cloud-native applications.
+
+\subsection{Experimental domains}
+
 \section{Experimental framework}
 
 The main focus for this thesis is on building a prototype and perform
