@@ -11,31 +11,44 @@
 \contentsline {section}{\numberline {1.4}Outline}{4}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Three waves of cloud compute}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Ashore: Before the waves}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}The First Wave: Virtual machines}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}The Second Wave: Containers}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}The Third Wave: WebAssembly modules}{10}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Background}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Cloud Computing Overview}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Energy consumption and Sustainability in Cloud Computing}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Virtualization and Virtual Machines}{15}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Containers and Container orchestration}{15}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Serverless Computing}{17}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Functions-as-a-Service}{18}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}WebAssembly and WASI}{19}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}asm.js}{20}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}WebAssembly}{20}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}Ignore the below for now, it is not ready for review}{22}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}WebAssembly System Interface}{23}{subsection.4.0.1}%
-\contentsline {section}{\numberline {4.1}Energy monitoring}{24}{section.4.1}%
-\contentsline {part}{II\hspace {1em}Project}{25}{part.2}%
-\contentsline {chapter}{\numberline {5}Approach}{26}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Analysis}{27}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Design}{28}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Implementation}{29}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Tech stack}{29}{section.8.1}%
-\contentsline {part}{III\hspace {1em}Results}{30}{part.3}%
-\contentsline {chapter}{\numberline {9}Evaulation}{31}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Discussion}{32}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusion}{33}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Future work}{34}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Appendices}{36}{chapter.13}%
+\contentsline {section}{\numberline {2.2}The First Wave: Virtual Machines}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The Second Wave: Containerization}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The Third Wave: WebAssembly}{9}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Background}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cloud Computing Overview}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Energy consumption and Sustainability in Cloud Computing}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Virtualization and Virtual Machines}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Containers and Container orchestration}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Serverless Computing}{16}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Functions-as-a-Service}{17}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}WebAssembly and WASI}{18}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}asm.js}{19}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}WebAssembly}{19}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{20}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Energy monitoring}{20}{section.3.7}%
+\contentsline {part}{II\hspace {1em}Project}{24}{part.2}%
+\contentsline {chapter}{\numberline {4}Methodology}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Research design}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Implementation strategy}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Experimental domains}{26}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Experimental framework}{26}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Prototyping}{26}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Hardware specifications}{26}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Software specification}{26}{subsubsection.4.2.1.2}%
+\contentsline {subsection}{\numberline {4.2.2}Benchmarking}{27}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Empirical measurements}{27}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Controlled experimentation}{27}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Comparative analysis}{27}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Data collection and analysis}{28}{subsection.4.2.6}%
+\contentsline {chapter}{\numberline {5}Designing Nebula}{29}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Prototype implementation}{30}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Requirements}{30}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Design}{31}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Implementation}{32}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Tech stack}{32}{section.8.1}%
+\contentsline {part}{III\hspace {1em}Results}{33}{part.3}%
+\contentsline {chapter}{\numberline {9}Evaulation}{34}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Discussion}{35}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Conclusion}{36}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Future work}{37}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Appendices}{39}{chapter.13}%
