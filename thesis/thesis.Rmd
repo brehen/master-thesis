@@ -372,25 +372,25 @@ have a table-of-contents.}
 9 out of 10 cloud providers hate this one simple trick.
 }{Joachim, my supervisor}
 
-The evolution of cloud computing represents a transformative adventure, driven by
-the pursuit for efficiency, scalability and reliability, yet it also
-poses challenges, notably it's environmental impact. This chapter steps through this
-adventure by introducing the concept of the "Three waves of cloud computing", coined
-by the WebAssembly community \citep*{butcherDodds2024}. Where the two first waves of
-cloud compute represent the shit from Virtual Machines to Containerization, the
-third wave encompasses utilizing \ac{Wasm} and \ac{WASI} to build the next era of cloud compute with the potential to
+The evolution of cloud computing represents a transformative adventure, driven
+by the pursuit for efficiency, scalability and reliability, yet it also poses
+challenges, notably it's environmental impact. This chapter steps introduces the
+concept of the "Three waves of cloud computing", coined by the WebAssembly
+community \citep*{butcherDodds2024, leonardWebAssemblyHeraldsThird2024}. Where
+the two first waves of cloud compute represent the shift from virtual machines
+to containerization, the third wave encompasses utilizing \ac{Wasm} and
+\ac{WASI} to build the next era of cloud compute with the potential to
 significantly reduce the carbon footprint.
 
 \section{Ashore: Before the waves}
 \label{sect:ashore}
 
-Before delving into the waves themselves, it is essential to understand the
+Before delving into the waves themselves, it is useful to understand the
 landscape that preceded cloud computing. Prior to the cloud era, companies were
 required to building and mantaining their digital services in-house. This
 required companies to invest heavily into both expensive hardware and expensive
 engineers to buy, upkeep and oversee their own physical servers and network
 hardware. (See \Cref{fig:myspeis} for an example)
-
 
 \begin{figure}[H]
 \centering
@@ -399,12 +399,17 @@ hardware. (See \Cref{fig:myspeis} for an example)
   \label{fig:myspeis}
 \end{figure}
 
-This setup mandates a significant upfront costs involved in setting up and
-maintaining such an infrastructure, which puts a considerable financial strain
-on organizations, and kept smaller companies that were unable to invest in this,
-at an disadvantage. 
+Setting up such an infrastructure requires a significant cost, both upfront for
+purchasing such a setup and for employing engineers who can set up and maintain
+this. This puts a considerable financial strain on organizations, and kept
+smaller companies without the financial backing to invest in this at a
+disadvantage \citep{etroEconomicImpactCloud2009}. Having to maintain
+infrastructure also poses a challenge when the services start to gain traction.
+To meet the increased traffic on the services, a company will have to scale up
+and extend the infrastructure, which also can be expensive and difficult
+\citep{armbrustViewCloudComputing2010}.
 
-As a response to this, some companies found a market for taking on the
+As a response to these challenges, some companies found a market for taking on the
 responsibility of managing infrastructure, and offer \ac{IaaS} to an evolving
 market that relies more and more on digital solutions. \ac{IaaS} provides
 consumers with the ability to provision computing resources where they can
@@ -413,7 +418,7 @@ deploy and run software, including operating systems and applications
 services on top of virtual machines that allowed more flexibility, and lowered
 the bar to new companies.
 
-\section{The First Wave: Virtual Machines}
+\section{The First Wave: Virtual machines}
 \label{sect:first-wave}
 
 The start of cloud computing can be traced back to the emergence of
@@ -439,7 +444,7 @@ While similar services existed before 2006, with Amazon's existing large
 customer base helped them gain significant traction, and ushered in a the first
 era, or wave, of *cloud computing*.
 
-\section{The Second Wave: Containerization}
+\section{The Second Wave: Containers}
 \label{sect:second-wave}
 
 As we entered the 2010s, the focus shifted from virtual machines to containers,
@@ -476,7 +481,7 @@ efficient way to package and deploy our programs? \ac{Wasm} and \ac{WASI}, as
 mentioned in epigraph of \cref{chap:intro}, has positioned itself as a potential
 contender for how applications are built, packaged and deployed to the cloud.
 
-\section{The Third Wave: WebAssembly}
+\section{The Third Wave: WebAssembly modules}
 \label{sect:third-wave}
 
 WebAssembly has had a surge of popularity the past three to four years when
@@ -900,7 +905,6 @@ of computing environments, originating in the web browser. This section
 introduces the project that WebAssembly evolved from - *asm.js* - and illustrate
 how WebAssembly lets developers write programs in a high-level language and
 run them across a multitude of platforms.
-
 
 \subsection{asm.js}
 \label{subsect:asm}
