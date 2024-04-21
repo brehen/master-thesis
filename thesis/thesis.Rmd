@@ -676,14 +676,15 @@ of the facility's heating, ventilation, and air conditioning (HVAC) system
 \citep{niReviewAirConditioning2017}.
 
 One innovative example of attempting to mitigate the environmental impact of
-cooling data centers can be found by data center providers like DeepGreen
-^[https://deepgreen.energy/faqs/], who submerge their servers into dielectric
-fluid, which gets warmed up by the excess heat of the computers. This heat is
-then transferred to a host's hot water system via a heat exchange and used for
-heating up swimming pools in London. Another broad strategy cloud providers
-opt for is the implementation of power management techniques, such as dynamic
-voltage and frequency scaling (DVFS), which adjusts the power consumption of
-servers based on workload demands \citep{beloglazovEnergyawareResourceAllocation2012}.
+cooling data centers can be found by data center providers like
+DeepGreen^[https://deepgreen.energy/faqs/], who submerge their servers into
+dielectric fluid, which gets warmed up by the excess heat of the computers. This
+heat is then transferred to a host's hot water system via a heat exchange and
+used for heating up swimming pools in London. Another broad strategy cloud
+providers opt for is the implementation of power management techniques, such as
+dynamic voltage and frequency scaling (DVFS), which adjusts the power
+consumption of servers based on workload demands
+\citep{beloglazovEnergyawareResourceAllocation2012}.
 
 Virtualization and resource pooling, two key components of cloud computing, also
 contribute to energy efficiency. By consolidating virtual machines onto shared
@@ -941,9 +942,17 @@ comparable to how Java bytecode runs on the \ac{JVM}.
   \label{fig:wasm-browser}
 \end{figure}
 
-\newpage
+\todo{Finish Wasm section}
 
-\chapter{Ignore the below for now, it is not ready for review}
+\subsection{WebAssembly System Interface}
+
+\todo{Write WASI section}
+
+\section{Energy monitoring}
+
+\todo{Write about MQTT and Zwave/Oh my Gude}
+
+\newpage
 
 WebAssembly, originally designed for running demanding computations in web
 browsers, present a promising technology that could help reduce the energy
@@ -954,6 +963,7 @@ associated with traditional serverless platforms. This increased efficiency
 could lead to a direct decrease in energy consumption for cloud services, which
 in turn could motivate the industry to adopt alternative technology that enable
 a more sustainable cloud.
+
 
 \todo{Rewrite the rest of this section, it's a bit of a mess right now}
 
@@ -1013,7 +1023,6 @@ security, and portability, can potentially offer an attractive alternative
 deployment method for building and running cloud native applications, like the
 "Academemes" service we will explore in this essay.
 
-\subsection{WebAssembly System Interface}
 
 WebAssembly (WASM) and [WebAssembly System Interface (WASI)][16] present
 promising choices to traditional ways of deploying and hosting Function as
@@ -1060,30 +1069,139 @@ efficient, and responsive cloud services. In the context of our "Academemes"
 service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
-\section{Energy monitoring}
-
-\todo{Write about MQTT and Zwave/Oh my Gude}
 
 
 
 \newpage
 
+
 \part{Project}
-\chapter{Analysis}
-\subsection{Approach}
 
-\chapter{Design}
+\chapter{Methodology} 
 
-To investigate the problem statements posed in \autoref{sect:problems} a
-prototype \ac{FaaS} platform will created and used to perform
-experiments and try to either prove or disprove that WebAssembly is a more
-energy efficient target for developing cloud native applications.
+This chapter outlines the research methodology employed to investigate the
+problem statements posed in \Cref{sect:problems}, specifically whether \ac{Wasm}
+is a more energy-efficient target for developing and deploying cloud native
+applications. A \ac{FaaS} prototype, named 'Nebula', will be developed as part
+of an experimental reserach method. This prototype will be used to conduct
+experiments on startup latencies (cold starts), runtime efficiency, and energy
+consumption of function invocations in two different deployment environments:
+\ac{Wasm} modules and Docker containers. The chapter details the research
+design, experimental setup, data collection methods, and analysis techniques,
+with a focus on ensuring the validity and reliability of the findings.
 
-This chapter will outline the design of the prototype and the tests that will be
-performed to measure energy consumption over multiple function invocations. 
+\section{Research design}
+
+The objective of this thesis is to compare the performance and energy efficiency
+of functions written in Rust when compiled to and deployed as \ac{Wasm} and
+\ac{WASI} modules versus the same functions compiled to a Rust binary within
+slim Docker containers. The research design will facilitate an evaluation of
+these two environments for running functions in a serverless model.
+
+\section{Experimental framework}
+
+The main focus for this thesis is on building a prototype and perform
+experiments on it, to measure the capabilities of \ac{Wasm}, augmented by
+\ac{WASI} as a model for deploying and running cloud applications. An
+experimental approach was chosen to test the problem statements posed in
+\Cref{sect:problems}, as it allows for controlled manipulation of variables,
+empirical measurements of outcomes, and direct comparison between two deployment
+environments (\ac{Wasm}+\ac{WASI} and Docker). This section outlines the
+different methods employed as part of an experimental research method to
+investigate the research questions.
+
+\subsection{Prototyping} 
+
+The prototype FaaS system, named 'Nebula', will be developed to serve as a
+controlled environment for invoking functions as either \ac{Wasm} modules or
+Docker containers. It needs 
+
+To perform the desired experiments, a prototype will be developed and deployed
+to two types of hardware. It will need to support invoking functions compiled
+to \ac{Wasm} and functions packaged as Docker images. 
+
+\subsubsection{Hardware specifications}
+Experiments will be performed on two types of hardware:
+
+1. Raspberry Pi: A small \ac{SBCs} with an ARM64 architecture that can run
+   flavors of Linux. This device will be used to measure energy consumption
+relative to function invocations, which it is well suited for, as it consumes
+small amounts of energy by itself, making it ideal for comparing power
+consumption under actual load \citep{bekarooPowerConsumptionRaspberry2016}.
+
+2. Virtual Machine: A Debian-based VM running on an \ac{IaaS} platform, to
+   measure performance relative to what a standard cloud native application
+would perform.
+
+\subsubsection{Software specification}
+
+For developing Nebula prototype itself, the following software setup will be
+required:
+
+- A programming language to write the prototype in.
+- An interface to deploy and invoke functions deployed onto the prototype.
+- 
+
+The software setup for developing functions will include:
+
+- Rust programming language: Chosen for implementing functions due to its
+efficiency and compatibility when building with targeting both \ac{Wasm} and
+traditional binaries.
+- \ac{Wasm} and \ac{WASI}: The functions will be compiled as \ac{Wasm} binaries
+with the `wasm32-wasi` target when building with Rust.
+- Docker: Functions will also be packaged as Docker images for comparison
+purposes.
+
+\subsection{Benchmarking}
+
+Benchmarking will be employed as a research method to evaluate the performance
+of different configurations. Benchmark functions representing various
+computational workloads will be implemented and executed on both environments.
+
+\subsection{Empirical measurements}
+
+Empirical measurement techniques will be utilized to quantify the energy
+consumption associated with function invocations on each deployment environment.
+The prototype and function binaries and images will be deployed to the Raspberry
+Pi, which will be connected to a power supply that can report energy readings. 
+
+\subsection{Controlled experimentation}
+
+Controlled experimentation will be a crucial aspect of this research, as it will
+allow for isolating and studying the effects of the deployment environment on
+performance and energy consumption. Various factors, such as input parameters
+for the benchmark functions and hardware configurations, will be controlled or
+kept constant across experiments to minimize the influence of external factors
+and ensure the validity and reliability of the results.
+
+\subsection{Comparative analysis}
+
+A comparative anlysis will be performed to evaluate the cold starts, runtime,
+and the energy consumption of function invocations between the two deployment
+environments. Specific metrics, such as startup latency, execution time, and
+energy consumption per invocation, will be used for this comparison to assess
+the overall performance and energy efficiency of each deployment environment for
+serverless function execution.
+
+\subsection{Data collection and analysis}
+
+Throughout the experiments, various data points, including startup and execution
+times, and energy consumption readings, will be collected and stored.
+Statistical techniques, such as mean, median, and standard deviation
+calculations, will be employed to analyze the collected data. 
+
+\chapter{Designing Nebula}
 
 
-\chapter{Implementation}
+
+\chapter{Prototype implementation}
+
+This chapter provides the details of the implementation of Nebula. 
+ 
+
+\section{Requirements}
+
+
 
 \newpage
 
