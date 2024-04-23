@@ -294,6 +294,20 @@
   file = {/Users/mariuskluften/Zotero/storage/76H38T8U/CTSS_ProgrammersGuide_1963.pdf}
 }
 
+@inproceedings{cuadrado-corderoComparativeExperimentalAnalysis2018,
+  title = {Comparative {{Experimental Analysis}} of the {{Quality-of-Service}} and {{Energy-Efficiency}} of {{VMs}} and {{Containers}}' {{Consolidation}} for {{Cloud Applications}}},
+  booktitle = {International {{Conference}} on {{Software}}, {{Telecommunications}} and {{Computer Networks}} ({{SoftCOM}} 2017)},
+  author = {Cuadrado-Cordero, Ismael and Orgerie, Anne-Cécile and Menaud, Jean-Marc},
+  date = {2018-02-23},
+  pages = {1--6},
+  location = {Split, Croatia},
+  doi = {10.23919/SOFTCOM.2017.8115516},
+  url = {https://hal.science/hal-01578325},
+  urldate = {2024-04-22},
+  abstract = {The consolidation of services is a widely accepted technique for IaaS Cloud providers to reducing energy consumption and improving the utilization of their resources. This technique is based on distributing all services in the minimum amount of servers. This way, the overall energy consumption of the datacenter is reduced, as less servers are needed to be active. Traditionally, research has focused on strategies for consolidation of Virtual Machines (VMs), but containers are changing the landscape of Cloud services. Containers are expected to optimize the consolidation of services by reducing the amount of needed resources, thus allocating more services using less servers. However, while multiple research works have been produced in the Energy Efficiency (EE) achieved through consolidation of VMs, there is yet no experimental work on how consolidation of containers affects EE, when assuming a given Quality-of-Service (QoS) to the user. In this paper we show an experimental analysis on the effects of consolidation of containers in the QoS and EE, compared to the consolidation of VMs. We demonstrate that the consolidation of containers is indeed more optimal than the one of VMs, both in terms of QoS and EE. Consecutively, we analyze how the degradation of the service is produced both in QoS and EE, and we show how QoS is the variable which is more affected by consolidation. This work provides the necessary scientific background on consolidation of two widely used virtualization technologies, and we believe it is useful for future works on the optimization of resources in datacenters.},
+  file = {/Users/mariuskluften/Zotero/storage/VAUXLMBH/Cuadrado-Cordero et al. - 2017 - Comparative Experimental Analysis of the Quality-o.pdf}
+}
+
 @online{DataStackShow,
   title = {‎{{The Data Stack Show}}: 172: {{How WebAssembly}} Is {{Enabling}} the {{Third Wave}} of {{Cloud Compute}} with {{Matt Butcher}} of {{Fermyon Technologies}} on {{Apple Podcasts}}},
   shorttitle = {‎{{The Data Stack Show}}},
@@ -385,6 +399,15 @@
   file = {/Users/mariuskluften/Zotero/storage/3G3FWH7M/compaq_cst_1996_0.pdf}
 }
 
+@online{fermyonDeployManageCloud,
+  title = {Deploy \& Manage Cloud Native {{WebAssembly}} Apps},
+  author = {Fermyon},
+  url = {https://www.fermyon.com/cloud},
+  urldate = {2024-04-22},
+  abstract = {Deploy \& manage cloud native WebAssembly apps},
+  langid = {english}
+}
+
 @article{freitag2021,
   title = {The Real Climate and Transformative Impact of {{ICT}}: {{A}} Critique of Estimates, Trends, and Regulations},
   shorttitle = {The Real Climate and Transformative Impact of {{ICT}}},
@@ -469,6 +492,24 @@
   annotation = {MAG ID: 2625141509 S2ID: f9420023ec1ee6d7d61d8f61f3c7df33b59afe61}
 }
 
+@inproceedings{haasBringingWebSpeed2017,
+  title = {Bringing the Web up to Speed with {{WebAssembly}}},
+  booktitle = {Proceedings of the 38th {{ACM SIGPLAN Conference}} on {{Programming Language Design}} and {{Implementation}}},
+  author = {Haas, Andreas and Rossberg, Andreas and Schuff, Derek L. and Titzer, Ben L. and Holman, Michael and Gohman, Dan and Wagner, Luke and Zakai, Alon and Bastien, Jf},
+  date = {2017-06-14},
+  pages = {185--200},
+  publisher = {ACM},
+  location = {Barcelona Spain},
+  doi = {10.1145/3062341.3062363},
+  url = {https://dl.acm.org/doi/10.1145/3062341.3062363},
+  urldate = {2024-04-22},
+  abstract = {The maturation of the Web platform has given rise to sophisticated and demanding Web applications such as interactive 3D visualization, audio and video software, and games. With that, efficiency and security of code on the Web has become more important than ever. Yet JavaScript as the only builtin language of the Web is not well-equipped to meet these requirements, especially as a compilation target.},
+  eventtitle = {{{PLDI}} '17: {{ACM SIGPLAN Conference}} on {{Programming Language Design}} and {{Implementation}}},
+  isbn = {978-1-4503-4988-8},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/MXRU8AZA/Haas et al. - 2017 - Bringing the web up to speed with WebAssembly.pdf}
+}
+
 @audio{HowWebAssemblyEnabling,
   title = {How {{WebAssembly}} Is {{Enabling}} the {{Third Wave}} of {{Cloud Compute}} with {{Matt Butcher}} of {{Fermyon Technologies}}},
   url = {https://datastackshow.com/podcast/how-webassembly-is-enabling-the-third-wave-of-cloud-compute-with-matt-butcher-of-fermyon-technologies/},
@@ -508,6 +549,16 @@
   doi = {10.1145/1807128.1807136},
   abstract = {Virtualization is often used in cloud computing platforms for its several advantages in efficiently managing resources. However, virtualization raises certain additional challenges, and one of them is lack of power metering for virtual machines (VMs). Power management requirements in modern data centers have led to most new servers providing power usage measurement in hardware and alternate solutions exist for older servers using circuit and outlet level measurements. However, VM power cannot be measured purely in hardware. We present a solution for VM power metering, named Joulemeter. We build power models to infer power consumption from resource usage at runtime and identify the challenges that arise when applying such models for VM power metering. We show how existing instrumentation in server hardware and hypervisors can be used to build the required power models on real platforms with low error. Our approach is designed to operate with extremely low runtime overhead while providing practically useful accuracy. We illustrate the use of the proposed metering capability for VM power capping, a technique to reduce power provisioning costs in data centers. Experiments are performed on server traces from several thousand production servers, hosting Microsoft's real-world applications such as Windows Live Messenger. The results show that not only does VM power metering allows virtualized data centers to achieve the same savings that non-virtualized data centers achieved through physical server power capping, but also that it enables further savings in provisioning costs with virtualization.},
   annotation = {MAG ID: 2109546606 S2ID: 1adc5f0eea495fa5bf7394574af776dd8e5af633}
+}
+
+@article{kaplanRevolutionizingDataCenter2008,
+  title = {Revolutionizing {{Data Center Energy Efficiency}}},
+  author = {Kaplan, James M. and Forrest, William and Kindler, Noah},
+  date = {2008-07-01},
+  journaltitle = {McKinsey \& Company},
+  url = {https://docplayer.net/5045147-Revolutionizing-data-center-energy-efficiency.html},
+  urldate = {2024-04-22},
+  abstract = {Revolutionizing Data Center Energy Efficiency July 2008 Copyright 2008 McKinsey \& Company James M. Kaplan William Forrest Noah Kindler Acknowledgement McKinsey \& Company would like to recognize the important}
 }
 
 @article{kashif2020,
@@ -726,6 +777,17 @@
   file = {/Users/mariuskluften/Zotero/storage/X3B87A8A/kraftproduksjon.html}
 }
 
+@online{page.head.extra.authorDevelopServerlessWebAssembly2022,
+  title = {Develop Serverless {{WebAssembly}} Apps with {{Spin}}},
+  author = {{page.head.extra.author}},
+  date = {2022-01-25T00:22:56Z},
+  url = {https://www.fermyon.com/spin},
+  urldate = {2024-04-22},
+  abstract = {Develop serverless WebAssembly apps with Spin},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/7ETQBQRV/spin.html}
+}
+
 @inproceedings{paladeEvaluationOpenSource2019,
   title = {An {{Evaluation}} of {{Open Source Serverless Computing Frameworks Support}} at the {{Edge}}},
   booktitle = {2019 {{IEEE World Congress}} on {{Services}} ({{SERVICES}})},
@@ -742,6 +804,17 @@
   isbn = {978-1-72813-851-0},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/S3R6VBM3/Palade et al. - 2019 - An Evaluation of Open Source Serverless Computing .pdf}
+}
+
+@report{qianEnergyFootprintingWordPress2022,
+  type = {Master Thesis},
+  title = {Energy Footprinting of {{WordPress}} Websites on the User Side},
+  author = {Qian, Zhenni},
+  date = {2022-01-07},
+  pages = {1--49},
+  institution = {University of Bristol},
+  abstract = {Reducing carbon emissions is an issue that every nation is working on. In order to achieve the goal of decolonization, it is important to first understand how much carbon is being emitted by users. In other words, the first step towards carbon neutrality should be to measure the carbon footprint of the user side. The main purpose of this project is to explore the impact of different factors on the energy usage and carbon footprint of user interactions with WordPress-based websites.},
+  langid = {english}
 }
 
 @online{rimolCloudMigrationCosts2021,
@@ -793,6 +866,23 @@
   file = {/Users/mariuskluften/Zotero/storage/LHPAH6Z5/data-centres-and-data-transmission-networks.html}
 }
 
+@inproceedings{sebrechtsAdaptingKubernetesControllers2022,
+  title = {Adapting {{Kubernetes}} Controllers to the Edge: On-Demand Control Planes Using {{Wasm}} and {{WASI}}},
+  shorttitle = {Adapting {{Kubernetes}} Controllers to the Edge},
+  booktitle = {2022 {{IEEE}} 11th {{International Conference}} on {{Cloud Networking}} ({{CloudNet}})},
+  author = {Sebrechts, Merlijn and Ramlot, Tim and Borny, Sander and Goethals, Tom and Volckaert, Bruno and De Turck, Filip},
+  date = {2022-11},
+  pages = {195--202},
+  issn = {2771-5663},
+  doi = {10.1109/CloudNet55617.2022.9978884},
+  url = {https://ieeexplore.ieee.org/document/9978884/figures#figures},
+  urldate = {2024-04-22},
+  abstract = {Kubernetes’ high resource requirements hamper its adoption in constrained environments such as the edge and fog. Its extensible control plane is a significant contributor to this, consisting of long-lived processes called "controllers" that constantly listen for state changes and use resources even when they are not needed. This paper presents a WebAssembly-based framework for running lightweight controllers on-demand, only when they are needed. This framework extends the WebAssembly System Interface (WASI), in order to run Kubernetes controllers as lightweight Wasm modules. The framework runs these Wasm controllers in a modified version of Wasmtime, the reference WebAssembly (Wasm) runtime, that swaps idle controllers to disk and activates them when needed. A thorough evaluation shows this framework achieves a 64\% memory reduction compared to traditional container-based controller frameworks.},
+  eventtitle = {2022 {{IEEE}} 11th {{International Conference}} on {{Cloud Networking}} ({{CloudNet}})},
+  keywords = {Complexity theory,Computer architecture,controllers,edge computing,Kubernetes,operators,Process control,Runtime,WASI,Webassembly},
+  file = {/Users/mariuskluften/Zotero/storage/6D4NXQN5/Sebrechts et al. - 2022 - Adapting Kubernetes controllers to the edge on-de.pdf;/Users/mariuskluften/Zotero/storage/QKZE9DBB/figures.html}
+}
+
 @inproceedings{sergeevDockerContainerPerformance2022,
   title = {Docker {{Container Performance Comparison}} on {{Windows}} and {{Linux Operating Systems}}},
   author = {Sergeev, Anatoliy and Rezedinova, Eugenia and Khakhina, Anna},
@@ -824,6 +914,31 @@
   abstract = {Serverless computing is an excellent fit for big data processing because it can scale quickly and cheaply to thousands of parallel functions. Existing serverless platforms isolate functions in ephemeral, stateless containers, preventing them from directly sharing memory. This forces users to duplicate and serialise data repeatedly, adding unnecessary performance and resource costs. We believe that a new lightweight isolation approach is needed, which supports sharing memory directly between functions and reduces resource overheads. We introduce Faaslets, a new isolation abstraction for highperformance serverless computing. Faaslets isolate the memory of executed functions using software-fault isolation (SFI), as provided by WebAssembly, while allowing memory regions to be shared between functions in the same address space. Faaslets can thus avoid expensive data movement when functions are co-located on the same machine. Our runtime for Faaslets, FAASM, isolates other resources, e.g. CPU and network, using standard Linux cgroups, and provides a low-level POSIX host interface for networking, file system access and dynamic loading. To reduce initialisation times, FAASM restores Faaslets from already-initialised snapshots. We compare FAASM to a standard container-based platform and show that, when training a machine learning model, it achieves a 2× speed-up with 10× less memory; for serving machine learning inference, FAASM doubles the throughput and reduces tail latency by 90\%.},
   langid = {english},
   file = {/Users/mariuskluften/Zotero/storage/WKZCL7U6/Shillaker and Pietzuch - FAASM Lightweight Isolation for Efﬁcient Stateful.pdf}
+}
+
+@inproceedings{shillakerFaasmLightweightIsolation2020a,
+  title = {Faasm: {{Lightweight Isolation}} for {{Efficient Stateful Serverless Computing}}},
+  shorttitle = {Faasm},
+  author = {Shillaker, Simon and Pietzuch, Peter},
+  date = {2020-07-16},
+  pages = {419--433},
+  url = {https://www.usenix.org/conference/atc20/presentation/shillaker},
+  urldate = {2024-04-22},
+  eventtitle = {2020 {{USENIX Annual Technical Conference}} ({{USENIX ATC}} 20)},
+  isbn = {978-1-939133-14-4},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/RSI78WBE/Shillaker and Pietzuch - 2020 - Faasm Lightweight Isolation for Efficient Statefu.pdf}
+}
+
+@article{shirinbabPerformanceEvaluationContainers2020,
+  title = {Performance Evaluation of Containers and Virtual Machines When Running {{Cassandra}} Workload Concurrently},
+  author = {Shirinbab, Sogand and Lundberg, Lars and Casalicchio, Emiliano},
+  date = {2020-02-13},
+  journaltitle = {Concurrency and Computation: Practice and Experience},
+  volume = {32},
+  doi = {10.1002/cpe.5693},
+  abstract = {NoSQL distributed databases are often used as Big Data platforms. To provide efficient resource sharing and cost effectiveness, such distributed databases typically run concurrently on a virtualized infrastructure that could be implemented using hypervisor‐based virtualization or container‐based virtualization. Hypervisor‐based virtualization is a mature technology but imposes overhead on CPU, networking, and disk. Recently, by sharing the operating system resources and simplifying the deployment of applications, container‐based virtualization is getting more popular. This article presents a performance comparison between multiple instances of VMware VMs and Docker containers running concurrently. Our workload models a real‐world Big Data Apache Cassandra application from Ericsson. As a baseline, we evaluated the performance of Cassandra when running on the nonvirtualized physical infrastructure. Our study shows that Docker has lower overhead compared with VMware; the performance on the container‐based infrastructure was as good as on the nonvirtualized. Our performance evaluations also show that running multiple instances of a Cassandra database concurrently affected the performance of read and write operations differently; for both VMware and Docker, the maximum number of read operations was reduced when we ran several instances concurrently, whereas the maximum number of write operations increased when we ran instances concurrently.},
+  file = {/Users/mariuskluften/Zotero/storage/LDA7MXXH/Shirinbab et al. - 2020 - Performance evaluation of containers and virtual m.pdf}
 }
 
 @online{smithMicrosoftWillBe2020,
@@ -904,6 +1019,22 @@
   file = {/Users/mariuskluften/Zotero/storage/L5QL6ZYI/Wang et al. - Peeking Behind the Curtains of Serverless Platform.pdf}
 }
 
+@online{WASIDev,
+  title = {{{WASI}}.Dev},
+  url = {https://wasi.dev/},
+  urldate = {2024-04-22},
+  abstract = {The WebAssembly System Interface (WASI) is a group of standard API specifications for software compiled to the W3C WebAssembly (Wasm) standard. WASI is designed to provide a secure standard interface for applications that can be compiled to Wasm from any language, and that may run anywhere\&mdash;from browsers to clouds to embedded devices.},
+  langid = {english},
+  file = {/Users/mariuskluften/Zotero/storage/IE4YNUFC/wasi.dev.html}
+}
+
+@online{WASIDocsDesignPrinciples,
+  title = {{{WASI}}/Docs/{{DesignPrinciples}}.Md at Snapshot-01 · {{WebAssembly}}/{{WASI}}},
+  url = {https://github.com/WebAssembly/WASI/blob/snapshot-01/docs/DesignPrinciples.md},
+  urldate = {2024-04-22},
+  file = {/Users/mariuskluften/Zotero/storage/6J2PDY28/DesignPrinciples.html}
+}
+
 @online{webassembly.orgFAQWebAssembly,
   title = {{{FAQ}} - {{WebAssembly}}},
   author = {WebAssembly.org},
@@ -919,6 +1050,26 @@
   urldate = {2024-04-04},
   organization = {webassembly.org},
   file = {/Users/mariuskluften/Zotero/storage/VDD563KW/webassembly.org.html}
+}
+
+@online{WebAssemblyWasmCloudflare,
+  title = {{{WebAssembly}} ({{Wasm}}) · {{Cloudflare Workers}} Docs},
+  url = {https://developers.cloudflare.com/workers/runtime-apis/webassembly/},
+  urldate = {2024-04-22},
+  abstract = {Execute code written in a language other than JavaScript or write an entire Cloudflare Worker in Rust.},
+  langid = {english},
+  organization = {Cloudflare Docs},
+  file = {/Users/mariuskluften/Zotero/storage/JAEQASWA/webassembly.html}
+}
+
+@online{WhatContainerizationIBM,
+  title = {What {{Is Containerization}}? | {{IBM}}},
+  shorttitle = {What {{Is Containerization}}?},
+  url = {https://www.ibm.com/topics/containerization},
+  urldate = {2024-04-22},
+  abstract = {Containerization is the packaging of software code to create a single lightweight executable—called a container—that runs consistently on any infrastructure.},
+  langid = {american},
+  file = {/Users/mariuskluften/Zotero/storage/4TSXPB86/containerization.html}
 }
 
 @online{WhoCoinedCloud,

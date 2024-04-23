@@ -167,3 +167,114 @@ a more efficient way to package and deploy functions.
 -->
 
 ---
+
+\newpage
+
+WebAssembly, originally designed for running demanding computations in web
+browsers, present a promising technology that could help reduce the energy
+consumption of cloud services. It offers an interesting option for packaging
+functions with its compact binary format and fast execution time. This has the
+potiential to significantly reduce startup latency and resource overhead
+associated with traditional serverless platforms. This increased efficiency
+could lead to a direct decrease in energy consumption for cloud services, which
+in turn could motivate the industry to adopt alternative technology that enable
+a more sustainable cloud.
+
+\todo{Rewrite the rest of this section, it's a bit of a mess right now}
+
+The WebAssembly team defines WebAssembly as such:
+
+\begin{tcolorbox}[ definitionstyle, title=WebAssembly definition, ] WebAssembly
+(abbreviated Wasm) is a binary instruction format for a stack-based virtual
+machine. Wasm is designed as a portable compilation target for programming
+languages, enabling deployment on the web for client and server applications.
+
+\hfill \href{https://webassembly.org}{webassembly.org}
+
+\end{tcolorbox}
+
+In other words, WebAssembly is a low-level code format designed to serve as a
+compilation target for high-level programming languages. It's a binary format
+that gets executed by a stack-based virtual machine, similar to how Java
+bytecode runs on the Java Virtual Machine (JVM). It was originally designed for
+running in a browser environment, and every major browser has implemented a way
+for running it.
+
+WebAssembly have promising properties that makes it interesting to investigate
+if it can find a home outside the browser environment it was designed for:
+
+\textit{Efficiency and Speed}: WebAssembly was designed to be fast, enabling
+near-native performance. Its binary format is compact and designed for quick
+decoding, contributing to quicker startup times, important aspects of cloud
+native applications.
+
+\textit{Safety and Security}: WebAssembly is designed to run safely in a secure
+sandbox. Each WebAssembly module executes within a confined environment without
+direct access to the host system's resources. This isolation of processes is
+inherent in WebAssembly's design, promoting secure practices.
+
+\textit{Portability}: WebAssembly's platform-agnostic design makes it highly
+portable. It can run across a variety of different system architectures. For
+cloud native applications, this means WebAssembly modules, once compiled, can
+run anywhere - from the edge to the server - on any environment.
+
+\textit{Language Support}: A large amount of programming languages can already
+target WebAssembly. This means developers are not restricted to a particular
+language when developing applications intended to be deployed as WebAssembly
+modules. This provides greater flexibility to leverage the most suitable
+languages for particular tasks.
+
+In contrast, traditional methods such as deployment with containers or VMs can
+be resource-intensive, slower to boot up, less secure due to a larger surface
+attack area, and less efficient. Given these, WebAssembly, with its efficiency,
+security, and portability, can potentially offer an attractive alternative
+deployment method for building and running cloud native applications, like the
+"Academemes" service we will explore in this essay.
+
+WebAssembly (WASM) and [WebAssembly System Interface (WASI)][16] present
+promising choices to traditional ways of deploying and hosting Function as a
+Service (FaaS) platforms, offering several notable advantages, in terms of
+startup times and energy efficiency.
+
+_Reduced Startup Times_: One of the greatest strengths of Wasm is its compact
+binary format designed for quick decoding and efficient execution. It offers
+near-native performance, which results in significantly reduced startup times
+compared to container-based or VM-based solutions. In a FaaS context, where
+functions need to spin up rapidly in response to events, this attribute is
+particularly advantageous. This not only contributes to the overall performance
+but also improves the user experience, as the latency associated with function
+initialization is minimized.
+
+_Improved Energy Efficiency_: Wasm's efficiency extends to energy use as well.
+Thanks to its optimized execution, Wasm can accomplish the same tasks as
+traditional cloud applications but with less computational effort. The CPU
+doesn't need to work as hard, which results in less energy consumed. With data
+centers being responsible for a significant portion of global energy consumption
+and carbon emissions, adopting Wasm could lead to substantial energy savings and
+environmental benefits.
+
+_Scalability_: Wasm's small footprint and fast startup times make it an
+excellent fit for highly scalable cloud applications. Its efficiency means it
+can handle many more requests within the same hardware resources, hence reducing
+the need for additional servers and thus reducing the energy footprint further.
+
+_Portability and Flexibility_: WASI extends the portability of Wasm outside the
+browser environment, making it possible to run Wasm modules securely on any
+WASI-compatible runtime. This means that FaaS platforms can run these modules on
+any hardware, operating system, or cloud provider that supports WASI. This
+portability ensures flexibility and mitigates the risk of vendor lock-in.
+
+While runtime efficiency is an important aspect and typically a strength of
+Wasm, it might not be the primary focus of this thesis. That being said, it is
+worth mentioning that the efficient execution of Wasm modules does contribute to
+the overall operational efficiency and energy savings of Wasm-based FaaS
+platforms.
+
+In summary, introducing WASM+WASI as a component for deploying and hosting FaaS
+platforms can offer significant benefits. Focusing on energy efficiency and
+reduced startup times, this approach could pave the way for more sustainable,
+efficient, and responsive cloud services. In the context of our "Academemes"
+service, this could lead to a scalable, performant, and environmentally friendly
+platform.
+
+---

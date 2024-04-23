@@ -92,6 +92,7 @@ header-includes:
 library(ggplot2)
 library(dplyr)
 library(scales)
+library(kableExtra)
 ```
 
 <!-- -------------------- -->
@@ -703,8 +704,8 @@ reduce the energy consumption of their data centers.
 Virtualization is the process of creating a virtual version of a physical
 resource, such as an operating system, a server, a storage device, or a network
 resource \citep{chiuehSurveyVirtualizationTechnologies2005}. Virtualization
-allows multiple virtual instances to share the underlying physical hardware,
-enabling more efficient resource utilization and consolidation.
+allow multiple virtual instances to share the underlying physical hardware,
+enabling more efficient resource utilization and consolidation. 
 
 One of the most common forms of virtualization is the creation of \ac{VMs}.
 \citet{barhamXenArtVirtualization2003} described that a virtual machine is a
@@ -723,6 +724,10 @@ environment.
   \label{vm-figure}
 \end{figure}
 
+By consolidating multiple servers through virtualization and running them on the
+same physical server, data centers can drastically decrease the number of
+physical machines required, leading to a reduction in energy consumption
+\citep{kaplanRevolutionizingDataCenter2008}.
 
 \section{Containers and Container orchestration}
 \label{sect:containers}
@@ -739,6 +744,15 @@ an application, along with its dependencies, libraries, and configuration files,
 into a single, self-contained unit. This allows applications to be deployed
 consistently across different environments, ensuring predictable behavior and
 reducing compatibility issues \citep{sergeevDockerContainerPerformance2022}
+
+By enabling more granular and efficient use of system resources, containers
+contribute to lower energy usage compared to virtual machines due to their
+lightweight nature and faster startup times
+\citep{shirinbabPerformanceEvaluationContainers2020}. The adoption of
+containerization technologies have been shown to optimize energy costs, as
+containers allow for a higher density of applications running on the same
+physical hardware without the overhead associated with full virtualization
+\citep{cuadrado-corderoComparativeExperimentalAnalysis2018}.
 
 Docker is one of the most widely adopted container platforms, providing tools
 for building, shipping, and running applications in containers
@@ -875,7 +889,6 @@ also introduce some challenges including, cold start latency and the overhead
 associated with container initialization and management
 \citep{wangPeekingCurtainsServerless2018}.
 
-
 Cold start latency refers to the time it takes for a FaaS platform to provision
 a new container instance when a function is invoked after a period of
 inactivity. This latency can be significant, especially for applications with
@@ -909,14 +922,13 @@ run them across a multitude of platforms.
 \subsection{asm.js}
 \label{subsect:asm}
 
-Mozilla released the first version of asm.js in 2013 and designed it to be a
-subset of JavaScript, designed to allow web applications written in other
-languages than JavaScript, such as C or C++, to run in the browser. The
-intention of asm.js is to allow for web applications to run at performance
-closer to native code than applications written in standard JavaScript can
-achieve. A simplified flow for how source code written in C/C++ is compiled to
-bytecode that can be executed in the browser can be found in figure
-\ref{fig:asm-figure} below.
+Mozilla released the first version of asm.js in 2013, and it was designed be a
+subset of JavaScript, allowing web applications written in other languages than
+JavaScript, such as C or C++, to run in the browser. The intention of asm.js was
+to enable web applications to run at performance closer to native code than
+applications written in standard JavaScript A simplified flow for how source
+code written in C/C++ is compiled to bytecode that can be executed in the
+browser can be found in figure \ref{fig:asm-figure} below.
 
 \begin{figure}[H]
 \centering
@@ -924,20 +936,21 @@ bytecode that can be executed in the browser can be found in figure
 \caption{Source code in C/C++ compiled to asm.js and run in browser}\label{fig:asm-figure}
 \end{figure}
 
-While asm.js was a great leap forward, being a subset of JavaScript limited the
-scope of what it could become, leading to its deprecation in 2017 and the
-development of a more efficient and portable format \citep{webassembly.orgFAQWebAssembly}. 
+While asm.js was a great leap forward, being a subset of JavaScript limited its
+scope, leading to its deprecation in 2017 and the development of a more
+efficient and portable format \citep{webassembly.orgFAQWebAssembly}. 
 
 
 \subsection{WebAssembly}
 
 The team at Mozilla built upon the lessons learned from asm.js and went on to
-develop WebAssembly and launch the first public version in
-2017. 
-WebAssembly, which is a low-level code format
-designed to serve as a compilation target for high-level programming languages.
-It is a binary format that gets executed by a stack-based virtual machine,
-comparable to how Java bytecode runs on the \ac{JVM}. 
+develop WebAssembly, launching the first public version in 2017. WebAssembly is
+a low-level code format designed to serve as a compilation target for high-level
+programming languages \citep{haasBringingWebSpeed2017}. It is a binary format
+that gets executed by a stack-based virtual machine, comparable to how Java
+bytecode runs on the \ac{JVM} \citep{haasBringingWebSpeed2017}. In
+\Cref{fig:wasm-browser} below, a simplified flow for compiling web applications
+written in different languages can be compiled and run inside a web browser.
 
 \begin{figure}[H]
 \centering
@@ -946,137 +959,159 @@ comparable to how Java bytecode runs on the \ac{JVM}.
   \label{fig:wasm-browser}
 \end{figure}
 
-\todo{Finish Wasm section}
+
+According to \citet{haasBringingWebSpeed2017}, some key features of \ac{Wasm}
+include: 
+
+1. Portability: \ac{Wasm} is designed to be a portable binary instruction format
+   that can run on various hardware platforms and operating systems. This
+portability is achieved through a hardware-independent instruction set and a
+sandboxed execution environment.
+2. Performance: \ac{Wasm} aims to achieve performance close to native code by
+   taking advantage of common hardware capabilities like a simple load-store
+architecture, single stating assignment form, and ahead-of-time compilation. 
+3. Security: \ac{Wasm} modules are executed in a sandboxed environment, which
+   isolates them from the host system and enforces strict hardware limits on
+memory access and control flow. This helps mitigate security vulnerabilities
+associated with traditional web applications.
+4. Open and Modular design: \ac{Wasm} is an open standard with a modular design,
+   allowing for extensions and integration with various programming languages
+and tools. This modularity enables \ac{Wasm} to be used in a wide range of
+applications beyond just web browsers.
+5. Efficient compression: The binary format of \ac{Wasm} is designed to be
+   efficiently compressed, reducing the size of the distributed code and
+improving download times, especially in resource-constrained devices like mobile
+devices. 
+
+By addressing performance, security and portability concerns, \ac{Wasm} offers
+an alternative to traditional approaches for running untrusted code on the web
+and in other computing environments, such as cloud and edge computing
+\citep{haasBringingWebSpeed2017}.  
 
 \subsection{WebAssembly System Interface}
 
+While \ac{Wasm} was initially designed to run in web browsers, its potential for
+use in other environments, such as cloud and edge compuitng, led to the
+development of the WebAssembly System Interface. \ac{WASI} is a modular system
+interface that provides a standardized set of functions for interacting with
+the host operating system, enabling \ac{Wasm} modules to run outside of web
+browsers \citep{WASIDev}. 
+
+\ac{WASI} defines a set of APIs for performing tasks like file system
+operations, networking, and other system-level operations, allowing \ac{Wasm}
+modules to be portable across different platforms and environments
+\citep{WASIDev}. It's first iteration aimed to be implement as many POXIS-like
+features as possible, but has since extended beyond this and in their latest
+Preview 2, they have implemented support for websockets and HTTP interfaces.
+
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3-wasi-figure.png}
+  \caption{Source code compiled to WebAssembly and embedded in browser}
+  \label{fig:wasm-browser}
+\end{figure}
+
+
 \todo{Write WASI section}
+
+\subsection{WebAssembly runtimes}
+
+\ac{Wasm} by itself can't run by itself. It needs to be interpreted by a runtime
+and ran by it. This is where Wasm runtimes like Wasmtime and Wasmer comes in.
+
+\todo{Write more wasmtime and wasmer}
 
 \section{Energy monitoring}
 
 \todo{Write about MQTT and Zwave/Oh my Gude}
 
-\newpage
-
-WebAssembly, originally designed for running demanding computations in web
-browsers, present a promising technology that could help reduce the energy
-consumption of cloud services. It offers an interesting option for packaging
-functions with its compact binary format and fast execution time. This has the
-potiential to significantly reduce startup latency and resource overhead
-associated with traditional serverless platforms. This increased efficiency
-could lead to a direct decrease in energy consumption for cloud services, which
-in turn could motivate the industry to adopt alternative technology that enable
-a more sustainable cloud.
 
 
-\todo{Rewrite the rest of this section, it's a bit of a mess right now}
+\section{Related work}
 
-The WebAssembly team defines WebAssembly as such:
+\todo{Maybe this section should be moved to the discussion/results page and be
+pulled in to support my findings?}
 
-\begin{tcolorbox}[
-  definitionstyle,
-  title=WebAssembly definition,
-]
-WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based
-virtual machine. Wasm is designed as a portable compilation target for
-programming languages, enabling deployment on the web for client and server
-applications.
+There are several cloud providers who have added support for running \ac{Wasm}
+on their cloud offerings. Cloudflare
+Workers^[https://developers.cloudflare.com/workers/runtime-apis/webassembly/],
+and Fastly
+Compute@Edge^[https://www.fastly.com/products/edge-compute/serverless] have
+added support, while Fermyon have built an entire cloud architecture around the
+binary format with their Fermyon Cloud^[https://www.fermyon.com/cloud]. Fermyon
+has also open sourced their developer tool Spin^[https://www.fermyon.com/spin], 
+a tool that lets developers create, build and test applications written in a
+supported
+language^[https://developer.fermyon.com/spin/v2/language-support-overview] and
+deploy it to a Fermyon Platform instance, either self-hosted or on their own
+service. 
 
-\hfill \href{https://webassembly.org}{webassembly.org}
+\citet{sebrechtsAdaptingKubernetesControllers2022} wrote a paper where they
+described their research in developing a \ac{Wasm}-based framework for running
+lightweight controllers on Kubernetes. In their research they found that with
+their novel \ac{Wasm}-based operators were able to reduce memory footprint of
+100 synthetic operators from 1405MiB to 227MiB and from 1131MiB to 86MiB of idle
+operators, compared to traditional operators. One of their conclusions is that
+using \ac{Wasm} proved to be more memory efficient than the container-based
+solution. See \Cref{fig:wasm-memory} for their findings on memory usage with
+\ac{Wasm}-based operators to Rust and Golang operators.
 
-\end{tcolorbox}
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-memoryusage-wasm.png}
+  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
+vs Rust container vs Golang container. © 2022 IEEE}
+  \label{fig:wasm-memory}
+\end{figure}
 
-In other words, WebAssembly is a low-level code format designed to serve as a
-compilation target for high-level programming languages. It's a binary format
-that gets executed by a stack-based virtual machine, similar to how Java
-bytecode runs on the Java Virtual Machine (JVM). It was originally designed for
-running in a browser environment, and every major browser has implemented a way
-for running it. 
+\citet{shillakerFaasmLightweightIsolation2020a} introduced a novel serverless
+runtime framework using an abstraction called Faaslets, which employ \ac{Wasm}
+for software-fault isolation (SFI). Their study showed that Faaslets in the
+Faasm runtime significantly enhance performance and efficiency over traditional
+container-based platforms. Notably, they achieved 2x speed-up in machine
+learning model training and doubled the throughput for interference tasks, while
+reducing memory usage by 90%, compared to traditional containers with Knative.
+See \cref{fig:wasm-faasm} below for their findings while comparing their Faasm
+to Knative.
 
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-faasm.png}
+  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
+vs Rust container vs Golang container. © 2022 IEEE}
+  \label{fig:wasm-faasm}
+\end{figure}
 
-WebAssembly have promising properties that makes it interesting to investigate
-if it can find a home outside the browser environment it was designed for:
+Furthermore, \citet{shillakerFaasmLightweightIsolation2020a} documented the
+details of the cold starts they observed during their experiments. In their
+study they found that cold starts for operators based on \ac{Wasm} were 538
+times faster than the traditional container-based operators and occupied between
+6.5 to 25 times less memory while in operation. See \Cref{tab:dockervsfaaslet}
+below for their findings.
 
-\textit{Efficiency and Speed}: WebAssembly was designed to be fast, enabling
-near-native performance. Its binary format is compact and designed for quick
-decoding, contributing to quicker startup times, important aspects of cloud
-native applications.
+```{r, echo=F, eval=T}
+data <- data.frame(
+  Metric = c("Initialization", "CPU cycles", "PSS memory", "RSS memory", "Capacity"),
+  Docker = c("2.8 s", "251M", "1.3 MB", "5.0 MB", "~8 K"),
+  Faaslets = c("5.2 ms", "1.4K", "200 KB", "200 KB", "~70 K"),
+  `vs Docker` = c("538×", "179K×", "6.5×", "25×", "8×")
+)
+colnames(data)[1] <- ""
 
-\textit{Safety and Security}: WebAssembly is designed to run safely in a secure
-sandbox. Each WebAssembly module executes within a confined environment without
-direct access to the host system's resources. This isolation of processes is
-inherent in WebAssembly's design, promoting secure practices. 
+kbl(data,
+  booktabs = T,
+  caption = "The table is here \\label{tab:dockervsfaaslet}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
 
-\textit{Portability}: WebAssembly's platform-agnostic design makes it highly
-portable. It can run across a variety of different system architectures. For
-cloud native applications, this means WebAssembly modules, once compiled, can
-run anywhere - from the edge to the server - on any environment. 
+Fermyon is pretty cool
 
-\textit{Language Support}: A large amount of programming languages can already
-target WebAssembly. This means developers are not restricted to a particular
-language when developing applications intended to be deployed as WebAssembly
-modules. This provides greater flexibility to leverage the most suitable
-languages for particular tasks. 
-
-
-
-In contrast, traditional methods such as deployment with containers or VMs can
-be resource-intensive, slower to boot up, less secure due to a larger surface
-attack area, and less efficient. Given these, WebAssembly, with its efficiency,
-security, and portability, can potentially offer an attractive alternative
-deployment method for building and running cloud native applications, like the
-"Academemes" service we will explore in this essay.
-
-
-WebAssembly (WASM) and [WebAssembly System Interface (WASI)][16] present
-promising choices to traditional ways of deploying and hosting Function as
-a Service (FaaS) platforms, offering several notable advantages, in
-terms of startup times and energy efficiency.
-
-_Reduced Startup Times_: One of the greatest strengths of Wasm is its compact
-binary format designed for quick decoding and efficient execution. It offers
-near-native performance, which results in significantly reduced startup times
-compared to container-based or VM-based solutions. In a FaaS context, where
-functions need to spin up rapidly in response to events, this attribute is
-particularly advantageous. This not only contributes to the overall performance
-but also improves the user experience, as the latency associated with function
-initialization is minimized.
-
-_Improved Energy Efficiency_: Wasm's efficiency extends to energy use as well.
-Thanks to its optimized execution, Wasm can accomplish the same tasks as
-traditional cloud applications but with less computational effort. The CPU
-doesn't need to work as hard, which results in less energy consumed. With data
-centers being responsible for a significant portion of global energy consumption
-and carbon emissions, adopting Wasm could lead to substantial energy savings and
-environmental benefits.
-
-_Scalability_: Wasm's small footprint and fast startup times make it an
-excellent fit for highly scalable cloud applications. Its efficiency means it
-can handle many more requests within the same hardware resources, hence reducing
-the need for additional servers and thus reducing the energy footprint further.
-
-_Portability and Flexibility_: WASI extends the portability of Wasm outside the
-browser environment, making it possible to run Wasm modules securely on any
-WASI-compatible runtime. This means that FaaS platforms can run these modules on
-any hardware, operating system, or cloud provider that supports WASI. This
-portability ensures flexibility and mitigates the risk of vendor lock-in.
-
-While runtime efficiency is an important aspect and typically a strength of
-Wasm, it might not be the primary focus of this thesis. That being said, it is
-worth mentioning that the efficient execution of Wasm modules does contribute to
-the overall operational efficiency and energy savings of Wasm-based FaaS
-platforms.
-
-In summary, introducing WASM+WASI as a component for deploying and hosting FaaS
-platforms can offer significant benefits. Focusing on energy efficiency and reduced startup times, this approach could pave the way for more sustainable,
-efficient, and responsive cloud services. In the context of our "Academemes"
-service, this could lead to a scalable, performant, and environmentally friendly
-platform.
-
-
-
-
-\newpage
 
 
 \part{Project}
@@ -1102,15 +1137,27 @@ of functions written in Rust when compiled to and deployed as \ac{Wasm} and
 slim Docker containers. The research design will facilitate an evaluation of
 these two environments for running functions in a serverless model.
 
-\subsection{Implementation strategy}
-
-The reserach will be conducted through a series of controlled experiments
+The research will be conducted through a series of controlled experiments
 designed to measure startup latencies (cold starts), and energy consumption
 under specified conditions. This experimental approach allows for a for a
 precise evaluation of how \ac{Wasm} technologies stack up against traiditional
 container-based deployments in the context of cloud-native applications.
 
-\subsection{Experimental domains}
+The experiments have beeen narrowed down to two domains:
+
+1. Deployment Environments: The choice of \ac{Wasm} modules and Docker containers
+as the primary environments for deployment is aimed at testing the core
+capabilities of \ac{Wasm} in a cloud-native setting, contrasting it against the
+well-established container technology. In a sense the experiments will compare
+two waves cloud compute.
+
+2. Performance metrics: Metrics have been chosen to provide quantitative data on
+the efficiency and scalability of each technology. This includes measuring the
+time to initialize (cold start), the time to execute tasks (runtime), and the
+energy required for operations.
+
+The following sections will dive deeper into the specific methodologies that
+will be employed for this thesis research. 
 
 \section{Experimental framework}
 
@@ -1148,6 +1195,10 @@ consumption under actual load \citep{bekarooPowerConsumptionRaspberry2016}.
 would perform.
 
 \subsubsection{Software specification}
+
+\todo{Aknowledge that WASI allows for access to underlying system, but the
+experiments will focus on running pure functions, which kinda diminishes
+this point.}
 
 For developing Nebula prototype itself, the following software setup will be
 required:
@@ -1188,6 +1239,55 @@ for the benchmark functions and hardware configurations, will be controlled or
 kept constant across experiments to minimize the influence of external factors
 and ensure the validity and reliability of the results.
 
+\todo{elaborate that the functions chosen are to be Pure, meaning that Nebula in
+its current state has been used a PFaaS (pure functions as a service)}
+
+To experiment on Nebula, a handful of functions will be implemented, which 
+requires more computation as the input value scales up, to measure exeuction
+time. 
+
+\subsubsection*{Fibonacci}
+
+Find the *nth* Fibonacci number in the sequence. 
+
+\[F_n = F_{n-1} + F_n \]
+
+\subsubsection*{Exponential}
+
+Calculate the value of Euler's number raised to the *nth* power.
+
+\[F_n = e^n \]
+
+\subsubsection*{Factorial}
+
+Calculate the sum of the factorial of *n*.
+
+\[ n! = \prod_{k=1}^n k \]
+
+\subsubsection*{Prime number} 
+
+Find the *nth* prime number. While this function is harder to represent
+mathematically, and while Euler deduced a close approximation with \(P(n) = n^2 - n +
+41 \), a function will be written in a more brute-force manner to push the CPU,
+and emulate a more typical scenario.
+
+This function will be expressed with these constraints:
+
+\[ \text{is\_prime}(n) =
+\begin{cases} 
+\text{false} & \text{if } n \leq 1 \\
+\text{true} & \text{if } n = 2 \text{ or } n = 3 \\
+\text{false} & \text{if } n \mod 2 = 0 \text{ or } n \mod 3 = 0 \\
+\text{false} & \text{if } \exists k, \text{ such that } 5 \leq k \leq \sqrt{n}, k \in \{6i-1, 6i+1\}, n \mod k = 0 \\
+\text{true} & \text{otherwise}
+\end{cases}
+\]
+
+And with a loop that ranges from 1 to \(2^{64} - 1\) (the highest integer on the
+target architecture), check if that number is prime, if so, append it to a list
+of primes and check if the new length of the list equals the input *n*.
+
+
 \subsection{Comparative analysis}
 
 A comparative anlysis will be performed to evaluate the cold starts, runtime,
@@ -1203,6 +1303,19 @@ Throughout the experiments, various data points, including startup and execution
 times, and energy consumption readings, will be collected and stored.
 Statistical techniques, such as mean, median, and standard deviation
 calculations, will be employed to analyze the collected data. 
+
+\subsection{Reliability and Validity}
+
+```
+Marius thoughts:
+
+Some aspects of cloud-native applications, like "impure" functionality is
+discounted for this research. The functions don't read to/fro the underlying
+system or perform intensive I/O operations. This is to compare functions in more
+of a controlled and isolated manner, where the time it takes to invoke a
+function in wasm focuses on the calculation itself. This is also true for the
+Docker images, so it's still a fair assessment. 
+```
 
 \chapter{Designing Nebula}
 
