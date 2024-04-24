@@ -70,7 +70,6 @@ header-includes:
   - \renewcommand{\headrulewidth}{0pt}
   - \renewcommand{\arraystretch}{1.7} % Adjust the value as needed
 
-
   - \usepackage{epigraph}
   - \setlength\epigraphwidth{.6\textwidth}
 
@@ -599,14 +598,13 @@ distributed computing models. \citep{baldiniServerlessComputingCurrent2017}
 
 \section{Energy consumption and Sustainability in Cloud Computing}
 
-One of the downsides to contrast the benefits of cloud computing, is the ever
-increasing demand for energy consumption required for running these servers in
-giant data centers. With the increased demand for energy consumption, comes an
-increased impact on the environment. As mentioned in \cref{chap:intro}, the
-ICT industry accounts for an estimated 2.1% to 3.9% of global greenhouse
-emissions  \citep{freitag2021}. According to the International Energy Agency
-(IEA), data centers across the globe consumed between from 240 to 340 TWh,
-accounting for 1 to 1.3% of the global electricity use. 
+A major drawback of cloud computing is the increasing energy consumption
+required to power data centers. With the increased demand for energy
+consumption, comes an increased impact on the environment. As mentioned in
+\cref{chap:intro}, the ICT industry accounts for an estimated 2.1% to 3.9% of
+global greenhouse emissions  \citep{freitag2021}. According to the International
+Energy Agency (IEA), data centers across the globe consumed between from 240 to
+340 TWh, accounting for 1 to 1.3% of the global electricity use. 
 
 In Norway, for example, Google is constructing a data center in Skien, expected
 to be fully operational by 2026. As of April 2024, they have been granted a
@@ -740,10 +738,11 @@ and efficient compared to traditional virtual machines. They can run physical
 servers, as well as on \ac{VMs} \citep{bernsteinContainersCloudLXC2014}.
 
 \citet{merkelDockerLightweightLinux2014} also explains that containers package
-an application, along with its dependencies, libraries, and configuration files,
-into a single, self-contained unit. This allows applications to be deployed
-consistently across different environments, ensuring predictable behavior and
-reducing compatibility issues \citep{sergeevDockerContainerPerformance2022}
+an application and its dependencies into a single unit. This includes libraries,
+configuration files and other necessary files. This allows applications to be
+deployed consistently across different environments, ensuring predictable
+behavior and reducing compatibility issues
+\citep{sergeevDockerContainerPerformance2022}
 
 By enabling more granular and efficient use of system resources, containers
 contribute to lower energy usage compared to virtual machines due to their
@@ -1002,115 +1001,97 @@ operations, networking, and other system-level operations, allowing \ac{Wasm}
 modules to be portable across different platforms and environments
 \citep{WASIDev}. It's first iteration aimed to be implement as many POXIS-like
 features as possible, but has since extended beyond this and in their latest
-Preview 2, they have implemented support for websockets and HTTP interfaces.
+Preview 2, they have implemented support for websockets and HTTP interfaces
+\citep{WASIPreview2README}.
 
 
 \begin{figure}[H]
 \centering
   \includegraphics{assets/3-wasi-figure.png}
-  \caption{Source code compiled to WebAssembly and embedded in browser}
-  \label{fig:wasm-browser}
+  \caption{Source code compiled to wasm\_wasi32 and deployed on platforms that support running the binaries.}
+  \label{fig:wasm-wasi}
 \end{figure}
 
 
-\todo{Write WASI section}
+
 
 \subsection{WebAssembly runtimes}
 
-\ac{Wasm} by itself can't run by itself. It needs to be interpreted by a runtime
-and ran by it. This is where Wasm runtimes like Wasmtime and Wasmer comes in.
+WebAssembly modules cannot run independently; they require a runtime environment
+to interpret and execute them. Several WebAssembly runtimes have been developed
+to support the execution of WebAssembly modules in different environments, such
+as Wasmtime, Wasmer, and WasmEdge \citep{zhang2024}. 
 
-\todo{Write more wasmtime and wasmer}
+\citet{zhang2024} explains that these runtimes
+provide a secure and efficient execution environment for WebAssembly modules,
+enabling them to run on a wide range of platforms, including cloud servers, edge
+devices, and even embedded systems. They explain that some runtimes offer
+features like \ac{AOT} compilation, which can further improve the performance of
+WebAssembly modules. \Cref{fig:wasm-runtimes} below illustrates how code written
+in a compatible source code can run on multiple 
+
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\columnwidth]{assets/3-wasm-runtime.png}
+  \caption{Source code compiled to wasm\_wasi32 that can run anywhere
+a WebAssembly runtime can be installed.}
+  \label{fig:wasm-runtimes}
+\end{figure}
+
+The combination of WebAssembly, WASI, and efficient runtimes has sparked
+interest in using WebAssembly as an alternative to traditional containerization
+technologies, such as Docker, in cloud-native and serverless environments
+\citep{shillakerFaasmLightweightIsolation2020a,
+sebrechtsAdaptingKubernetesControllers2022}. 
 
 \section{Energy monitoring}
 
-\todo{Write about MQTT and Zwave/Oh my Gude}
+Monitoring and measuring energy consumption can be useful for understanding and
+optimizing the energy efficiency of cloud computing environments. Energy
+measurements provide insights into the impact of different technologies,
+architectures, and workloads on overall energy usage
+\citep{shehabiUnitedStatesData2016, al-fuqahaInternetThingsSurvey2015}.
 
+Several protocols and techniques have been explored to collect and analyze
+energy consumption data, and this thesis will explore some of these. These
+protocols enable the transmission of energy data, which can be used for
+optimizing energy efficiency \citep{al-fuqahaInternetThingsSurvey2015}.
 
+\subsection{MQTT}
 
-\section{Related work}
-
-\todo{Maybe this section should be moved to the discussion/results page and be
-pulled in to support my findings?}
-
-There are several cloud providers who have added support for running \ac{Wasm}
-on their cloud offerings. Cloudflare
-Workers^[https://developers.cloudflare.com/workers/runtime-apis/webassembly/],
-and Fastly
-Compute@Edge^[https://www.fastly.com/products/edge-compute/serverless] have
-added support, while Fermyon have built an entire cloud architecture around the
-binary format with their Fermyon Cloud^[https://www.fermyon.com/cloud]. Fermyon
-has also open sourced their developer tool Spin^[https://www.fermyon.com/spin], 
-a tool that lets developers create, build and test applications written in a
-supported
-language^[https://developer.fermyon.com/spin/v2/language-support-overview] and
-deploy it to a Fermyon Platform instance, either self-hosted or on their own
-service. 
-
-\citet{sebrechtsAdaptingKubernetesControllers2022} wrote a paper where they
-described their research in developing a \ac{Wasm}-based framework for running
-lightweight controllers on Kubernetes. In their research they found that with
-their novel \ac{Wasm}-based operators were able to reduce memory footprint of
-100 synthetic operators from 1405MiB to 227MiB and from 1131MiB to 86MiB of idle
-operators, compared to traditional operators. One of their conclusions is that
-using \ac{Wasm} proved to be more memory efficient than the container-based
-solution. See \Cref{fig:wasm-memory} for their findings on memory usage with
-\ac{Wasm}-based operators to Rust and Golang operators.
+The \ac{MQTT} protocol is a lightweight and efficient protocol that has been
+used for energy monitoring. In an MQTT setup, a broker server acts as an
+intermediary, facilitating communication between devices and servers. This
+enables efficient data exchange between publishers and subscribers
+\citep{al-fuqahaInternetThingsSurvey2015}. (See \Cref{fig:mqtt-model.png}).
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/3.8-memoryusage-wasm.png}
-  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
-vs Rust container vs Golang container. © 2022 IEEE}
-  \label{fig:wasm-memory}
+  \includegraphics{assets/3-mqtt-pubsub.png}
+  \caption{PubSub model of the MQTT protocol.}
+  \label{fig:mqtt-model.png}
 \end{figure}
 
-\citet{shillakerFaasmLightweightIsolation2020a} introduced a novel serverless
-runtime framework using an abstraction called Faaslets, which employ \ac{Wasm}
-for software-fault isolation (SFI). Their study showed that Faaslets in the
-Faasm runtime significantly enhance performance and efficiency over traditional
-container-based platforms. Notably, they achieved 2x speed-up in machine
-learning model training and doubled the throughput for interference tasks, while
-reducing memory usage by 90%, compared to traditional containers with Knative.
-See \cref{fig:wasm-faasm} below for their findings while comparing their Faasm
-to Knative.
 
-\begin{figure}[H]
-\centering
-  \includegraphics{assets/3.8-faasm.png}
-  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
-vs Rust container vs Golang container. © 2022 IEEE}
-  \label{fig:wasm-faasm}
-\end{figure}
+\subsection{Z-Wave}
 
-Furthermore, \citet{shillakerFaasmLightweightIsolation2020a} documented the
-details of the cold starts they observed during their experiments. In their
-study they found that cold starts for operators based on \ac{Wasm} were 538
-times faster than the traditional container-based operators and occupied between
-6.5 to 25 times less memory while in operation. See \Cref{tab:dockervsfaaslet}
-below for their findings.
+Z-Wave is a wireless communication protocol designed for home
+automation and energy management. It has been used in research studies to
+develop energy monitoring systems for residential buildings, enabling monitoring
+and control of energy consumption \citep{al-fuqahaInternetThingsSurvey2015}.
 
-```{r, echo=F, eval=T}
-data <- data.frame(
-  Metric = c("Initialization", "CPU cycles", "PSS memory", "RSS memory", "Capacity"),
-  Docker = c("2.8 s", "251M", "1.3 MB", "5.0 MB", "~8 K"),
-  Faaslets = c("5.2 ms", "1.4K", "200 KB", "200 KB", "~70 K"),
-  `vs Docker` = c("538×", "179K×", "6.5×", "25×", "8×")
-)
-colnames(data)[1] <- ""
+\todo{elaborate on why zwave is relevant. In the end, I ended up relying on
+modbus because the latency the smart sockets supported were 1s at minimum}
 
-kbl(data,
-  booktabs = T,
-  caption = "The table is here \\label{tab:dockervsfaaslet}",
-  align = "lrrr",
-) %>%
-  kableExtra::kable_styling(
-    full_width = T,
-    latex_options = c("HOLD_position", "striped")
-  )
-```
+\subsection{Modbus TCP}
 
-Fermyon is pretty cool
+The Modbus TCP protocol is a widely adopted industrial communication protocol for
+exchanging data between devices and control systems. It has been used to develop
+energy monitoring and auditing systems for industrial applications, facilitating
+energy audits and energy-saving strategies 
+\citep{tongStudyEthernetCommunication2015}.
+
 
 
 
@@ -1184,7 +1165,7 @@ to \ac{Wasm} and functions packaged as Docker images.
 \subsubsection{Hardware specifications}
 Experiments will be performed on two types of hardware:
 
-1. Raspberry Pi: A small \ac{SBCs} with an ARM64 architecture that can run
+1. Raspberry Pi: A small \ac{SBC}s with an ARM64 architecture that can run
    flavors of Linux. This device will be used to measure energy consumption
 relative to function invocations, which it is well suited for, as it consumes
 small amounts of energy by itself, making it ideal for comparing power
@@ -1239,7 +1220,7 @@ for the benchmark functions and hardware configurations, will be controlled or
 kept constant across experiments to minimize the influence of external factors
 and ensure the validity and reliability of the results.
 
-\todo{elaborate that the functions chosen are to be Pure, meaning that Nebula in
+\todo[inline=true]{elaborate that the functions chosen are to be Pure, meaning that Nebula in
 its current state has been used a PFaaS (pure functions as a service)}
 
 To experiment on Nebula, a handful of functions will be implemented, which 
@@ -1319,7 +1300,10 @@ Docker images, so it's still a fair assessment.
 
 \chapter{Designing Nebula}
 
+\section{Performing energy readings}
 
+
+\newpage
 
 \chapter{Prototype implementation}
 
@@ -1327,22 +1311,6 @@ This chapter provides the details of the implementation of Nebula.
  
 
 \section{Requirements}
-
-
-
-\newpage
-
-\chapter{Design}
-
-\newpage
-
-\chapter{Implementation}
-
-This is the chapter on implementing Nebula.
-
-\section{Tech stack}
-
-Rust/Docker/Etc.
 
 \newpage
 
@@ -1354,44 +1322,98 @@ Rust/Docker/Etc.
 \newpage
 \chapter{Discussion}
 
+
+
+\section{Related work}
+
+\todo[inline=true]{Maybe this section should be moved to the discussion/results page and be
+pulled in to support my findings?}
+
+There are several cloud providers who have added support for running \ac{Wasm}
+on their cloud offerings. Cloudflare
+Workers^[https://developers.cloudflare.com/workers/runtime-apis/webassembly/],
+and Fastly
+Compute@Edge^[https://www.fastly.com/products/edge-compute/serverless] have
+added support, while Fermyon have built an entire cloud architecture around the
+binary format with their Fermyon Cloud^[https://www.fermyon.com/cloud]. Fermyon
+has also open sourced their developer tool Spin^[https://www.fermyon.com/spin], 
+a tool that lets developers create, build and test applications written in a
+supported
+language^[https://developer.fermyon.com/spin/v2/language-support-overview] and
+deploy it to a Fermyon Platform instance, either self-hosted or on their own
+service. 
+
+\citet{sebrechtsAdaptingKubernetesControllers2022} wrote a paper where they
+described their research in developing a \ac{Wasm}-based framework for running
+lightweight controllers on Kubernetes. In their research they found that with
+their novel \ac{Wasm}-based operators were able to reduce memory footprint of
+100 synthetic operators from 1405MiB to 227MiB and from 1131MiB to 86MiB of idle
+operators, compared to traditional operators. One of their conclusions is that
+using \ac{Wasm} proved to be more memory efficient than the container-based
+solution. See \Cref{fig:wasm-memory} for their findings on memory usage with
+\ac{Wasm}-based operators to Rust and Golang operators.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-memoryusage-wasm.png}
+  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
+vs Rust container vs Golang container. © 2022 IEEE}
+  \label{fig:wasm-memory}
+\end{figure}
+
+\citet{shillakerFaasmLightweightIsolation2020a} introduced a novel serverless
+runtime framework using an abstraction called Faaslets, which employ \ac{Wasm}
+for software-fault isolation (SFI). Their study showed that Faaslets in the
+Faasm runtime significantly enhance performance and efficiency over traditional
+container-based platforms. Notably, they achieved 2x speed-up in machine
+learning model training and doubled the throughput for interference tasks, while
+reducing memory usage by 90%, compared to traditional containers with Knative.
+See \cref{fig:wasm-faasm} below for their findings while comparing their Faasm
+to Knative.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-faasm.png}
+  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
+vs Rust container vs Golang container. © 2022 IEEE}
+  \label{fig:wasm-faasm}
+\end{figure}
+
+Furthermore, \citet{shillakerFaasmLightweightIsolation2020a} documented the
+details of the cold starts they observed during their experiments. In their
+study they found that cold starts for operators based on \ac{Wasm} were 538
+times faster than the traditional container-based operators and occupied between
+6.5 to 25 times less memory while in operation. See \Cref{tab:dockervsfaaslet}
+below for their findings.
+
+```{r, echo=F, eval=T}
+data <- data.frame(
+  Metric = c("Initialization", "CPU cycles", "PSS memory", "RSS memory", "Capacity"),
+  Docker = c("2.8 s", "251M", "1.3 MB", "5.0 MB", "~8 K"),
+  Faaslets = c("5.2 ms", "1.4K", "200 KB", "200 KB", "~70 K"),
+  `vs Docker` = c("538×", "179K×", "6.5×", "25×", "8×")
+)
+colnames(data)[1] <- ""
+
+kbl(data,
+  booktabs = T,
+  caption = "The table is here \\label{tab:dockervsfaaslet}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
 \newpage
 \chapter{Conclusion}
 
 \newpage
 \chapter{Future work}
-\label{CustomLastPage}
 
 
-
-\chapter*{References}
-
-<div id="refs"></div>
-
-[1]: https://dx.doi.org/10.1016/j.patter.2021.100340
-[2]: https://doi.org/10.1038/s41558-020-0837-6
-[3]: https://www.rust-lang.org/
-[4]: https://webassembly.org/
-[5]: https://ieeexplore.ieee.org/document/798396
-[6]: https://dx.doi.org/10.5381/jot.2009.8.3.c4
-[7]: https://www.gartner.com/smarterwithgartner/6-ways-cloud-migration-costs-go-off-the-rails
-[8]: https://aws.amazon.com/blogs/aws/amazon_ec2_beta/
-[9]: https://dx.doi.org/10.1145/2988336.2988337
-[10]: https://kubernetes.io/
-[11]: https://aws.amazon.com/lambda/
-[12]: https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90
-[13]: https://cloud.google.com/functions
-[14]: https://www.infoworld.com/article/3265750/serverless-in-the-cloud-aws-vs-google-cloud-vs-microsoft-azure.html
-[15]: https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview
-[16]: https://wasi.dev/
-[17]: https://www.fermyon.com/spin
-[18]: https://luiscruz.github.io/2021/07/20/measuring-energy.html
-[19]: https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/running-average-power-limit-energy-reporting.html
-[20]: http://dx.doi.org/10.1145/3177754
-[21]: https://www.youtube.com/watch?v=9_o2Ia-EIzo
-
-\chapter{Appendices}
-
-
+\chapter*{Acronyms}
 \begin{acronym}
   \acro{IaaS}[IaaS]{Infrastructure-as-a-Service}
   \acro{FaaS}[FaaS]{Functions-as-a-Service}
@@ -1404,4 +1426,12 @@ Rust/Docker/Etc.
   \acro{AWS}[AWS]{Amazon Web Services}
   \acro{GCP}[GCP]{Google Cloud Platform}
   \acro{ACI}[ACI]{Azure Container Instances}
+  \acro{SBC}[SBC]{Single board computer}
+  \acro{AOT}[AOT]{ahead-of-time}
+  \acro{MQTT}[MQTT]{Message Queuing Telemetry Transport}
 \end{acronym}
+
+\chapter*{Appendices}
+
+
+

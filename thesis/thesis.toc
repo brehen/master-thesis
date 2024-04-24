@@ -1,8 +1,8 @@
 \contentsline {chapter}{Abstract}{i}{chapter*.1}%
 \contentsline {chapter}{Acknowledgements}{ii}{chapter*.2}%
 \contentsline {chapter}{Contents}{iii}{chapter*.4}%
-\contentsline {chapter}{List of Figures}{vi}{chapter*.5}%
-\contentsline {chapter}{List of Tables}{vii}{chapter*.7}%
+\contentsline {chapter}{List of Figures}{v}{chapter*.5}%
+\contentsline {chapter}{List of Tables}{vi}{chapter*.7}%
 \contentsline {part}{I\hspace {1em}Overview}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}%
@@ -26,8 +26,10 @@
 \contentsline {subsection}{\numberline {3.6.2}WebAssembly}{21}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{23}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}WebAssembly runtimes}{23}{subsection.3.6.4}%
-\contentsline {section}{\numberline {3.7}Energy monitoring}{23}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Related work}{23}{section.3.8}%
+\contentsline {section}{\numberline {3.7}Energy monitoring}{24}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}MQTT}{25}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Z-Wave}{25}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Modbus TCP}{25}{subsection.3.7.3}%
 \contentsline {part}{II\hspace {1em}Project}{26}{part.2}%
 \contentsline {chapter}{\numberline {4}Methodology}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Research design}{27}{section.4.1}%
@@ -42,14 +44,12 @@
 \contentsline {subsection}{\numberline {4.2.6}Data collection and analysis}{31}{subsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.2.7}Reliability and Validity}{31}{subsection.4.2.7}%
 \contentsline {chapter}{\numberline {5}Designing Nebula}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Performing energy readings}{32}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Prototype implementation}{33}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Requirements}{33}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Design}{34}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Implementation}{35}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Tech stack}{35}{section.8.1}%
-\contentsline {part}{III\hspace {1em}Results}{36}{part.3}%
-\contentsline {chapter}{\numberline {9}Evaulation}{37}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Discussion}{38}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusion}{39}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Future work}{40}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Appendices}{42}{chapter.13}%
+\contentsline {part}{III\hspace {1em}Results}{34}{part.3}%
+\contentsline {chapter}{\numberline {7}Evaulation}{35}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Discussion}{36}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Related work}{36}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Conclusion}{39}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Future work}{40}{chapter.10}%

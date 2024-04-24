@@ -9,16 +9,15 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Containers running on the Docker Engine}}{17}{figure.3.3}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Source code in C/C++ compiled to asm.js and run in browser}}{21}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Source code compiled to WebAssembly and embedded in browser}}{22}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Source code compiled to WebAssembly and embedded in browser}}{23}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{24}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{25}{figure.3.8}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Source code compiled to wasm\_wasi32 and deployed on platforms that support running the binaries.}}{23}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Source code compiled to wasm\_wasi32 that can run anywhere a WebAssembly runtime can be installed.}}{24}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces PubSub model of the MQTT protocol.}}{25}{figure.3.8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{37}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{37}{figure.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
