@@ -278,3 +278,53 @@ service, this could lead to a scalable, performant, and environmentally friendly
 platform.
 
 ---
+
+To measure power consumed by Nebula, the MQTT and Modbus TCP protocols will be
+explored to read energy readings from a Gude Expert Controller 1105. Modbus is a
+widely adopted industrial communication protocol that enables the exchange of
+data between devices and control systems (Modbus Organization, 2012). The Modbus
+TCP variant leverages the TCP/IP protocol for communication, making it suitable
+for Ethernet-based networks and enabling remote monitoring and control of
+devices.
+
+The Gude Expert Controller 1105 is a building automation and control system
+designed for monitoring and managing various aspects of building operations,
+including energy consumption (Gude, n.d.). By integrating with this controller
+via Modbus TCP, near real-time energy consumption data from the monitored
+devices and systems can be retrieved.
+
+Previous research has demonstrated the effectiveness of Modbus-based energy
+monitoring in various domains. Saha et al. (2021) developed a Modbus-based
+energy monitoring system for industrial applications, enabling the collection
+and analysis of energy data from multiple devices. Their system facilitated
+energy audits and the implementation of energy-saving strategies, resulting in
+significant cost reductions.
+
+By leveraging the Modbus TCP protocol and the Gude Expert Controller 1105,
+accurate energy consumption data from the cloud computing environment can be
+collected. The collected data can be analyzed and correlated with various
+factors, such as workload characteristics, resource utilization, and the
+deployment of different technologies (e.g., containers, WebAssembly). This
+analysis contributes to a deeper understanding of the energy implications of
+these technologies and provides valuable insights for optimizing energy
+efficiency in cloud computing environments.
+
+---
+
+\subsection{Power Consumption Calculation Techniques}
+
+In addition to communication protocols, various techniques have been explored
+for calculating and estimating power consumption in computing systems. Rivoire
+et al. (2007) proposed a model for estimating the power consumption of servers
+based on CPU utilization and performance counters. Kansal et al. (2010)
+developed a software-based technique for estimating the energy consumption of
+mobile devices using a finite state machine model.
+
+These protocols and techniques have been widely adopted in energy monitoring
+systems across various domains, including industrial, commercial, and
+residential settings. By leveraging these approaches, accurate energy
+consumption data can be collected and analyzed, enabling informed
+decision-making and the implementation of energy-efficient strategies in cloud
+computing environments.
+
+---
