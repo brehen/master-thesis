@@ -465,7 +465,7 @@ their container workflow)
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.9\columnwidth]{assets/2.3-second-wave-2.png}
+  \includegraphics[width=0.8\columnwidth]{assets/2.3-second-wave-2.png}
   \caption{DevOps engineer deploying services as containers on \ac{GCP}.}
   \label{fig:docker}
 \end{figure}
@@ -1177,7 +1177,7 @@ would perform.
 
 \subsubsection{Software specification}
 
-\todo{Aknowledge that WASI allows for access to underlying system, but the
+\todo[inline=true]{Aknowledge that WASI allows for access to underlying system, but the
 experiments will focus on running pure functions, which kinda diminishes
 this point.}
 
