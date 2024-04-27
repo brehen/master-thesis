@@ -987,6 +987,8 @@ an alternative to traditional approaches for running untrusted code on the web
 and in other computing environments, such as cloud and edge computing
 \citep{haasBringingWebSpeed2017}.  
 
+
+
 \subsection{WebAssembly System Interface}
 
 While \ac{Wasm} was initially designed to run in web browsers, its potential for
@@ -1011,9 +1013,6 @@ Preview 2, they have implemented support for websockets and HTTP interfaces
   \caption{Source code compiled to wasm\_wasi32 and deployed on platforms that support running the binaries.}
   \label{fig:wasm-wasi}
 \end{figure}
-
-
-
 
 \subsection{WebAssembly runtimes}
 
@@ -1092,9 +1091,6 @@ energy monitoring and auditing systems for industrial applications, facilitating
 energy audits and energy-saving strategies 
 \citep{tongStudyEthernetCommunication2015}.
 
-
-
-
 \part{Project}
 
 \chapter{Methodology} 
@@ -1113,10 +1109,10 @@ with a focus on ensuring the validity and reliability of the findings.
 \section{Research design}
 
 The objective of this thesis is to compare the performance and energy efficiency
-of functions written in Rust when compiled to and deployed as \ac{Wasm} and
-\ac{WASI} modules versus the same functions compiled to a Rust binary within
-slim Docker containers. The research design will facilitate an evaluation of
-these two environments for running functions in a serverless model.
+of functions written in Rust when compiled to and deployed as \ac{Wasm} modules
+versus the same functions compiled to a Rust binary packaged in slim Docker
+containers. The research design will facilitate an evaluation of these two
+environments for running functions in a serverless model.
 
 The research will be conducted through a series of controlled experiments
 designed to measure startup latencies (cold starts), and energy consumption
@@ -1136,6 +1132,14 @@ two waves cloud compute.
 the efficiency and scalability of each technology. This includes measuring the
 time to initialize (cold start), the time to execute tasks (runtime), and the
 energy required for operations.
+
+\subsection{Sampling Strategy}
+
+A total of four benchmark functions will be selected for testing, representing
+various computational workloads. These functions will be implemented in Rust and
+compiled to both \ac{Wasm} modules and Docker images. The selection of these
+functions is based on computational intensity and the ability to push the CPU,
+emulating real-world scenarios.
 
 The following sections will dive deeper into the specific methodologies that
 will be employed for this thesis research. 
@@ -1198,6 +1202,11 @@ with the `wasm32-wasi` target when building with Rust.
 - Docker: Functions will also be packaged as Docker images for comparison
 purposes.
 
+WASI allows for access to the underlying system, but the experiments will focus
+on running pure functions, which doesn't allow this feature to shine. The role
+of WASI is to provide a way to deploy and run \ac{Wasm} modules in a
+cloud-native setting.
+
 \subsection{Benchmarking}
 
 Benchmarking will be employed as a research method to evaluate the performance
@@ -1232,6 +1241,12 @@ time.
 Find the *nth* Fibonacci number in the sequence. 
 
 \[F_n = F_{n-1} + F_n \]
+
+The Fibonacci sequence is a classic example of a recursive function. As the
+input value (n) increases, the number of recursive calls grows exponentially,
+leading to a significant increase in computation time. This makes it an
+excellent candidate for testing the performance of your prototype under
+increasing computational load.
 
 \subsubsection*{Exponential}
 
@@ -1283,9 +1298,21 @@ serverless function execution.
 Throughout the experiments, various data points, including startup and execution
 times, and energy consumption readings, will be collected and stored.
 Statistical techniques, such as mean, median, and standard deviation
-calculations, will be employed to analyze the collected data. 
+calculations, will be employed to analyze the collected data. Aditionally,
+regression analysis will be used to model the relationship between the
+independent variables (deploymend environment and function type) and the
+dependent variables (startup latency, execution time, and energy consumption).
+o
 
 \subsection{Reliability and Validity}
+
+To ensure the reliability and validity of the results, the following measures
+will be taken: controlled experimentation will be used to minimize the influence
+of external factors; the experiments will be repeared multiple times to ensure
+consistency of the results; the data will be analyzed using statistical
+techniques to identify any patterns or trends; and the results will be validated
+by comparing them to existing research in the field, explored in
+\Cref{sect:related-work}.
 
 ```
 Marius thoughts:
@@ -1300,12 +1327,71 @@ Docker images, so it's still a fair assessment.
 
 \chapter{Designing Nebula}
 
-\section{Performing energy readings}
+This chapter will present the design and overall architecture of Nebula, a
+\ac{FaaS} prototype that can spin up functions both as \ac{Wasm} modules, and as
+Docker images. The core components of the prototype will be presented, and by
+the end of this chapter, the reader should have a clear understanding on how
+Nebula was designed, how its core features were chosen for implementation and
+how one can interact with the prototype.
 
+\section{A word on this chapter}
+
+This is a prototype FaaS platform that is meant to illustrate the raw
+differences between two waves of cloud compute; \ac{Wasm} modules and container.
+It's scope will be limited by the fact that it is a single students thesis
+project, and will naturlly lack many features that large-scale FaaS platforms
+typically have. None of the major cloud providers have open sourced their FaaS
+platform, meaning that exactly how they function behind the scenes is difficult
+to surmise. This prototype therefore aims to hone in on the aspect of deploying
+functions as containers and compare it with deploying functions as \ac{Wasm}
+modules.
+
+\section{Nebula overview}
+
+\todo[inline=true]{
+
+This section will provide an overview of Nebula's architecture, including: 
+
+- A high-level description of the system components and their relationship.
+- An explanation of how users can interact with Nebula.
+- A brief discussion of the design trade-offs made during development.
+
+}
+
+\section{Core components}
+
+The following sections will delve into the individual core components of Nebula:
+
+\subsection{Web server}
+
+
+\subsection{Function deployment}
+
+How functions are packaged, deployed and managed on the server.
+
+\subsection{Wasm Module execution}
+
+\todo[inline=true]{The process by which \ac{Wasm} modules are executed on Nebula.}
+
+\subsection{Docker Image execution}
+
+\todo[inline=true]{The process by which Docker images are executed on Nebula.}
+
+\subsection{Orchestration and Management}
+
+\todo[inline=true]{How Nebula manages the execution of functions, including passing input/output
+and collecting metrics}
+
+\section{Design rationale}
+
+\todo[inline=true]{Explain that this section provide an explanation of design decisions made
+during development of Nebula}
+
+\section{Designing energy readings}
 
 \newpage
 
-\chapter{Prototype implementation}
+\chapter{Implementing Nebula}
 
 This chapter provides the details of the implementation of Nebula. 
  
@@ -1325,6 +1411,7 @@ This chapter provides the details of the implementation of Nebula.
 
 
 \section{Related work}
+\label{sect:related-work}
 
 \todo[inline=true]{Maybe this section should be moved to the discussion/results page and be
 pulled in to support my findings?}

@@ -5,7 +5,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces DevOps engineer deploying services as containers on \ac {GCP}.}}{8}{figure.2.3}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Projected energy consumption in 2026: Skien data center and Norway.}}{13}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Virtual machines running on top of Hypervisor on a computer.}}{15}{figure.3.2}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Virtual machines running on top of Hypervisor on a computer.}}{16}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Containers running on the Docker Engine}}{17}{figure.3.3}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Source code in C/C++ compiled to asm.js and run in browser}}{21}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Source code compiled to WebAssembly and embedded in browser}}{22}{figure.3.5}%
@@ -17,7 +17,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{37}{figure.8.1}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{37}{figure.8.2}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{40}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{40}{figure.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
