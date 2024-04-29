@@ -34,22 +34,21 @@
 \contentsline {subsection}{\numberline {3.7.5}Gude Expert Power Control 1105}{27}{subsection.3.7.5}%
 \contentsline {part}{II\hspace {1em}Project}{28}{part.2}%
 \contentsline {chapter}{\numberline {4}Methodology}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Research design}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Sampling Strategy}{30}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Experimental framework}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Prototyping}{30}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Hardware specifications}{31}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Software specification}{31}{subsubsection.4.2.1.2}%
-\contentsline {subsection}{\numberline {4.2.2}Benchmarking}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Empirical measurements}{32}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Controlled experimentation}{32}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Data collection and analysis}{33}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Comparative analysis}{34}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Reliability and Validity}{34}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.0.1}Sampling Strategy}{30}{subsection.4.0.1}%
+\contentsline {section}{\numberline {4.1}Experimental framework}{30}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Prototyping}{30}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Hardware specifications}{31}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Software specification}{31}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Benchmarking}{32}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Empirical measurements}{32}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Controlled experimentation}{32}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Data collection and analysis}{33}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Comparative analysis}{34}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Reliability and Validity}{34}{subsection.4.1.7}%
 \contentsline {chapter}{\numberline {5}Designing Nebula}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}A word on this chapter}{35}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Nebula overview}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Core components}{35}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Core components}{36}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Web server}{36}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Function deployment}{36}{subsection.5.3.2}%
 \contentsline {subsection}{\numberline {5.3.3}Wasm Module execution}{36}{subsection.5.3.3}%

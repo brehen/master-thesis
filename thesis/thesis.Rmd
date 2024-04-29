@@ -1161,6 +1161,19 @@ server for communicating over Modbus TCP is shown.
 
 \chapter{Methodology} 
 
+To reiterate, the goal of this thesis is to investigate the two problem statements
+presented in \Cref{sect:problems}. We are going to develop a FaaS prototype, named
+Nebula, which we're going to use for conducting experiments to see if the
+claim that \ac{Wasm} modules offer a more efficient way to develop and
+deploy our cloud native applications holds true. On this platform we are going
+to deploy functions written in Rust that are either compiled to \ac{Wasm}
+modules or compiled to Rust binaries that get packaged into a Docker image.
+
+This chapter will present the intended methodology on how this experimental
+reserach method will be conducted. 
+
+
+
 This chapter outlines the research methodology employed to investigate the
 problem statements posed in \Cref{sect:problems}, specifically whether \ac{Wasm}
 is a more energy-efficient target for developing and deploying cloud native
@@ -1172,13 +1185,6 @@ consumption of function invocations in two different deployment environments:
 design, experimental setup, data collection methods, and analysis techniques,
 with a focus on ensuring the validity and reliability of the findings.
 
-\section{Research design}
-
-The objective of this thesis is to compare the performance and energy efficiency
-of functions written in Rust when compiled to and deployed as \ac{Wasm} modules
-versus the same functions compiled to a Rust binary packaged in slim Docker
-containers. The research design will facilitate an evaluation of these two
-environments for running functions in a serverless model.
 
 The research will be conducted through a series of controlled experiments
 designed to measure startup latencies (cold starts), and energy consumption
@@ -1413,6 +1419,14 @@ functions as containers and compare it with deploying functions as \ac{Wasm}
 modules.
 
 \section{Nebula overview}
+
+
+This section will provide an overview of Nebula’s architecture, including:
+- A high-level description of the system components and their relationship. 
+
+- An explanation of how users can interact with Nebula. 
+
+- a brief discussion of the design trade-offs made during development.
 
 \section{Core components}
 
