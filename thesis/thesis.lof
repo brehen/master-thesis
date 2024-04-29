@@ -16,11 +16,12 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces TCP/IP package exchange between a client and a server over Modbus TCP.}}{27}{figure.3.10}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Client communicating with Gude over Modbus TCP.}}{27}{figure.3.11}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Reading energy consumption of our Raspberry Pi.}}{33}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{41}{figure.8.1}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{41}{figure.8.2}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{42}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{42}{figure.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

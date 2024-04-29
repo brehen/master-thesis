@@ -1058,6 +1058,7 @@ technologies, such as Docker, in cloud-native and serverless environments
 sebrechtsAdaptingKubernetesControllers2022}. 
 
 \section{Energy monitoring}
+\label{sect:energy_monitoring}
 
 Monitoring and measuring energy consumption can be useful for understanding and
 optimizing the energy efficiency of cloud computing environments. Energy
@@ -1169,31 +1170,227 @@ deploy our cloud native applications holds true. On this platform we are going
 to deploy functions written in Rust that are either compiled to \ac{Wasm}
 modules or compiled to Rust binaries that get packaged into a Docker image.
 
-This chapter will present the intended methodology on how this experimental
-reserach method will be conducted. 
+This chapter will present the intended methodology on how we will conduct our
+experimental research method. We will employ an experimental research method,
+where we will build a prototype, perform experiments on it in a controlled
+environment, collect measurements and compare the results. 
+
+\section{Experimental framework}
+
+The main focus of this thesis is to build a prototype and perform experiments on
+it, to measure the capabilities of \ac{Wasm} modules as a model for deploying
+and running cloud applications. An experimental approach was chosen to test the
+problem statements, as we can have controlled manipulation of variables, measure
+the outcomes, and compare directly between two deployment environments;
+\ac{Wasm} modules and Docker containers. 
+
+We will perform a series of controlled experiments designed to measure startup
+latencies (cold start), total runtime, and energy consumption for each
+invocation of a function. This allows for a precise evaluation of how \ac{Wasm}
+modules compare against traditional container-based deployments in the context
+of cloud-native applications.
+
+To capture energy measurements, we will need to use hardware locally that we can
+control. For this we will look at the protocols mentioned in
+\Cref{sect:energy_monitoring}, and use a Raspberry Pi as our local deployment
+environment. We will also capture startup and runtime data on these invocations,
+but not many cloud applications today are deployed on Raspberry Pi's, so we will
+also need to deploy Nebula on a more typical setup. 
+
+\subsection{Prototyping}
+
+The prototype we're going to build for this project will be named Nebula, named
+after the celestial phenomenon that can be observed in the form of a giant cloud
+out in space. On Nebula we will develop a way to deploy and invoke functions in
+the form of \ac{Wasm} modules or as spun up Docker containers. To perform the
+desired experiments, the prototype will need to be able to deploy to both a
+Raspberry Pi 4b, and on a typical machine hosted on the cloud. For this, we will
+be using NREC \todo{add citation/link}, a IaaS platform available to students,
+where we can spin up a Debian virtual machine and set up a service on a public
+IP address. 
+
+\subsubsection{Hardware specifications}
+Experiments will be performed on two types of hardware:
+
+1. Raspberry Pi: A small \ac{SBC}s with an ARM64 architecture that can run
+   flavors of Linux. This device will be used to measure energy consumption
+relative to function invocations, which it is well suited for, as it consumes
+small amounts of energy by itself, making it ideal for comparing power
+consumption under actual load \citep{bekarooPowerConsumptionRaspberry2016}.
+
+2. Virtual Machine: A Debian-based VM running on an \ac{IaaS} platform (e.g.,
+   NREC), to measure performance relative to what a standard cloud native
+application would perform.
+
+\subsubsection{Nebula requirements}
+
+Based on this, we can summarize what we need Nebula to be able to meet these
+requirements.
+
+\begin{table}[ht]
+\centering
+\caption{Nebula requirements}
+\begin{tabular}{@{}p{0.3\linewidth}@{\hskip\tabcolsep}p{0.6\linewidth}@{}}
+\toprule
+\textbf{Requirement} & \textbf{Description} \\
+\midrule
+
+\rowcolor{green!10} Function deployment & We should be able to deploy functions
+to Nebula. \\
+
+Function execution & The prototype should execute functions in response to user
+invocations, either as \ac{Wasm} modules or as Docker containers.  \\
+
+\rowcolor{blue!10} Measurement \parbox{0.9\linewidth}{capabilities} & The prototype should be able
+to collect data for startup latencies, total runtime, and energy consumption for
+each function invocation. \\
+
+Portability & The prototype should be deployable on both a
+Raspberry Pi for local testing and measurement, and on a Debian virtual machine
+hosted on an IaaS platform (e.g., NREC) for a more typical cloud setup. \\
+
+\rowcolor{orange!10} Performance & The prototype should be built in such a
+manner that it presents little overhead when running our functions, isolating
+the resulting efficiency and energy readings to each function invocation. \\
 
 
-
-This chapter outlines the research methodology employed to investigate the
-problem statements posed in \Cref{sect:problems}, specifically whether \ac{Wasm}
-is a more energy-efficient target for developing and deploying cloud native
-applications. A \ac{FaaS} prototype, named 'Nebula', will be developed as part
-of an experimental reserach method. This prototype will be used to conduct
-experiments on startup latencies (cold starts), runtime efficiency, and energy
-consumption of function invocations in two different deployment environments:
-\ac{Wasm} modules and Docker containers. The chapter details the research
-design, experimental setup, data collection methods, and analysis techniques,
-with a focus on ensuring the validity and reliability of the findings.
+\bottomrule
+\end{tabular}
+\label{table:nebula_requirements}
+\end{table}
 
 
-The research will be conducted through a series of controlled experiments
-designed to measure startup latencies (cold starts), and energy consumption
-under specified conditions. This experimental approach allows for a for a
-precise evaluation of how \ac{Wasm} technologies stack up against traiditional
-container-based deployments in the context of cloud-native applications.
+\subsection{Benchmarking}
 
-The experiments have been narrowed down to two domains:
+Benchmarking will be employed as a research method to evaluate the performance
+of different configurations. Benchmark functions representing various
+computational workloads will be implemented and executed on both environments.
 
+\subsection{Controlled experimentation}
+
+Controlled experimentation will be an important aspect of this research, as it
+let us isolate and study the effects of the deployment environment on
+performance and energy consumption. Various factors, such as input parameters
+for the benchmark functions and hardware configurations, will be controlled or
+kept constant across experiments to minimize the influence of external factors
+and increase the validity and reliability of the results.
+
+To experiment on Nebula, we will craft a set of benchmark functions. As the
+input value to these functions scale up, the computational load on the server
+will increase, letting us measure the execution time across different workloads.
+
+\subsection{Benchmark functions}
+
+A total of four benchmarking functions will be selected for testing,
+representing various computational workloads. These functions will be written in
+Rust and compiled to both \ac{Wasm} modules and Rust binaries packaged in Docker
+images. The selection of these functions is based on their computational
+intensity and their ability to stress the CPU.
+
+The functions we will implement are:
+
+1. *Fibonacci*: This function calculates the *nth* Fibonacci number in the
+sequence, following the  formula: \(F_n = F_{n-1} + F_{n-2} \). 
+2. *Exponential*: This function calculates the value of Euler's number raised to
+the nth power, following the formula: \(F_n = e^n\). This benchmark tests the
+performance of the prototype in handling intesive floating-point calculations.
+3. *Factorial*: This function calculates the sum of the factorial of *n*,
+following the formula: \(n! = \prod_{k=1}^n k\). 
+4. *Prime number*: This function finds the nth prime number. While it is harder
+   to represent this in a mathematical formula, a brute-force approach will be
+used to stress the CPU and emulate a more typical scenario. The function will
+loop through a range of numbers (0 through \(2^{64} - 1\)), check if the number
+is a prime number, and append prime numbers to a list until the nth prime number
+is found.
+
+By implementing, deploying and executing these functions as both \ac{Wasm}
+modules and Docker containers, the research aims to provide a thorough
+evaluation of the performance and efficiency of each environment.
+
+\subsection{Measurement and Data Collection}
+
+To quantify the efficiency and energy consumption associated with function
+invocations on each environment, empirical measurement techniques will be
+employed. We will deploy Nebula, along with the \ac{Wasm} modules and Docker
+images, to our target computers. For measuring startup and runtimes of each
+function akin to traditional deployments, we will deploy Nebula and the
+functions to a virtual machine running Debian on NREC. While a Raspberry Pi 4
+will serve as our deployment target for measuring startup latencies and runtimes
+of a device more akin to embedded systems, but more importantly, allowing us to
+measure energy consumption on a controlled device.
+
+The Raspberry Pi will be connected to a power supply that can report energy
+readings, enabling the collection of energy consumption data during function
+execution. See \Cref{fig:benchmark-setup} below for a rough sketch on how we
+will set up benchmarking and energy measurements for our experiments.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\columnwidth]{assets/4-benchmark-setup.png}
+  \caption{Reading energy consumption of our Raspberry Pi.}
+  \label{fig:benchmark-setup}
+\end{figure}
+
+Throughout the experiments, we will collect various data points to evaluate the
+performance and energy efficiency of both \ac{Wasm} modules and Docker
+containers. 
+
+To isolate how much power our functions invoke on top of the idle load of the
+underlying system that hosts Nebula, we will also benchmark a baseline power
+level, to measure how much power Nebula consumes while idle. Any power consumed
+above this should then reflect how much power each function invokes when called.
+
+The following measurements will be recorded on both hardware
+configurations:
+
+- Startup latency / Cold start: For each function invocation, the time taken
+from the intial request is received until the function start executing will be
+measured. This startup latency, known as cold start, is a critical metric for
+evaluating the responsiveness and scalability of serverless function
+deployments.
+
+- Total runtime: The total execution time of each function will be measured,
+from the same time we start measuring cold start until the function returns the
+result will be measured. This metric will let us compare the computational
+efficiency of each environment under different workloads.
+
+While these additional measurements will be gathered on our local system as seen
+in \Cref{fig:benchmark-setup}: 
+
+- Power consumption: During the function execution on the Raspberry Pi, we will
+measure the power the server consumes at regular intervals. To get a more
+accurate reading, we will measure the current (*I*) in *mA* and the power factor
+(*PF*)\todo{Explain wtf PF is.}, while assuming the voltage (*U*) is a constant
+240V. Using these numbers we will calculate the power with the following
+equation: \[P = U \times I \times PF\] Two sets of power consumption data will
+be collected.
+
+  - Average Power: The average power consumption of the Raspberry Pi device,
+  including any background processes, including Nebula, or idle draw, while
+  invoking a function. This will be an estimation based on energy readings read
+  during the lifetime of each function, and getting the average of these.
+
+  - Isolated Average Power: An estimation on how much extra power consumption a
+    function incurs, this will be a sum of Average power minus the Baseline
+  power. \(P_{\text{iso}} = P_{\text{total}} - P_{\text{baseline}}\)
+
+- Energy Consumption: Based on the power consumption measurements and the total
+runtime durations, the energy consumption for each function invocation will be
+calculated. We will calculate the energy consumption with the following formula:
+\[E_{\text{Wh}} = P_{\text{W}} \times t_{\text{h}}\] Two sets of energy
+consumption values will be derived:
+
+  - Energy consumption: The total energy in *Wh* consumed of the entire
+  Raspberry Pi device during function execution. The unit prefix will be
+  adjusted according to the results.
+
+  - Isolated Energy consumption: The energy in *Wh* consumed by the function,
+  with the baseline power subtracted from the base *W* used to calculate this.
+
+\todo{continue here}
+
+\subsection{Comparative analysis}
+ 
 1. Deployment Environments: The choice of \ac{Wasm} modules and Docker containers
 as the primary environments for deployment is aimed at testing the core
 capabilities of \ac{Wasm} in a cloud-native setting, contrasting it against the
@@ -1205,170 +1402,10 @@ the efficiency and scalability of each technology. This includes measuring the
 time to initialize (cold start), the time to execute tasks (runtime), and the
 energy required for operations.
 
-\subsection{Sampling Strategy}
-
-A total of four benchmark functions will be selected for testing, representing
-various computational workloads. These functions will be implemented in Rust and
-compiled to both \ac{Wasm} modules and Docker images. The selection of these
-functions is based on computational intensity and the ability to push the CPU,
-emulating real-world scenarios.
 
 The following sections will dive deeper into the specific methodologies that
 will be employed for this thesis research. 
 
-\section{Experimental framework}
-
-The main focus for this thesis is on building a prototype and perform
-experiments on it, to measure the capabilities of \ac{Wasm}, augmented by
-\ac{WASI} as a model for deploying and running cloud applications. An
-experimental approach was chosen to test the problem statements posed in
-\Cref{sect:problems}, as it allows for controlled manipulation of variables,
-empirical measurements of outcomes, and direct comparison between two deployment
-environments (\ac{Wasm}+\ac{WASI} and Docker). This section outlines the
-different methods employed as part of an experimental research method to
-investigate the research questions.
-
-\subsection{Prototyping} 
-
-The prototype FaaS system, named 'Nebula', will be developed to serve as a
-controlled environment for invoking functions as either \ac{Wasm} modules or
-Docker containers. It needs 
-
-To perform the desired experiments, a prototype will be developed and deployed
-to two types of hardware. It will need to support invoking functions compiled
-to \ac{Wasm} and functions packaged as Docker images. 
-
-\subsubsection{Hardware specifications}
-Experiments will be performed on two types of hardware:
-
-1. Raspberry Pi: A small \ac{SBC}s with an ARM64 architecture that can run
-   flavors of Linux. This device will be used to measure energy consumption
-relative to function invocations, which it is well suited for, as it consumes
-small amounts of energy by itself, making it ideal for comparing power
-consumption under actual load \citep{bekarooPowerConsumptionRaspberry2016}.
-
-2. Virtual Machine: A Debian-based VM running on an \ac{IaaS} platform, to
-   measure performance relative to what a standard cloud native application
-would perform.
-
-\subsubsection{Software specification}
-
-\todo[inline=true]{Aknowledge that WASI allows for access to underlying system, but the
-experiments will focus on running pure functions, which kinda diminishes
-this point.}
-
-For developing Nebula prototype itself, the following software setup will be
-required:
-
-- A programming language to write the prototype in.
-- An interface to deploy and invoke functions deployed onto the prototype.
-- 
-
-The software setup for developing functions will include:
-
-- Rust programming language: Chosen for implementing functions due to its
-efficiency and compatibility when building with targeting both \ac{Wasm} and
-traditional binaries.
-- \ac{Wasm} and \ac{WASI}: The functions will be compiled as \ac{Wasm} binaries
-with the `wasm32-wasi` target when building with Rust.
-- Docker: Functions will also be packaged as Docker images for comparison
-purposes.
-
-WASI allows for access to the underlying system, but the experiments will focus
-on running pure functions, which doesn't allow this feature to shine. The role
-of WASI is to provide a way to deploy and run \ac{Wasm} modules in a
-cloud-native setting.
-
-\subsection{Benchmarking}
-
-Benchmarking will be employed as a research method to evaluate the performance
-of different configurations. Benchmark functions representing various
-computational workloads will be implemented and executed on both environments.
-
-\subsection{Empirical measurements}
-
-Empirical measurement techniques will be utilized to quantify the energy
-consumption associated with function invocations on each deployment environment.
-The prototype and function binaries and images will be deployed to the Raspberry
-Pi, which will be connected to a power supply that can report energy readings. 
-
-\subsection{Controlled experimentation}
-
-Controlled experimentation will be a crucial aspect of this research, as it will
-allow for isolating and studying the effects of the deployment environment on
-performance and energy consumption. Various factors, such as input parameters
-for the benchmark functions and hardware configurations, will be controlled or
-kept constant across experiments to minimize the influence of external factors
-and ensure the validity and reliability of the results.
-
-\todo[inline=true]{elaborate that the functions chosen are to be Pure, meaning that Nebula in
-its current state has been used a PFaaS (pure functions as a service)}
-
-To experiment on Nebula, a handful of functions will be implemented, which 
-requires more computation as the input value scales up, to measure exeuction
-time. 
-
-\subsubsection*{Fibonacci}
-
-Find the *nth* Fibonacci number in the sequence. 
-
-\[F_n = F_{n-1} + F_n \]
-
-The Fibonacci sequence is a classic example of a recursive function. As the
-input value (n) increases, the number of recursive calls grows exponentially,
-leading to a significant increase in computation time. This makes it an
-excellent candidate for testing the performance of your prototype under
-increasing computational load.
-
-\subsubsection*{Exponential}
-
-Calculate the value of Euler's number raised to the *nth* power.
-
-\[F_n = e^n \]
-
-\subsubsection*{Factorial}
-
-Calculate the sum of the factorial of *n*.
-
-\[ n! = \prod_{k=1}^n k \]
-
-\subsubsection*{Prime number} 
-
-Find the *nth* prime number. While this function is harder to represent
-mathematically, and while Euler deduced a close approximation with \(P(n) = n^2 - n +
-41 \), a function will be written in a more brute-force manner to push the CPU,
-and emulate a more typical scenario.
-
-This function will be expressed with these constraints:
-
-\[ \text{is\_prime}(n) =
-\begin{cases} 
-\text{false} & \text{if } n \leq 1 \\
-\text{true} & \text{if } n = 2 \text{ or } n = 3 \\
-\text{false} & \text{if } n \mod 2 = 0 \text{ or } n \mod 3 = 0 \\
-\text{false} & \text{if } \exists k, \text{ such that } 5 \leq k \leq \sqrt{n}, k \in \{6i-1, 6i+1\}, n \mod k = 0 \\
-\text{true} & \text{otherwise}
-\end{cases}
-\]
-
-And with a loop that ranges from 1 to \(2^{64} - 1\) (the highest integer on the
-target architecture), check if that number is prime, if so, append it to a list
-of primes and check if the new length of the list equals the input *n*.
-
-
-
-\subsection{Data collection and analysis}
-
-Throughout the experiments, various data points, including startup and execution
-times, and energy consumption readings, will be collected and stored.
-Statistical techniques, such as mean, median, and standard deviation
-calculations, will be employed to analyze the collected data. Aditionally,
-regression analysis will be used to model the relationship between the
-independent variables (deploymend environment and function type) and the
-dependent variables (startup latency, execution time, and energy consumption).
-
-
-\subsection{Comparative analysis}
 
 A comparative anlysis will be performed to evaluate the cold starts, runtime,
 and the energy consumption of function invocations between the two deployment

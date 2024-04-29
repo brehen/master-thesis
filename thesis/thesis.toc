@@ -34,33 +34,32 @@
 \contentsline {subsection}{\numberline {3.7.5}Gude Expert Power Control 1105}{27}{subsection.3.7.5}%
 \contentsline {part}{II\hspace {1em}Project}{28}{part.2}%
 \contentsline {chapter}{\numberline {4}Methodology}{29}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Sampling Strategy}{30}{subsection.4.0.1}%
-\contentsline {section}{\numberline {4.1}Experimental framework}{30}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Experimental framework}{29}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Prototyping}{30}{subsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}Hardware specifications}{31}{subsubsection.4.1.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.2}Software specification}{31}{subsubsection.4.1.1.2}%
-\contentsline {subsection}{\numberline {4.1.2}Benchmarking}{32}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Empirical measurements}{32}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Controlled experimentation}{32}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Data collection and analysis}{33}{subsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Hardware specifications}{30}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Nebula requirements}{30}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Benchmarking}{30}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Controlled experimentation}{31}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Benchmark functions}{31}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Measurement and Data Collection}{32}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Comparative analysis}{34}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Reliability and Validity}{34}{subsection.4.1.7}%
-\contentsline {chapter}{\numberline {5}Designing Nebula}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A word on this chapter}{35}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Nebula overview}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Core components}{36}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Web server}{36}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Function deployment}{36}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Wasm Module execution}{36}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Docker Image execution}{36}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Orchestration and Management}{36}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Design rationale}{36}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Designing energy readings}{36}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Implementing Nebula}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Requirements}{37}{section.6.1}%
-\contentsline {part}{III\hspace {1em}Results}{38}{part.3}%
-\contentsline {chapter}{\numberline {7}Evaulation}{39}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Discussion}{40}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Related work}{40}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Conclusion}{43}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Future work}{44}{chapter.10}%
+\contentsline {subsection}{\numberline {4.1.7}Reliability and Validity}{35}{subsection.4.1.7}%
+\contentsline {chapter}{\numberline {5}Designing Nebula}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A word on this chapter}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Nebula overview}{36}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Core components}{37}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Web server}{37}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Function deployment}{37}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Wasm Module execution}{37}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Docker Image execution}{37}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Orchestration and Management}{37}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Design rationale}{37}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Designing energy readings}{37}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Implementing Nebula}{38}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Requirements}{38}{section.6.1}%
+\contentsline {part}{III\hspace {1em}Results}{39}{part.3}%
+\contentsline {chapter}{\numberline {7}Evaulation}{40}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Discussion}{41}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Related work}{41}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Conclusion}{44}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Future work}{45}{chapter.10}%
