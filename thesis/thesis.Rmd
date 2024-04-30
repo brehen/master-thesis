@@ -11,7 +11,9 @@ output:
     number_sections: true
     latex_engine: lualatex
     citation_package: biblatex
+    highlight: zenburn
     fig_caption: true
+
 
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
@@ -219,7 +221,7 @@ The idea for the topic for this thesis appeared in an episode of the podcast
 "Rustacean station". Matt Butcher, the CEO of Fermyon, told the story of his
 journey through the different waves of cloud computing, and how Fermyon was
 founded as a software company that aimed to build a cloud platform with
-WebAssembly and lead the charge into the ntext big wave of cloud compute.
+WebAssembly and lead the charge into the next big wave of cloud compute.
 
 \vspace{0.25cm}
 
@@ -229,12 +231,12 @@ the snowball that ended up as the avalanche that is this thesis.
 
 \vspace{0.25cm}
 
-I'd like to thank Matt Butcher and the people over at Fermyon for inadvertently 
+I would like to thank Matt Butcher and the people over at Fermyon for inadvertently 
 inspiring my topic. 
 
 \vspace{0.25cm}
 
-Furthermore I'd like to thank my two supervisors Joachim Tilsted Kristensen and 
+Furthermore I would like to thank my two supervisors Joachim Tilsted Kristensen and 
 Michael Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
 through such a cutting edge topic. Their guidance and insight have been
 invaluable the past semesters. 
@@ -375,7 +377,7 @@ have a table-of-contents.}
 
 The evolution of cloud computing represents a transformative adventure, driven
 by the pursuit for efficiency, scalability and reliability, yet it also poses
-challenges, notably it's environmental impact. This chapter steps introduces the
+challenges, notably its environmental impact. This chapter steps introduces the
 concept of the "Three waves of cloud computing", coined by the WebAssembly
 community \citep*{butcherDodds2024, leonardWebAssemblyHeraldsThird2024}. Where
 the two first waves of cloud compute represent the shift from virtual machines
@@ -561,13 +563,13 @@ concept of shared computing resources, a fundamental principle of cloud
 computing.
 
 Over the following decades, advancements in networking, virtualization and the
-ubiquity of the internet led to the development of today's sophisticated cloud
+ubiquity of the internet led to the development of todays sophisticated cloud
 services. The term "cloud computing" was first coined in the year 1996 by
 Compaq, \citep{favaloroInternetSolutionsDivision1996}, but it was not until
 Amazon launched its subsidiary \ac{AWS} in the 2006 that the adoption
 became wide spread. 
 
-The launch of AWS's Amazon S3 cloud service in March 2006, followed by Elastic
+The launch of AWS Amazon S3 cloud service in March 2006, followed by Elastic
 Compute Cloud (EC2) in August the same year \citep{barrAmazonEC2Beta2006},
 marked a major turning point in application development and deployment, and
 popularized cloud computing. EC2, as an Infrastructure-as-a-Service platform,
@@ -648,7 +650,7 @@ ggplot(energy_data, aes(x = "", y = Energy_Consumption, fill = Category)) +
 
 \todo[inline=true]{Consider this feedback from Michael: Google also does not
 make it rain more. If Google come and buys all the green energy in the area, it
-will just mean that others will use more black energy. They don't build new
+will just mean that others will use more black energy. They don not build new
 infrastructure. And this is only for Googles "usage". Not the users and network
 infrastructure.}
 
@@ -1015,7 +1017,7 @@ browsers \citep{WASIDev}.
 \ac{WASI} defines a set of APIs for performing tasks like file system
 operations, networking, and other system-level operations, allowing \ac{Wasm}
 modules to be portable across different platforms and environments
-\citep{WASIDev}. It's first iteration aimed to be implement as many POXIS-like
+\citep{WASIDev}. Its first iteration aimed to be implement as many POXIS-like
 features as possible, but has since extended beyond this and in their latest
 Preview 2, they have implemented support for websockets and HTTP interfaces
 \citep{WASIPreview2README}.
@@ -1029,6 +1031,7 @@ Preview 2, they have implemented support for websockets and HTTP interfaces
 \end{figure}
 
 \subsection{WebAssembly runtimes}
+\label{sect:wasm_runtimes}
 
 WebAssembly modules cannot run independently; they require a runtime environment
 to interpret and execute them. Several WebAssembly runtimes have been developed
@@ -1161,10 +1164,11 @@ server for communicating over Modbus TCP is shown.
 \part{Project}
 
 \chapter{Methodology} 
+\label{chap:method} 
 
 To reiterate, the goal of this thesis is to investigate the two problem statements
 presented in \Cref{sect:problems}. We are going to develop a FaaS prototype, named
-Nebula, which we're going to use for conducting experiments to see if the
+Nebula, which we are going to use for conducting experiments to see if the
 claim that \ac{Wasm} modules offer a more efficient way to develop and
 deploy our cloud native applications holds true. On this platform we are going
 to deploy functions written in Rust that are either compiled to \ac{Wasm}
@@ -1176,6 +1180,7 @@ where we will build a prototype, perform experiments on it in a controlled
 environment, collect measurements and compare the results. 
 
 \section{Experimental framework}
+\label{sect:exp_frame}
 
 The main focus of this thesis is to build a prototype and perform experiments on
 it, to measure the capabilities of \ac{Wasm} modules as a model for deploying
@@ -1198,8 +1203,9 @@ but not many cloud applications today are deployed on Raspberry Pi's, so we will
 also need to deploy Nebula on a more typical setup. 
 
 \subsection{Prototyping}
+\label{sect:prototyping}
 
-The prototype we're going to build for this project will be named Nebula, named
+The prototype we are going to build for this project will be named Nebula, named
 after the celestial phenomenon that can be observed in the form of a giant cloud
 out in space. On Nebula we will develop a way to deploy and invoke functions in
 the form of \ac{Wasm} modules or as spun up Docker containers. To perform the
@@ -1210,24 +1216,28 @@ where we can spin up a Debian virtual machine and set up a service on a public
 IP address. 
 
 \subsubsection{Hardware specifications}
+\label{sect:hardware_spec}
+
 Experiments will be performed on two types of hardware:
 
 1. Raspberry Pi: A small \ac{SBC}s with an ARM64 architecture that can run
    flavors of Linux. This device will be used to measure energy consumption
 relative to function invocations, which it is well suited for, as it consumes
 small amounts of energy by itself, making it ideal for comparing power
-consumption under actual load \citep{bekarooPowerConsumptionRaspberry2016}.
+consumption under load \citep{bekarooPowerConsumptionRaspberry2016}.
 
 2. Virtual Machine: A Debian-based VM running on an \ac{IaaS} platform (e.g.,
-   NREC), to measure performance relative to what a standard cloud native
+   NREC), to measure performance relative to how a typical cloud native
 application would perform.
 
+\newpage
 \subsubsection{Nebula requirements}
+\label{sect:nebula_req}
 
 Based on this, we can summarize what we need Nebula to be able to meet these
 requirements.
 
-\begin{table}[ht]
+\begin{table}[!ht]
 \centering
 \caption{Nebula requirements}
 \begin{tabular}{@{}p{0.3\linewidth}@{\hskip\tabcolsep}p{0.6\linewidth}@{}}
@@ -1253,20 +1263,13 @@ hosted on an IaaS platform (e.g., NREC) for a more typical cloud setup. \\
 manner that it presents little overhead when running our functions, isolating
 the resulting efficiency and energy readings to each function invocation. \\
 
-
 \bottomrule
 \end{tabular}
 \label{table:nebula_requirements}
 \end{table}
 
-
-\subsection{Benchmarking}
-
-Benchmarking will be employed as a research method to evaluate the performance
-of different configurations. Benchmark functions representing various
-computational workloads will be implemented and executed on both environments.
-
 \subsection{Controlled experimentation}
+\label{sect:controleld_experimentation}
 
 Controlled experimentation will be an important aspect of this research, as it
 let us isolate and study the effects of the deployment environment on
@@ -1279,7 +1282,15 @@ To experiment on Nebula, we will craft a set of benchmark functions. As the
 input value to these functions scale up, the computational load on the server
 will increase, letting us measure the execution time across different workloads.
 
+\subsection{Benchmarking}
+\label{sect:benchmark}
+
+Benchmarking will be employed as a research method to evaluate the performance
+of different configurations. Benchmark functions representing various
+computational workloads will be implemented and executed on both environments.
+
 \subsection{Benchmark functions}
+\label{sect:bench_funct}
 
 A total of four benchmarking functions will be selected for testing,
 representing various computational workloads. These functions will be written in
@@ -1308,16 +1319,17 @@ modules and Docker containers, the research aims to provide a thorough
 evaluation of the performance and efficiency of each environment.
 
 \subsection{Measurement and Data Collection}
+\label{sect:measure_data_collect}
 
 To quantify the efficiency and energy consumption associated with function
-invocations on each environment, empirical measurement techniques will be
+invocations on each environment, measurement techniques will be
 employed. We will deploy Nebula, along with the \ac{Wasm} modules and Docker
 images, to our target computers. For measuring startup and runtimes of each
-function akin to traditional deployments, we will deploy Nebula and the
-functions to a virtual machine running Debian on NREC. While a Raspberry Pi 4
-will serve as our deployment target for measuring startup latencies and runtimes
-of a device more akin to embedded systems, but more importantly, allowing us to
-measure energy consumption on a controlled device.
+function like a typical setup, we will deploy Nebula and the functions to a
+virtual machine running Debian on NREC. While a Raspberry Pi 4 will serve as our
+deployment target for measuring startup latencies and runtimes of a device more
+akin to embedded systems, but more importantly, allowing us to measure energy
+consumption on a controlled device.
 
 The Raspberry Pi will be connected to a power supply that can report energy
 readings, enabling the collection of energy consumption data during function
@@ -1354,8 +1366,8 @@ from the same time we start measuring cold start until the function returns the
 result will be measured. This metric will let us compare the computational
 efficiency of each environment under different workloads.
 
-While these additional measurements will be gathered on our local system as seen
-in \Cref{fig:benchmark-setup}: 
+Additionally, the following measurements will be gathered on the Raspberry Pi
+system system, as shown in \Cref{fig:benchmark-setup}: 
 
 - Power consumption: During the function execution on the Raspberry Pi, we will
 measure the power the server consumes at regular intervals. To get a more
@@ -1370,26 +1382,32 @@ be collected.
   invoking a function. This will be an estimation based on energy readings read
   during the lifetime of each function, and getting the average of these.
 
-  - Isolated Average Power: An estimation on how much extra power consumption a
-    function incurs, this will be a sum of Average power minus the Baseline
-  power. \(P_{\text{iso}} = P_{\text{total}} - P_{\text{baseline}}\)
+  - Isolated Average Power: The average power consumption attributed specificall
+  to function execution, calculated by subtracting the baseline power from the
+  average power. \(P_{\text{iso}} = P_{\text{total}} - P_{\text{baseline}}\)
 
 - Energy Consumption: Based on the power consumption measurements and the total
 runtime durations, the energy consumption for each function invocation will be
 calculated. We will calculate the energy consumption with the following formula:
-\[E_{\text{Wh}} = P_{\text{W}} \times t_{\text{h}}\] Two sets of energy
+\[E_{\text{Wh}} = P_W \times t_h\] Two sets of energy
 consumption values will be derived:
 
   - Energy consumption: The total energy in *Wh* consumed of the entire
-  Raspberry Pi device during function execution. The unit prefix will be
-  adjusted according to the results.
-
+  Raspberry Pi device during function execution. 
   - Isolated Energy consumption: The energy in *Wh* consumed by the function,
   with the baseline power subtracted from the base *W* used to calculate this.
 
-\todo{continue here}
+This data will then be saved in a JSON format and used for analysis.
+
+\subsection{Data analysis}
+\label{sect:data_anal}
+
+\todo{Land on analysis method for my findings.}
 
 \subsection{Comparative analysis}
+\label{sect:comp_anal}
+
+\todo{Finish methodology}
  
 1. Deployment Environments: The choice of \ac{Wasm} modules and Docker containers
 as the primary environments for deployment is aimed at testing the core
@@ -1401,7 +1419,6 @@ two waves cloud compute.
 the efficiency and scalability of each technology. This includes measuring the
 time to initialize (cold start), the time to execute tasks (runtime), and the
 energy required for operations.
-
 
 The following sections will dive deeper into the specific methodologies that
 will be employed for this thesis research. 
@@ -1419,9 +1436,8 @@ To ensure the reliability and validity of the results, the following measures
 will be taken: controlled experimentation will be used to minimize the influence
 of external factors; the experiments will be repeared multiple times to ensure
 consistency of the results; the data will be analyzed using statistical
-techniques to identify any patterns or trends; and the results will be validated
-by comparing them to existing research in the field, explored in
-\Cref{sect:related-work}.
+techniques to identify any patterns or trends; and the results will be compared
+to existing research in the field, explored in \Cref{sect:related-work}.
 
 ```
 Marius thoughts:
@@ -1434,73 +1450,335 @@ function in wasm focuses on the calculation itself. This is also true for the
 Docker images, so it's still a fair assessment. 
 ```
 
-\chapter{Designing Nebula}
-
-This chapter will present the design and overall architecture of Nebula, a
-\ac{FaaS} prototype that can spin up functions both as \ac{Wasm} modules, and as
-Docker images. The core components of the prototype will be presented, and by
-the end of this chapter, the reader should have a clear understanding on how
-Nebula was designed, how its core features were chosen for implementation and
-how one can interact with the prototype.
-
-\section{A word on this chapter}
-
-This is a prototype FaaS platform that is meant to illustrate the raw
-differences between two waves of cloud compute; \ac{Wasm} modules and container.
-It's scope will be limited by the fact that it is a single students thesis
-project, and will naturlly lack many features that large-scale FaaS platforms
-typically have. None of the major cloud providers have open sourced their FaaS
-platform, meaning that exactly how they function behind the scenes is difficult
-to surmise. This prototype therefore aims to hone in on the aspect of deploying
-functions as containers and compare it with deploying functions as \ac{Wasm}
-modules.
-
-\section{Nebula overview}
-
-
-This section will provide an overview of Nebula’s architecture, including:
-- A high-level description of the system components and their relationship. 
-
-- An explanation of how users can interact with Nebula. 
-
-- a brief discussion of the design trade-offs made during development.
-
-\section{Core components}
-
-The following sections will delve into the individual core components of Nebula:
-
-\subsection{Web server}
-
-
-\subsection{Function deployment}
-
-How functions are packaged, deployed and managed on the server.
-
-\subsection{Wasm Module execution}
-
-\todo[inline=true]{The process by which \ac{Wasm} modules are executed on Nebula.}
-
-\subsection{Docker Image execution}
-
-\todo[inline=true]{The process by which Docker images are executed on Nebula.}
-
-\subsection{Orchestration and Management}
-
-\todo[inline=true]{How Nebula manages the execution of functions, including passing input/output
-and collecting metrics}
-
-\section{Design rationale}
-
-\todo[inline=true]{Explain that this section provide an explanation of design decisions made
-during development of Nebula}
-
-\section{Designing energy readings}
-
 \newpage
+
+\chapter{Designing Nebula}
+\label{chap:design}
+
+Based on the requirements outlined in \Cref{sect:requirements}, we will design a
+prototype named Nebula, which is a serverless \ac{FaaS} platform capable of
+executing deployed functions as both \ac{Wasm} modules and Docker containers.
+The primary goal of Nebula is to serve as an experimental testbed for evaluating
+the performance and energy efficiency of \ac{Wasm} modules to traditional
+container-based deployments in the context of cloud-native applications. On top
+of this, we will need supporting infrastructure and utilities for benchmarking
+our prototype.
+
+\section{Prototype scope and Objectives}
+\label{sect:prototype_scope}
+
+While popular serverless platforms offered by major cloud providers are
+typically closed-source, meaning how the work behind the scenes is hard to
+evaluate from the outside, this prototype focuses on the aspect of function
+deployment and execution of \ac{FaaS}. This controlled approach lets us
+concentrate on an evaluation of deploying and runnings functions as \ac{Wasm}
+modules versus Docker containers. 
+
+As a student thesis project, the prototype's scope is inherently limited. We are
+not going to implement features such as automatic scaling, distributed function
+deployments, authentication and authorization, integrations with file systems
+and databases, and more. However, this focused design is intentional, as we
+want to minimize other factors, and rather hone in on a controlled comparison
+between the two deployment methods. 
+
+\newpage 
+
+\section{System architecture}
+
+We will design Nebula to be a \ac{FaaS} platform that lets us execute functions
+deployed as both \ac{Wasm} modules and Docker containers. The system
+architecture will consist of several key components that work together to
+facilitate the development, deploymend, and execution of functions, as well as
+the benchmarking and evaluation of their performance and energy efficiency.
+
+
+1. *Nebula core*: The central component of the prototype, responsible for handling
+   incoming requests from users, spinning up deployed functions, and executing
+them. Nebula will support both \ac{Wasm} modules and Docker containers,
+providing an interface for interacting with the deployed functions.
+
+2. *Function development and deployment*: A separate environment where example
+   functions can be developed, either compiled to \ac{Wasm} modules or packaged
+into Docker images, and then uploaded to Nebula.
+
+3. *Infrastructure*: Two environments will be used for performing the
+experiments: a Raspberry Pi, a low-power ARM-based \ac{SBC} serving as the
+deployment target for measuring energy, and a Debian-based virtual machine
+hosted on an \ac{IaaS} platform to simulate a typical cloud-native application
+deployment environment.
+
+4. *Energy measurement setup*: A power supply capale of reporting energy
+   readings will be used to supply the Raspberry Pi with power, allowing the
+collection of energy consumption data during function execution. 
+
+5. *Benchmarking utility*: A separate benchmarking application for performing
+   our experiments. We will develop this to let us create a benchmark suite that
+can be reused and test a variety of variables. This utility will be responsible
+for reading energy measurements from our power supply, and consolidate energy
+readings with function executions.
+
+\Cref{fig:system-design} illustrates the overall architecture of our Nebula
+prototype system, including benchmarking and energy measurements for our
+experiments.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\columnwidth]{assets/5-overall-system-design.png}
+  \caption{Overall architecture of our prototype system.}
+  \label{fig:system-design}
+\end{figure}
+
+\section{Nebula}
+
+Nebula will serve as the core component of the prototype. It will handle incoming
+requests, manage the lifecycle of deployed functions, execute them, and
+measure startup and runtimes of each execution. We will develop an interface
+for users to interact with the deployed functions, either as \ac{Wasm} modules
+or Docker containers.
+
+Nebula's function execution process will involve several steps, as illustrated
+in \Cref{fig:function-execution-design}. When a user invokes a function through
+the interface, Nebula receives the request and routes it to the corresponding
+function based on the specified deployment method. Nebula will then start the
+function, execute it with the provided input data, and return the result back to
+the user.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/5-nebula-function-execution.png}
+  \caption{Flow of a user invoking a function on Nebula.}
+  \label{fig:function-exeuction-design}
+\end{figure}
+
+This function execution process will also include collecting metrics for each
+function invocation. We will start a timer at the start of our function
+execution that first times when our function is loaded into memory and starts
+executing, and then takes the time again at the end of the function. These
+metrics will be added to our function response and provide accurate measurements
+on how fast our functions start up and how much time is attributed to the
+function running itself.
+
+\subsection{Function packaging and deployment}
+
+Functions deployed to Nebula will either be in the form of a \ac{Wasm} module
+binary file, or as a Docker image that is uploaded to the server and loaded into
+the servers image repository. The packaging process will involve compiling the
+source code to \ac{Wasm} module binaries, or creating a Docker image with the
+use of a Docker file that describes its layers.
+
+Our server will provide a way to let users upload their functions to the system.
+The deployment process will handle the necessary steps to make the functions
+available for invocation, such as storing the \ac{Wasm} modules or Docker image,
+and preparing them for invocation. \todo{rephrase this mess}
+
+\subsection{Function execution}
+
+To run functions we will need to provide the proper environments they can run
+inside of. For \ac{Wasm} modules, we will need a way to include a \ac{Wasm}
+runtime, as mentioned in \Cref{sect:wasm_runtimes}, which will let us run our
+functions in a sandboxed environment. The runtime will handle the loading and
+instantiation of the modules.
+
+For Docker containers, we will use the containerization capabilities of Docker.
+Each function will run in its own isolated container, with the Docker Engine
+runtime managing its startup and shutdown. 
+
+For both methods, we will need a way to pass the users input to the function as
+a parameter and receive the result of each function invocation. The chosen way
+to pass input and receive output should be the same for each environment, to
+ensure controlled experimentation.
+
+\subsection{Interface}
+
+To serve as an interface for the user to invoke our functions, we will also
+develop a web server that will expose end points that our users can communicate
+with over HTTP in a REST-ful manner. In other word, we are going to develop a
+web server that exposes a REST API, where users can send requests that result in
+function invocation based on the request body.
+
+\section{Infrastructure}
+
+The Nebula prototype will be deployed on two different environments to evaluate
+its performance and energy efficiency:
+
+- Raspberry Pi: A low-power, ARM-based \ac{SBC} will serve as the deployment
+target for measuring energy consumption during function execution. The Raspberry
+Pi will run Nebula and the deployed functions, and it will be connected to the
+energy measurement setup to collect power consumption data.
+
+- Virtual Machine: A Debian-based virtual machine hosted on an \ac{IaaS} platform
+will be used to simulate a typical cloud-native application deployment
+environment. Nebula will be deployed on this virtual machine, and the functions
+will be executed in this environment to assess their performance in a cloud-like
+setting.
+
+\section{Energy measurements}
+
+To measure the energy consumption of our functions executed on the Raspberry Pi,
+a power supply capable of reporting energy readings will be used. The Raspberry
+Pi will be connected to the power supply and provide energy readings continually
+over the lifetime of our benchmarks. In \Cref{sect:energy_monitoring} a couple
+of devices and protocols were presented that will be relevant for our system. We
+will attempt to set up energy measurements with each configuration, and see
+which best matches our desired outcome. \todo[inline=true]{I ended up with Gude
++ Modbus tcp, should I just cut out Smart switch and MQTT/Zwave from the thesis,
+as they turned out to be too slow on reporting? Or could they still be relevant,
+considering they are also valid ways to measure energy readings, at a more
+affordable level?}
+
+The collected energy measurements data will be stored in a fitting data format
+and parsed for analysis and comparison between \ac{Wasm} modules and Docker
+containers.
+
+\section{Benchmarking utility}
+
+We want to minimize the amount of computing power attributed to our prototype
+as much as possible. With the exception of invoking the functions from a
+client, we want to isolate the computing power used to run our functions as much
+as possible. Because of this, we will use a separate computer for
+performing benchmarking. While there exists tools out there that could help us
+achieve parts of this, a custom application will be built that can both interface with
+the server through the REST API, and interface with the power supply over a
+chosen protocol. 
+
+The utility will be responsible for invoking the functions deployed on Nebula,
+both as \ac{Wasm} modules and Docker containers, and collect our metrics. The
+collected data will be stored and organized in a JSON format, and then analysed
+using the statistical techniques mentioned in \Cref{sect:data_anal}. 
+
+\section{Experiment design}
+
+To evaluate the performance and energy efficiency of \ac{Wasm} modules compared
+to Docker containers, we will perform a series of experiments on our prototype.
+The experiments, as described in {sect:experiments}, will focus on measuring
+startup times, runtimes, power measurements and calculate the resulting energy
+consumption. Each experiment will involve deploying the same function as both a \ac{Wasm}
+module and as a Docker container on Nebula. The functions will be invoked using
+the benchmarking utility, which will collect the relevant metrics for analysis.
+
+The experiments will be performed on both the Raspberry Pi and the virtual
+machine environments to assess the performance in different deployment
+scenarios. The Raspberry Pi setup will additionally give us insights into the
+energy consumption of our functions, while the virtual machine will represent a
+cloud-native deployment environment, with a more powerful CPU and more memory,
+like we would expect of our cloud servers.
+
+The data we end up with from the experiments will be analyzed and compared to
+evaluate the performance and energy efficiency of \ac{Wasm} modules versus
+Docker containers. We will perform multiple invocations of the same set of
+independent variables; function, module type and input, and derive median, mean
+and average of each invocation to strengthen our findings.
+
+Finally, the results of our experiments will be visualized and discussed,
+relating the findings to the problem statements posed for this thesis. Here we
+will highlight the potential benefits and trade-offs of using \ac{Wasm} modules
+for serverless function deployment compared to traditional Docker containers, if
+the hypothesis we set out to explore ends up holding true.
 
 \chapter{Implementing Nebula}
 
-This chapter provides the details of the implementation of Nebula. 
+As mentioned in the acknowledgments at the start of this thesis, the idea for
+this project came from a podcast episode where the CEO of Fermyon, Matt Butcher,
+told the journey of how they ended up developing their cloud platform as a way
+to offer a \ac{FaaS} powered by \ac{WebAssembly} modules. They have built a
+cloud application platform for \ac{Wasm}-based serverless functions named
+Fermyon Cloud, which is supported by their developer framework, Spin. Spin is a
+framework for building \ac{Wasm}-based functions that can be deployed on their
+cloud, and this setup acts as an inspiration for the prototype we are going to
+build. Both of these projects are open-sourced and available on Github, so we
+can take a look at how they've implemented their services to run \ac{Wasm}
+modules in a serverless environment.
+
+The code presented in this chapter is shortened down to focus on the important
+parts that we will use for our experiments. There is also an interactive GUI
+built with HTMX and Askama HTML templating which the user can use to manually
+interact with each deployed function, but this aspect is more a novelty for
+manual testing, rather than a feature that supports this thesis. The code for
+this GUI will not be part of the code examples shown, but can be found in its
+entirity in the projects repository. \todo[inline=true]{Will I hand in the
+repository as part of the hand in?}
+
+\section{Choosing a tech stack}
+
+The programming language Rust was chosen to build our prototype. It has a great
+story with \ac{Wasm}, with the same company, Mozilla, having developed both languages. 
+Rust is a <describe rust here>. There also exist a Rust crates (Rust's naming
+convention for libraries) for most of the \ac{Wasm} runtimes that we could
+choose to employ for our application. Using one of these crates will allow us to
+ship the entire \ac{Wasm} runtime required for running our \ac{Wasm} modules as
+part of the web server itself, meaning that we won't have to install a separate
+runtime on our server as part of our prototype deployment.
+
+For our \ac{Wasm} runtime, we're going to opt for
+Wasmtime^[https://wasmtime.dev/], as it offers a relatively easy way to install
+and package our runtime with our application. <enter more reasons>
+
+For our Docker environment, we will have to install Docker desktop on both our
+development computer, and on each deployment target. Docker desktop has support
+for both Debian on ARM64 on our Raspberry Pi, and on Debian on our virtual
+machine. We will write a Rust function that spins up a command for running our
+docker image during execution.
+
+\section{Building a web server}
+
+To let our users interact with our application, we need to spin up an
+application that they can interface against. For this we are going to build a
+web server that exposes a REST API, and for this we will use Actix
+Web^[https://actix.rs/], a web framework that builds upon the asynchronous Rust
+runtime Tokio, which we will use for running multiple processes at once.  
+
+The code below describes how the main entry point for our web server is built.
+We define an asynchronous main function, using a Rust macro `[#tokio::main}]`.
+Then we define a router with two end points, one for calling functions, and one
+for retrieving stored function results.
+
+\newpage
+
+```{rust}
+// Import crates
+use std::{
+  net::{IpAddr, Ipv4Addr, SocketAddr},
+  sync::Arc,
+};
+use tokio::{net::TcpListener, sync::Mutex};
+use axum::{
+  routing::{get, post},
+  Router,
+};
+// Supporting library for our function execution
+use nebula_server::{
+    api::call_function::call_function_headless, 
+    components::function_results::get_function_results,
+    models::AppState,
+};
+// Entry point, Tokio main function
+#[tokio::main]
+async fn main() {
+  let app_state = Arc::new(AppState {
+      function_calls: Mutex::new(vec![]),
+  });
+
+  let router = Router::new()
+      .route("/results", get(get_function_results))
+      .route("/invoke_function", post(call_function_headless))
+      .with_state(app_state);
+
+  let localhost = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
+
+  let listener = TcpListener::bind(&SocketAddr::new(localhost, 3090))
+      .await
+      .unwrap();
+
+  axum::serve(listener, router.into_make_service())
+      .await
+      .expect("Server to start up");
+}
+
+```
+
+
+
+
  
 
 \section{Requirements}
