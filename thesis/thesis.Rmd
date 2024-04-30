@@ -11,7 +11,7 @@ output:
     number_sections: true
     latex_engine: lualatex
     citation_package: biblatex
-    highlight: zenburn
+    highlight: /Users/mariuskluften/projects/uio/master-thesis/nebula.theme
     fig_caption: true
 
 
@@ -1734,7 +1734,7 @@ for retrieving stored function results.
 
 \newpage
 
-```{rust}
+```{rust, eval=F}
 // Import crates
 use std::{
   net::{IpAddr, Ipv4Addr, SocketAddr},
