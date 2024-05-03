@@ -43,6 +43,8 @@ header-includes:
   - \addbibresource{nebula.bib}
   - \addbibresource{manual-nebula.bib}
   - \DefineBibliographyExtras{english}{}
+  - \usepackage{minted}
+  - \usemintedstyle{xcode}
   - \usepackage{csquotes}
 
 
@@ -50,7 +52,6 @@ header-includes:
   - \usepackage{cleveref}
   - \usepackage{booktabs}
   - \usepackage{array} 
-
   - \onehalfspacing
 
   - \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
@@ -94,6 +95,8 @@ library(ggplot2)
 library(dplyr)
 library(scales)
 library(kableExtra)
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.engine_args = "-shell-escape")
 ```
 
 <!-- -------------------- -->
@@ -199,9 +202,9 @@ scalability, essential for cloud services.
 
 \vspace{0.25cm}
 
-Preliminary findings suggest that programs compiled to WebAssembly modules have 
-reduced startup and runtimes, which hopefully leads to less energy
-consumption and offering a viable pathway towards a more sustainable cloud.
+Preliminary findings suggest that programs compiled to WebAssembly modules have
+reduced startup and runtimes, which hopefully leads to lower energy consumption,
+offering a viable pathway towards more sustainable cloud computing.
 
 \end{minipage}
 \end{center}
@@ -243,9 +246,9 @@ invaluable the past semesters.
 
 \vspace{0.25cm}
 
-
-Finally I would like to thank Syrus Akbary, founder of Wasmer, whom I met at
-WasmIO 2024 who showed me how to reduce my startup times by a further 100 times.
+Finally, I would like to thank Syrus Akbary, founder of Wasmer. If I hadn't met
+him at the WasmIO 2024 conference in Barcelona, my startup times would be 100
+times slower.
 
 \end{minipage}
 \end{center}
@@ -1676,6 +1679,7 @@ for serverless function deployment compared to traditional Docker containers, if
 the hypothesis we set out to explore ends up holding true.
 
 \chapter{Implementing Nebula}
+\label{chap:implement}
 
 As mentioned in the acknowledgments at the start of this thesis, the idea for
 this project came from a podcast episode where the CEO of Fermyon, Matt Butcher,
@@ -1689,99 +1693,483 @@ build. Both of these projects are open-sourced and available on Github, so we
 can take a look at how they've implemented their services to run \ac{Wasm}
 modules in a serverless environment.
 
-The code presented in this chapter is shortened down to focus on the important
-parts that we will use for our experiments. There is also an interactive GUI
+In this chapter, the code snipets are presented in a condensed form, focusing on
+the parts relevant to our experiments. There is also an interactive GUI
 built with HTMX and Askama HTML templating which the user can use to manually
 interact with each deployed function, but this aspect is more a novelty for
-manual testing, rather than a feature that supports this thesis. The code for
-this GUI will not be part of the code examples shown, but can be found in its
-entirity in the projects repository. \todo[inline=true]{Will I hand in the
-repository as part of the hand in?}
+manual testing, rather than a feature that supports this thesis. A lot of the
+source code will not be shown, we are going to focus on the code that lets us
+run functions as either \ac{Wasm} modules or Docker containers. 
 
-\section{Choosing a tech stack}
+\section{Choosing a Tech Stack}
 
-The programming language Rust was chosen to build our prototype. It has a great
-story with \ac{Wasm}, with the same company, Mozilla, having developed both languages. 
-Rust is a <describe rust here>. There also exist a Rust crates (Rust's naming
-convention for libraries) for most of the \ac{Wasm} runtimes that we could
-choose to employ for our application. Using one of these crates will allow us to
-ship the entire \ac{Wasm} runtime required for running our \ac{Wasm} modules as
-part of the web server itself, meaning that we won't have to install a separate
-runtime on our server as part of our prototype deployment.
+The programming language Rust was chosen to build our prototype. This choice was
+driven by Rust's strong relationship with \ac{Wasm} and its suitability for
+building efficient and scalable applications. Developed by Mozilla Research, the
+same company that developed \ac{Wasm}, Rust emphasizes memory safety,
+concurrency, and parallelism while combining high performance with strong safety
+guarantees. Its syntax is somewhat similar to TypeScript, allowing developers write
+low level programs in a high-level manner
 
-For our \ac{Wasm} runtime, we're going to opt for
-Wasmtime^[https://wasmtime.dev/], as it offers a relatively easy way to install
-and package our runtime with our application. <enter more reasons>
+\subsection{Rust and WebAssembly}
 
-For our Docker environment, we will have to install Docker desktop on both our
-development computer, and on each deployment target. Docker desktop has support
-for both Debian on ARM64 on our Raspberry Pi, and on Debian on our virtual
-machine. We will write a Rust function that spins up a command for running our
-docker image during execution.
+Rust's close relationship with \ac{Wasm} stems from their shared origin at
+Mozilla Research, where both technologies stems from. Rust's ecosystem offers a
+wide range of crates (Rust's naming convention for libraries) for various
+\ac{Wasm} runtimes, enabling us to ship the entire Wasm runtime required for
+running our Wasm modules as part of the web server itself. This approach
+eliminates the need to install a separate runtime on our server, simplifying the
+prototype development.
 
-\section{Building a web server}
+\subsection{Wasmtime}
 
-To let our users interact with our application, we need to spin up an
-application that they can interface against. For this we are going to build a
-web server that exposes a REST API, and for this we will use Actix
-Web^[https://actix.rs/], a web framework that builds upon the asynchronous Rust
-runtime Tokio, which we will use for running multiple processes at once.  
+For our \ac{Wasm} runtime, we opted for Wasmtime^[https://wasmtime.dev/].
+Wasmtime offers seamless integration with Rust through the official wasmtime
+crate and provides portability across platforms, including ARM for our Raspberry
+Pi deployment. The choice for Wasmtime was inspired by Fermyon's choice to build
+their platform on it. A viable alternative is Wasmer^[https://wasmer.io/], which
+can also be installed as a crate and shipped with a Rust application.
 
-The code below describes how the main entry point for our web server is built.
-We define an asynchronous main function, using a Rust macro `[#tokio::main}]`.
-Then we define a router with two end points, one for calling functions, and one
-for retrieving stored function results.
+\subsection{Docker Environment}
 
-\newpage
-
-```{rust, eval=F}
-// Import crates
-use std::{
-  net::{IpAddr, Ipv4Addr, SocketAddr},
-  sync::Arc,
-};
-use tokio::{net::TcpListener, sync::Mutex};
-use axum::{
-  routing::{get, post},
-  Router,
-};
-// Supporting library for our function execution
-use nebula_server::{
-    api::call_function::call_function_headless, 
-    components::function_results::get_function_results,
-    models::AppState,
-};
-// Entry point, Tokio main function
-#[tokio::main]
-async fn main() {
-  let app_state = Arc::new(AppState {
-      function_calls: Mutex::new(vec![]),
-  });
-
-  let router = Router::new()
-      .route("/results", get(get_function_results))
-      .route("/invoke_function", post(call_function_headless))
-      .with_state(app_state);
-
-  let localhost = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
-
-  let listener = TcpListener::bind(&SocketAddr::new(localhost, 3090))
-      .await
-      .unwrap();
-
-  axum::serve(listener, router.into_make_service())
-      .await
-      .expect("Server to start up");
-}
-
-```
+For our Docker environment, we installed Docker Desktop on both our development
+computer and each deployment target. Docker Desktop supports Debian on ARM64 for
+our Raspberry Pi deployment. It also supports Debian on amd for our virtual
+machine. We implemented a Rust function to spin up a command for running our
+Docker images during execution.
 
 
+\section{Nebula Core}
+
+In this section we will describe how we built the core of Nebula, with the
+following components:
+
+1. **Web Server**: A RESTful API server written in Rust andand utilities used by
+   both the web server and function runners. built using the Actix Web
+framework, responsible for receiving function invocation requests and managing
+the execution of functions, serving as the interface for our users.
+
+2. **Function Runners**: Separate modules for executing functions deployed as
+   Wasm modules or Docker containers, encapsulating the logic for invoking and
+managing the respective execution environments.
+
+3. **Shared Library**: A common library containing shared types the function
+   runners. 
+
+\subsection{Building the Web Server}
+
+The web server serves as the entry point for Nebula, exposing a RESTful API for
+function invocation requests. We built it using the Actix Web framework, which
+leverages the asynchronous Rust runtime Tokio for handling concurrent requests.
+
+\inputminted{rust}{assets/code/web_server.rs}
+
+The main entry point defines a router with a single POST endpoint
+`/invoke_function`, which is bound to the `call_function` handler. This handler
+function determines the requested function type (Wasm or Docker) and routes the
+request to the corresponding function runner module.
+
+\section{Calling functions}
+
+To handle function invocation requests, Nebula defines a set of types to
+represent the request parameters, function results, and associated metrics. This
+is stored in the shared library and lets us reuse the same types for our runner
+functions and the web server implentation.
+
+\inputminted{rust}{assets/code/nebula_types.rs}
+
+The `call_function` handler function is responsible for dispatching the request
+to the appropriate function runner based on the requested function type.
+
+\inputminted{rust}{assets/code/call_function.rs}
+
+The function runners for Wasm modules and Docker containers are implemented in
+separate modules within the shared library. This separation of concerns makes it
+easier to maintain and possibly extend the codebase later, in case anyone wants
+to build upon this project in the future.
+
+\subsection{Executing Wasm modules}
+
+The `run_wasm` function is responsible for executing a Wasm module based on the
+provided input and module path. We are using the Wasmtime crate, the official
+Rust library for executing Wasm modules, and the wasmtime-wasi crate for
+providing a WebAssembly System Interface (WASI) implementation, which lets us
+pass input as stdin to our functions.
+
+\inputminted{rust}{assets/code/wasm_runner.rs}
+
+The key steps involved in executing a Wasm module are:
+
+1. Initialize the Wasmtime engine and linker.
+2. Set up the WASI context, including stdin and stdout pipes for passing input
+   and receiving output.
+3. Load the correct Wasm module from the provided path. This path is determined
+   in the `call_function` and lets our runner know where our .wasm binary files
+are stored on our server. In our case it's in `/root/modules/wasm/`.
+4. Instantiate the module and execute the modules default function, which
+   corresponds to each functions main function, which we will show later.
+5. Capture the output from stdout and return it as the function result.
+
+Throughout the execution process, we collect startup and runtime metrics which
+are included in the returned `FunctionResult` struct. As we will see in
+\Cref{chap:results}, our \ac{Wasm} modules startup 
 
 
+\subsection{Executing Docker Containers}
+\label{sect:execute_docker}
+The `run_docker` function is responsible for executing a function deployed as a Docker container. It spawns a new Docker container based on the provided image and function name, passing the input data as stdin.
+
+\inputminted{rust}{assets/code/docker_runner.rs}
+
+The key steps involved in executing a Docker container are:
+
+1. Start up a Command process, from Rust's standard library, which spawns a
+   `docker run` command that we provide with image name and append stdin and
+stdout processes. 
+2. Write input to the stdin, which the function that is packaged inside our
+   container is waiting on.
+3. Wait for function inside the Docker container to execute and write out the
+   result as stdout.
+4. Parse output from the Docker container with a helper function, which comes in
+   the form of a tuple of (result, micro_seconds_since_epoch). We will use the
+second item in this tuple pair for determining the actual startup time of our
+function, which when the Docker container starts executing.
+
+Similar to the \ac{Wasm} module execution, we collect relevant metrics for
+startup and runtime of our functions invoked as Docker containers.
+
+\subsection{Challenges and insights} 
+
+During the implementation of Nebula's core functionality, several challenges
+were encountered that required creative problem-solving and valuable insights
+from experts from the \ac{Wasm} community.
+
+Initially, passing input data to Wasm modules proved challenging due to the need
+for shared memory and exported functions. This issue was resolved by leaning
+into the the POSIX-like behavior of WASI and provide input via stdin and output
+to be captured from stdout, similar to traditional command-line programs. As
+\citet{malmgrenGettingDataOut2022} suggested in their helpful article, using
+this feature of WASI provided a simpler approach for handling input and output
+in our Wasm module execution model. This approach was also implemented for
+passing input and output to and from our Docker containers, and while using
+stdin and stdout should incur some cost in terms of our metrics, this cost
+applies to both deployment methods, ensuring a fair assessment.
+
+Another challenge arose when timing the startup of Docker containers. The first
+iteration involved defining a startup_time variable immediately after spawning
+the Command process. However, this naive implementation resulted in misleading
+"cold start" times of practically zero seconds, which would have invalidated our
+hypothesis. Fortunately, a former colleague, Roger Slaaen, suggested timing the
+startup at the moment the Docker images start running. This proved to be the key
+for solving this challenge as this accurately captures the cold start of our
+Docker-based functions when the container are loaded and start running. 
+
+Finally, the first implementation of the \ac{Wasm} module execution had longer cold start
+times than expected, despite maintaining a fast runtime. While attending the
+WasmIO conference in 2024, I met Syrus Akbary, the founder of Wasmer, whom I
+showed my prototype to and mentioned my cold start issue. 
+
+Akbary, who works on the core of Wasmer runtime, shared key insights into how a
+runtime prepares a \ac{Wasm} module for execution. The long startup latency
+turned out to be caused by a naive understanding of how the modules should be
+loaded, and with the first iteration, Wasmtime had to load "raw" Wasm binary
+files. To execute our modules on the runtime, we have to compile raw binary
+files into a binary file that Wasmtime can understand. This step was crucial in
+unlocking the perfomance we will explore in \Cref{chap:results}. This method was
+backed by the employees at Fermyon, who were also attending the same conference,
+and shared that their framework Spin does the same thing while building
+\ac{Wasm} modules for their platform. The code that implements this feature is
+as follows: 
+
+\inputminted{rust}{assets/code/serialize_wasm.rs}
+
+The steps involved in serializing our modules are:
+
+1. Get a list of all the \ac{Wasm} modules present in our deployment folder.
+2. Instantiate the same kind of Wasmtime engine that we use in our function
+   execution function.
+3. Loop through all the deployed modules in our folder.
+4. Load the raw \ac{Wasm} binary and compile into a `Module` which Wasmtime can
+   run on its engine. Then serialize the resulting compiled binary represented
+by bytecode.
+5. Write the resulting bytecode into a file that we store in a separate folder
+   from our deployment storage.
+
+This sequence precompiles our raw \ac{Wasm} binaries into bytecode we can load
+and execute upon request. The code for loading the binaries can be seen here:
+
+\inputminted{rust}{assets/code/load_wasm.rs}
+
+Here we load the requested precompiled and serialized \ac{Wasm} binary from our
+file system and deserialize it into a \ac{Wasm} module we can run on Wasmtime.
+This function is called on each invocation of our \ac{Wasm} modules. It is
+important to note the presence of an unsafe code block surrounding the
+`Module::deserialize` function. As Rust is a statically typed program, we have
+to provide the types for our code ahead of time, before compilation, and even if
+we are "pretty sure" that we know what the contents of our module_bytes are, we
+can not be entirely sure, so we have to opt out of Rust's safety in this case.
+This is not a crucial downside for our experiments, but hopefully something that
+can be changed in a later version of Wasmtime, in order to minimize the risk of
+this potential insecurity.
+
+The resulting application built from this source is now ready to execute
+functions as either \ac{Wasm} modules or Docker containers. However, to achieve
+this, we need to implement our environment for developing and deploying these
+functions.
+
+\section{Function development and deployment}
+
+Now that we have a web server that we can start on our deployment targets, we
+are going to need some functions that we can deploy and run on Nebula. For thatj
+we are going to develop the functions described in \Cref{sect:bench_funct} in
+Rust and set up a way to package our functions in a way that we can spin them up
+and conduct the experiments we have planned.
+
+\subsection{Development Environment}
+
+For our development environment, we are going to set up some parts: 
+
+- A shared library: We are relying on stdin and stdout to pass input and output
+from our functions, and ideally we won't have to implement that individually for
+each of our functions. Therefore we are going to build a shared library that
+exposes functions for reading from stdin and printing to stdout. 
+- Timing docker cold start: In this library we will also implement a helper
+function for getting the actual time of cold start for our Docker containers. 
+- A Make file and Dockerfile: for streamlining the build and deployment of our
+functions to our target.
+
+\subsection{Shared library}
+
+We have three goals with our shared library code. First we need a single way to
+run our functions that wraps our example functions with reading from stdin and
+writing to stdout. Secondly, we want a way to time the actual startup times of
+our docker containers. Finally we will write a Dockerfile that we will use to
+build your Rust functions into Docker images and a Makefile we can use to run
+to streamline the build and deploy of each function with ease.
+
+The pipeline we want to support is: 
+
+\inputminted[firstline=6, lastline=9]{bash}{assets/code/commands.sh}
+
+To achieve this pipeline we will implement the following: 
+
+\inputminted{rust}{assets/code/shared_lib.rs}
+
+In this library we have exposed a `run_function` wrapper that we will import
+into the code for each of our benchmark functions. For each of our functions we
+want to start with timing the start of our function, if it is Docker. If it is
+not, the timestamp will be empty and not returned to Nebula. In hindsight, we
+could have measured the start time in the same way for our \ac{Wasm} modules,
+but some manual testing revelead a negligble difference, which shouldn't have
+any major impact on our results. 
+
+After timing the start of the function, we read from the stdin, run the function
+with the input value of type T (generic type, which can change depending on
+our functions). Then we print the result to stdout, either as a pair of
+`result | timestamp`, or just the result.
+
+Then we had to specify a Dockerfile that our Docker build process will read from
+that describes how our functions are to be packaged into a Docker image. When we
+build with this Dockerfile, we also provide the target architecture we want our
+Docker container to run on. For our NREC deployment, we will target linux/amd64
+and for the Raspberry Pi, we will target linux/arm64. 
+
+\inputminted{toml}{assets/code/Dockerfile}
+
+In this Dockerfile, we use the official Docker image for Rust as the build
+layer. Then we copy over the required images into this layer, build our
+functions with the release flag (ensuring best performance), and flag that we
+want to print the timestamp for these Docker functions through a feature flag.
+
+
+Then we use a smaller debian:bullseye-slim image as a target for our final
+Docker image as we do not need the entire Rust toolchain installed in our final
+image to run our functions as Rust binaries.
+
+Finally, we define a simple run.sh script, which is identical for every
+function, as shown here:
+
+\inputminted[firstline=2, lastline=4]{bash}{assets/code/commands.sh}
+
+This serves as the script that we run when we invoke our Docker functions as
+described in \Cref{sect:execute_docker}, invoking the main function of our
+benchmark functions.
+
+Finally, we created a `Makefile` to streamline the commands required for
+building and deploying our functions, following the process described earlier.
+
+While explaining the code for this file is not crucial for our research,
+\Cref{fig:build_deploy_function} illustrates the flow it follows. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/6-build_deploy_functions.png}
+  \caption{Streamlined flow of building and deploying functions.}
+  \label{fig:build_deploy_function}
+\end{figure}
+
+One thing to note in this flow, is the step *wasm-tools strip*. *wasm-tools* 
+is a CLI tool maintained by the Bytecode Alliance that includes a series of
+tools we can use to manipulate our \ac{Wasm} modules. Compiling a Rust program
+to \ac{Wasm} includes some unnecessary sections that we can strip away. The
+\ac{Wasm} binaries we built for our experiments resulted in ~2Mb in size. Using
+this tool lets us cut this down to ~200Kb instead, while still maintaining its
+function. More on that in our \Cref{chap:results}.
+
+\subsection{Implementing a benchmark function}
+
+Now that we have set up an environment for building and deploying functions to
+Nebula, we can look at how we developed the benchmark functions themselves. We
+will implement the recursive Fibonacci function in this section.
+
+\inputminted{rust}{assets/code/fib-recursive.rs}
+
+Our shared library handles the core functionality. As described in
+\Cref{sect:challenges}, we treat our functions as normal programs, which we do
+by running them by invoking their main function. In this main function we
+determine if the function will be compiled to a \ac{Wasm} module or a Docker
+container based on the `--features docker` flag we pass in our build command.
+(See \Cref{fig:build_deploy_function})
+
+Then we implement the `fib` function which takes in what number in the Fibonacci
+sequence we're interested in, which we have implemented recursively, and pass
+this into our `run_function` wrapper from our shared library.
+
+With that in place, we just need to set up our deployment targets - the
+Raspberry Pi and the Debian-based virtual machine on NREC.
+
+\section{Deployment Setup}
+
+For our research we have decided to set up Nebula both on a Raspberry Pi running
+Debian on an ARM-based CPU, and on a virtual machine running on \ac{NREC}, with
+gives us an AMD-based virtual CPU.
+
+\subsection{Raspberry Pi Setup}
+
+The Raspberry Pi, a low-cost and energy-efficient \ac{SBC}, was chosen as one of
+our deployment targets to measure power consumption of our function executions.
+The model we chose was the Raspberry Pi 4 Model B, with 4GB of RAM, running the
+lite version of the Raspberry Pi OS, which is built on top of Debian.
+
+\subsubsection{Hardware setup}
+
+1. Use the Raspberry Pi image tool for installing Raspberry Pi OS (lite, without
+desktop). Configure the OS with:
+  1. Wifi credentials, if not using ethernet.
+  2. SSH key, created with ssh-keygen, used to authenticate when connecting to
+     device through SSH. This is also useful for uploading our files through
+  scp.
+2. Insert the microSD into the device and connect it to power, which boots it up.
+3. If device connects to internet, it will be discoverable as `raspberrypi.local`,
+   which can be used instead of its IP-address.
+
+
+\subsection{Virtual Machine setup (NREC)}
  
+For our experiments, we chose \ac{NREC} as our \ac{IaaS} platform for hosting
+our virtual machine and benchmark a more typical deployment environment. To use
+this service, we had to contact the administration and verify that we were a
+student at the University of Oslo. 
 
-\section{Requirements}
+Once inside the NREC platform, we can launch an instance of our virtual machine,
+following their guide\todo{add guide?} for doing so. For our experiments we
+chose the pre-configured flavor of `m1.medium`, which gives us 1 virtual CPU, 4GB
+of RAM and 20GB storage space. The virtual machine was built with the base image
+of Debian 12. After this is set up, we can ssh into the server with a ssh-key we
+provided during setup.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/6-nrec_nebula}
+  \caption{Our virtual machine configured on NREC.}
+  \label{fig:build_deploy_function}
+\end{figure}
+
+
+\subsection{Software setup}
+
+As both our setups are running a flavor of Debian, setting up the software
+required to run our experiments are identical.
+
+- First we update the package lists and upgrade pre-installed packages on our
+server: 
+
+\inputminted[firstline=12, lastline=13]{bash}{assets/code/commands.sh}
+
+- Then we install Docker Engine following their official guide from their
+manual^[https://docs.docker.com/engine/install/debian/].
+
+Now we are ready to deploy Nebula to each server and deploy our functions.
+
+
+
+
+\subsection{Tying it all together}
+
+Once we have install the required software on our servers, we can start to
+deploy our Nebula web server and upload our \ac{Wasm} modules and Docker images.
+
+In our main project folder, we build Nebula using the cargo build command. We
+add the flag `--release`, which optimizes the binary for production, and
+the flag `--target <target-arch>`, which cross-compiles Nebula to the target
+architecture. Our prototype was developed on a M2-based Macbook pro, so the
+default build target is not supported on our target platforms. Cross-compiling
+works fine, but the easiest and fastest way to build Nebula is to do it on the
+target architecture itself. 
+
+For the Raspberry Pi, this was done by cloning the Github repository with the
+source code onto the device, and building it from there. For the NREC
+implementation, a Github action was implemented for building the application on
+a Linux VM as part of their CI/CD service. This is not a crucial detail for our
+research, but valuable for anyone who would want to recreate the experiment and
+expand upon it.
+
+Finally, we build and deploy our functions as described in
+\Cref{sect:shared_lib}, and upload our \ac{Wasm} binaries and our gzipped Docker
+images to each server. Part of deploying the Docker images is loading them into
+the local Docker image list, done with the command `docker load -i
+/path/to/image.tar.gz`. When we start our server we call the `serialize_wasm()`
+function and serialize our \ac{Wasm} modules into byte_code that we can load
+and run on Wasmtime. With all this in place, we can now perform our experiments.
+
+\section{Benchmarking}
+
+Now that we have our Nebula \ac{FaaS} prototype up and running on both our
+Raspberry Pi and virtual machine on NREC, we can start implementing the
+benchmarking utility that will be used to conduct the experiments and collect
+data.
+
+\subsection{Setting up our energy measurements}
+
+
+
+\subsection{Energy measurement challenges}
+
+In \Cref{sect:energy_monitoring}, we saw several protocols and measurement
+devices, and how they work, described. The first iteration of measuring power
+was inspired by \citet{qianEnergyFootprintingWordPress2022}, and
+consisted of an Aotec Smart Switch 7, Aotec Z-stick 7 and relied on the
+zwave-js-ui application to act as a publisher for reporting energy measurements
+over MQTT. This setup had one major flaw; energy reporting through MQTT could
+only be reported once every 30 seconds at a minimum. This turned out to be too
+slow for attempting to measure accurate readings for our experiments. 
+
+This limitation was unexpected, but Qian had used an Aotec Smart Switch 6, the
+previous generation, which turned out to support reporting once every second.
+This device was luckily found on Finn.no, and allowed us to upgrade the accuracy
+own to measuring every second instead.
+
+However, as we will present in \Cref{chap:results}, our function executions on
+our Raspberry Pi can come down to single-digit milliseconds, meaning that once
+every second is still not accurate enough to pinpoint the current draw on our
+system for each function invocation.
+
+The Gude Expert Power Control 1105 turned out to be the most suited device for
+our experiments. This device supports many protocols, one of which is the Modbus
+TCP protocol. By switching to this power supply, connecting our Raspberry
+Pi and benchmarking computer to the same network over ethernet, and changing the
+communcation method from MQTT to Modbus TCP, we were able to perform energy
+readings in microseconds.
 
 \newpage
 

@@ -2,7 +2,7 @@
 \contentsline {chapter}{Acknowledgements}{ii}{chapter*.2}%
 \contentsline {chapter}{Contents}{iii}{chapter*.4}%
 \contentsline {chapter}{List of Figures}{vi}{chapter*.5}%
-\contentsline {chapter}{List of Tables}{vii}{chapter*.7}%
+\contentsline {chapter}{List of Tables}{viii}{chapter*.7}%
 \contentsline {part}{I\hspace {1em}Overview}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}%
@@ -57,12 +57,32 @@
 \contentsline {section}{\numberline {5.6}Benchmarking utility}{42}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Experiment design}{42}{section.5.7}%
 \contentsline {chapter}{\numberline {6}Implementing Nebula}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Choosing a tech stack}{44}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Building a web server}{45}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Requirements}{47}{section.6.3}%
-\contentsline {part}{III\hspace {1em}Results}{48}{part.3}%
-\contentsline {chapter}{\numberline {7}Evaulation}{49}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Discussion}{50}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Related work}{50}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Conclusion}{53}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Future work}{54}{chapter.10}%
+\contentsline {section}{\numberline {6.1}Choosing a Tech Stack}{44}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Rust and WebAssembly}{45}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Wasmtime}{45}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Docker Environment}{45}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Nebula Core}{45}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Building the Web Server}{46}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Calling functions}{47}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Executing Wasm modules}{49}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Executing Docker Containers}{51}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Challenges and insights}{52}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Function development and deployment}{55}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Development Environment}{55}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Shared library}{56}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Implementing a benchmark function}{60}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Deployment Setup}{61}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Raspberry Pi Setup}{61}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}Hardware setup}{61}{subsubsection.6.5.1.1}%
+\contentsline {subsection}{\numberline {6.5.2}Virtual Machine setup (NREC)}{61}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Software setup}{62}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Tying it all together}{62}{subsection.6.5.4}%
+\contentsline {section}{\numberline {6.6}Benchmarking}{63}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Setting up our energy measurements}{63}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Energy measurement challenges}{63}{subsection.6.6.2}%
+\contentsline {part}{III\hspace {1em}Results}{65}{part.3}%
+\contentsline {chapter}{\numberline {7}Evaulation}{66}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Discussion}{67}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Related work}{67}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Conclusion}{70}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Future work}{71}{chapter.10}%
