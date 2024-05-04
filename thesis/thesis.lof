@@ -23,9 +23,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Streamlined flow of building and deploying functions.}}{59}{figure.6.1}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Our virtual machine configured on NREC.}}{62}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A Modbus TCP packet.}}{66}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Power measurements that overlap with function invocations}}{70}{figure.6.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{68}{figure.8.1}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{68}{figure.8.2}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{77}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Different Kubernetes operators memory usage. Comparing Rust to WASM vs Rust container vs Golang container. © 2022 IEEE}}{77}{figure.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

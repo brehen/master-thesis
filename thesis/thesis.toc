@@ -78,11 +78,18 @@
 \contentsline {subsection}{\numberline {6.5.3}Software setup}{62}{subsection.6.5.3}%
 \contentsline {subsection}{\numberline {6.5.4}Tying it all together}{62}{subsection.6.5.4}%
 \contentsline {section}{\numberline {6.6}Benchmarking}{63}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Setting up our energy measurements}{63}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Energy measurement challenges}{63}{subsection.6.6.2}%
-\contentsline {part}{III\hspace {1em}Results}{65}{part.3}%
-\contentsline {chapter}{\numberline {7}Evaulation}{66}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Discussion}{67}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Related work}{67}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Conclusion}{70}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Future work}{71}{chapter.10}%
+\contentsline {subsection}{\numberline {6.6.1}Stress-testing Nebula}{63}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Measuring power}{66}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Reading from Modbus TCP}{68}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Attaching power measurement to function invocations}{69}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}Energy measurement challenges}{71}{subsection.6.6.5}%
+\contentsline {section}{\numberline {6.7}Testing - Validity and Rigidity}{72}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Rust's Compiler Guarantees}{72}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Leveraging the Rust Ecosystem and Best Practices}{73}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}Rigorous Testing and Benchmarking}{73}{subsection.6.7.3}%
+\contentsline {part}{III\hspace {1em}Results}{74}{part.3}%
+\contentsline {chapter}{\numberline {7}Evaulation}{75}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Discussion}{76}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Related work}{76}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Conclusion}{79}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Future work}{80}{chapter.10}%

@@ -1702,6 +1702,7 @@ source code will not be shown, we are going to focus on the code that lets us
 run functions as either \ac{Wasm} modules or Docker containers. 
 
 \section{Choosing a Tech Stack}
+\label{sect:tech_stack}
 
 The programming language Rust was chosen to build our prototype. This choice was
 driven by Rust's strong relationship with \ac{Wasm} and its suitability for
@@ -1839,6 +1840,7 @@ Similar to the \ac{Wasm} module execution, we collect relevant metrics for
 startup and runtime of our functions invoked as Docker containers.
 
 \subsection{Challenges and insights} 
+\label{sect:6-challenge_insights}
 
 During the implementation of Nebula's core functionality, several challenges
 were encountered that required creative problem-solving and valuable insights
@@ -2094,15 +2096,13 @@ required to run our experiments are identical.
 - First we update the package lists and upgrade pre-installed packages on our
 server: 
 
-\inputminted[firstline=12, lastline=13]{bash}{assets/code/commands.sh}
+\inputminted[firstline=12, lastline=13]{shell}{assets/code/commands.sh}
 
 - Then we install Docker Engine following their official guide from their
 manual^[https://docs.docker.com/engine/install/debian/].
 
-Now we are ready to deploy Nebula to each server and deploy our functions.
-
-
-
+At this point, we are ready to deploy Nebula to each server and deploy our
+functions.
 
 \subsection{Tying it all together}
 
@@ -2133,17 +2133,216 @@ function and serialize our \ac{Wasm} modules into byte_code that we can load
 and run on Wasmtime. With all this in place, we can now perform our experiments.
 
 \section{Benchmarking}
+\label{sect:impl_bench}
 
 Now that we have our Nebula \ac{FaaS} prototype up and running on both our
 Raspberry Pi and virtual machine on NREC, we can start implementing the
 benchmarking utility that will be used to conduct the experiments and collect
-data.
+our data. While there exist tools out there for performing experiments like
+this, the setup we have implemented would be difficult to cover with an already
+existing tool. Because of this, we will develop a custom benchmark utility in 
+Rust, which will let us collect the data we're interested in.
 
-\subsection{Setting up our energy measurements}
+For our experiments we will need to implement two core functionalities. First,
+we need to implement a function that loops through  a pre-defined set of input
+values for each function and perform POST requests to Nebula, storing the
+function results on our computer. We also need a function for measuring power
+measurements while performing our POST requests to Nebula on our Raspberry Pi.
+
+\subsection{Stress-testing Nebula}
+
+To benchmark Nebula's cold starts and runtime efficiencies, we will need to
+perform a range of POST requests with the intent of gathering a wide range of
+data that we can compare later. For this we rely on the widely used Rust crate,
+`reqwest`, a library for performing http requests in Rust. The code for
+performing the request in itself is omitted from this example, but the suite of
+functions and their corresponding inputs we're testing with can be seen here:
+
+\newpage
+
+\inputminted{rust}{assets/code/request.rs}
+
+For our benchmark functions, we have found a range of values that through manual
+testing, that will give us a clear picture on how our prototype performs when
+running functions as \ac{Wasm} modules or Docker containers.
+
+The steps we take in our stress-test function are:
+
+1. Define a list of modules that we are going to benchmark. For each function we
+   have a tuple that consist of three values.  
+   - The name of the function.
+   - The amount of input values we want to test for each function.  
+   - The factor we want to multiply our input values with, to cover a wider
+      range of input values for our experiments. 
+2. Loop through our list of functions.
+3. For each function, loop through a range of <0, steps>.
+4. Determine input value by multiplying current step with factor.
+5. Perform each set of function and input 6 times. This is in order to gather a
+   mean of each metric for our results later, to account for variance in our
+results.
+6. Perform a function invocation for each function as both Wasm and Docker
+   sequentially, then append result to the final result.
+7. Return the list of results.
+
+The final result of this, is a long list of values that we store as JSON, for
+further analysis.
+
+An example of a function result from benchmarking on our Raspberry Pi looks like
+this:
+
+\inputminted{json}{assets/code/result_example.json}
+
+Part of our metrics is the timings for microseconds since epoch for the start
+and end of each function invocation, this is important for our power
+measurements.
+
+\subsection{Measuring power}
+
+For communicating with our Gude expert control over Modbus TCP, we are going to
+use the `tokio-modbus` crate. This library will let us write an interface
+against the device over our network. 
+
+As was presented in \Cref{sect:energy_background}, we saw how a client and
+server communicates through Modbus TCP packets. In figure
+\Cref{fig:modbus_tcp_packet} below, we zoom into this packet, as they are
+important for our implementation for communicating with our Gude power supply.
 
 
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\columnwidth]{assets/6-modbus_packet.png}
+  \caption{A Modbus TCP packet.}
+  \label{fig:modbus_tcp_packet}
+\end{figure}
+
+To read from the packets we receive from our Gude power supply, we need to know
+which register each measurement it can report to are registered. From the manual
+of our Gude Expert Power Control 1105, we find this table of sensor that it can
+report on. In \Cref{tab:gude_config} below, we have extracted the most relevant
+sensors for our measurements, it's register address, and how accurate it's
+reported units are. 
+
+```{r, echo=F, eval=T}
+data <- data.frame(
+  Offset = 0:5,
+  "Sensor Field" = c("Absolute Active Energy", "Power Active", "Voltage", "Current", "Frequency", "Power Factor"),
+  Address = c("0x400", "0x402", "0x404", "0x406", "0x408", "0x40a"),
+  Unit = c("Wh", "W", "V", "mA", "0.01hz", "0.001")
+)
+
+kbl(data,
+  booktabs = T,
+  caption = "Gude Expert Power Control 1105 sensors. \\label{tab:gude_config}",
+  align = "ccrc",
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+As we can see from \Cref{tab:gude_config}, we can read Absolute Active Energy,
+a value that is the cumulative sum of all energy consumed on our device,
+measured in Wh. Power active reports the current W being drawn at the moment of
+reading the sensor, the product of Voltage and Current. At first glance, these
+two sensors seem ideal for our benchmarkings, but as we will reveal in
+\Cref{chap:results}, the energy it takes to invoke a function as either a
+\ac{Wasm} module or Docker container, will be measured in μWh. Measurements in
+whole Watts will not provide accurate enough data for our experiments. The three
+most important sensors for our experiments will be Voltage, Current and Power
+Factor. 
+
+To re-iterate, the formula for calculating power is \(P = U \times I\), where *U* is
+voltage and *I* is current. For example, with a constant voltage of 240V and a
+current of 24mA, we will get \(240V \times 24mA = 5,76mW\). Another important
+sensor to read from is the Power factor, which is a factor that indicates how
+much power the connected device is actually consuming, compared to the total
+draw of current through the power cable. For our system it varied between 0.50
+and 0.55, so with an example of \(PF = 0.55\) for our example above, we get
+\(240V \times 24mA \times 0.55 = 3,168mW\). This product is what we're going to
+collect data on. 
+
+In \Cref{sect:energy_challenges} we will discuss some challenges regarding this
+setup, and most importantly that we are going to assume a constant voltage of
+240V for calculating our power measurements. This is because for every sensor we
+want to read from our Gude device at a given measurement adds up to the total
+amount of time it takes to read this measure. When we limit our readings to
+focus on current and power factor, our energy measurements come in fast enough
+to accurately time them against our function executions.
+
+\subsection{Reading from Modbus TCP}
+
+For our sensor data, we are going to define a set of types and configure a
+mapping of our sensor to register address data. For our measurements, we will
+measure the current, power factor and time the start and end of our readings.
+These timings will help us map power readings to the function execution.
+
+\inputminted[firstline = 33, lastline = 60]{rust}{assets/code/modbus.rs}
+
+With this in place, and we can define our function for reading from modbus. The
+goal of this function is to run in a parallell thread while we conduct our
+stress-testing of Nebula on our Raspberry Pi. This function will be run continually
+until the parent thread breaks, so we will read measurements from Gude,
+described in code:
+
+\inputminted[firstline = 0, lastline = 31]{rust}{assets/code/modbus.rs}
+
+The steps we go through here are:
+
+1. Define our tcp client and connect it to our Gude device on the modbus tcp
+port (e.g., 192.168.68.71:502), and create an instance of our SensorData struct,
+where we set values to 0, and time the start of our measurement in microseconds
+since epoch.
+2. Read current from its register, cast it as a floating point number and divide
+   by 1000, so we get the value in *A*, instead of *mA*.
+3. Read power factor from the register, which is multiplied by 1000 in the
+   measurements, so we cast it to f32 and divide it by 1000 to get the power
+factor.
+4. Calculate power at the time of measurement to \(240V \times I \times
+   PF\) and return the power product and start and end times for the measurement.
+
+\subsection{Attaching power measurement to function invocations}
+
+When we benchmark Nebula on our Raspberry Pi, we spawn two threads that run
+in paralell, using the Tokio async runtime. One of these threads performs out
+stress-test function from \Cref{sect:stress_test}, while the other reads from
+our read_modbus_data function from \Cref{sect:read_modbus}. We continue to read
+sensor data until the stress-test function is completed, and save both lists as
+a variable. Then we pass both the resulting function invocation results and the
+power readings to a function that finds power measurements that coincide with a
+function invocation. 
+
+\Cref{fig:power_measurement_timeline} below illustrates how power measurements
+are paired with coinciding function invocations to estimate the power required
+to run our functions.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/6-power_measurements}
+  \caption{Power measurements that overlap with function invocations}
+  \label{fig:power_measurement_timeline}
+\end{figure}
+
+In some of our benchmarks, there were instances of function invocations being
+too fast to be able to pair with an power measurement. In these cases, we ran
+the functions with its input multiple times, to ensure that every input value
+for each function has the same amount of invocations to improve the validity of
+our data. In other cases, we saw functions that were so slow that multiple power
+measurements were performed over the functions lifetime, and in this case we sum
+all the corresponding measurements and get the average power consumption. For
+example, a slow recursive fibonacci function might have 30 power readings
+associated with it. 
+
+The code below shows how this is done. It loops through each function result,
+finds the energy measurements that begin and end within the start and end of
+each function invocation. Then it updates each function result with the average
+power that was consumed by the system during the functions execution. We also
+calculate the estimated *Wh* in energy consumption with the formula: \[P \times
+\frac{t}{36000000000}\] 
+
+\inputminted{rust}{assets/code/pair_power_data.rs}
 
 \subsection{Energy measurement challenges}
+\label{sect:energy_challenges}
 
 In \Cref{sect:energy_monitoring}, we saw several protocols and measurement
 devices, and how they work, described. The first iteration of measuring power
@@ -2170,6 +2369,67 @@ TCP protocol. By switching to this power supply, connecting our Raspberry
 Pi and benchmarking computer to the same network over ethernet, and changing the
 communcation method from MQTT to Modbus TCP, we were able to perform energy
 readings in microseconds.
+
+\section{Testing - Validity and Rigidity}
+
+While formal unit testing was not exercised during the development of Nebula,
+the choice of the Rust programming language was deliberate and brought inherent
+benefits in terms of code reliability and correctness, ensuring the validity and
+rigidity of the prototype.
+
+\subsection{Rust's Compiler Guarantees}
+
+As mentioned in \Cref{sect:tech_stack}, the selection of Rust was driven by its strong
+relationship with WebAssembly and its suitability for building efficient and
+scalable applications. Furthermore, Rust's strict compiler checks and emphasis
+on memory safety, concurrency, and parallelism provided a solid foundation for
+developing a robust and reliable system.
+
+The Rust compiler enforces a set of rules that prevent common programming
+errors, such as null pointer dereferences, data races, and memory leaks. By
+catching these issues at compile-time, Rust eliminates entire classes of runtime
+errors, increasing the overall stability and predictability of the codebase.
+
+Moreover, Rust's ownership model and borrowing rules, ensure that memory is
+managed safely and efficiently, without the need for manual memory management or
+a garbage collector. This reduces the risk of memory-related bugs, which are
+notoriously difficult to detect and fix. 
+
+An exception to these guarantees can be found in the case of deserializing our
+\ac{Wasm} modules as discussed in \Cref{sect:6-challenge_insights}. Here we opt
+out of Rust's compiler guarantees by telling Rust that we know better in this
+instance, and read our \ac{Wasm} binary files as byte code. This is a potential
+risk, in case someone manages to sneak in harmful binaries into the web server,
+but did not pose an issue for our experiments.
+
+\subsection{Leveraging the Rust Ecosystem and Best Practices}
+
+Throughout the development of Nebula, idiomatic Rust practices and best
+practices from the Rust community were followed. This included adhering to
+guidelines such as favoring composition over inheritance, embracing functional
+programming patterns where applicable, and utilizing Rust's robust ecosystem of
+crates (libraries), as highlighted in \Cref{sect:tech_stack}.
+
+By aligning with these practices and leveraging well-tested, community-driven
+solutions, the codebase remains maintainable, extensible, and aligned with the
+collective wisdom of the Rust community, reducing the likelihood of subtle bugs
+or design flaws.
+
+\subsection{Rigorous Testing and Benchmarking}
+
+While formal unit testing was not a primary focus, the code underwent rigorous
+manual testing and code review processes. As detailed in Section 6.6, each
+component of Nebula was thoroughly tested with various input scenarios, edge
+cases, and stress tests to ensure its correctness and robustness.
+
+Additionally, the benchmarking suite itself, as described in
+\Cref{sect:impl_bench}, served as a form of integration testing, exercising the
+entire system end-to-end and validating the correctness of the results. 
+
+The choice of Rust, combined with idiomatic coding practices, adherence to best
+practices, and extensive testing through the benchmarking suite, provided a
+strong foundation for the validity and rigidity of the Nebula prototype,
+ensuring reliable and robust performance during the experiments and evaluation.
 
 \newpage
 
