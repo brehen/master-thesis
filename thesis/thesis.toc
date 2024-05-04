@@ -85,8 +85,7 @@
 \contentsline {subsection}{\numberline {6.6.5}Energy measurement challenges}{71}{subsection.6.6.5}%
 \contentsline {section}{\numberline {6.7}Testing - Validity and Rigidity}{72}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Rust's Compiler Guarantees}{72}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Leveraging the Rust Ecosystem and Best Practices}{73}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}Rigorous Testing and Benchmarking}{73}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.2}Rigorous Testing and Benchmarking}{73}{subsection.6.7.2}%
 \contentsline {part}{III\hspace {1em}Results}{74}{part.3}%
 \contentsline {chapter}{\numberline {7}Evaulation}{75}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Discussion}{76}{chapter.8}%

@@ -2402,25 +2402,13 @@ instance, and read our \ac{Wasm} binary files as byte code. This is a potential
 risk, in case someone manages to sneak in harmful binaries into the web server,
 but did not pose an issue for our experiments.
 
-\subsection{Leveraging the Rust Ecosystem and Best Practices}
-
-Throughout the development of Nebula, idiomatic Rust practices and best
-practices from the Rust community were followed. This included adhering to
-guidelines such as favoring composition over inheritance, embracing functional
-programming patterns where applicable, and utilizing Rust's robust ecosystem of
-crates (libraries), as highlighted in \Cref{sect:tech_stack}.
-
-By aligning with these practices and leveraging well-tested, community-driven
-solutions, the codebase remains maintainable, extensible, and aligned with the
-collective wisdom of the Rust community, reducing the likelihood of subtle bugs
-or design flaws.
-
 \subsection{Rigorous Testing and Benchmarking}
 
 While formal unit testing was not a primary focus, the code underwent rigorous
-manual testing and code review processes. As detailed in Section 6.6, each
-component of Nebula was thoroughly tested with various input scenarios, edge
-cases, and stress tests to ensure its correctness and robustness.
+manual testing and code review processes. As discussed in
+\Cref{sect:impl_bench}, the components of Nebula were thoroughly tested with
+various input scenarios, edge cases, and stress tests to ensure its correctness
+and robustness.
 
 Additionally, the benchmarking suite itself, as described in
 \Cref{sect:impl_bench}, served as a form of integration testing, exercising the
