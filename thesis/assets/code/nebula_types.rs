@@ -1,3 +1,5 @@
+mod serialize_wasm;
+
 enum FunctionType {
   Docker,
   Wasm,

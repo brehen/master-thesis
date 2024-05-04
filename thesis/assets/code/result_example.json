@@ -1,0 +1,12 @@
+{
+  "func_name": "fibonacci-recursive",
+  "func_type": "Wasm",
+  "input": "2",
+  "result": "1",
+  "metrics": {
+    "startup_time": 3778,
+    "total_runtime": 8197,
+    "start_since_epoch": 1714755235731991,
+    "end_since_epoch": 1714755235740188
+  }
+}
