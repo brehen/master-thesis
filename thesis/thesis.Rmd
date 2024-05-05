@@ -2341,6 +2341,19 @@ calculate the estimated *Wh* in energy consumption with the formula: \[P \times
 
 \inputminted{rust}{assets/code/pair_power_data.rs}
 
+With this in place, we can now perform our experiments on both our virtual
+machine and on the Raspberry Pi. \Cref{fig:physical_setup} below shows the
+physical setup for the experiments on Nebula on our Raspberry Pi. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/6-physical_setup.jpg}
+  \caption{The physical setup, including the Raspberry Pi connected to power
+through our Gude power supply. The Raspberry Pi and Gude controller is connected
+to the benchmark computer on a local network through ethernet.}
+  \label{fig:physical_setup}
+\end{figure}
+
 \subsection{Energy measurement challenges}
 \label{sect:energy_challenges}
 
@@ -2373,70 +2386,66 @@ readings in microseconds.
 \section{Testing - Validity and Rigidity}
 
 While formal unit testing was not exercised during the development of Nebula,
-the choice of the Rust programming language was deliberate and brought inherent
-benefits in terms of code reliability and correctness, ensuring the validity and
-rigidity of the prototype.
+the choice of the Rust programming language provided inherent benefits in terms
+of code reliability and correctness, ensuring the validity and rigidity of the
+prototype.
 
 \subsection{Rust's Compiler Guarantees}
 
-As mentioned in \Cref{sect:tech_stack}, the selection of Rust was driven by its strong
-relationship with WebAssembly and its suitability for building efficient and
-scalable applications. Furthermore, Rust's strict compiler checks and emphasis
-on memory safety, concurrency, and parallelism provided a solid foundation for
-developing a robust and reliable system.
+As outlined in \Cref{sect:tech_stack}, chosing Rust as the programming language
+was driven by its strong relationship with \ac{Wasm} and its suitability for
+building efficient and scalable applications. Significant factors to this are
+Rust's strict compiler checks and emphasis on memory safety, concurrency, and
+parallelism. These factors help 
 
 The Rust compiler enforces a set of rules that prevent common programming
 errors, such as null pointer dereferences, data races, and memory leaks. By
 catching these issues at compile-time, Rust eliminates entire classes of runtime
 errors, increasing the overall stability and predictability of the codebase.
 
-Moreover, Rust's ownership model and borrowing rules, ensure that memory is
-managed safely and efficiently, without the need for manual memory management or
-a garbage collector. This reduces the risk of memory-related bugs, which are
-notoriously difficult to detect and fix. 
+Furthermore, Rust's ownership model and borrowing rules ensure safe and
+efficient memory management, without the need for manual intervention or a
+garbage collector. This approach reduces the risk of memory-related bugs, which
+are very difficult to detect and resolve. We can't guarantee that
+there are not any present in Nebula, as testing will never be able to guarantee
+the absence of bugs. However, we saw that during extensive stress-testing, our
+prototype consistently for several hours straight during our benchmarks.
 
-An exception to these guarantees can be found in the case of deserializing our
-\ac{Wasm} modules as discussed in \Cref{sect:6-challenge_insights}. Here we opt
-out of Rust's compiler guarantees by telling Rust that we know better in this
-instance, and read our \ac{Wasm} binary files as byte code. This is a potential
-risk, in case someone manages to sneak in harmful binaries into the web server,
-but did not pose an issue for our experiments.
+One exception to these guarantees is the deserialization of our \ac{Wasm}
+modules, as discussed in \Cref{sect:6-challenge_insights}. In this case, we opt
+out of Rust's compiler guarantees by telling the compiler that we have a better
+understanding of the situation and can safely read our \ac{Wasm} binary files as
+bytecode. While this represents a potential risk if malicious binaries were to
+be introduced to the web server, it did not pose an issue for our research.
 
 \subsection{Rigorous Testing and Benchmarking}
 
-While formal unit testing was not a primary focus, the code underwent rigorous
-manual testing and code review processes. As discussed in
+Although formal unit testing was not a primary focus, the code underwent
+rigorous manual testing and code review processes. As detailed in
 \Cref{sect:impl_bench}, the components of Nebula were thoroughly tested with
-various input scenarios, edge cases, and stress tests to ensure its correctness
-and robustness.
+various input scenarios, edge cases, and stress tests to ensure correctness and
+robustness.
 
-Additionally, the benchmarking suite itself, as described in
-\Cref{sect:impl_bench}, served as a form of integration testing, exercising the
-entire system end-to-end and validating the correctness of the results. 
+Moreover, the benchmarking suite itself, described in \Cref{sect:impl_bench},
+served as a form of integration testing, exercising the entire system end-to-end
+and validating the correctness of the results.
 
-The choice of Rust, combined with idiomatic coding practices, adherence to best
-practices, and extensive testing through the benchmarking suite, provided a
-strong foundation for the validity and rigidity of the Nebula prototype,
-ensuring reliable and robust performance during the experiments and evaluation.
-
-\newpage
-
-\part{Results}
+The combination of Rust's language features, idiomatic coding practices, and
+extensive manual testing through the benchmarking suite provided a strong
+foundation for the validity and rigidity of the Nebula prototype, ensuring
+reliable and robust performance during the experiments and evaluation.
 
 \newpage
-\chapter{Evaulation}
+
+\part{Discussion}
+
 
 \newpage
-\chapter{Discussion}
+\chapter{Results}
 
-\setlength\epigraphwidth{.7\textwidth}
+\newpage
+\chapter{Analysis}
 
-\epigraph{\itshape 
-“So will wasm replace Docker?” No, but imagine a future where Docker runs linux
-containers, windows containers and wasm containers side by side. Over time wasm
-might become the most popular container type. Docker will love them all equally,
-and run it all :)
-}{---Solomon Hykes, \textit{Founder of Docker}}
 
 \section{Related work}
 \label{sect:related-work}
@@ -2521,6 +2530,20 @@ kbl(data,
     latex_options = c("HOLD_position", "striped")
   )
 ```
+
+
+\newpage
+\chapter{Future work}
+
+\setlength\epigraphwidth{.7\textwidth}
+
+\epigraph{\itshape 
+“So will wasm replace Docker?” No, but imagine a future where Docker runs linux
+containers, windows containers and wasm containers side by side. Over time wasm
+might become the most popular container type. Docker will love them all equally,
+and run it all :)
+}{---Solomon Hykes, \textit{Founder of Docker}}
+
 
 \newpage
 \chapter{Conclusion}
