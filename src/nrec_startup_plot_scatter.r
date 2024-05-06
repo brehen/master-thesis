@@ -1,0 +1,66 @@
+# Load necessary libraries
+library(hrbrthemes)
+library(jsonlite)
+library(ggplot2)
+library(dplyr)
+
+# Function to load data from JSON and create a scatter plot with bubble size
+load_data_and_plot_scatter <- function(file_path) {
+  # Read JSON data into a dataframe and flatten the nested 'metrics'
+  data_raw <- fromJSON(file_path, flatten = TRUE)
+
+
+
+  # Select and rename the metrics columns, convert types
+  data <- data_raw %>%
+    mutate(
+      startup_time = as.numeric(metrics.startup_time) / 1000,
+      total_runtime = as.numeric(metrics.total_runtime) / 1000,
+      func_type = func_type,
+      func_name = func_name,
+      input = as.numeric(input)
+    ) %>%
+    select(startup_time, total_runtime, func_type, func_name, input)
+
+  # Filter data for Docker environment and apply specified conditions
+  docker_data <- data %>%
+    # filter(func_type == "Wasm") %>%
+    # filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710))) %>%
+    group_by(func_name) %>%
+    mutate(input_percent = input / max(input) * 100) %>%
+    ungroup()
+
+
+  print(head(docker_data))
+
+  # Creating a ggplot with scatter plot and bubble size
+  gg <- ggplot(docker_data, aes(x = input, y = total_runtime, color = func_type)) +
+    geom_point(alpha = 0.4) + # Adjust transparency with alpha
+    ggtitle("") +
+    scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
+    geom_smooth(aes(label = func_type),
+      fill = "#69b3a2",
+      method = "loess", formula = y ~ x,
+      size = 3, linewidth = 1, boxlinewidth = 0.4,
+      se = TRUE
+    ) +
+    labs(
+      x = "Input", y = "Total execution time (ms)", color = "Function Type",
+    ) +
+    facet_wrap(~func_name, scales = "free") +
+    theme_ipsum(base_size = 30, caption_size = 30, axis_title_size = 24, plot_title_size = 24, strip_text_size = 25) +
+    theme(legend.position = "bottom")
+
+  # gg <- gg +
+  #   guides(color = guide_legend(override.aes = list(
+  #     shape = rep("square", length(unique(docker_data$func_type))),
+  #     size = 5,
+  #     keywidth = 2,
+  #     keyheight = 2,
+  #     fill = c("#089CEC", "#6B54F1") # Color squares according to your palette
+  #   )))
+
+  print(gg)
+}
+
+load_data_and_plot_scatter("../thesis/assets/metrics/nrec_energy_data.json")
