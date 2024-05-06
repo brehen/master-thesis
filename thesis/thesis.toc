@@ -1,8 +1,8 @@
 \contentsline {chapter}{Abstract}{i}{chapter*.1}%
 \contentsline {chapter}{Acknowledgements}{ii}{chapter*.2}%
 \contentsline {chapter}{Contents}{iii}{chapter*.4}%
-\contentsline {chapter}{List of Figures}{vi}{chapter*.5}%
-\contentsline {chapter}{List of Tables}{viii}{chapter*.7}%
+\contentsline {chapter}{List of Figures}{vii}{chapter*.5}%
+\contentsline {chapter}{List of Tables}{ix}{chapter*.7}%
 \contentsline {part}{I\hspace {1em}Overview}{1}{part.1}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}%
@@ -16,15 +16,15 @@
 \contentsline {section}{\numberline {2.4}The Third Wave: WebAssembly modules}{9}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Background}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cloud Computing Overview}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Energy consumption and Sustainability in Cloud Computing}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Energy consumption and Sustainability in Cloud Computing}{12}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Virtualization and Virtual Machines}{15}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Containers and Container orchestration}{16}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Serverless Computing}{18}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Functions-as-a-Service}{19}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}WebAssembly and WASI}{21}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}asm.js}{21}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.6}WebAssembly and WASI}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}asm.js}{20}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}WebAssembly}{21}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{22}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.3}WebAssembly System Interface}{23}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}WebAssembly runtimes}{23}{subsection.3.6.4}%
 \contentsline {section}{\numberline {3.7}Energy monitoring}{25}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}MQTT}{25}{subsection.3.7.1}%
@@ -88,8 +88,10 @@
 \contentsline {subsection}{\numberline {6.7.2}Rigorous Testing and Benchmarking}{73}{subsection.6.7.2}%
 \contentsline {part}{III\hspace {1em}Discussion}{75}{part.3}%
 \contentsline {chapter}{\numberline {7}Results}{76}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Analysis}{77}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Related work}{77}{section.8.1}%
-\contentsline {chapter}{\numberline {9}Future work}{80}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusion}{81}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Future work}{82}{chapter.11}%
+\contentsline {section}{\numberline {7.1}Methodology recap}{76}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Presentation of Results}{77}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Analysis}{78}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Related work}{78}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Future work}{81}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Conclusion}{82}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Future work}{83}{chapter.11}%
