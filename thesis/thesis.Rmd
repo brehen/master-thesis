@@ -98,7 +98,8 @@ library(dplyr)
 library(scales)
 library(kableExtra)
 library(tidyr)
-knitr::opts_chunk$set(echo = TRUE)
+library(stringr)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 options(tinytex.engine_args = "-shell-escape")
 
 nrec_data_raw <- fromJSON("./assets/metrics/nrec_energy_data.json", flatten = TRUE)
@@ -110,12 +111,16 @@ nrec_data <- nrec_data_raw %>%
     total_runtime = as.numeric(metrics.total_runtime) / 1000,
     func_type = func_type,
     func_name = func_name,
-    input = as.numeric(input)
+    input = as.numeric(input),
+    source = "nrec"
   ) %>%
-  select(startup_time, runtime, total_runtime, func_type, func_name, input)
+  select(
+    startup_time, runtime, total_runtime, func_type, func_name, input,
+    source
+  )
 
 
-rpi_data_raw <- fromJSON("./assets/metrics/rpi_energy_data.json", flatten = TRUE)
+rpi_data_raw <- fromJSON("./assets/metrics/rpi_energy_data_0_5_0.json", flatten = TRUE)
 
 rpi_data <- rpi_data_raw %>%
   mutate(
@@ -126,9 +131,10 @@ rpi_data <- rpi_data_raw %>%
     energy_consumption_wh = as.double(metrics.energy_consumption_wh) * 1000 * 1000,
     func_type = func_type,
     func_name = func_name,
-    input = as.numeric(input)
+    input = as.numeric(input),
+    source = "rpi"
   ) %>%
-  select(startup_time, runtime, total_runtime, energy_consumption_wh, func_type, func_name, input)
+  select(startup_time, runtime, total_runtime, average_power, energy_consumption_wh, func_type, func_name, input, source)
 ```
 
 
@@ -383,7 +389,8 @@ The goal of the thesis is to:
 
 1. Develop a prototype cloud computing platform for the \ac{FaaS} paradigm.
 2. Use this platform for conducting experiments that either prove or disprove
-   the claim that WebAssembly is the more energy efficient choice.
+   the claim that WebAssembly is the more efficient choice.
+3. Determine whether or not WebAssembly is a more energy efficient choice.
 
 By achieving these goals this thesis seeks to shed light on the feasibility and
 implications of adopting \ac{Wasm} and \ac{WASI} for a greener cloud.
@@ -463,13 +470,13 @@ the bar to new companies.
 The start of cloud computing can be traced back to the emergence of
 virtualization, more specifically virtual machines, a response to the costly and
 complex nature of managing traditional, on-premise data centers. During the
-mid-2000s, Amazon launched its subsidiary, Amazon Web Services (AWS), who in
-turn launched Amazon S3 in March 2006, followed by Elastic Compute Cloud (EC2)
-in August the same year \citep{barrAmazonEC2Beta2006}. With these services, AWS
-positioned itself as a pioneer in this space, marking a major turning point in
-application development and deployment, and popularized cloud computing. EC2, as
-an \ac{IaaS} platform, empowered developers to run virtual machines remotely.
-(See \Cref{fig:feisbook} for an example of this kind of architecture)
+mid-2000s, Amazon launched its subsidiary, \ac{AWS}, who in turn launched Amazon
+S3 in March 2006, followed by Elastic Compute Cloud (EC2) in August the same
+year \citep{barrAmazonEC2Beta2006}. With these services, \ac{AWS} positioned
+itself as a pioneer in this space, marking a major turning point in application
+development and deployment, and popularized cloud computing. EC2, as an
+\ac{IaaS} platform, empowered developers to run virtual machines remotely. (See
+\Cref{fig:feisbook} for an example of this kind of architecture)
 
 \begin{figure}[H]
 \centering
@@ -605,22 +612,22 @@ Compaq, \citep{favaloroInternetSolutionsDivision1996}, but it was not until
 Amazon launched its subsidiary \ac{AWS} in the 2006 that the adoption
 became wide spread. 
 
-The launch of AWS Amazon S3 cloud service in March 2006, followed by Elastic
+The launch of \ac{AWS} Amazon S3 cloud service in March 2006, followed by Elastic
 Compute Cloud (EC2) in August the same year \citep{barrAmazonEC2Beta2006},
 marked a major turning point in application development and deployment, and
 popularized cloud computing. EC2, as an Infrastructure-as-a-Service platform,
 empowered developers to run virtual machines remotely. By providing these
-services over the internet on a pay-as-you-go basis, AWS drastically lowered the
+services over the internet on a pay-as-you-go basis, \ac{AWS} drastically lowered the
 bar for accessing computing resources, making it easier and more cost-effective
 for businesses and developers to build and deploy applications without the need
 for considerable upfront investment in hardware and infrastructure.
 
-With the success of AWS, other major technology companies saw their fit to enter
+With the success of \ac{AWS}, other major technology companies saw their fit to enter
 the cloud computing market. In 2008, Google launched the Google App Engine
 \citep{mcdonaldIntroducingGoogleApp2008}, a platform for building and hosting
 web applications in Google's data centers. Microsoft followed with the launch of
 Azure in 2010, its cloud computing platform that offers a range of services
-comparable to AWS.
+comparable to \ac{AWS}.
 
 The rapid growth of cloud computing also fueled the rise of DevOps practices and
 containerization technologies like Docker, which facilitate the development,
@@ -630,7 +637,7 @@ scaling containerized applications across cloud enviroments
 \citep{bernsteinContainersCloudLXC2014}. 
 
 Today, cloud computing has become an essential part of modern IT infrastructure,
-where major cloud provides, like AWS, Microsoft and Google, continue to innovate
+where major cloud provides, like \ac{AWS}, Microsoft and Google, continue to innovate
 and expand their offerings. Cloud computing has also enable new paradigms like
 serverless computing and edge computing, allowing for even more efficient and
 distributed computing models. \citep{baldiniServerlessComputingCurrent2017}
@@ -1113,7 +1120,7 @@ optimizing energy efficiency \citep{al-fuqahaInternetThingsSurvey2015}.
 \subsection{MQTT}
 
 The \ac{MQTT} protocol is a lightweight and efficient protocol that has been
-used for energy monitoring. In an MQTT setup, a broker server acts as an
+used for energy monitoring. In an \ac{MQTT} setup, a broker server acts as an
 intermediary, facilitating communication between devices and servers. This
 enables efficient data exchange between publishers and subscribers
 \citep{al-fuqahaInternetThingsSurvey2015}. (See \Cref{fig:mqtt-model.png}).
@@ -1121,7 +1128,7 @@ enables efficient data exchange between publishers and subscribers
 \begin{figure}[H]
 \centering
   \includegraphics{assets/3-mqtt-pubsub.png}
-  \caption{PubSub model of the MQTT protocol.}
+  \caption{PubSub model of the \ac{MQTT} protocol.}
   \label{fig:mqtt-model.png}
 \end{figure}
 
@@ -1144,8 +1151,8 @@ automation. It allows its users to integrate with it through a Aeotec Z-Stick
 what communicates with the switch through Z-wave. A supporting library;
 zwave-js-ui^[https://github.com/zwave-js/zwave-js-ui], which can be setup as a
 Docker container on a computer, can read energy measurements from the Smart
-Switch at a given interval and publish the values on a MQTT-topic. This is in
-turn picked up by the MQTT broker and published to its subscribers. This switch
+Switch at a given interval and publish the values on a \ac{MQTT}-topic. This is in
+turn picked up by the \ac{MQTT} broker and published to its subscribers. This switch
 supports reporting measurements at an interval of 1 second \citep{aeotecAeotecSmartSwitch}.
 
 \begin{figure}[H]
@@ -1162,7 +1169,7 @@ on modbus tcp, or keep it in the background?}
 
 \subsection{Modbus TCP}
 
-An alternative to reading energy measurements through a pub-sub model with MQTT,
+An alternative to reading energy measurements through a pub-sub model with \ac{MQTT},
 is to utilize the Modbus TCP protocol. Modbus TCP is a widely adopted industrial
 communication protocol for exchanging data between devices and control systems.
 It has been used to develop energy monitoring and auditing systems for
@@ -1186,7 +1193,7 @@ metering and monitoring that supports communicating over TCP/IP. It is
 effectively a light weight server that can measure energy, current, power
 factor, phase angle, voltage, and active / apparent / reactive power. To read
 these measurements, the PDU supports a handful of interfaces, such as REST API,
-HTTPS, SNMP, Telnet, MQTT and Modbus TCP \citep{gmbhExpertPowerControl2023}. In
+HTTPS, SNMP, Telnet, \ac{MQTT} and Modbus TCP \citep{gmbhExpertPowerControl2023}. In
 \Cref{fig:gude-control} below, a simplified setup with the Gude acting as the
 server for communicating over Modbus TCP is shown.
 
@@ -1247,7 +1254,7 @@ out in space. On Nebula we will develop a way to deploy and invoke functions in
 the form of \ac{Wasm} modules or as spun up Docker containers. To perform the
 desired experiments, the prototype will need to be able to deploy to both a
 Raspberry Pi 4b, and on a typical machine hosted on the cloud. For this, we will
-be using NREC \todo{add citation/link}, a IaaS platform available to students,
+be using \ac{NREC} \todo{add citation/link}, a IaaS platform available to students,
 where we can spin up a Debian virtual machine and set up a service on a public
 IP address. 
 
@@ -1263,7 +1270,7 @@ small amounts of energy by itself, making it ideal for comparing power
 consumption under load \citep{bekarooPowerConsumptionRaspberry2016}.
 
 2. Virtual Machine: A Debian-based VM running on an \ac{IaaS} platform (e.g.,
-   NREC), to measure performance relative to how a typical cloud native
+   \ac{NREC}), to measure performance relative to how a typical cloud native
 application would perform.
 
 \newpage
@@ -1293,7 +1300,7 @@ each function invocation. \\
 
 Portability & The prototype should be deployable on both a
 Raspberry Pi for local testing and measurement, and on a Debian virtual machine
-hosted on an IaaS platform (e.g., NREC) for a more typical cloud setup. \\
+hosted on an IaaS platform (e.g., \ac{NREC}) for a more typical cloud setup. \\
 
 \rowcolor{orange!10} Performance & The prototype should be built in such a
 manner that it presents little overhead when running our functions, isolating
@@ -1362,7 +1369,7 @@ invocations on each environment, measurement techniques will be
 employed. We will deploy Nebula, along with the \ac{Wasm} modules and Docker
 images, to our target computers. For measuring startup and runtimes of each
 function like a typical setup, we will deploy Nebula and the functions to a
-virtual machine running Debian on NREC. While a Raspberry Pi 4 will serve as our
+virtual machine running Debian on \ac{NREC}. While a Raspberry Pi 4 will serve as our
 deployment target for measuring startup latencies and runtimes of a device more
 akin to embedded systems, but more importantly, allowing us to measure energy
 consumption on a controlled device.
@@ -1657,7 +1664,7 @@ over the lifetime of our benchmarks. In \Cref{sect:energy_monitoring} a couple
 of devices and protocols were presented that will be relevant for our system. We
 will attempt to set up energy measurements with each configuration, and see
 which best matches our desired outcome. \todo[inline=true]{I ended up with Gude
-+ Modbus tcp, should I just cut out Smart switch and MQTT/Zwave from the thesis,
++ Modbus tcp, should I just cut out Smart switch and \ac{MQTT}/Zwave from the thesis,
 as they turned out to be too slow on reporting? Or could they still be relevant,
 considering they are also valid ways to measure energy readings, at a more
 affordable level?}
@@ -1883,7 +1890,7 @@ Initially, passing input data to Wasm modules proved challenging due to the need
 for shared memory and exported functions. This issue was resolved by leaning
 into the the POSIX-like behavior of WASI and provide input via stdin and output
 to be captured from stdout, similar to traditional command-line programs. As
-\citet{malmgrenGettingDataOut2022} suggested in their helpful article, using
+\citet{malmgrenGettingDataOut2022a} suggested in their helpful article, using
 this feature of WASI provided a simpler approach for handling input and output
 in our Wasm module execution model. This approach was also implemented for
 passing input and output to and from our Docker containers, and while using
@@ -2006,7 +2013,7 @@ our functions). Then we print the result to stdout, either as a pair of
 Then we had to specify a Dockerfile that our Docker build process will read from
 that describes how our functions are to be packaged into a Docker image. When we
 build with this Dockerfile, we also provide the target architecture we want our
-Docker container to run on. For our NREC deployment, we will target linux/amd64
+Docker container to run on. For our \ac{NREC} deployment, we will target linux/amd64
 and for the Raspberry Pi, we will target linux/arm64. 
 
 \inputminted{toml}{assets/code/Dockerfile}
@@ -2071,7 +2078,7 @@ sequence we're interested in, which we have implemented recursively, and pass
 this into our `run_function` wrapper from our shared library.
 
 With that in place, we just need to set up our deployment targets - the
-Raspberry Pi and the Debian-based virtual machine on NREC.
+Raspberry Pi and the Debian-based virtual machine on \ac{NREC}.
 
 \section{Deployment Setup}
 
@@ -2099,14 +2106,14 @@ desktop). Configure the OS with:
    which can be used instead of its IP-address.
 
 
-\subsection{Virtual Machine setup (NREC)}
+\subsection{Virtual Machine setup (\ac{NREC})}
  
 For our experiments, we chose \ac{NREC} as our \ac{IaaS} platform for hosting
 our virtual machine and benchmark a more typical deployment environment. To use
 this service, we had to contact the administration and verify that we were a
 student at the University of Oslo. 
 
-Once inside the NREC platform, we can launch an instance of our virtual machine,
+Once inside the \ac{NREC} platform, we can launch an instance of our virtual machine,
 following their guide\todo{add guide?} for doing so. For our experiments we
 chose the pre-configured flavor of `m1.medium`, which gives us 1 virtual CPU, 4GB
 of RAM and 20GB storage space. The virtual machine was built with the base image
@@ -2116,8 +2123,8 @@ provided during setup.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/6-nrec_nebula}
-  \caption{Our virtual machine configured on NREC.}
-  \label{fig:build_deploy_function}
+  \caption{Our virtual machine configured on \ac{NREC}.}
+  \label{fig:nrec_nebula}
 \end{figure}
 
 
@@ -2151,7 +2158,7 @@ works fine, but the easiest and fastest way to build Nebula is to do it on the
 target architecture itself. 
 
 For the Raspberry Pi, this was done by cloning the Github repository with the
-source code onto the device, and building it from there. For the NREC
+source code onto the device, and building it from there. For the \ac{NREC}
 implementation, a Github action was implemented for building the application on
 a Linux VM as part of their CI/CD service. This is not a crucial detail for our
 research, but valuable for anyone who would want to recreate the experiment and
@@ -2169,7 +2176,7 @@ and run on Wasmtime. With all this in place, we can now perform our experiments.
 \label{sect:impl_bench}
 
 Now that we have our Nebula \ac{FaaS} prototype up and running on both our
-Raspberry Pi and virtual machine on NREC, we can start implementing the
+Raspberry Pi and virtual machine on \ac{NREC}, we can start implementing the
 benchmarking utility that will be used to conduct the experiments and collect
 our data. While there exist tools out there for performing experiments like
 this, the setup we have implemented would be difficult to cover with an already
@@ -2395,7 +2402,7 @@ devices, and how they work, described. The first iteration of measuring power
 was inspired by \citet{qianEnergyFootprintingWordPress2022}, and
 consisted of an Aotec Smart Switch 7, Aotec Z-stick 7 and relied on the
 zwave-js-ui application to act as a publisher for reporting energy measurements
-over MQTT. This setup had one major flaw; energy reporting through MQTT could
+over \ac{MQTT}. This setup had one major flaw; energy reporting through \ac{MQTT} could
 only be reported once every 30 seconds at a minimum. This turned out to be too
 slow for attempting to measure accurate readings for our experiments. 
 
@@ -2413,7 +2420,7 @@ The Gude Expert Power Control 1105 turned out to be the most suited device for
 our experiments. This device supports many protocols, one of which is the Modbus
 TCP protocol. By switching to this power supply, connecting our Raspberry
 Pi and benchmarking computer to the same network over ethernet, and changing the
-communcation method from MQTT to Modbus TCP, we were able to perform energy
+communcation method from \ac{MQTT} to Modbus TCP, we were able to perform energy
 readings in microseconds.
 
 \section{Testing - Validity and Rigidity}
@@ -2473,15 +2480,17 @@ reliable and robust performance during the experiments and evaluation.
 \newpage
 \chapter{Results}
 
-Now that we have ventured through planning our experimental research, to
-designing a prototype and planning our benchmarkings, and finally implemented
-and performed our benchmarkings, it is time to look at explore the data we have
-gathered through our benchmarkings.
+Now that we have achieved the first goal of our thesis, to develop a prototype
+cloud computing platform for the \ac{FaaS} paradigm, we will explore the
+remaining goals and attempt to answer them in this part. Based on the prototype
+we implemented in \Cref{chap:implement_nebula} and the supporting benchmark
+utility we also developed, we have experimented on Nebula, and are now ready to
+examine the results.
 
 \section{Methodology recap}
 
 For our experiments we implemented a series of benchmark functions that were to
-run on both our Raspberry Pi and a standard virtual machine on NREC to mimic different
+run on both our Raspberry Pi and a standard virtual machine on \ac{NREC} to mimic different
 operational environments. Each function was tested as both a \ac{Wasm} module
 and Docker container, and we aimed to capture a broad range of data under
 controlled condotions. The specific metrics we aimed to measure were:
@@ -2499,16 +2508,94 @@ also have the benefit of deriving an estimation of how energy our function
 exections consumed during its lifetime. Energy consumption (*E*) is measured in Wh,
 a product of \(E = P \times t\).
 
-The data collection was automated through our benchmarking utility written in
-Rust to ensure accuracy and repeatabiity, which proved invaluable while
-gathering data for this report.
+We automated the data collection through our benchmarking utility implemented in
+\Cref{sect:implement_benchmark} to ensure accuracy and repeatabiity, which
+proved invaluable while gathering data for this report.
 
-\section{Presentation of Results}
+Important to note for this chapter, is that a lot of the data the differences
+between our function invocations as \ac{Wasm} modules and Docker containers are
+so extreme that it is hard to properly visualize them next to each other in the
+same graph. Therefore, where applicable, the data will be split into \ac{Wasm}
+and Docker for our data sets, to be able to examine the data more closely. 
 
+\section{Startup and Runtimes}
+
+
+```{r, avg_times_nrec_rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.cap="Average Startup and Runtime on our setups"}
+combined_data <- bind_rows(
+  nrec_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
+  rpi_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
+)
+
+avg_srtup_data <- combined_data %>%
+  # filter(func_type == "Wasm") %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+  filter(!(func_name == "prime-number" & input > 1500))
+
+
+# Filter data for Docker environment
+# docker_data <- data %>%
+#   # filter(func_type == "Wasm") %>%
+#   filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710)))
+
+
+averaged_data <- avg_srtup_data %>%
+  group_by(func_name, source_func_type) %>%
+  summarize(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2)
+  ) %>%
+  ungroup() %>%
+  pivot_longer(cols = c("avg_runtime", "avg_startup_time"), names_to = "metric", values_to = "value") %>%
+  mutate(Metric = case_when(
+    metric == "avg_startup_time" & grepl("Docker", source_func_type) ~ "Docker Startup",
+    metric == "avg_runtime" & grepl("Docker", source_func_type) ~ "Docker Runtime",
+    metric == "avg_startup_time" & grepl("Wasm", source_func_type) ~ "Wasm Startup",
+    metric == "avg_runtime" & grepl("Wasm", source_func_type) ~ "Wasm Runtime",
+  ))
+
+
+# Creating a ggplot with stacked bar chart
+ggplot(averaged_data, aes(x = interaction(func_name, source_func_type), y = value, fill = Metric)) +
+  geom_col(position = "stack") +
+  # ggtitle("Average Startup and Runtimes on both setups") +
+  scale_x_discrete(labels = c("Exponential", "Factorial", "Fibonacci", "Prime\nNumber"), guide = guide_axis(angle = 45)) +
+  scale_fill_manual(values = c("Docker Startup" = "#089CEC", "Wasm Startup" = "#6B54F1", "Docker Runtime" = "#EC5808", "Wasm Runtime" = "#F1548C")) +
+  facet_wrap(~source_func_type,
+    scales = "free", labeller = function(variable, value) {
+      value <- str_replace(value, "nrec_Docker", "Docker (VM)")
+      value <- str_replace(value, "nrec_Wasm", "Wasm (VM)")
+      value <- str_replace(value, "rpi_Docker", "Docker (Raspberry Pi)")
+      value <- str_replace(value, "rpi_Wasm", "Wasm (Raspberry Pi)")
+      return(value)
+    }
+  ) +
+  labs(x = "Function Name", y = "Time in milliseconds") +
+  theme_ipsum(base_family = "Avenir", base_size = 12, axis_text_size = 10, plot_title_size = 10, axis_title_size = 15, strip_text_size = 15) +
+  theme(
+    legend.position = "bottom", axis.title.x = element_blank(),
+    axis.title.y = element_text(face = "italic", vjust = 0.5, hjust = 0.5),
+    axis.text.y = element_text(face = "bold")
+  )
+```
+
+In \Cref{avg_times_nrec_rpi} above we can see the startup and runtimes of
+our function invocations across both our Nrec and Raspberry Pi deployment
+targets, across our 4 benchmark functions, split by Docker or \ac{Wasm}
+invocations. As we will present in a later graph, the fibonacci and prime number
+functions data set include input that towards the higher end ramps up the
+runtime exponentially. These extremes have been excluded from the sample in
+this graph, so we can closer examine the average startup and runtimes we could
+expect. (Specifically, input above 1500 for Prime numbers, and above 30 for
+Fibonacci)  
+
+
+
+\newpage
 
 
 ```{r, echo=F, warning=F}
-gg <- ggplot(nrec_data, aes(x = input, y = total_runtime, color = func_type)) +
+ggplot(nrec_data, aes(x = input, y = total_runtime, color = func_type)) +
   geom_point(alpha = 0.4) + # Adjust transparency with alpha
   ggtitle("Startup times in ms on NREC virtual machine") +
   scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
@@ -2524,53 +2611,29 @@ gg <- ggplot(nrec_data, aes(x = input, y = total_runtime, color = func_type)) +
   facet_wrap(~func_name, scales = "free") +
   theme_minimal() +
   theme(legend.position = "bottom")
-
-gg
 ```
 
-```{r, echo=F, warning=F, dev = "cairo_pdf"}
-avg_srtup_data <- nrec_data %>%
-  # filter(func_type == "Wasm") %>%
-  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
-  filter(!(func_name == "prime-number" & input > 1500))
+```{r, echo=F, warning=F}
+power_rip_data <- rpi_data %>%
+  filter(func_name == "factorial")
 
-
-# Filter data for Docker environment
-# docker_data <- data %>%
-#   # filter(func_type == "Wasm") %>%
-#   filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710)))
-
-
-averaged_data <- avg_srtup_data %>%
-  group_by(func_name, func_type) %>%
-  summarize(
-    avg_startup_time = round(mean(startup_time), digits = 2),
-    avg_runtime = round(mean(runtime), digits = 2)
-  ) %>%
-  ungroup() %>%
-  pivot_longer(cols = c("avg_runtime", "avg_startup_time"), names_to = "metric", values_to = "value") %>%
-  mutate(Metric = case_when(
-    metric == "avg_startup_time" & func_type == "Docker" ~ "Docker Startup",
-    metric == "avg_runtime" & func_type == "Docker" ~ "Docker Runtime",
-    metric == "avg_startup_time" & func_type == "Wasm" ~ "Wasm Startup",
-    metric == "avg_runtime" & func_type == "Wasm" ~ "Wasm Runtime",
-  ))
-
-
-# Creating a ggplot with stacked bar chart
-gg <- ggplot(averaged_data, aes(x = interaction(func_name, func_type), y = value, fill = Metric)) +
-  geom_col(position = "stack") +
-  ggtitle("Average Startup and Runtimes on NREC virtual machine") +
-  scale_x_discrete(labels = c("Exponential", "Factorial", "Fibonacci", "Prime\nNumber"), guide = guide_axis(angle = 45)) +
-  scale_fill_manual(values = c("Docker Startup" = "#089CEC", "Wasm Startup" = "#6B54F1", "Docker Runtime" = "#EC5808", "Wasm Runtime" = "#F1548C")) +
-  facet_wrap(~func_type, scales = "free") +
-  labs(x = "Function Name", y = "Time (ms)") +
-  theme_ipsum(base_family = "Avenir", base_size = 12, axis_text_size = 10, plot_title_size = 10, axis_title_size = 15, strip_text_size = 15) +
-  theme(legend.position = "bottom", axis.title.x = element_blank())
-
-print(gg)
+ggplot(power_rip_data, aes(x = input, y = average_power, color = func_type)) +
+  geom_point(alpha = 0.41) + # Adjust transparency with alpha
+  ggtitle("Power consumption on Raspberry Pi") +
+  scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
+  geom_smooth(aes(label = func_type),
+    fill = "#69b3a2",
+    method = "loess", formula = y ~ x,
+    size = 3, linewidth = 1, boxlinewidth = 0.4,
+    se = TRUE
+  ) +
+  labs(
+    x = "Input", y = "Power in Watts (W)", color = "Function Type",
+  ) +
+  facet_wrap(~func_name, scales = "free") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
 ```
-
 
 
 
