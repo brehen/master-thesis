@@ -23,7 +23,6 @@ header-includes:
   - \usepackage{float} % Allow for more granular control of float of figures
   - \usepackage{setspace}
   - \usepackage{lipsum} % Generate lorem ipsum text
-  - \usepackage{acronym}
   - \usepackage[fontsize=12pt]{scrextend}
   - \usepackage{fontspec} % change to system font
   - \usepackage{tcolorbox} % Fancy text boxes that are pretty
@@ -40,7 +39,7 @@ header-includes:
   - \usepackage{todonotes}
 
   - \usepackage[style=apa, natbib=true]{biblatex}
-  - \addbibresource{nebula.bib}
+  - \addbibresource{nebula_refs.bib}
   - \addbibresource{manual-nebula.bib}
   - \DefineBibliographyExtras{english}{}
   - \usepackage{minted}
@@ -86,6 +85,7 @@ header-includes:
 
 
   - \hyphenation{Web-Assembly}
+  - \usepackage{acronym}
 
 
 ---
@@ -1724,7 +1724,7 @@ the hypothesis we set out to explore ends up holding true.
 As mentioned in the acknowledgments at the start of this thesis, the idea for
 this project came from a podcast episode where the CEO of Fermyon, Matt Butcher,
 told the journey of how they ended up developing their cloud platform as a way
-to offer a \ac{FaaS} powered by \ac{WebAssembly} modules. They have built a
+to offer a \ac{FaaS} powered by \ac{Wasm} modules. They have built a
 cloud application platform for \ac{Wasm}-based serverless functions named
 Fermyon Cloud, which is supported by their developer framework, Spin. Spin is a
 framework for building \ac{Wasm}-based functions that can be deployed on their
@@ -2595,9 +2595,12 @@ Fibonacci)
 
 
 ```{r, echo=F, warning=F}
-ggplot(nrec_data, aes(x = input, y = total_runtime, color = func_type)) +
-  geom_point(alpha = 0.4) + # Adjust transparency with alpha
-  ggtitle("Startup times in ms on NREC virtual machine") +
+wasm_nrec_data <- nrec_data %>%
+  filter(func_type == "Wasm")
+
+ggplot(wasm_nrec_data, aes(x = input, y = runtime, color = func_type)) +
+  geom_point(alpha = 0.1) +
+  ggtitle("Runtimes in ms on NREC virtual machine") +
   scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
   geom_smooth(aes(label = func_type),
     fill = "#69b3a2",
@@ -2613,13 +2616,13 @@ ggplot(nrec_data, aes(x = input, y = total_runtime, color = func_type)) +
   theme(legend.position = "bottom")
 ```
 
-```{r, echo=F, warning=F}
-power_rip_data <- rpi_data %>%
-  filter(func_name == "factorial")
+```{r, echo=F, warning=F, fig.height = 6}
+wasm_rpi_data <- rpi_data %>%
+  filter(func_type == "Wasm")
 
-ggplot(power_rip_data, aes(x = input, y = average_power, color = func_type)) +
-  geom_point(alpha = 0.41) + # Adjust transparency with alpha
-  ggtitle("Power consumption on Raspberry Pi") +
+ggplot(wasm_rpi_data, aes(x = input, y = runtime, color = func_type)) +
+  geom_point(alpha = 0.1) + # Adjust transparency with alpha
+  ggtitle("Runtimes in ms on RPI") +
   scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
   geom_smooth(aes(label = func_type),
     fill = "#69b3a2",
@@ -2628,7 +2631,7 @@ ggplot(power_rip_data, aes(x = input, y = average_power, color = func_type)) +
     se = TRUE
   ) +
   labs(
-    x = "Input", y = "Power in Watts (W)", color = "Function Type",
+    x = "Input", y = "Total execution time (ms)", color = "Function Type",
   ) +
   facet_wrap(~func_name, scales = "free") +
   theme_minimal() +
@@ -2636,6 +2639,133 @@ ggplot(power_rip_data, aes(x = input, y = average_power, color = func_type)) +
 ```
 
 
+```{r, echo=F, warning=F, dev = "cairo_pdf"}
+print_power_graph <- function(data_set) {
+  ggplot(data_set, aes(x = input, y = average_power, color = func_type)) +
+    geom_point(alpha = 0.1) + # Adjust transparency with alpha
+    ggtitle("Power consumption on Raspberry Pi") +
+    scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
+    geom_smooth(aes(label = func_type),
+      fill = "#69b3a2",
+      method = "loess", formula = y ~ x,
+      size = 3, linewidth = 2, boxlinewidth = 0.9,
+      se = TRUE
+    ) +
+    labs(
+      x = "Input", y = "Power in Watts (W)", color = "Function Type",
+    ) +
+    facet_wrap(~func_name, scales = "free") +
+    theme_classic() +
+    theme(legend.position = "bottom")
+}
+
+print_energy_graph <- function(data_set) {
+  ggplot(data_set, aes(x = input, y = energy_consumption_wh, color = func_type)) +
+    geom_point(alpha = 0.1) + # Adjust transparency with alpha
+    ggtitle("Energy consumption (μWh) on Raspberry Pi") +
+    scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
+    geom_smooth(aes(label = func_type),
+      fill = "#69b3a2",
+      method = "loess", formula = y ~ x,
+      size = 3, linewidth = 2, boxlinewidth = 0.4,
+      se = TRUE
+    ) +
+    labs(
+      x = "Input", y = "Energy in micro Watt-hours (μWh)", color = "Function Type",
+    ) +
+    facet_wrap(~func_name, scales = "free") +
+    theme_classic() +
+    theme(legend.position = "bottom")
+}
+```
+
+
+```{r, fib_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
+fib_rip_data <- rpi_data %>%
+  filter(func_name == "fibonacci-recursive")
+
+print_power_graph(fib_rip_data)
+```
+
+```{r, fib_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
+print_energy_graph(fib_rip_data)
+```
+
+```{r, fact_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
+fact_rip_data <- rpi_data %>%
+  filter(func_name == "factorial")
+
+print_power_graph(fact_rip_data)
+```
+
+```{r, fact_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
+print_energy_graph(fact_rip_data)
+```
+
+```{r, exp_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
+exp_rip_data <- rpi_data %>%
+  filter(func_name == "exponential")
+
+print_power_graph(exp_rip_data)
+```
+
+```{r, exp_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
+print_energy_graph(exp_rip_data)
+```
+```{r, prime_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
+prime_rip_data <- rpi_data %>%
+  filter(func_name == "prime-number")
+
+print_power_graph(prime_rip_data)
+```
+
+```{r, prime_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
+print_energy_graph(prime_rip_data)
+```
+
+\newpage
+
+```{r, runtime_prime_number, echo=F, warning=F, dev = "cairo_pdf"}
+combined_data <- bind_rows(
+  nrec_data %>% mutate(source_func_name = paste(source, func_name, sep = "_")),
+  rpi_data %>% mutate(source_func_name = paste(source, func_name, sep = "_")),
+)
+
+power_rip_data <- combined_data %>%
+  filter(func_name == "fibonacci-recursive") %>%
+  filter(func_type == "Wasm")
+
+avg_srtup_data <- power_rip_data %>%
+  # filter(func_type == "Wasm") %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 31)) %>%
+  filter(!(func_name == "prime-number" & input > 1500))
+
+
+
+
+averaged_data <- avg_srtup_data %>%
+  group_by(source_func_name, input) %>%
+  summarize(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2),
+    func_name = func_name
+  ) %>%
+  ungroup() %>%
+  pivot_longer(cols = c("avg_runtime", "avg_startup_time"), names_to = "metric", values_to = "value")
+
+
+# Creating a ggplot with stacked bar chart
+ggplot(averaged_data, aes(x = input, y = value, fill = metric)) +
+  geom_line() +
+  facet_wrap(~source_func_name, scales = "free", ncol = 2) +
+  labs(x = "Function Name", y = "Time in milliseconds") +
+  theme_ipsum(base_family = "Avenir", base_size = 12, axis_text_size = 10, plot_title_size = 10, axis_title_size = 15, strip_text_size = 15) +
+  theme(
+    legend.position = "bottom", axis.title.x = element_blank(),
+    axis.title.y = element_text(face = "italic", vjust = 0.5, hjust = 0.5),
+    axis.text.y = element_text(face = "bold")
+  )
+```
 
 \newpage
 \chapter{Analysis}
@@ -2764,6 +2894,7 @@ and run it all :)
   \acro{SBC}[SBC]{Single board computer}
   \acro{AOT}[AOT]{ahead-of-time}
   \acro{MQTT}[MQTT]{Message Queuing Telemetry Transport}
+  \acro{NREC}[NREC]{Norwegian Reasearch and Education Cloud}
 \end{acronym}
 
 \chapter*{Appendices}
