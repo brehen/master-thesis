@@ -10,4 +10,4 @@
 \contentsline {todo}{rephrase this mess}{40}{section*.31}%
 \contentsline {todo}{I ended up with Gude + Modbus tcp, should I just cut out Smart switch and \ac {MQTT}/Zwave from the thesis, as they turned out to be too slow on reporting? Or could they still be relevant, considering they are also valid ways to measure energy readings, at a more affordable level?}{42}{section*.32}%
 \contentsline {todo}{add guide?}{61}{section*.33}%
-\contentsline {todo}{Flesh out about qian's study, which was an inspiration for my setup.}{85}{section*.34}%
+\contentsline {todo}{Flesh out about qian's study, which was an inspiration for my setup.}{87}{section*.34}%

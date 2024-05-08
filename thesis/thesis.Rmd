@@ -5,6 +5,7 @@ author: Marius Nilsen Kluften
 documentclass: report
 classoption:
   - table
+
 date: 2024
 output: 
   pdf_document:
@@ -13,6 +14,7 @@ output:
     citation_package: biblatex
     highlight: /Users/mariuskluften/projects/uio/master-thesis/nebula.theme
     fig_caption: true
+    keep_tex: true
 
 
 header-includes: 
@@ -20,7 +22,9 @@ header-includes:
   - \usepackage{lastpage} % Calculate the last page of the document
   - \usepackage{tocbibind} % Insert custom table of content items
   - \usepackage{graphicx} % import figure
+  - \graphicspath{{figures/}}
   - \usepackage{float} % Allow for more granular control of float of figures
+  - \floatplacement{figure}{H}
   - \usepackage{setspace}
   - \usepackage{lipsum} % Generate lorem ipsum text
   - \usepackage[fontsize=12pt]{scrextend}
@@ -37,6 +41,7 @@ header-includes:
       }
     }
   - \usepackage{todonotes}
+
 
   - \usepackage[style=apa, natbib=true]{biblatex}
   - \addbibresource{nebula_refs.bib}
@@ -99,7 +104,11 @@ library(scales)
 library(kableExtra)
 library(tidyr)
 library(stringr)
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(ggpattern)
+knitr::opts_chunk$set(
+  echo = TRUE, warning = FALSE, message = FALSE, fig.pos =
+    "H"
+)
 options(tinytex.engine_args = "-shell-escape")
 
 nrec_data_raw <- fromJSON("./assets/metrics/nrec_energy_data.json", flatten = TRUE)
@@ -135,6 +144,14 @@ rpi_data <- rpi_data_raw %>%
     source = "rpi"
   ) %>%
   select(startup_time, runtime, total_runtime, average_power, energy_consumption_wh, func_type, func_name, input, source)
+
+function_labeller <- function(variable, value) {
+  value <- str_replace(value, "fibonacci-recursive", "Fibonacci")
+  value <- str_replace(value, "exponential", "Exponential")
+  value <- str_replace(value, "factorial", "Factorial")
+  value <- str_replace(value, "prime-number", "Prime Number")
+  return(value)
+}
 ```
 
 
@@ -1867,11 +1884,13 @@ The key steps involved in executing a Docker container are:
 1. Start up a Command process, from Rust's standard library, which spawns a
    `docker run` command that we provide with image name and append stdin and
 stdout processes. 
-2. Write input to the stdin, which the function that is packaged inside our
+2. Time the moment the container spawns, this will be compared against the time
+   timed inside container, to get an accurate cold start time.
+3. Write input to the stdin, which the function that is packaged inside our
    container is waiting on.
-3. Wait for function inside the Docker container to execute and write out the
+4. Wait for function inside the Docker container to execute and write out the
    result as stdout.
-4. Parse output from the Docker container with a helper function, which comes in
+5. Parse output from the Docker container with a helper function, which comes in
    the form of a tuple of (result, micro_seconds_since_epoch). We will use the
 second item in this tuple pair for determining the actual startup time of our
 function, which when the Docker container starts executing.
@@ -2475,68 +2494,62 @@ extensive manual testing through the benchmarking suite provided a strong
 foundation for the validity and rigidity of the Nebula prototype, ensuring
 reliable and robust performance during the experiments and evaluation.
 
-\part{Discussion}
+\part{Analysis}
 
 \newpage
 \chapter{Results}
 
-Now that we have achieved the first goal of our thesis, to develop a prototype
-cloud computing platform for the \ac{FaaS} paradigm, we will explore the
-remaining goals and attempt to answer them in this part. Based on the prototype
-we implemented in \Cref{chap:implement_nebula} and the supporting benchmark
-utility we also developed, we have experimented on Nebula, and are now ready to
-examine the results.
+With the first goal of developing a prototype cloud computing platform for the
+\ac{FaaS} paradigm accomplished, we can turn our attention to the remaining
+objectives of this thesis. Leveraging the prototype implemented in
+\Cref{chap:implement_nebula} and the supporting benchmark utility, experiments
+were conducted on Nebula to evaluate its performance. This chapter presents the
+results, while we will discuss these results further in \Cref{chap:discussion}.
 
 \section{Methodology recap}
 
-For our experiments we implemented a series of benchmark functions that were to
-run on both our Raspberry Pi and a standard virtual machine on \ac{NREC} to mimic different
-operational environments. Each function was tested as both a \ac{Wasm} module
-and Docker container, and we aimed to capture a broad range of data under
-controlled condotions. The specific metrics we aimed to measure were:
+The experiments involved running a series of benchmark functions on both a
+Raspberry Pi model 4B and a virtual machine on \ac{NREC}, representing different
+operational environments. Each function was tested as a \ac{Wasm} module and a
+Docker container to capture a comprehensive dataset under controlled conditions.
+The key metrics measured were:
 
-- Startup Latency (Cold start): Time from the function is invoked until it
-begins executing.
-- Total Runtime: Duration of the entire functions lifetime, from start until it
-returns the result.
-- Power consumption: The amount of *W* that we measured on our Raspberry Pi
-while under load of our function executions. A product of the measured current
-and power factor, where we assume a constant voltage of 240V.
+- Startup latency (Cold start): The time elapsed between invoking the function
+and its exeuction start. 
+- Total runtime: The complete lifecycle duration from start to result return. 
+- Power consumption: The power draw (in watts)on the Raspberry Pi during
+function execution loads, calculated as the product of measured current, power
+factor, and an assumed 240V voltage.
 
-As a result of our benchmarks measuring total runtime and power consumption, we
-also have the benefit of deriving an estimation of how energy our function
-exections consumed during its lifetime. Energy consumption (*E*) is measured in Wh,
-a product of \(E = P \times t\).
+Additionally, by combining total runtime and power consumption data, an
+estimation of the energy consumed by function executions throughout their
+lifetime could be derived. Due to the fast execution times of our functions,
+energy consumption (*E*) is expressed in microwatt-hours (μWh), calculated as \(E = P
+\times t\), where P is the power in watts and t is the time in microseconds. 
 
-We automated the data collection through our benchmarking utility implemented in
-\Cref{sect:implement_benchmark} to ensure accuracy and repeatabiity, which
-proved invaluable while gathering data for this report.
+To ensure accuracy and repeatability, data collection was automated using the
+benchmarking utility developed in \Cref{sect:implement_benchmark}, proving
+invaluable for this report.
 
-Important to note for this chapter, is that a lot of the data the differences
-between our function invocations as \ac{Wasm} modules and Docker containers are
-so extreme that it is hard to properly visualize them next to each other in the
-same graph. Therefore, where applicable, the data will be split into \ac{Wasm}
-and Docker for our data sets, to be able to examine the data more closely. 
+Of particular note is the extreme performance disparity between \ac{Wasm}
+modules and Docker containers, making it difficult to visualize their data on
+the same graphs effectively. Consequently, where applicable, the data is
+presented seperately to allow for closer examination of each execution mode.
 
 \section{Startup and Runtimes}
 
 
-```{r, avg_times_nrec_rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.cap="Average Startup and Runtime on our setups"}
+```{r, avg-times-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Average Startup and Runtime on both our setups"}
 combined_data <- bind_rows(
   nrec_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
   rpi_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
 )
 
 avg_srtup_data <- combined_data %>%
-  # filter(func_type == "Wasm") %>%
   filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
   filter(!(func_name == "prime-number" & input > 1500))
 
 
-# Filter data for Docker environment
-# docker_data <- data %>%
-#   # filter(func_type == "Wasm") %>%
-#   filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710)))
 
 
 averaged_data <- avg_srtup_data %>%
@@ -2558,9 +2571,14 @@ averaged_data <- avg_srtup_data %>%
 # Creating a ggplot with stacked bar chart
 ggplot(averaged_data, aes(x = interaction(func_name, source_func_type), y = value, fill = Metric)) +
   geom_col(position = "stack") +
-  # ggtitle("Average Startup and Runtimes on both setups") +
   scale_x_discrete(labels = c("Exponential", "Factorial", "Fibonacci", "Prime\nNumber"), guide = guide_axis(angle = 45)) +
-  scale_fill_manual(values = c("Docker Startup" = "#089CEC", "Wasm Startup" = "#6B54F1", "Docker Runtime" = "#EC5808", "Wasm Runtime" = "#F1548C")) +
+  scale_fill_manual(
+    values = c("Docker Startup" = "#089CEC", "Wasm Startup" = "#6B54F1", "Docker Runtime" = "#EC5808", "Wasm Runtime" = "#F1548C"),
+    guide = guide_legend(override.aes = list(pattern = c(" ", " ", " ", " ")))
+  ) +
+  scale_fill_manual(
+    values = c("Docker Startup" = "#089CEC", "Wasm Startup" = "#6B54F1", "Docker Runtime" = "#EC5808", "Wasm Runtime" = "#F1548C"),
+  ) +
   facet_wrap(~source_func_type,
     scales = "free", labeller = function(variable, value) {
       value <- str_replace(value, "nrec_Docker", "Docker (VM)")
@@ -2575,203 +2593,354 @@ ggplot(averaged_data, aes(x = interaction(func_name, source_func_type), y = valu
   theme(
     legend.position = "bottom", axis.title.x = element_blank(),
     axis.title.y = element_text(face = "italic", vjust = 0.5, hjust = 0.5),
-    axis.text.y = element_text(face = "bold")
+    axis.text.y = element_text(face = "bold"),
   )
 ```
 
-In \Cref{avg_times_nrec_rpi} above we can see the startup and runtimes of
-our function invocations across both our Nrec and Raspberry Pi deployment
-targets, across our 4 benchmark functions, split by Docker or \ac{Wasm}
-invocations. As we will present in a later graph, the fibonacci and prime number
-functions data set include input that towards the higher end ramps up the
-runtime exponentially. These extremes have been excluded from the sample in
-this graph, so we can closer examine the average startup and runtimes we could
-expect. (Specifically, input above 1500 for Prime numbers, and above 30 for
-Fibonacci)  
+\Cref{fig:avg-times-nrec-rpi} provides an overview of the average startup and
+runtimes across our benchmarks on both our virtual machine and Raspberry Pi
+setups. While this offers a general comparison between \ac{Wasm} and Docker
+invocations, \Cref{fig:nrec-efficiency, fig:rpi-efficiency} present more
+detailed scatter plots with an average line drawn across showcasing the
+performance variance for each input across multiple runs.
 
+At first glance, the startup and runtimes of our \ac{Wasm} modules and Docker
+containers may appear similar in \Cref{fig:avg-times-nrec-pi}, but a keen eye
+will notice the differeing y-axis scales. While Docker containers startup and
+return results in the range of hundreds of milliseconds, the \ac{Wasm} modules
+startup and shut down in just single-digit milliseconds.
 
+It is evident from these figures that the data follows a similar curve on the
+Raspberry Pi, albeit with longer runtimes compared to the virtual machine, as
+expected due to the resource constraintes of the former. To account for
+variance, every permutation of function type, name and input was executed at
+least five times during the benchmarking process. 
+
+For the sake of clarity, measurements exceeding specific input thresholds for
+the fibonacci (above 30) and prime number (above 1500) functions have been
+ecluded from the graphs, as their steep runtime increases would impede effective
+visualization.
 
 \newpage
 
-
-```{r, echo=F, warning=F}
-wasm_nrec_data <- nrec_data %>%
+```{r nrec-efficiency, echo=F, warning=F, dev = "cairo_pdf", fig.height = 9.75, fig.align = 'center', fig.cap = "Wasm runtime measurements on VM during benchmarks.\\label{nrec-efficiency}"}
+combined_times_nrec <- rbind(
+  mutate(nrec_data, type = "Total Runtime"),
+  mutate(nrec_data, total_runtime = startup_time, type = "Cold start")
+)
+wasm_nrec_data <- combined_times_nrec %>%
   filter(func_type == "Wasm")
 
-ggplot(wasm_nrec_data, aes(x = input, y = runtime, color = func_type)) +
-  geom_point(alpha = 0.1) +
-  ggtitle("Runtimes in ms on NREC virtual machine") +
-  scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
-  geom_smooth(aes(label = func_type),
-    fill = "#69b3a2",
-    method = "loess", formula = y ~ x,
-    size = 3, linewidth = 1, boxlinewidth = 0.4,
-    se = TRUE
+docker_nrec_data <- combined_times_nrec %>%
+  filter(func_type == "Docker")
+
+combined_nrec <- rbind(
+  mutate(wasm_nrec_data, env = "Wasm"),
+  mutate(docker_nrec_data, env = "Docker")
+)
+
+gg <- ggplot(combined_nrec, aes(
+  x = input, y = total_runtime,
+  color = interaction(env, type), # Combine env and type for unique color
+  shape = type,
+)) +
+  geom_point(alpha = 0.25) +
+  scale_shape_manual(values = c("Total Runtime" = 3, "Cold start" = 16), name = "") +
+  scale_color_manual(
+    values = c(
+      "Docker.Cold start" = "#089CEC",
+      "Docker.Total Runtime" = "#EC5808",
+      "Wasm.Cold start" = "#6B54F1",
+      "Wasm.Total Runtime" = "#F1548C"
+    ),
+    labels = c(
+      "Startup (Docker)",
+      "Total runtime (Docker)",
+      "Startup (Wasm)",
+      "Total runtime (Wasm)"
+    ),
+    name = ""
   ) +
-  labs(
-    x = "Input", y = "Total execution time (ms)", color = "Function Type",
-  ) +
-  facet_wrap(~func_name, scales = "free") +
+  geom_smooth(method = "loess", formula = y ~ x, size = 3, linewidth = 1, boxlinewidth = 0.4, se = TRUE) +
+  labs(x = "Input (n)", y = "Time in milliseconds (ms)") +
+  facet_wrap(func_name ~ env, ncol = 2, scales = "free", labeller = function_labeller) +
   theme_minimal() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  # guides(
+  #   shape = guide_legend(override.aes = list(fill = c("#6B54F1", "#F1548C"), size = 5))
+  # ) +
+  guides(
+    shape = guide_legend(override.aes = list(fill = c("#6B54F1", "#F1548C"), size = 5, color = "black"), nrow = 2),
+    color = guide_legend(
+      nrow = 2,
+      override.aes = list(
+        shape = c(3, 16, 3, 16)
+      )
+    ),
+    nrow = 2
+  ) +
+  scale_y_continuous(limits = c(0, NA))
+
+print(gg)
 ```
 
-```{r, echo=F, warning=F, fig.height = 6}
-wasm_rpi_data <- rpi_data %>%
+\newpage
+
+```{r rpi-efficiency, echo=F, warning=F, dev = "cairo_pdf", fig.height = 9.5, fig.align = 'center', fig.cap = "Startup and Runtime measurements on Raspberry Pi 4B during benchmarks."}
+combined_times_rpi <- rbind(
+  mutate(rpi_data, type = "Total Runtime"),
+  mutate(rpi_data, total_runtime = startup_time, type = "Cold start")
+)
+wasm_rpi_data <- combined_times_rpi %>%
   filter(func_type == "Wasm")
 
-ggplot(wasm_rpi_data, aes(x = input, y = runtime, color = func_type)) +
-  geom_point(alpha = 0.1) + # Adjust transparency with alpha
-  ggtitle("Runtimes in ms on RPI") +
-  scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
-  geom_smooth(aes(label = func_type),
-    fill = "#69b3a2",
-    method = "loess", formula = y ~ x,
-    size = 3, linewidth = 1, boxlinewidth = 0.4,
-    se = TRUE
+docker_rpi_data <- combined_times_rpi %>%
+  filter(func_type == "Docker")
+
+combined_rpi <- rbind(
+  mutate(wasm_rpi_data, env = "Wasm"),
+  mutate(docker_rpi_data, env = "Docker")
+)
+
+gg <- ggplot(combined_rpi, aes(
+  x = input, y = total_runtime,
+  color = interaction(env, type), # Combine env and type for unique color
+  shape = type,
+)) +
+  geom_point(alpha = 0.25) +
+  scale_shape_manual(values = c("Total Runtime" = 3, "Cold start" = 16), name = "") +
+  scale_color_manual(
+    values = c(
+      "Wasm.Cold start" = "#6B54F1",
+      "Docker.Cold start" = "#089CEC",
+      "Wasm.Total Runtime" = "#F1548C",
+      "Docker.Total Runtime" = "#EC5808"
+    ),
+    labels = c(
+      "Startup (Docker)",
+      "Total runtime (Docker)",
+      "Startup (Wasm)",
+      "Total runtime (Wasm)"
+    ),
+    name = ""
   ) +
-  labs(
-    x = "Input", y = "Total execution time (ms)", color = "Function Type",
-  ) +
-  facet_wrap(~func_name, scales = "free") +
+  geom_smooth(method = "loess", formula = y ~ x, size = 3, linewidth = 1, boxlinewidth = 0.4, se = TRUE) +
+  labs(x = "Input (n)", y = "Time in milliseconds (ms)") +
+  facet_wrap(func_name ~ env, ncol = 2, scales = "free", labeller = function_labeller) +
   theme_minimal() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  guides(
+    shape = guide_legend(override.aes = list(fill = c("#6B54F1", "#F1548C"), size = 5, color = "black"), nrow = 2),
+    color = guide_legend(
+      nrow = 2,
+      override.aes = list(
+        shape = c(3, 16, 3, 16)
+      )
+    ),
+    nrow = 2
+  ) +
+  scale_y_continuous(limits = c(0, NA))
+
+
+print(gg)
 ```
 
 
 ```{r, echo=F, warning=F, dev = "cairo_pdf"}
-print_power_graph <- function(data_set) {
-  ggplot(data_set, aes(x = input, y = average_power, color = func_type)) +
-    geom_point(alpha = 0.1) + # Adjust transparency with alpha
-    ggtitle("Power consumption on Raspberry Pi") +
+print_power_graph <- function(data_set, title) {
+  gg <- ggplot(data_set, aes(
+    x = input, y = average_power, color = func_type,
+    shape = func_type
+  )) +
+    geom_point(alpha = 0.15) + # Adjust transparency with alpha
+    ggtitle(title) +
+    scale_shape_manual(values = c("Docker" = 3, "Wasm" = 16), name = "") +
     scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
-    geom_smooth(aes(label = func_type),
-      fill = "#69b3a2",
-      method = "loess", formula = y ~ x,
-      size = 3, linewidth = 2, boxlinewidth = 0.9,
-      se = TRUE
+    geom_smooth(
+      method = "loess", formula = y ~ x, size = 3, linewidth = 2, boxlinewidth = 0.9, se = TRUE
     ) +
     labs(
-      x = "Input", y = "Power in Watts (W)", color = "Function Type",
+      x = "Input (n)", y = "Power in Watts (W)", color = "Function Type",
     ) +
-    facet_wrap(~func_name, scales = "free") +
-    theme_classic() +
+    # facet_wrap(~func_name, scales = "free", labeller = function_labeller) +
+    theme_ipsum() +
+    guides(
+      shape = guide_legend(
+        override.aes = list(color = c("#089CEC", "#6B54F1")),
+        title = "Function Type",
+        label = c("Docker", "Wasm"),
+        keywidth = 2,
+        keyheight = 1,
+        byrow = TRUE,
+        nrow = 1
+      )
+    ) +
     theme(legend.position = "bottom")
+
+  print(gg)
 }
 
-print_energy_graph <- function(data_set) {
-  ggplot(data_set, aes(x = input, y = energy_consumption_wh, color = func_type)) +
-    geom_point(alpha = 0.1) + # Adjust transparency with alpha
-    ggtitle("Energy consumption (μWh) on Raspberry Pi") +
+print_energy_graph <- function(data_set, title) {
+  gg <- ggplot(data_set, aes(x = input, y = energy_consumption_wh, color = func_type, shape = func_type)) +
+    geom_point(alpha = 0.15) + # Adjust transparency with alpha
+    ggtitle(title) +
     scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
-    geom_smooth(aes(label = func_type),
+    scale_shape_manual(values = c("Docker" = 3, "Wasm" = 16), name = "") +
+    geom_smooth(
       fill = "#69b3a2",
       method = "loess", formula = y ~ x,
       size = 3, linewidth = 2, boxlinewidth = 0.4,
       se = TRUE
     ) +
     labs(
-      x = "Input", y = "Energy in micro Watt-hours (μWh)", color = "Function Type",
+      x = "Input (n)", y = "Energy in microwatt-hours (μWh)", color = "Function Type",
     ) +
-    facet_wrap(~func_name, scales = "free") +
-    theme_classic() +
-    theme(legend.position = "bottom")
+    theme_ipsum() +
+    theme(legend.position = "bottom") +
+    guides(shape = guide_legend(override.aes = list(fill = c(
+      "#089CEC",
+      "#EC5808"
+    ), size = 5)))
+
+  print(gg)
 }
-```
-
-
-```{r, fib_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
-fib_rip_data <- rpi_data %>%
-  filter(func_name == "fibonacci-recursive")
-
-print_power_graph(fib_rip_data)
-```
-
-```{r, fib_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
-print_energy_graph(fib_rip_data)
-```
-
-```{r, fact_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
-fact_rip_data <- rpi_data %>%
-  filter(func_name == "factorial")
-
-print_power_graph(fact_rip_data)
-```
-
-```{r, fact_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
-print_energy_graph(fact_rip_data)
-```
-
-```{r, exp_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
-exp_rip_data <- rpi_data %>%
-  filter(func_name == "exponential")
-
-print_power_graph(exp_rip_data)
-```
-
-```{r, exp_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
-print_energy_graph(exp_rip_data)
-```
-```{r, prime_power, echo=F, warning=F, dev = "cairo_pdf", fig.cap="Average Power load during function execution"}
-prime_rip_data <- rpi_data %>%
-  filter(func_name == "prime-number")
-
-print_power_graph(prime_rip_data)
-```
-
-```{r, prime_energy, echo=F, warning=F, dev = "cairo_pdf", fig.cap="so beautiful"}
-print_energy_graph(prime_rip_data)
 ```
 
 \newpage
 
-```{r, runtime_prime_number, echo=F, warning=F, dev = "cairo_pdf"}
-combined_data <- bind_rows(
-  nrec_data %>% mutate(source_func_name = paste(source, func_name, sep = "_")),
-  rpi_data %>% mutate(source_func_name = paste(source, func_name, sep = "_")),
-)
+\section{Power load and Energy consumption results}
 
-power_rip_data <- combined_data %>%
-  filter(func_name == "fibonacci-recursive") %>%
-  filter(func_type == "Wasm")
+This section presents the data for power load and energy consumption measured on
+the Raspberry Pi during our benchmarking experiments. The results for each
+function are presented in pairs, with the first figure of each pair showing the
+average power load in watts that the Raspberry Pi drew during function
+invocations for each input value (*n*). The second figure displays the estimated
+energy consumed, in microwatt-hours (μWh), calculated by multiplying the average
+power load by the total execution time in microseconds for each function.
 
-avg_srtup_data <- power_rip_data %>%
-  # filter(func_type == "Wasm") %>%
-  filter(!(func_name == "fibonacci-recursive" & input > 31)) %>%
+\todo{mention the average consumption chart below}
+
+An interesting observation from the fibonacci and prime number functions is that
+while the average power load converges to a constant value beyond certain input
+for both \ac{Wasm} and Docker executions. Despite the consistent power draw
+during prolonged execution times, the energy consumption curves for each
+function type maintain their trajectories. 
+
+Despite the consistent power draw during prolonged execution times, the energy
+consumed continues to increase along the same curve of each execution mode. The
+divergence in energy consumption, even with converging power loads, highlights
+the importance of considering both power and time factors when optimizing energy
+efficiency in serverless computing environments. 
+
+```{r, avg-energy-consumption-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Average energy consumption for our functions."}
+avg_srtup_data <- rpi_data %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
   filter(!(func_name == "prime-number" & input > 1500))
 
-
-
-
 averaged_data <- avg_srtup_data %>%
-  group_by(source_func_name, input) %>%
+  group_by(func_name, func_type) %>%
   summarize(
-    avg_startup_time = round(mean(startup_time), digits = 2),
-    avg_runtime = round(mean(runtime), digits = 2),
-    func_name = func_name
+    avg_energy_consumption = round(mean(energy_consumption_wh), digits = 2)
   ) %>%
-  ungroup() %>%
-  pivot_longer(cols = c("avg_runtime", "avg_startup_time"), names_to = "metric", values_to = "value")
+  ungroup()
 
-
-# Creating a ggplot with stacked bar chart
-ggplot(averaged_data, aes(x = input, y = value, fill = metric)) +
-  geom_line() +
-  facet_wrap(~source_func_name, scales = "free", ncol = 2) +
-  labs(x = "Function Name", y = "Time in milliseconds") +
-  theme_ipsum(base_family = "Avenir", base_size = 12, axis_text_size = 10, plot_title_size = 10, axis_title_size = 15, strip_text_size = 15) +
+ggplot(averaged_data, aes(x = func_name, y = avg_energy_consumption, fill = func_type)) +
+  geom_col(position = "dodge", width = 0.7) +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~func_type, scales = "free", labeller = function_labeller) +
+  labs(x = "Function Name", y = "Average Energy Consumption (mWh)") +
+  theme_minimal() +
+  # theme_ipsum(base_family = "Avenir", base_size = 12, axis_text_size = 10, plot_title_size = 10, axis_title_size = 15, strip_text_size = 15) +
   theme(
-    legend.position = "bottom", axis.title.x = element_blank(),
+    legend.position = "bottom",
+    axis.title.x = element_blank(),
     axis.title.y = element_text(face = "italic", vjust = 0.5, hjust = 0.5),
     axis.text.y = element_text(face = "bold")
   )
 ```
 
+
+```{r, fib-power, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Power load on Raspberry Pi during Fibonacci benchmark."}
+fib_rip_data <- rpi_data %>%
+  filter(func_name == "fibonacci-recursive")
+
+print_power_graph(fib_rip_data, "Fibonacci")
+```
+
+```{r, fib-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Fibonacci benchmark"}
+print_energy_graph(fib_rip_data, "Fibonacci")
+```
+
 \newpage
-\chapter{Analysis}
+
+```{r, fact-power, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Power load on Raspberry Pi during Factorial benchmark."}
+fact_rip_data <- rpi_data %>%
+  filter(func_name == "factorial")
+
+print_power_graph(fact_rip_data, "Factorial")
+```
+
+```{r, fact-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Factorial benchmark."}
+print_energy_graph(fact_rip_data, "Factorial")
+```
+
+\newpage
+
+```{r, exp-power, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Power load on Raspberry Pi during Exponential benchmark."}
+exp_rip_data <- rpi_data %>%
+  filter(func_name == "exponential")
+
+print_power_graph(exp_rip_data, "Exponential")
+```
+
+```{r, exp-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Factorial benchmark."}
+exp_rip_data <- rpi_data %>%
+  filter(func_name == "exponential")
+print_energy_graph(exp_rip_data, "Exponential")
+```
+
+\newpage
+
+```{r, prime-power, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Power load on Raspberry Pi during Prime Number benchmark."}
+prime_rip_data <- rpi_data %>%
+  filter(func_name == "prime-number")
+
+print_power_graph(prime_rip_data, "Prime Number")
+```
+
+```{r, prime-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Prime Number benchmark."}
+print_energy_graph(prime_rip_data, "Prime Number")
+```
+
+These results provide insights into the power and energy implications of
+executing various functions as \ac{Wasm} modules and Docker containers on
+resource-constrained devices like the Raspberry Pi. While this controlled
+experiment does not necessarily accurately represent larger data centers, the
+data can still inform decision-making processes related to function deployment,
+resource allocation, and energy optimization strategies in serverless computing
+environments.
 
 
+\newpage
+\chapter{Discussion}
 
+The results obtained from our experiments shed light on the performance
+characteristics and resource implications of serverless function execution using
+\ac{Wasm} modules and traditional Docker containers. This chapter discusses the
+key findings and their significance and relates them to existing research in
+this domain.
+
+\section{Startup Latency and Runtime Performance}
+
+One of the most noticable findings from our experiments is the substantial
+difference in startup latency between \ac{Wasm} modules and Docker containers.
+On the virtual machine setup, \ac{Wasm}-based function invocations exhibited
+startup times approximately 300-400 times faster than their Docker counterparts.
+This discrepancy was also observed on the resource-constrained Raspberry Pi,
+albeit with a bit smaller gap, where \ac{Wasm} startups were around 240 times
+quicker than Docker containers. 
+
+Our findings align with the observations made by 
 
 \section{Related work}
 \label{sect:related-work}
