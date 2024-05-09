@@ -35,20 +35,20 @@ load_data_and_plot_scatter <- function(file_path) {
   # Filter data for Docker environment and apply specified conditions
   docker_data <- data %>%
     # filter(func_type == "Docker") %>%
-    # filter(func_type == "Wasm") %>%
-    filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710))) %>%
-    group_by(func_name) %>%
-    mutate(input_percent = input / max(input) * 100) %>%
-    ungroup()
+    filter(func_type == "Wasm")
+  # filter(!(func_name == "fibonacci" | (func_name == "factorial" & input > 130) | (func_name == "exponential" & input > 710))) %>%
+  # group_by(func_name) %>%
+  # mutate(input_percent = input / max(input) * 100) %>%
+  # ungroup()
 
-  print(docker_data[1, "energy_consumption_wh"])
+  # print(docker_data[1, "energy_consumption_wh"])
 
   print(head(docker_data))
 
   # Creating a ggplot with scatter plot and bubble size
   gg <- ggplot(docker_data, aes(x = input, y = energy_consumption_wh, color = func_type)) +
     geom_point(alpha = 0.4) + # Adjust transparency with alpha
-    scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
+    # scale_color_manual(values = c("Docker" = "#089CEC", "Wasm" = "#6B54F1")) +
     geom_smooth(aes(label = func_type),
       fill = "#69b3a2",
       method = "loess", formula = y ~ x,
@@ -58,8 +58,9 @@ load_data_and_plot_scatter <- function(file_path) {
     labs(
       x = "Input", y = "Energy Consumption (μWh)", color = "Function Type",
     ) +
-    facet_wrap(~func_name, scales = "free_x") +
-    theme_ipsum(base_size = 30, caption_size = 30, axis_title_size = 24, plot_title_size = 24, strip_text_size = 25) +
+    facet_wrap(~func_name, scales = "free") +
+    theme_ipsum() +
+    # theme_ipsum(base_size = 30, caption_size = 30, axis_title_size = 24, plot_title_size = 24, strip_text_size = 25) +
     theme(legend.position = "bottom")
 
   gg <- gg +
@@ -68,10 +69,10 @@ load_data_and_plot_scatter <- function(file_path) {
       size = 5,
       keywidth = 2,
       keyheight = 2,
-      fill = c("#089CEC", "#6B54F1") # Color squares according to your palette
+      fill = c("#089CEC") # , "#6B54F1") # Color squares according to your palette
     )))
 
   print(gg)
 }
 
-load_data_and_plot_scatter("../thesis/assets/metrics/rpi_energy_data.json")
+load_data_and_plot_scatter("../thesis/assets/metrics/rpi_energy_data_0_5_0.json")
