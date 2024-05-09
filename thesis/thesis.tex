@@ -412,10 +412,6 @@ have a table-of-contents.}
 
 \setlength\epigraphwidth{.35\textwidth}
 
-\epigraph{\itshape 
-9 out of 10 cloud providers hate this one simple trick.
-}{Joachim, my supervisor}
-
 The evolution of cloud computing represents a transformative adventure,
 driven by the pursuit for efficiency, scalability and reliability, yet
 it also poses challenges, notably its environmental impact. This chapter
@@ -582,10 +578,6 @@ impact of ICT.
 
 \chapter{Background}
 \label{chap:background}
-
-\epigraph{\itshape 
-Data has gravity, and that gravity pulls hard
-}{David Flanagan}
 
 \section{Cloud Computing Overview}
 \label{sect:cloud-overview}
@@ -3078,7 +3070,7 @@ times less memory during operation (\Cref{tab:dockervsfaaslet}).
 \centering
 \caption{\label{tab:unnamed-chunk-3}Comparison of Faaslets vs. container cold starts. Reprinted with permission.\label{tab:dockervsfaaslet}}
 \centering
-\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\begin{tabular}[t]{lrrr}
 \toprule
  & Docker & Faaslets & vs.Docker\\
 \midrule
@@ -3088,7 +3080,7 @@ CPU cycles & 251M & 1.4K & 179K×\\
 RSS memory & 5.0 MB & 200 KB & 25×\\
 \cellcolor{gray!10}{Capacity} & \cellcolor{gray!10}{\textasciitilde{}8 K} & \cellcolor{gray!10}{\textasciitilde{}70 K} & \cellcolor{gray!10}{8×}\\
 \bottomrule
-\end{tabu}
+\end{tabular}
 \end{table}
 
 Additionally, they demonstrated a 2x speed-up in machine learning model
@@ -3136,17 +3128,87 @@ vs Rust container vs Golang container. © 2022 IEEE}
 \chapter{Conclusion}
 
 With the first goal of this thesis achieved, we move our attention to
-the topic of whether or not our hypothesis that \ac{Wasm} offers a more
-efficient alternative to Docker in regards for startup, runtime and
-energy consumption.
+the topic of whether our hypothesis that Wasm offers a more efficient
+alternative to Docker in regards to startup, runtime, and energy
+consumption. Our findings are summiarised in
+\Cref{tab:nrec-avg,tab:rpi-avg} which represent the differences in our
+controlled experiments for this project.
 
-These findings underscore the potential of \ac{Wasm} as a lightweight
-and efficient execution environment for serverless functions, offering
-substantial performance benefits over traditional container-based
+\begin{table}[H]
+\centering
+\caption{\label{tab:nrec_data_table}Comparison of Wasm vs. Docker cold starts on VM.\label{tab:nrec-avg}}
+\centering
+\begin{tabular}[t]{llrr}
+\toprule
+  & Docker & Wasm & vs Docker\\
+\midrule
+\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{324.66 ms} & \cellcolor{gray!10}{0.89 ms} & \cellcolor{gray!10}{365×}\\
+Runtime & 187.03 ms & 0.69 ms & 271×\\
+\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{511.69 ms} & \cellcolor{gray!10}{1.58 ms} & \cellcolor{gray!10}{324×}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:rpi_data_table}Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\label{tab:rpi-avg}}
+\centering
+\begin{tabular}[t]{llrr}
+\toprule
+  & Docker & Wasm & vs Docker\\
+\midrule
+\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{692.36 ms} & \cellcolor{gray!10}{3.19 ms} & \cellcolor{gray!10}{217×}\\
+Runtime & 426.82 ms & 2.93 ms & 146×\\
+\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{1119.18 ms} & \cellcolor{gray!10}{6.12 ms} & \cellcolor{gray!10}{183×}\\
+Energy consumption & 1176.15 μWh & 5.95 μWh & 198×\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The findings from our experiments conclusively demonstrate the
+superiority of \ac{Wasm} over Docker in terms of our scoped domain. As
+evident from \Cref{tab:nrec-avg,tab:rpi-avg}, Wasm outperformed Docker
+by significant margins across all aspects, including cold start times,
+runtime, total runtime, and our estimation for energy consumption. It is
+important to note that for certain computationally intensive functions
+with very large input ranges (fibonacci-recursive with input
+\textgreater{} 30 and prime-number with input \textgreater{} 1500), we
+excluded those data points to avoid skewing the averages due to
+excessive runtimes.
+
+On the VM environment \Cref{tab:nrec-avg}, Wasm showed a remarkable 365×
+faster cold start, 271× faster runtime, and 324× faster total runtime
+compared to the same source code packaged into Docker images. Similarly,
+on the Raspberry Pi \Cref{tab:rpi-avg}, Wasm showcased impressive
+improvements, with 217× faster cold start, 146× faster runtime, 183×
+faster total runtime, and 198× less energy consumed than Docker.
+
+These findings underscore the potential of Wasm as a lightweight and
+efficient execution environment for serverless functions, offering
+significant performance benefits over traditional container-based
 approaches. The drastic reduction in startup latency and overall runtime
 times can be particularly advantageous in scenarios where minimizing
 latency and maximizing throughput are critical, such as in
 latency-sensitive applications or high-throughput workloads.
+Furthermore, the significant energy savings and the low memory usage
+\citep{shillakerFaasmLightweightIsolation2020a} achieved by Wasm make it
+an attractive choice for resource-constrained environments, such as edge
+computing devices or embedded systems.
+
+While our experiments focused on specific workloads and environments,
+the observed trends suggest that Wasm could be a viable and compelling
+alternative to Docker for a wide range of serverless applications.
+However, it is essential to note that the choice between Wasm and Docker
+may also depend on other factors, such as the specific requirements of
+the application, the available resources, and the trade-offs between
+performance and other considerations, such as security and portability.
+
+In summary, our research has demonstrated the potential of Wasm as a
+high-performance and energy-efficient alternative to Docker for
+serverless computing. The findings presented in this thesis provide a
+solid foundation for further exploration and adoption of Wasm in the
+serverless ecosystem, particularly in scenarios where performance,
+latency, and energy efficiency are critical concerns.
 
 \newpage
 \chapter{Future work}
@@ -3159,12 +3221,6 @@ containers, windows containers and wasm containers side by side. Over time wasm
 might become the most popular container type. Docker will love them all equally,
 and run it all :)
 }{---Solomon Hykes, \textit{Founder of Docker}}
-
-\newpage
-\chapter{Conclusion}
-
-\newpage
-\chapter{Future work}
 
 \chapter*{Acronyms}
 \begin{acronym}

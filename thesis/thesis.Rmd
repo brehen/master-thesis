@@ -431,9 +431,9 @@ have a table-of-contents.}
 
 \setlength\epigraphwidth{.35\textwidth}
 
-\epigraph{\itshape 
-9 out of 10 cloud providers hate this one simple trick.
-}{Joachim, my supervisor}
+<!-- \epigraph{\itshape  -->
+<!-- 9 out of 10 cloud providers hate this one simple trick. -->
+<!-- }{Joachim, my supervisor} -->
 
 The evolution of cloud computing represents a transformative adventure, driven
 by the pursuit for efficiency, scalability and reliability, yet it also poses
@@ -589,9 +589,9 @@ environmental impact of ICT.
 \chapter{Background}
 \label{chap:background}
 
-\epigraph{\itshape 
-Data has gravity, and that gravity pulls hard
-}{David Flanagan}
+<!-- \epigraph{\itshape  -->
+<!-- Data has gravity, and that gravity pulls hard -->
+<!-- }{David Flanagan} -->
 
 \section{Cloud Computing Overview}
 \label{sect:cloud-overview}
@@ -2968,10 +2968,6 @@ Rust binary inside the Docker container would perform close to the same source
 code compiled to \ac{Wasm}. Examining this discrepancy would be valuable to
 explore in future work.
 
-```{r, eval=T}
-source()
-```
-
 
 
 \section{Power Consumption and Energy Efficiency}
@@ -3030,7 +3026,7 @@ kbl(data,
   align = "lrrr",
 ) %>%
   kableExtra::kable_styling(
-    full_width = T,
+    # full_width = T,
     latex_options = c("HOLD_position", "striped")
   )
 ```
@@ -3072,44 +3068,153 @@ vs Rust container vs Golang container. © 2022 IEEE}
   \label{fig:wasm-memory}
 \end{figure}
 
-```{r}
-library(ggplot2)
-
-# Load your data (replace with your actual dataset)
-data <- data.frame(
-  Average_Cold_Start = c(10, 12, 15),
-  Average_Runtime = c(50, 60, 70)
-)
-
-# Create the table
-ggplot(data) +
-  geom_table(aes(x = "", y = Average_Cold_Start, label = paste("Average Cold Start: ", round(Average_Cold_Start), " seconds")),
-    height = unit(2.5, "cm")
-  ) +
-  geom_text(
-    aes(
-      x = 0.3, y = max(data$Average_Cold_Start) + 1,
-      label = "Cold Start (seconds)", hjust = 0, vjust = -0.5
-    ),
-    fontface = "bold"
-  ) +
-  theme_classic()
-```
 
 \newpage
 \chapter{Conclusion}
 
 With the first goal of this thesis achieved, we move our attention to the topic
-of whether or not our hypothesis that \ac{Wasm} offers a more efficient
-alternative to Docker in regards for startup, runtime and energy consumption.
+of whether our hypothesis that Wasm offers a more efficient alternative to
+Docker in regards to startup, runtime, and energy consumption. Our findings are
+summiarised in \Cref{tab:nrec-avg,tab:rpi-avg} which represent the differences
+in our controlled experiments for this project.
 
-These findings underscore the potential of \ac{Wasm} as a lightweight and
-efficient execution environment for serverless functions, offering substantial
-performance benefits over traditional container-based approaches. The drastic
-reduction in startup latency and overall runtime times can be particularly
-advantageous in scenarios where minimizing latency and maximizing throughput are
-critical, such as in latency-sensitive applications or high-throughput
-workloads.
+```{r nrec_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on VM."}
+nrec_avg_data <- nrec_data %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+  filter(!(func_name == "prime-number" & input > 1500)) %>%
+  group_by(func_type) %>%
+  summarise(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2),
+    avg_total_runtime = round(mean(total_runtime), digits = 2),
+  )
+
+nrec_table <- data.frame(
+  Docker = c(
+    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Docker"],
+    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Docker"],
+    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Docker"]
+  ),
+  Wasm = c(
+    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Wasm"],
+    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Wasm"],
+    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Wasm"]
+  ),
+  row.names = c("Cold start", "Runtime", "Total runtime")
+)
+
+nrec_table$`vs Docker` <- paste0(round(nrec_table$Docker / nrec_table$Wasm), "×")
+
+nrec_table[, 1:2] <- sapply(nrec_table[, 1:2], function(x) paste0(x, " ms"))
+
+
+
+
+kbl(nrec_table,
+  booktabs = T,
+  caption = "Comparison of Wasm vs. Docker cold starts on VM.\\label{tab:nrec-avg}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    # full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+```{r rpi_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on Raspberry Pi."}
+# rpi_table_data <- rpi_data %>%
+#   filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+#   filter(!(func_name == "prime-number" & input > 1500))
+
+rpi_avg_data <- rpi_data %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+  filter(!(func_name == "prime-number" & input > 1500)) %>%
+  group_by(func_type) %>%
+  summarise(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2),
+    avg_total_runtime = round(mean(total_runtime), digits = 2),
+    avg_energy_consumption_wh = round(mean(energy_consumption_wh), digits = 2)
+  )
+
+rpi_table <- data.frame(
+  Docker = c(
+    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Docker"]
+  ),
+  Wasm = c(
+    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Wasm"]
+  ),
+  row.names = c("Cold start", "Runtime", "Total runtime", "Energy consumption")
+)
+
+rpi_table$`vs Docker` <- paste0(round(rpi_table$Docker / rpi_table$Wasm), "×")
+
+
+rpi_table[1:3, 1:2] <- sapply(rpi_table[1:3, 1:2], function(x) paste0(x, " ms"))
+rpi_table[4, 1:2] <- sapply(rpi_table[4, 1:2], function(x) paste0(x, " μWh"))
+
+
+kbl(rpi_table,
+  booktabs = T,
+  caption = "Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\\label{tab:rpi-avg}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    # full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+
+The findings from our experiments conclusively demonstrate the superiority of
+\ac{Wasm} over Docker in terms of our scoped domain. As evident from
+\Cref{tab:nrec-avg,tab:rpi-avg}, Wasm outperformed Docker by significant
+margins across all aspects, including cold start times, runtime, total runtime,
+and our estimation for energy consumption. It is important to note that for certain computationally
+intensive functions with very large input ranges (fibonacci-recursive with input
+\> 30 and prime-number with input \> 1500), we excluded those data points to avoid
+skewing the averages due to excessive runtimes.
+
+On the VM environment \Cref{tab:nrec-avg}, Wasm showed a remarkable 365× faster
+cold start, 271× faster runtime, and 324× faster total runtime compared to the
+same source code packaged into Docker images. Similarly, on the Raspberry Pi
+\Cref{tab:rpi-avg}, Wasm showcased impressive improvements, with 217× faster cold
+start, 146× faster runtime, 183× faster total runtime, and 198× less energy
+consumed than Docker.
+
+These findings underscore the potential of Wasm as a lightweight and efficient
+execution environment for serverless functions, offering significant performance
+benefits over traditional container-based approaches. The drastic reduction in
+startup latency and overall runtime times can be particularly advantageous in
+scenarios where minimizing latency and maximizing throughput are critical, such
+as in latency-sensitive applications or high-throughput workloads. Furthermore,
+the significant energy savings and the low memory usage
+\citep{shillakerFaasmLightweightIsolation2020a} achieved by Wasm make it an
+attractive choice for resource-constrained environments, such as edge computing
+devices or embedded systems. 
+
+While our experiments focused on specific workloads and environments, the
+observed trends suggest that Wasm could be a viable and compelling alternative
+to Docker for a wide range of serverless applications. However, it is essential
+to note that the choice between Wasm and Docker may also depend on other
+factors, such as the specific requirements of the application, the available
+resources, and the trade-offs between performance and other considerations, such
+as security and portability.
+
+In summary, our research has demonstrated the potential of Wasm as a
+high-performance and energy-efficient alternative to Docker for serverless
+computing. The findings presented in this thesis provide a solid foundation for
+further exploration and adoption of Wasm in the serverless ecosystem,
+particularly in scenarios where performance, latency, and energy efficiency are
+critical concerns.
+
+
 
 \newpage
 \chapter{Future work}
@@ -3123,12 +3228,6 @@ might become the most popular container type. Docker will love them all equally,
 and run it all :)
 }{---Solomon Hykes, \textit{Founder of Docker}}
 
-
-\newpage
-\chapter{Conclusion}
-
-\newpage
-\chapter{Future work}
 
 
 \chapter*{Acronyms}
