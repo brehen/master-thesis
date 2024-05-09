@@ -2871,6 +2871,8 @@ second figure displays the estimated energy consumed, in microwatt-hours
 (μWh), calculated by multiplying the average power load by the total
 execution time in microseconds for each function.
 
+\todo{mention the average consumption chart below}
+
 An interesting observation from the fibonacci and prime number functions
 is that while the average power load converges to a constant value
 beyond certain input for both \ac{Wasm} and Docker executions. Despite
@@ -2984,92 +2986,97 @@ optimization strategies in serverless computing environments.
 
 The results obtained from our experiments shed light on the performance
 characteristics and resource implications of serverless function
-execution using \ac{Wasm} modules and traditional Docker containers.
-This chapter discusses the key findings and their significance and
-relates them to existing research in this domain.
+execution using \ac{Wasm} modules and traditional Docker containers. In
+this chapter we will discuss the key findings, their significance and
+compare them to existing research in this domain.
 
 \section{Startup Latency and Runtime Performance}
 
-One of the most noticable findings from our experiments is the
-substantial difference in startup latency between \ac{Wasm} modules and
-Docker containers. On the virtual machine setup, \ac{Wasm}-based
-function invocations exhibited startup times approximately 300-400 times
-faster than their Docker counterparts. This discrepancy was also
-observed on the resource-constrained Raspberry Pi, albeit with a bit
-smaller gap, where \ac{Wasm} startups were around 240 times quicker than
-Docker containers.
+Our experiments revealed a substantial difference in startup latency
+between \ac{Wasm} modules and Docker containers. As illustrated in
+\Cref{fig:avg-efficiency-nrec-rpi}, \ac{Wasm} function invocations on
+average showed startup times approximately 300-400 times faster than
+their Docker counterparts on the virtual machine setup. While the gap is
+smaller on Raspberry Pi, due to its resource constraints, it is still
+noticeable with \ac{Wasm} starting up 240 times faster than Docker
+containers. In \Cref{fig:nrec-efficiency, fig:rpi-efficiency} we can see
+the detailed startup times of our functions across both our setups, and
+while the values can vary a lot across invocations, we can see that the
+trend for a consistent startup time is consistent.
+\todo{get these numbers}
 
-Our findings align with the observations made by
+In addition to faster startup times, the results in
+\Cref{fig:avg-efficiency-nrec-rpi} indicates that \ac{Wasm} modules
+maintained a notable performance advantage over Docker containers in
+form of overall runtime. On the virtual machine, \ac{Wasm} runtimes were
+between 100-200 times faster than Docker runtimes, while on the
+Raspberry Pi, \ac{Wasm} still showed significant runtime improvements
+compared to Docker containers.
+\Cref{fig:nrec-efficiency, fig:rpi-efficiency} shows the total runtime
+on both setups, including the startup times, and here we can see that
+most of the time spent during execution of our functions is spent on
+startup. The exception to this is in the case of our fibonacci and prime
+number functions, where the total runtime consistently go beyond the
+startup time at input numbers above 30 and 1500 respectively.This
+indicates that the improved runtimes of our \ac{Wasm}-based functions as
+an alternative to Docker diminishes at heavier workloads.
+
+A very interesting observation that is made apparent from
+\Cref{fig-avg-efficiency-nrec-rpi} is that our Docker containers perform
+unexpectedly slow in runtime, compared to the runtime of the same code
+executed as \ac{Wasm} modules. The ratio of our tuntimes across both
+\ac{Wasm} and Docker remains largely the same, but with the same source
+code, one could expect that the Rust binary inside the Docker container
+would perform close to the same source code compiled to \ac{Wasm}.
+Examining this discrepancy would be valuable to explore in future work.
+
+\section{Power Consumption and Energy Efficiency}
+
+Another important aspect explored in our study is the power consumption
+and energy efficiency of \ac{Wasm} modules compared to Docker
+containers. As depicted in \Cref{fig:fib-power} to
+\cref{fig:prime-energy}, our results from the Raspberry Pi benchmarks
+revealed that \ac{Wasm} function executions consumed approximately 200
+times less energy \todo{get accurate figure}, measured in
+microwatt-hours (μWh), than their Docker counterparts for the same
+computational workload.
+
+While the average power load during execution converged to a consistent
+value for both \ac{Wasm} and Docker instances at higher input values,
+the energy consumption curves maintained their trajectories. This
+divergence highlights the importance of considering both power and time
+factors when optimizing for energy efficiency in serverless computing
+environments.
+
+Important to note for our power and energy measurements is that this
+form of measuring power on a system is inherently not able to paint an
+accurate representation on how much power and energy our functions
+consume in isolation. Thus the results presented in \Cref{chap:results}
+represent a approximation of how much energy our Raspberry Pi as a whole
+consumes while executing our functions, including its other functions.
+For our experiments we disabled unnecessary components, such as wifi,
+bluetooth, HDMI and other connectors that draw constant power. We could
+measure a ``baseline'' power draw that our system draws while idle and
+not executing any functions and subtract this from our measurements, but
+this would also only result in a close approximation with mostly the
+same graphs with lower numbers.
 
 \section{Related work}
 \label{sect:related-work}
 
-\todo{Flesh out about qian's study, which was an inspiration for my setup.}
-
-\citet{qianEnergyFootprintingWordPress2022} wrote a dissertation at the
-University of Bristol where they
-
-There are several cloud providers who have added support for running
-\ac{Wasm} on their cloud offerings. Cloudflare Workers\footnote{\url{https://developers.cloudflare.com/workers/runtime-apis/webassembly/}},
-and Fastly
-\href{mailto:Compute@Edge}{\nolinkurl{Compute@Edge}}\footnote{\url{https://www.fastly.com/products/edge-compute/serverless}}
-have added support, while Fermyon have built an entire cloud
-architecture around the binary format with their Fermyon
-Cloud\footnote{\url{https://www.fermyon.com/cloud}}. Fermyon has also
-open sourced their developer tool Spin\footnote{\url{https://www.fermyon.com/spin}},
-a tool that lets developers create, build and test applications written
-in a supported language\footnote{\url{https://developer.fermyon.com/spin/v2/language-support-overview}}
-and deploy it to a Fermyon Platform instance, either self-hosted or on
-their own service.
-
-\citet{sebrechtsAdaptingKubernetesControllers2022} wrote a paper where
-they described their research in developing a \ac{Wasm}-based framework
-for running lightweight controllers on Kubernetes. In their research
-they found that with their novel \ac{Wasm}-based operators were able to
-reduce memory footprint of 100 synthetic operators from 1405MiB to
-227MiB and from 1131MiB to 86MiB of idle operators, compared to
-traditional operators. One of their conclusions is that using \ac{Wasm}
-proved to be more memory efficient than the container-based solution.
-See \Cref{fig:wasm-memory} for their findings on memory usage with
-\ac{Wasm}-based operators to Rust and Golang operators.
-
-\begin{figure}[H]
-\centering
-  \includegraphics{assets/3.8-memoryusage-wasm.png}
-  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
-vs Rust container vs Golang container. © 2022 IEEE}
-  \label{fig:wasm-memory}
-\end{figure}
+Our findings on the performance and efficiency advantages of \ac{Wasm}
+align with and complement the existing body of research in this field.
 
 \citet{shillakerFaasmLightweightIsolation2020a} introduced a novel
-serverless runtime framework using an abstraction called Faaslets, which
-employ \ac{Wasm} for software-fault isolation (SFI). Their study showed
-that Faaslets in the Faasm runtime significantly enhance performance and
-efficiency over traditional container-based platforms. Notably, they
-achieved 2x speed-up in machine learning model training and doubled the
-throughput for interference tasks, while reducing memory usage by 90\%,
-compared to traditional containers with Knative. See
-\cref{fig:wasm-faasm} below for their findings while comparing their
-Faasm to Knative.
-
-\begin{figure}[H]
-\centering
-  \includegraphics{assets/3.8-faasm.png}
-  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
-vs Rust container vs Golang container. © 2022 IEEE}
-  \label{fig:wasm-faasm}
-\end{figure}
-
-Furthermore, \citet{shillakerFaasmLightweightIsolation2020a} documented
-the details of the cold starts they observed during their experiments.
-In their study they found that cold starts for operators based on
-\ac{Wasm} were 538 times faster than the traditional container-based
-operators and occupied between 6.5 to 25 times less memory while in
-operation. See \Cref{tab:dockervsfaaslet} below for their findings.
+serverless runtime, which employs \ac{Wasm} based ``Faaslets'' for
+software-fault isolation. Similar to our observations, they reported
+that Faaslets achieved cold start times 538 times faster than
+traditional container-based operators and occupied between 6.5 to 25
+times less memory during operation (\Cref{tab:dockervsfaaslet}).
 
 \begin{table}[H]
 \centering
-\caption{\label{tab:unnamed-chunk-3}The table is here \label{tab:dockervsfaaslet}}
+\caption{\label{tab:unnamed-chunk-3}Comparison of Faaslets vs. container cold starts. Reprinted with permission.\label{tab:dockervsfaaslet}}
 \centering
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
 \toprule
@@ -3083,6 +3090,63 @@ RSS memory & 5.0 MB & 200 KB & 25×\\
 \bottomrule
 \end{tabu}
 \end{table}
+
+Additionally, they demonstrated a 2x speed-up in machine learning model
+training and doubled throughput for interference tasks while reducing
+memory usage by 90\% compared to traditional containers with Knative
+(\Cref{fig:wasm-faasm}).
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-faasm.png}
+  \caption{Machine learning training with SGD with Faaslets (FAASM) and containers (Knative). Reprinted with permission.}
+  \label{fig:wasm-faasm}
+\end{figure}
+
+Our results indicating the drastic reduction in startup latency and
+runtime improvements with \ac{Wasm} modules align closely with the
+performance gains reported by
+\citet{shillakerFaasmLightweightIsolation2020a}, further validating the
+potential of \ac{Wasm} as a lightweight and efficient efficient
+execution environment.
+
+\citet{sebrechtsAdaptingKubernetesControllers2022} developed a
+\ac{Wasm}-based framework for running lightweight controllers on
+Kubernetes. They found that their \ac{Wasm}-based operators
+significantly reduced memory footprint compared to traditional
+container-based solutions. In their research they saw reductions from
+1405MiB to 227MiB for 100 synthetic operators, and for idle operators
+they saw a reduction from 1131MiB to 86MiB. (\Cref{fig:wasm-memory})
+
+We didn't measure memory usage during our experiments, so the findings
+of \citet{sebrechtsAdaptingKubernetesControllers2022} are not directly
+appicable to our results, but their results corroborate with our
+findings and show that \ac{Wasm} is a viable option on
+resource-constrained setups.
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/3.8-memoryusage-wasm.png}
+  \caption{Different Kubernetes operators memory usage. Comparing Rust to WASM
+vs Rust container vs Golang container. © 2022 IEEE}
+  \label{fig:wasm-memory}
+\end{figure}
+
+\newpage
+\chapter{Conclusion}
+
+With the first goal of this thesis achieved, we move our attention to
+the topic of whether or not our hypothesis that \ac{Wasm} offers a more
+efficient alternative to Docker in regards for startup, runtime and
+energy consumption.
+
+These findings underscore the potential of \ac{Wasm} as a lightweight
+and efficient execution environment for serverless functions, offering
+substantial performance benefits over traditional container-based
+approaches. The drastic reduction in startup latency and overall runtime
+times can be particularly advantageous in scenarios where minimizing
+latency and maximizing throughput are critical, such as in
+latency-sensitive applications or high-throughput workloads.
 
 \newpage
 \chapter{Future work}

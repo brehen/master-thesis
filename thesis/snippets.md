@@ -328,3 +328,17 @@ decision-making and the implementation of energy-efficient strategies in cloud
 computing environments.
 
 ---
+
+There are several cloud providers who have added support for running \ac{Wasm}
+on their cloud offerings. Cloudflare
+Workers^[https://developers.cloudflare.com/workers/runtime-apis/webassembly/],
+and Fastly
+Compute@Edge^[https://www.fastly.com/products/edge-compute/serverless] have
+added support, while Fermyon have built an entire cloud architecture around the
+binary format with their Fermyon Cloud^[https://www.fermyon.com/cloud]. Fermyon
+has also open sourced their developer tool Spin^[https://www.fermyon.com/spin],
+a tool that lets developers create, build and test applications written in a
+supported
+language^[https://developer.fermyon.com/spin/v2/language-support-overview] and
+deploy it to a Fermyon Platform instance, either self-hosted or on their own
+service.
