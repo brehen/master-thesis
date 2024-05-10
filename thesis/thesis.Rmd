@@ -398,6 +398,9 @@ reducing the carbon footprint for cloud applications.
 \section{Problem Statement}
 \label{sect:problems}
 
+\todo{Maybe start this section differently. Say what we want to achieve, and
+then compile the list of statements from that}
+
 The goal of the thesis is to:
 
 1. Develop a prototype cloud computing platform for the \ac{FaaS} paradigm.
@@ -3051,8 +3054,41 @@ draws while idle and not executing any functions and subtract this from our
 measurements, but this would also only result in a close approximation with
 mostly the same graphs with lower numbers. 
 
+\section{Function storage}
+\label{sect:func_storage}
+
+Interestingly, and not something we set out to explore, but is still worth a
+mention, is that our \ac{Wasm} modules were relatively small in size. Especially
+compared to the same source code packaged as a Docker image and gzipped.
+\Cref{tab:function_sizes} shows the storage size, which were mostly identical,
+for each of our benchmark functions. Using the strip-tool of the wasm-tools
+program reduces the size of our \ac{Wasm} by ten times, while still being able
+to run on Wasmtime without issue.
+
+```{r, echo=F, eval=T}
+data <- data.frame(
+  Metric = c("Docker", "Wasm", "Wasm (stripped)", "Wasm vs Docker", "Wasm (stripped) vs Docker"),
+  `Storage Size` = c("32MB", "2.1MB", "236KB", "14×", "138×")
+)
+
+colnames(data)[1] <- ""
+colnames(data)[2] <- "Storage Size"
+
+kbl(data,
+  booktabs = T,
+  caption = "Comparison of storage size of functions.\\label{tab:function_sizes}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    # full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+
 \section{Related Work}
 \label{sect:related-work}
+
 
 Our findings on the performance and efficiency advantages of \ac{Wasm} align
 with and complement the existing body of research in this field. 
@@ -3120,6 +3156,8 @@ our results, but their results corroborate with our findings and show that
 vs Rust container vs Golang container. © 2022 IEEE}
   \label{fig:wasm-memory}
 \end{figure}
+
+
 
 
 \newpage
@@ -3252,10 +3290,10 @@ benefits over traditional container-based approaches. The drastic reduction in
 startup latency and runtime times can be a serious advantage in scenarios where
 minimizing latency and maximizing throughput are critical, such as in
 latency-sensitive applications or high-throughput workloads. Furthermore, the
-significant energy savings and the low memory usage
-\citep{shillakerFaasmLightweightIsolation2020a} achieved by \ac{Wasm} make it an
-attractive choice for resource-constrained environments, such as edge computing
-devices or embedded systems. 
+significant energy savings, the reduced storage required for storing functions,
+and the low memory usage \citep{shillakerFaasmLightweightIsolation2020a}
+achieved by \ac{Wasm} make it an attractive choice for resource-constrained
+environments, such as edge computing devices or embedded systems. 
 
 While our experiments focused on specific workloads and environments, the
 observed trends suggest that Wasm could be a viable and compelling alternative

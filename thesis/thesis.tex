@@ -369,6 +369,9 @@ footprint for cloud applications.
 \section{Problem Statement}
 \label{sect:problems}
 
+\todo{Maybe start this section differently. Say what we want to achieve, and
+then compile the list of statements from that}
+
 The goal of the thesis is to:
 
 \begin{enumerate}
@@ -3113,6 +3116,35 @@ not executing any functions and subtract this from our measurements, but
 this would also only result in a close approximation with mostly the
 same graphs with lower numbers.
 
+\section{Function storage}
+\label{sect:func_storage}
+
+Interestingly, and not something we set out to explore, but is still
+worth a mention, is that our \ac{Wasm} modules were relatively small in
+size. Especially compared to the same source code packaged as a Docker
+image and gzipped. \Cref{tab:function_sizes} shows the storage size,
+which were mostly identical, for each of our benchmark functions. Using
+the strip-tool of the wasm-tools program reduces the size of our
+\ac{Wasm} by ten times, while still being able to run on Wasmtime
+without issue.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-3}Comparison of storage size of functions.\label{tab:function_sizes}}
+\centering
+\begin{tabular}[t]{lr}
+\toprule
+ & Storage Size\\
+\midrule
+\cellcolor{gray!10}{Docker} & \cellcolor{gray!10}{32MB}\\
+Wasm & 2.1MB\\
+\cellcolor{gray!10}{Wasm (stripped)} & \cellcolor{gray!10}{236KB}\\
+Wasm vs Docker & 14×\\
+\cellcolor{gray!10}{Wasm (stripped) vs Docker} & \cellcolor{gray!10}{138×}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{Related Work}
 \label{sect:related-work}
 
@@ -3128,7 +3160,7 @@ memory during operation (\Cref{tab:dockervsfaaslet}).
 
 \begin{table}[H]
 \centering
-\caption{\label{tab:unnamed-chunk-3}Comparison of Faaslets vs. container cold starts. Reprinted with permission.\label{tab:dockervsfaaslet}}
+\caption{\label{tab:unnamed-chunk-4}Comparison of Faaslets vs. container cold starts. Reprinted with permission.\label{tab:dockervsfaaslet}}
 \centering
 \begin{tabular}[t]{lrrr}
 \toprule
@@ -3255,10 +3287,11 @@ approaches. The drastic reduction in startup latency and runtime times
 can be a serious advantage in scenarios where minimizing latency and
 maximizing throughput are critical, such as in latency-sensitive
 applications or high-throughput workloads. Furthermore, the significant
-energy savings and the low memory usage
-\citep{shillakerFaasmLightweightIsolation2020a} achieved by \ac{Wasm}
-make it an attractive choice for resource-constrained environments, such
-as edge computing devices or embedded systems.
+energy savings, the reduced storage required for storing functions, and
+the low memory usage \citep{shillakerFaasmLightweightIsolation2020a}
+achieved by \ac{Wasm} make it an attractive choice for
+resource-constrained environments, such as edge computing devices or
+embedded systems.
 
 While our experiments focused on specific workloads and environments,
 the observed trends suggest that Wasm could be a viable and compelling
