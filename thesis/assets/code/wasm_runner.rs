@@ -46,10 +46,6 @@ fn run_wasm(
       start_since_epoch,
       total_runtime: start.elapsed().as_micros(),
       end_since_epoch: start_since_epoch + total_runtime,
-      startup_percentage: ((startup_time as f64
-        / total_runtime as f64)
-        * 100.0)
-        .round(),
     },
     func_type: ModuleType::Wasm,
     func_name: func_name.to_string(),
