@@ -17,13 +17,14 @@ pub fn run_docker_image(
     .stdin(Stdio::piped())
     .stdout(Stdio::piped())
     .spawn()?;
-  let cmd_start = current_micros()?;
   // 2.
-  child.stdin.as_mut().unwrap().write_all(input.as_bytes())?;
+  let cmd_start = current_micros()?;
   // 3.
+  child.stdin.as_mut().unwrap().write_all(input.as_bytes())?;
+  // 4.
   let output = child.wait_with_output()?;
   let stdout = String::from_utf8_lossy(&output.stdout);
-  // 4.
+  // 5.
   let (result, actual_startup) = parse_output(&stdout, cmd_start)?;
   Ok(FunctionResult {
     result,
