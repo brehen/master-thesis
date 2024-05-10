@@ -381,8 +381,7 @@ The goal of the thesis is to:
   Use this platform for conducting experiments that either prove or
   disprove the claim that WebAssembly is the more efficient choice.
 \item
-  Determine whether or not WebAssembly is a more energy efficient
-  choice.
+  Determine whether WebAssembly is a more energy efficient choice.
 \end{enumerate}
 
 By achieving these goals this thesis seeks to shed light on the
@@ -403,7 +402,7 @@ have a table-of-contents.}
 
 \newpage
 
-\chapter{Three waves of cloud compute}
+\chapter{Three Waves of Cloud Compute}
 \label{chap:three-waves}
 
 \setlength\epigraphwidth{.35\textwidth}
@@ -475,7 +474,7 @@ Compute Cloud (EC2) in August the same year
 itself as a pioneer in this space, marking a major turning point in
 application development and deployment, and popularized cloud computing.
 EC2, as an \ac{IaaS} platform, empowered developers to run virtual
-machines remotely. (See \Cref{fig:feisbook} for an example of this kind
+machines remotely. (See \Cref{fig:headbook} for an example of this kind
 of architecture)
 
 \begin{figure}[H]
@@ -762,9 +761,9 @@ consumption of servers based on workload demands
 
 Virtualization and resource pooling, two key components of cloud
 computing, also contribute to energy efficiency. By consolidating
-virtual machines onto shared physical servers, cloud providers are able
-to improve resource utilization and reduce the energy consumption of
-their data centers. \citep{beloglazovEnergyawareResourceAllocation2012}
+virtual machines onto shared physical servers, cloud providers can
+improve resource utilization and reduce the energy consumption of their
+data centers. \citep{beloglazovEnergyawareResourceAllocation2012}
 
 \section{Virtualization and Virtual Machines}
 \label{sect:virtual}
@@ -1221,6 +1220,7 @@ measurements at an interval of 1 second \citep{aeotecAeotecSmartSwitch}.
 \end{figure}
 
 \subsection{Modbus TCP}
+\label{sect:modbus_tcp}
 
 An alternative to reading energy measurements through a pub-sub model
 with \ac{MQTT}, is to utilize the Modbus TCP protocol. Modbus TCP is a
@@ -1294,13 +1294,13 @@ results.
 \section{Experimental Framework}
 \label{sect:exp_frame}
 
-The main focus of this thesis is to build a prototype and perform
-experiments on it, to measure the capabilities of \ac{Wasm} modules as a
-model for deploying and running cloud applications. An experimental
-approach was chosen to test the problem statements, as we can have
-controlled manipulation of variables, measure the outcomes, and compare
-directly between two deployment environments; \ac{Wasm} modules and
-Docker containers.
+The focus of this thesis is to build a prototype and perform experiments
+on it, to measure the capabilities of \ac{Wasm} modules as a model for
+deploying and running cloud applications. An experimental approach was
+chosen to test the problem statements, as we can have controlled
+manipulation of variables, measure the outcomes, and compare directly
+between two deployment environments; \ac{Wasm} modules and Docker
+containers.
 
 We will perform a series of controlled experiments designed to measure
 startup latencies (cold start), total runtime, and energy consumption
@@ -1326,8 +1326,8 @@ deploy and invoke functions in the form of \ac{Wasm} modules or as spun
 up Docker containers. To perform the desired experiments, the prototype
 will need to be able to deploy to both a Raspberry Pi 4b, and on a
 typical machine hosted on the cloud. For this, we will be using
-\ac{NREC} \todo{add citation/link}, a IaaS platform available to
-students, where we can spin up a Debian virtual machine and set up a
+\ac{NREC}\footnote{\url{https://nrec.no/}}, an IaaS platform available
+to students, where we can spin up a Debian virtual machine and set up a
 service on a public IP address.
 
 \subsubsection{Hardware specifications}
@@ -1621,7 +1621,7 @@ increase our credibility and validity of our findings from this study.
 The most dangerous phrase in the language is ``We have always done it this way''
 }{---Grace Hopper}
 
-Based on the requirements outlined in \Cref{sect:requirements}, we will
+Based on the requirements outlined in \Cref{sect:nebula_req}, we will
 design a prototype named Nebula, which is a serverless \ac{FaaS}
 platform capable of executing deployed functions as both \ac{Wasm}
 modules and Docker containers. The primary goal of Nebula is to serve as
@@ -1722,7 +1722,7 @@ provided input data, and return the result back to the user.
 \centering
   \includegraphics{assets/5-nebula-function-execution.png}
   \caption{Flow of a user invoking a function on Nebula.}
-  \label{fig:function-exeuction-design}
+  \label{fig:function-execution-design}
 \end{figure}
 
 This function execution process will also include collecting metrics for
@@ -1735,18 +1735,19 @@ much time is attributed to the function running itself.
 
 \subsection{Function Packaging and Deployment}
 
-Functions deployed to Nebula will either be in the form of a \ac{Wasm}
-module binary file, or as a Docker image that is uploaded to the server
-and loaded into the servers image repository. The packaging process will
-involve compiling the source code to \ac{Wasm} module binaries, or
-creating a Docker image with the use of a Docker file that describes its
-layers.
+Our development environment will need to support packaging and deploying
+functions as WebAssembly (Wasm) modules or Docker images For Wasm, the
+compiled binary will be transferred to the server through SCP (Secure
+Copy Protocol). For Docker, a Dockerfile specifying the image build
+instructions will describe how Docker should package our function,
+before we gzip the image and upload it to the server through SCP.
 
-Our server will provide a way to let users upload their functions to the
-system. The deployment process will handle the necessary steps to make
-the functions available for invocation, such as storing the \ac{Wasm}
-modules or Docker image, and preparing them for invocation.
-\todo{rephrase this mess}
+For Wasm modules no further steps are required, as Nebula will handle
+loading the binary into the Wasm runtime environment. For the Docker
+images we will need to inform Docker on the server that we want to load
+our image into its repository, making it available to run as a
+container. This process will ensure that the functions are ready to be
+invoked and executed when needed.
 
 \subsection{Function Execution}
 
@@ -1827,7 +1828,7 @@ separate computer for performing benchmarking. While there exists tools
 out there that could help us achieve parts of this, a custom application
 will be built that can both interface with the server through the REST
 API, and interface with the power supply over an approriate protocol as
-we saw in \Cref{fig:function-exeuction-design}.
+we saw in \Cref{fig:function-execution-design}.
 
 The utility will be responsible for invoking the functions deployed on
 Nebula, both as \ac{Wasm} modules and Docker containers, and collect our
@@ -1880,15 +1881,15 @@ Talk is cheap. Show me the code.
 As mentioned in the acknowledgments at the start of this thesis, the
 idea for this project came from a podcast episode where the CEO of
 Fermyon, Matt Butcher, told the journey of how they ended up developing
-their cloud platform as a way to offer a \ac{FaaS} powered by \ac{Wasm}
-modules. They have built a cloud application platform for
-\ac{Wasm}-based serverless functions named Fermyon Cloud, which is
-supported by their developer framework, Spin. Spin is a framework for
-building \ac{Wasm}-based functions that can be deployed on their cloud,
-and this setup acts as an inspiration for the prototype we are going to
-build. Both of these projects are open-sourced and available on Github,
-so we can take a look at how they've implemented their services to run
-\ac{Wasm} modules in a serverless environment.
+their cloud platform to offer a \ac{FaaS} powered by \ac{Wasm} modules.
+They have built a cloud application platform for \ac{Wasm}-based
+serverless functions named Fermyon Cloud, which is supported by their
+developer framework, Spin. Spin is a framework for building
+\ac{Wasm}-based functions that can be deployed on their cloud, and this
+setup acts as an inspiration for the prototype we are going to build.
+Both projects are open-sourced and available on Github, so we can take a
+look at how they've implemented their services to run \ac{Wasm} modules
+in a serverless environment.
 
 In this chapter, the code snipets are presented in a condensed form,
 focusing on the parts relevant to our experiments. There is also an
@@ -1912,6 +1913,7 @@ similar to TypeScript, allowing developers write low level programs in a
 high-level manner
 
 \subsection{Rust and WebAssembly}
+\label{sect:rust_and_wasm}
 
 Rust's close relationship with \ac{Wasm} stems from their shared origin
 at Mozilla Research, where both technologies stems from. Rust's
@@ -2083,15 +2085,14 @@ valuable insights from experts from the \ac{Wasm} community.
 Initially, passing input data to Wasm modules proved challenging due to
 the need for shared memory and exported functions. This issue was
 resolved by leaning into the the POSIX-like behavior of WASI and provide
-input via stdin and output to be captured from stdout, similar to
-traditional command-line programs. As
-\citet{malmgrenGettingDataOut2022a} suggested in their helpful article,
-using this feature of WASI provided a simpler approach for handling
-input and output in our Wasm module execution model. This approach was
-also implemented for passing input and output to and from our Docker
-containers, and while using stdin and stdout should incur some cost in
-terms of our metrics, this cost applies to both deployment methods,
-ensuring a fair assessment.
+input via stdin and output to be captured from stdout, like traditional
+command-line programs. As \citet{malmgrenGettingDataOut2022a} suggested
+in their helpful article, using this feature of WASI provided a simpler
+approach for handling input and output in our Wasm module execution
+model. This approach was also implemented for passing input and output
+to and from our Docker containers, and while using stdin and stdout
+should incur some cost in terms of our metrics, this cost applies to
+both deployment methods, ensuring a fair assessment.
 
 Another challenge arose when timing the startup of Docker containers.
 The first iteration involved defining a startup\_time variable
@@ -2158,7 +2159,7 @@ from our file system and deserialize it into a \ac{Wasm} module we can
 run on Wasmtime. This function is called on each invocation of our
 \ac{Wasm} modules. It is important to note the presence of an unsafe
 code block surrounding the \texttt{Module::deserialize} function. As
-Rust is a statically typed program, we have to provide the types for our
+Rust is a statically typed program, we must provide the types for our
 code ahead of time, before compilation, and even if we are ``pretty
 sure'' that we know what the contents of our module\_bytes are, we can
 not be entirely sure, so we have to opt out of Rust's safety in this
@@ -2202,6 +2203,7 @@ For our development environment, we are going to set up some parts:
 \end{itemize}
 
 \subsection{Shared Library}
+\label{sect:shared_lib}
 
 We have three goals with our shared library code. First we need a single
 way to run our functions that wraps our example functions with reading
@@ -2294,11 +2296,11 @@ in this section.
 \inputminted{rust}{assets/code/fib-recursive.rs}
 
 Our shared library handles the core functionality. As described in
-\Cref{sect:challenges}, we treat our functions as normal programs, which
-we do by running them by invoking their main function. In this main
-function we determine if the function will be compiled to a \ac{Wasm}
-module or a Docker container based on the \texttt{-\/-features\ docker}
-flag we pass in our build command. (See
+\Cref{sect:6-challenge_insights}, we treat our functions as normal
+programs, which we do by running them by invoking their main function.
+In this main function we determine if the function will be compiled to a
+\ac{Wasm} module or a Docker container based on the
+\texttt{-\/-features\ docker} flag we pass in our build command. (See
 \Cref{fig:build_deploy_function})
 
 Then we implement the \texttt{fib} function which takes in what number
@@ -2345,6 +2347,13 @@ is built on top of Debian.
   \texttt{raspberrypi.local}, which can be used instead of its
   IP-address.
 \end{enumerate}
+
+\begin{figure}[H]
+\centering
+  \includegraphics{assets/raspberry-setup.jpeg}
+  \caption{Our Raspberry Pi Model 4B.}
+  \label{fig:rpi_setup}
+\end{figure}
 
 \subsection{Virtual Machine Setup (\ac{NREC})}
 
@@ -2448,14 +2457,15 @@ measurements while performing our POST requests to Nebula on our
 Raspberry Pi.
 
 \subsection{Stress-Testing Nebula}
+\label{sect:stress_test}
 
 To benchmark Nebula's cold starts and runtime efficiencies, we will need
 to perform a range of POST requests with the intent of gathering a wide
 range of data that we can compare later. For this we rely on the widely
 used Rust crate, \texttt{reqwest}, a library for performing http
-requests in Rust. The code for performing the request in itself is
-omitted from this example, but the suite of functions and their
-corresponding inputs we're testing with can be seen here:
+requests in Rust. The code for performing the request is omitted from
+this example, but the suite of functions and their corresponding inputs
+we're testing with can be seen here:
 
 \newpage
 
@@ -2493,9 +2503,9 @@ The steps we take in our stress-test function are:
 \item
   Determine input value by multiplying current step with factor.
 \item
-  Perform each set of function and input 6 times. This is in order to
-  gather a mean of each metric for our results later, to account for
-  variance in our results.
+  Perform each set of function and input 6 times. This is lets us gather
+  a mean of each metric for our results later, to account for variance
+  in our results.
 \item
   Perform a function invocation for each function as both Wasm and
   Docker sequentially, then append result to the final result.
@@ -2503,8 +2513,8 @@ The steps we take in our stress-test function are:
   Return the list of results.
 \end{enumerate}
 
-The final result of this, is a long list of values that we store as
-JSON, for further analysis.
+The result of this, is a long list of values that we store as JSON, for
+further analysis.
 
 An example of a function result from benchmarking on our Raspberry Pi
 looks like this:
@@ -2521,8 +2531,8 @@ For communicating with our Gude expert control over Modbus TCP, we are
 going to use the \texttt{tokio-modbus} crate. This library will let us
 write an interface against the device over our network.
 
-As was presented in \Cref{sect:energy_background}, we saw how a client
-and server communicates through Modbus TCP packets. In figure
+As was presented in \Cref{sect:modbus_tcp}, we saw how a client and
+server communicates through Modbus TCP packets. In figure
 \Cref{fig:modbus_tcp_packet} below, we zoom into this packet, as they
 are important for our implementation for communicating with our Gude
 power supply.
@@ -2592,6 +2602,7 @@ factor, our energy measurements come in fast enough to accurately time
 them against our function executions.
 
 \subsection{Reading from Modbus TCP}
+\label{sect:read_modbus}
 
 For our sensor data, we are going to define a set of types and configure
 a mapping of our sensor to register address data. For our measurements,
@@ -2784,6 +2795,7 @@ evaluation.
 
 \newpage
 \chapter{Results}
+\label{chap:results}
 
 \setlength\epigraphwidth{.6\textwidth} 
 \epigraph{\itshape  
@@ -2793,7 +2805,7 @@ One accurate measurement is worth a thousand expert opinions.
 With the first goal of developing a prototype cloud computing platform
 for the \ac{FaaS} paradigm accomplished, we can turn our attention to
 the remaining objectives of this thesis. Leveraging the prototype
-implemented in \Cref{chap:implement_nebula} and the supporting benchmark
+implemented in \Cref{chap:implement} and the supporting benchmark
 utility, experiments were conducted on Nebula to evaluate its
 performance. This chapter presents the results, while we will discuss
 these results further in \Cref{chap:discussion}.
@@ -2829,8 +2841,8 @@ functions, energy consumption (\emph{E}) is expressed in microwatt-hours
 microseconds.
 
 To ensure accuracy and repeatability, data collection was automated
-using the benchmarking utility developed in
-\Cref{sect:implement_benchmark}, proving invaluable for this report.
+using the benchmarking utility developed in \Cref{sect:impl_bench},
+proving invaluable for this report.
 
 Of particular note is the extreme performance disparity between
 \ac{Wasm} modules and Docker containers, making it difficult to
@@ -2842,27 +2854,27 @@ examination of each execution mode.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{thesis_files/figure-latex/avg-times-nrec-rpi-1} 
+{\centering \includegraphics{thesis_files/figure-latex/avg-efficiency-nrec-rpi-1} 
 
 }
 
-\caption{Mean startup and runtimes on both our setups.}\label{fig:avg-times-nrec-rpi}
+\caption{Mean startup and runtimes on both our setups}\label{fig:avg-efficiency-nrec-rpi}
 \end{figure}
 
-\Cref{fig:avg-times-nrec-rpi} provides an overview of the average
+\Cref{fig:avg-efficiency-nrec-rpi} provides an overview of the average
 startup and runtimes across our benchmarks on both our virtual machine
 and Raspberry Pi setups. While this offers a general comparison between
 \ac{Wasm} and Docker invocations,
-\Cref{fig:nrec-efficiency, fig:rpi-efficiency} present more detailed
+\Cref{fig:nrec-efficiency,fig:rpi-efficiency} present more detailed
 scatter plots with an average line drawn across showcasing the
 performance variance for each input across multiple runs.
 
 At first glance, the startup and runtimes of our \ac{Wasm} modules and
-Docker containers may appear similar in \Cref{fig:avg-times-nrec-pi},
-but a keen eye will notice the differeing y-axis scales. While Docker
-containers startup and return results in the range of hundreds of
-milliseconds, the \ac{Wasm} modules startup and shut down in just
-single-digit milliseconds.
+Docker containers may appear similar in
+\Cref{fig:avg-efficiency-nrec-rpi}, but a keen eye will notice the
+differeing y-axis scales. While Docker containers startup and return
+results in the range of hundreds of milliseconds, the \ac{Wasm} modules
+startup and shut down in just single-digit milliseconds.
 
 It is evident from these figures that the data follows a similar curve
 on the Raspberry Pi, albeit with longer runtimes compared to the virtual
@@ -2908,9 +2920,9 @@ of each pair showing the average power load in watts that the Raspberry
 Pi drew during function invocations for each input value (\emph{n}). The
 second figure displays the estimated energy consumed, in microwatt-hours
 (μWh), calculated by multiplying the average power load by the total
-execution time in microseconds for each function.
-
-\todo{mention the average consumption chart below}
+execution time in microseconds for each function. In
+\Cref{fig:avg-energy-consumption-rpi}, we can see the average energy
+consumption that our Rasbperry Pi consumes during their execution.
 
 An interesting observation from the fibonacci and prime number functions
 is that while the average power load converges to a constant value
@@ -3022,6 +3034,7 @@ optimization strategies in serverless computing environments.
 
 \newpage
 \chapter{Discussion}
+\label{chap:discussion}
 
 The results obtained from our experiments shed light on the performance
 characteristics and resource implications of serverless function
@@ -3038,7 +3051,7 @@ average showed startup times approximately 365 times faster than their
 Docker counterparts on the virtual machine setup. While the gap is
 smaller on Raspberry Pi, due to its resource constraints, it is still
 noticeable with \ac{Wasm} starting up 217 times faster than Docker
-containers on average. In \Cref{fig:nrec-efficiency, fig:rpi-efficiency}
+containers on average. In \Cref{fig:nrec-efficiency,fig:rpi-efficiency}
 we can see the detailed startup times of our functions across both our
 setups, and while the values can vary a lot across invocations, we can
 see that the trend for a consistent startup time is consistent.
@@ -3052,17 +3065,17 @@ faster for the functions entire lifetime, from start to finish. On the
 Raspberry Pi, \ac{Wasm} still showed significant runtime improvements
 compared to Docker containers, spending 146 times less time calculating
 the result, and 183 times less time for the functions lifetime.
-\Cref{fig:nrec-efficiency, fig:rpi-efficiency} shows the total runtime
-on both setups, including the startup times, and here we can see that
-most of the time spent during execution of our functions is spent on
-startup. The exception to this is in the case of our fibonacci and prime
-number functions, where the total runtime consistently go beyond the
-startup time at input numbers above 30 and 1500 respectively. This
-indicates that the improved runtimes of our \ac{Wasm}-based functions as
-an alternative to Docker diminishes at heavier workloads.
+\Cref{fig:nrec-efficiency,fig:rpi-efficiency} shows the total runtime on
+both setups, including the startup times, and here we can see that most
+of the time spent during execution of our functions is spent on startup.
+The exception to this is in the case of our fibonacci and prime number
+functions, where the total runtime consistently go beyond the startup
+time at input numbers above 30 and 1500 respectively. This indicates
+that the improved runtimes of our \ac{Wasm}-based functions as an
+alternative to Docker diminishes at heavier workloads.
 
 A very interesting observation that is made apparent from
-\Cref{fig-avg-efficiency-nrec-rpi} is that our Docker containers perform
+\Cref{fig:avg-efficiency-nrec-rpi} is that our Docker containers perform
 unexpectedly slow in runtime, compared to the runtime of the same code
 executed as \ac{Wasm} modules. The ratio of our tuntimes across both
 \ac{Wasm} and Docker remains largely the same, but with the same source
@@ -3108,10 +3121,10 @@ align with and complement the existing body of research in this field.
 
 \citet{shillakerFaasmLightweightIsolation2020a} introduced a novel
 serverless runtime, which employs \ac{Wasm} based ``Faaslets'' for
-software-fault isolation. Similar to our observations, they reported
-that Faaslets achieved cold start times 538 times faster than
-traditional container-based operators and occupied between 6.5 to 25
-times less memory during operation (\Cref{tab:dockervsfaaslet}).
+software-fault isolation. Like our observations, they reported that
+Faaslets achieved cold start times 538 times faster than traditional
+container-based operators and occupied between 6.5 to 25 times less
+memory during operation (\Cref{tab:dockervsfaaslet}).
 
 \begin{table}[H]
 \centering
