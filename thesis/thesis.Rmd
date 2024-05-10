@@ -422,7 +422,7 @@ have a table-of-contents.}
 \newpage
 
 
-\chapter{Three waves of cloud compute}
+\chapter{Three Waves of Cloud Compute}
 \label{chap:three-waves}
 
 \setlength\epigraphwidth{.35\textwidth}
@@ -1286,7 +1286,7 @@ out in space. On Nebula we will develop a way to deploy and invoke functions in
 the form of \ac{Wasm} modules or as spun up Docker containers. To perform the
 desired experiments, the prototype will need to be able to deploy to both a
 Raspberry Pi 4b, and on a typical machine hosted on the cloud. For this, we will
-be using \ac{NREC} \todo{add citation/link}, a IaaS platform available to students,
+be using \ac{NREC}^[https://nrec.no/], an IaaS platform available to students,
 where we can spin up a Debian virtual machine and set up a service on a public
 IP address. 
 
@@ -2855,9 +2855,9 @@ function are presented in pairs, with the first figure of each pair showing the
 average power load in watts that the Raspberry Pi drew during function
 invocations for each input value (*n*). The second figure displays the estimated
 energy consumed, in microwatt-hours (μWh), calculated by multiplying the average
-power load by the total execution time in microseconds for each function.
-
-\todo{mention the average consumption chart below}
+power load by the total execution time in microseconds for each function. In
+\Cref{fig:avg-energy-consumption-rpi}, we can see the average energy consumption
+that our Rasbperry Pi consumes during their execution. 
 
 An interesting observation from the fibonacci and prime number functions is that
 while the average power load converges to a constant value beyond certain input
