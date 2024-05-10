@@ -494,9 +494,9 @@ development and deployment, and popularized cloud computing. EC2, as an
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.7\columnwidth]{assets/aws-wave.jpg}
-  \caption{Example of ``Fæisbook`` building their services on EC2 and using S3
+  \caption{Example of ``Headbook`` building their services on EC2 and using S3
 for storage.}
-  \label{fig:feisbook}
+  \label{fig:headbook}
 \end{figure}
 
 While similar services existed before 2006, with Amazon's existing large
@@ -1241,7 +1241,7 @@ spent on actual computation \citep{rasmussenImpactLeadingPower2020}.
 \chapter{Methodology} 
 \label{chap:method} 
 
-To reiterate, the goal of this thesis is to investigate the two problem statements
+To reiterate, the goal of this thesis is to investigate the problem statements
 presented in \Cref{sect:problems}. We are going to develop a FaaS prototype, named
 Nebula, which we are going to use for conducting experiments to see if the
 claim that \ac{Wasm} modules offer a more efficient way to develop and
@@ -1604,7 +1604,7 @@ experiments.
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.7\columnwidth]{assets/5-overall-system-design.png}
-  \caption{Overall architecture of our prototype system.}
+  \caption{Overall architecture of our benchmarking setup.}
   \label{fig:system-design}
 \end{figure}
 
@@ -1640,16 +1640,18 @@ function running itself.
 
 \subsection{Function Packaging and Deployment}
 
-Functions deployed to Nebula will either be in the form of a \ac{Wasm} module
-binary file, or as a Docker image that is uploaded to the server and loaded into
-the servers image repository. The packaging process will involve compiling the
-source code to \ac{Wasm} module binaries, or creating a Docker image with the
-use of a Docker file that describes its layers.
+Our development environment will need to support packaging and deploying
+functions as WebAssembly (Wasm) modules or Docker images For Wasm, the compiled
+binary will be transferred to the server through SCP (Secure Copy Protocol). For
+Docker, a Dockerfile specifying the image build instructions will describe how
+Docker should package our function, before we gzip the image and upload it to
+the server through SCP.
 
-Our server will provide a way to let users upload their functions to the system.
-The deployment process will handle the necessary steps to make the functions
-available for invocation, such as storing the \ac{Wasm} modules or Docker image,
-and preparing them for invocation. \todo{rephrase this mess}
+For Wasm modules no further steps are required, as Nebula will handle loading
+the binary into the Wasm runtime environment. For the Docker images we will need
+to inform Docker on the server that we want to load our image into its
+repository, making it available to run as a container. This process will ensure
+that the functions are ready to be invoked and executed when needed.
 
 \subsection{Function Execution}
 
@@ -1672,25 +1674,33 @@ ensure controlled experimentation.
 
 To serve as an interface for the user to invoke our functions, we will also
 develop a web server that will expose end points that our users can communicate
-with over HTTP in a REST-ful manner. In other word, we are going to develop a
+with over HTTP in a RESTful manner. In other word, we are going to develop a
 web server that exposes a REST API, where users can send requests that result in
 function invocation based on the request body.
 
 \section{Infrastructure}
 
-The Nebula prototype will be deployed on two different environments to evaluate
-its performance and energy efficiency:
-
-- Raspberry Pi: A low-power, ARM-based \ac{SBC} will serve as the deployment
-target for measuring energy consumption during function execution. The Raspberry
-Pi will run Nebula and the deployed functions, and it will be connected to the
-energy measurement setup to collect power consumption data.
+For our experiments, we are interested in finding out two things: how efficient
+is \ac{Wasm} modules compared to Docker containers, and how much energy can we
+potentially save by shifting to \ac{Wasm}. To measure a real case scenario for
+how much more efficient our function executions can be, we will deploy Nebula
+where the digital services normally are: on the cloud. This will let us measure
+realistic startup and runtimes for our function invocations. However, we do not 
+have access to the power socket that the data center we will use for hosting
+Nebula on, so we can not measure the power consumed by our functions. Therefore
+we will target two environments for our experiments on Nebula: 
 
 - Virtual Machine: A Debian-based virtual machine hosted on an \ac{IaaS} platform
 will be used to simulate a typical cloud-native application deployment
 environment. Nebula will be deployed on this virtual machine, and the functions
 will be executed in this environment to assess their performance in a cloud-like
 setting.
+
+- Raspberry Pi: A low-power, ARM-based \ac{SBC} will serve as the deployment
+target for measuring energy consumption during function execution. The Raspberry
+Pi will run Nebula and the deployed functions, and it will be connected to the
+energy measurement setup to collect power consumption data.
+
 
 \section{Energy Measurements}
 
@@ -1714,8 +1724,8 @@ client, we want to isolate the computing power used to run our functions as much
 as possible. Because of this, we will use a separate computer for
 performing benchmarking. While there exists tools out there that could help us
 achieve parts of this, a custom application will be built that can both interface with
-the server through the REST API, and interface with the power supply over a
-chosen protocol. 
+the server through the REST API, and interface with the power supply over an 
+approriate protocol as we saw in \Cref{fig:function-exeuction-design}.
 
 The utility will be responsible for invoking the functions deployed on Nebula,
 both as \ac{Wasm} modules and Docker containers, and collect our metrics. The
@@ -1734,10 +1744,11 @@ the benchmarking utility, which will collect the relevant metrics for analysis.
 
 The experiments will be performed on both the Raspberry Pi and the virtual
 machine environments to assess the performance in different deployment
-scenarios. The Raspberry Pi setup will additionally give us insights into the
-energy consumption of our functions, while the virtual machine will represent a
-cloud-native deployment environment, with a more powerful CPU and more memory,
-like we would expect of our cloud servers.
+scenarios. Both environments will provide time usage measurements in the form of
+startup and runtimes. The Raspberry Pi setup will additionally give us insights
+into the energy consumption of our functions, while the virtual machine will
+represent a cloud-native deployment environment, with a more powerful CPU and
+more memory, like we would expect of our cloud servers.
 
 The data we end up with from the experiments will be analyzed and compared to
 evaluate the performance and energy efficiency of \ac{Wasm} modules versus
@@ -1890,9 +1901,7 @@ are stored on our server. In our case it's in `/root/modules/wasm/`.
 5. Capture the output from stdout and return it as the function result.
 
 Throughout the execution process, we collect startup and runtime metrics which
-are included in the returned `FunctionResult` struct. As we will see in
-\Cref{chap:results}, our \ac{Wasm} modules startup 
-
+are included in the returned `FunctionResult` struct. 
 
 \subsection{Executing Docker Containers}
 \label{sect:execute_docker}
@@ -1905,8 +1914,8 @@ The key steps involved in executing a Docker container are:
 1. Start up a Command process, from Rust's standard library, which spawns a
    `docker run` command that we provide with image name and append stdin and
 stdout processes. 
-2. Time the moment the container spawns, this will be compared against the time
-   timed inside container, to get an accurate cold start time.
+2. Time the moment the container spawns, this will be compared against the
+   timestamp timed inside container, to get an accurate cold start time.
 3. Write input to the stdin, which the function that is packaged inside our
    container is waiting on.
 4. Wait for function inside the Docker container to execute and write out the
@@ -1992,7 +2001,7 @@ we are "pretty sure" that we know what the contents of our module_bytes are, we
 can not be entirely sure, so we have to opt out of Rust's safety in this case.
 This is not a crucial downside for our experiments, but hopefully something that
 can be changed in a later version of Wasmtime, in order to minimize the risk of
-this potential insecurity.
+this insecurity.
 
 The resulting application built from this source is now ready to execute
 functions as either \ac{Wasm} modules or Docker containers. However, to achieve
@@ -2002,7 +2011,7 @@ functions.
 \section{Function Development and Deployment}
 
 Now that we have a web server that we can start on our deployment targets, we
-are going to need some functions that we can deploy and run on Nebula. For thatj
+are going to need some functions that we can deploy and run on Nebula. For that
 we are going to develop the functions described in \Cref{sect:bench_funct} in
 Rust and set up a way to package our functions in a way that we can spin them up
 and conduct the experiments we have planned.
@@ -2153,11 +2162,11 @@ our virtual machine and benchmark a more typical deployment environment. To use
 this service, we had to contact the administration and verify that we were a
 student at the University of Oslo. 
 
-Once inside the \ac{NREC} platform, we can launch an instance of our virtual machine,
-following their guide\todo{add guide?} for doing so. For our experiments we
-chose the pre-configured flavor of `m1.medium`, which gives us 1 virtual CPU, 4GB
-of RAM and 20GB storage space. The virtual machine was built with the base image
-of Debian 12. After this is set up, we can ssh into the server with a ssh-key we
+Once inside the \ac{NREC} platform, we can launch an instance of our virtual
+machine, following their guide for doing so. For our experiments we chose the
+pre-configured flavor of `m1.medium`, which gives us 1 virtual CPU, 4GB of RAM
+and 20GB storage space. The virtual machine was built with the base image of
+Debian 12. After this is set up, we can ssh into the server with a ssh-key we
 provided during setup.
 
 \begin{figure}[H]
@@ -2220,14 +2229,19 @@ Raspberry Pi and virtual machine on \ac{NREC}, we can start implementing the
 benchmarking utility that will be used to conduct the experiments and collect
 our data. While there exist tools out there for performing experiments like
 this, the setup we have implemented would be difficult to cover with an already
-existing tool. Because of this, we will develop a custom benchmark utility in 
-Rust, which will let us collect the data we're interested in.
+existing tool. For our experiments we will need to hammer Nebula with a large
+amount of requests, which we in theory could do with something like Postman.
+But, we also need to measure power data while hammering our Raspberry Pi over
+Modbus TCP and then bind these power readings to our function invocations.
+Because of this, we will develop a custom benchmark utility in Rust, which will
+let us collect the data we're interested in.
 
 For our experiments we will need to implement two core functionalities. First,
 we need to implement a function that loops through  a pre-defined set of input
 values for each function and perform POST requests to Nebula, storing the
-function results on our computer. We also need a function for measuring power
-measurements while performing our POST requests to Nebula on our Raspberry Pi.
+function results, which includes our efficiency metrics, on our computer. We
+also need a function for measuring power measurements while performing our POST
+requests to Nebula on our Raspberry Pi.
 
 \subsection{Stress-Testing Nebula}
 
@@ -2242,9 +2256,9 @@ functions and their corresponding inputs we're testing with can be seen here:
 
 \inputminted{rust}{assets/code/request.rs}
 
-For our benchmark functions, we have found a range of values that through manual
-testing, that will give us a clear picture on how our prototype performs when
-running functions as \ac{Wasm} modules or Docker containers.
+Through the development and manual testing of Nebula, we identified a range of
+benchmark values that provide a clear picture of our prototype's performance
+when running functions as WebAssembly (Wasm) modules or Docker containers.
 
 The steps we take in our stress-test function are:
 
@@ -2476,7 +2490,7 @@ As outlined in \Cref{sect:tech_stack}, chosing Rust as the programming language
 was driven by its strong relationship with \ac{Wasm} and its suitability for
 building efficient and scalable applications. Significant factors to this are
 Rust's strict compiler checks and emphasis on memory safety, concurrency, and
-parallelism. These factors help 
+parallelism. 
 
 The Rust compiler enforces a set of rules that prevent common programming
 errors, such as null pointer dereferences, data races, and memory leaks. By
@@ -2564,7 +2578,7 @@ presented seperately to allow for closer examination of each execution mode.
 
 \section{Startup and Runtimes}
 
-```{r, avg-times-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Average Startup and Runtime on both our setups"}
+```{r, avg-times-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Mean startup and runtimes on both our setups"}
 combined_data <- bind_rows(
   nrec_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
   rpi_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
@@ -3274,6 +3288,21 @@ could involve a comprehensive analysis of the Docker runtime environment inside
 the container. Factors such as container initialization overhead, resource
 allocation strategies, and potential bottlenecks in the exeuction pipeline would
 prove very useful to improve the body of research.
+
+\section{Other Programming Languages as Source}
+
+As described in \Cref{sect:rust_and_wasm}, Rust has a very close relationship
+with \ac{Wasm}. They were both developed by the same company, and the two have a
+natural alignment for working together. We chose Rust as the source language for
+this project, because it allowed us to tap into this strength, and achieve
+synergy with the development of Nebula itself. However, in theory any function
+written in a language that can compile to the wasm_wasi target and expose stdin
+and stdout as the means of reading input and writing output, should be able to
+run on our prototype. Therefore it would be very interesting to see research
+that explore the idea presented in \Cref{fig:wasm-runtimes}, where any code
+written in a language that supports compiling to \ac{Wasm} will be able to run
+on any platform that a \ac{Wasm} runtime can run on.
+
 
 \section{Distributed Deployment and Power Measurement}
 
