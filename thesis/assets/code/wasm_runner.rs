@@ -4,6 +4,9 @@ use wasi_common::pipe::{ReadPipe, WritePipe};
 use wasmtime::*;
 use wasmtime_wasi::sync::WasiCtxBuilder;
 
+/* Load Wasm binary that matches module path, execute its main
+*  function and return the result. Take timestamps for defining
+*  startup and total runtime for each invocation. */
 fn run_wasm(
   input: &str,
   wasm_module_path: PathBuf,
@@ -11,10 +14,10 @@ fn run_wasm(
 ) -> Result<FunctionResult, anyhow::Error> {
   let start_since_epoch = current_micros()?;
   let start = Instant::now();
-  // 1.
+  // 1.1.
   let engine = Engine::default();
   let mut linker = Linker::new(&engine);
-  // 2.
+  // 1.2.
   wasmtime_wasi::add_to_linker(&mut linker, |s| s)?;
   let stdin = ReadPipe::from(input);
   let stdout = WritePipe::new_in_memory();
@@ -23,17 +26,17 @@ fn run_wasm(
     .stdin(Box::new(stdin.clone()))
     .stdout(Box::new(stdout.clone()))
     .build();
-  // 3.
+  // 1.3.
   let module = load_module(&engine, wasi_module_path)?;
   let startup_time = start.clone().elapsed().as_micros();
   linker.module(&mut store, "", &module)?;
-  // 4.
+  // 1.4.
   linker
     .get_default(&mut store, "")?
     .typed::<(), ()>(&store)?
     .call(&mut store, ())?;
   drop(store);
-  // 5.
+  // 1.5.
   let contents: Vec<u8> = stdout
     .try_into_inner()
     .map_err(|_err| anyhow::Error::msg("sole remaining reference"))?

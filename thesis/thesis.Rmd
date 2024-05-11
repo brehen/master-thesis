@@ -219,8 +219,6 @@ function_labeller <- function(variable, value) {
 <!-- -------------------- -->
 
 \newpage
-\listoftodos
-\newpage
 
 
 \null\vfill
@@ -398,29 +396,45 @@ reducing the carbon footprint for cloud applications.
 \section{Problem Statement}
 \label{sect:problems}
 
-\todo{Maybe start this section differently. Say what we want to achieve, and
-then compile the list of statements from that}
+In this thesis, we are interested in exploring the potential of \ac{Wasm} and
+\ac{WASI} as an energy-efficient alternative for deploying functions in a
+serverless computing environment. The primary focus is to investigate whether
+\ac{Wasm}-based functions can offer improved performance and reduced energy
+consumption compared to traditional containerized functions.
 
-The goal of the thesis is to:
+Based on this, we can define these goals that we want to achieve with this
+thesis:
 
-1. Develop a prototype cloud computing platform for the \ac{FaaS} paradigm.
-2. Use this platform for conducting experiments that either prove or disprove
-   the claim that WebAssembly is the more efficient choice.
-3. Determine whether WebAssembly is a more energy efficient choice.
+- Develop a prototype cloud computing platform for the \ac{FaaS} paradigm.
+- Use this prototype to compare the performance of \ac{Wasm}-based functions to containerized
+functions in terms of startup latency and execution time
+- Find out if \ac{Wasm}-based functions consume less energy than containerized
+functions when executing equivalent tasks
 
 By achieving these goals this thesis seeks to shed light on the feasibility and
 implications of adopting \ac{Wasm} and \ac{WASI} for a greener cloud.
 
 \section{Outline}
 
-The thesis has five chapters; this introduction, a chapter that goes
-through the background for how cloud computing got to this point, a chapter
-dedicated to the process of building Nebula, a chapter for discussing the
-results from the experiments, and ending with a chapter suggesting future works.
+The thesis is structured to guide the reader through the background, design,
+implementation, and analysis of the Nebula project. The key aspects covered
+include:
 
-\todo[inline=true]{Feedback from Michael: When I write this, use it to point the reader to
-the most important parts of the thesis. Avoid listing the chapters; you already
-have a table-of-contents.}
+- The evolution of cloud computing and the emergence of WebAssembly as a
+promising technology for serverless computing.
+
+- The design and implementation of the Nebula prototype, highlighting the
+integration of Wasm and WASI, using the Rust programming language.
+
+- The experimental setup and methodology employed to compare the performance and
+energy consumption of \ac{Wasm}-based functions against containerized functions.
+
+- An in-depth analysis and discussion of the experimental results, addressing
+the implications for energy efficiency in serverless computing.
+
+- Concluding remarks and suggestions for future work, exploring the potential
+for further research and development in this area.
+
 
 \newpage
 
@@ -431,8 +445,8 @@ have a table-of-contents.}
 \setlength\epigraphwidth{.35\textwidth}
 
 \epigraph{\itshape 
-The most dangerous phrase in the language is `We\'ve always done it this way`"
-}{Grace Hopper}
+If VMs were the first wave and containers were the second, \#WebAssembly is the third wave of cloud compute.
+}{---Matt Butcher, \textit{CEO of Fermyon}}
 
 The evolution of cloud computing represents a transformative adventure, driven
 by the pursuit for efficiency, scalability and reliability, yet it also poses
@@ -697,7 +711,7 @@ Google consumed globally in 2022. The energy consumption in Norway is projected
 to reach 150-158 TWh in 2026 \citep{gunnerodStatnettAnalyse2022}, meaning that
 the data center in Skien could account for 5\% of the energy consumption in the
 country. \Cref{fig:skienvsnorway} below illustrates the amount of energy the new
-data center will consume compared to Norway.
+data center will consume compared to the entire energy consumption of Norway.
 
 \vspace{0.25cm}
 
@@ -724,11 +738,6 @@ ggplot(energy_data, aes(x = "", y = Energy_Consumption, fill = Category)) +
   scale_fill_manual(values = c("#1a338f", "#FF7F0E"))
 ```
 
-\todo[inline=true]{Consider this feedback from Michael: Google also does not
-make it rain more. If Google come and buys all the green energy in the area, it
-will just mean that others will use more black energy. They don not build new
-infrastructure. And this is only for Googles "usage". Not the users and network
-infrastructure.}
 
 The flipside of this, is that Google is commited to reach a net-zero carbon
 footprint by 2030, and the data center in Skien is built to reflect this. Google
@@ -738,6 +747,12 @@ electricity consumption with renewable energy since 2017
 power production, investment into solar energy and other renewable energy
 sources make it an ideal location for building data centers aiming to be powered
 by renewable energy \citep{norwegian-energyElectricityProduction2023}. 
+
+It is important to note that while Google is committed to using renewable
+energy, their presence in the area does not necessarily lead to an increase in
+renewable energy infrastructure. If Google purchases all the available green
+energy in the region, it may result in other consumers relying more on
+non-renewable energy sources \citep{sundtConsumersWillingnessPay2015}. 
 
 Like Google, other major cloud providers have set ambitious targets for
 renewable energy adoption and have invested in large-scale renewable projects.
@@ -751,9 +766,12 @@ industry, but this commitment is not universally adopted, and many data centers
 still rely on electricity generated by fossil fuels, a leading contributor to
 climate change \citep{mytton2020}.
 
-\todo{Feedback fra ingvild: include that data centers also increase the demand
-for power, so more power demand => more nature gets torn down to accomadate for
-the increase in demand.}
+It is crucial to acknowledge that the increasing demand for data centers also
+leads to a higher overall power demand. This increased demand for energy can
+result in more natural habitats being destroyed to accommodate the necessary
+power infrastructure. The construction of new data centers and the associated
+energy infrastructure can have a significant impact on the environment and local
+ecosystems \citep{bolognaDeforestationWorldPopulation2020}.
 
 Several factors make up the energy consumption required to service a data
 center. One of these factors is cooling down the servers while running, and a
@@ -778,6 +796,20 @@ contribute to energy efficiency. By consolidating virtual machines onto shared
 physical servers, cloud providers can improve resource utilization and
 reduce the energy consumption of their data centers.
 \citep{beloglazovEnergyawareResourceAllocation2012} 
+
+To summarize, in the context of the growing energy consumption of data centers
+and its environmental impact, major cloud providers such as Google, Microsoft,
+and Amazon have made significant commitments to renewable energy adoption and
+sustainability. However, it is important to acknowledge that reducing energy
+consumption is the most sustainable approach. Researchers and industry experts
+have emphasized the importance of prioritizing energy efficiency, optimizing
+resource utilization, and adopting innovative solutions like submerged servers
+and power management techniques to minimize the environmental footprint of cloud
+computing \{shehabiUnitedStatesData2016,mytton2020,danilakCouncilPostWhy2017}.
+The European Climate, Infrastructure and Environment Executive Agency
+underscores this point, stating, "The greenest and most ethical energy is the
+energy we don't consume" \citep{cappellettiGreenestMostEthical2022}.
+
 
 \section{Virtualization and Virtual Machines}
 \label{sect:virtual}
@@ -1245,6 +1277,10 @@ spent on actual computation \citep{rasmussenImpactLeadingPower2020}.
 \chapter{Methodology} 
 \label{chap:method} 
 
+\epigraph{\itshape 
+The only true wisdom is in knowing you know nothing.
+}{---Socrates}
+
 To reiterate, the goal of this thesis is to investigate the problem statements
 presented in \Cref{sect:problems}. We are going to develop a FaaS prototype, named
 Nebula, which we are going to use for conducting experiments to see if the
@@ -1364,9 +1400,13 @@ will increase, letting us measure the execution time across different workloads.
 \subsection{Benchmarking}
 \label{sect:benchmark}
 
+
+
 Benchmarking will be employed as a research method to evaluate the performance
 of different configurations. Benchmark functions representing various
-computational workloads will be implemented and executed on both environments.
+computational workloads will be implemented and executed on both environments to
+assess the suitability of the \ac{FaaS} prototype for diverse application
+scenarios.
 
 \subsection{Benchmark Functions}
 \label{sect:bench_funct}
@@ -1374,24 +1414,32 @@ computational workloads will be implemented and executed on both environments.
 A total of four benchmarking functions will be selected for testing,
 representing various computational workloads. These functions will be written in
 Rust and compiled to both \ac{Wasm} modules and Rust binaries packaged in Docker
-images. The selection of these functions is based on their computational
-intensity and their ability to stress the CPU.
+images. The selection of these functions is based on their ability to stress
+different aspects of Nebula, including function invocation mechanisms, memory
+management, computational intensity, and handling of large datasets.
 
 The functions we will implement are:
 
 1. *Fibonacci*: This function calculates the *nth* Fibonacci number in the
-sequence, following the  formula: \(F_n = F_{n-1} + F_{n-2} \). 
+sequence, following the  formula: \(F_n = F_{n-1} + F_{n-2} \). The recursive
+nature of the Fibonacci function involves a significant number of function calls
+and memory accesses, making it a relevant benchmark for evaluating the overhead
+and efficiency of function invocations and memory utilization in the \ac{FaaS}
+prototype.
 2. *Exponential*: This function calculates the value of Euler's number raised to
 the nth power, following the formula: \(F_n = e^n\). This benchmark tests the
-performance of the prototype in handling intesive floating-point calculations.
+performance of the prototype in handling intesive floating-point calculations,
+which are common in scientific computing and data analysis applications.
 3. *Factorial*: This function calculates the sum of the factorial of *n*,
-following the formula: \(n! = \prod_{k=1}^n k\). 
-4. *Prime number*: This function finds the nth prime number. While it is harder
-   to represent this in a mathematical formula, a brute-force approach will be
-used to stress the CPU and emulate a more typical scenario. The function will
-loop through a range of numbers (0 through \(2^{64} - 1\)), check if the number
-is a prime number, and append prime numbers to a list until the nth prime number
-is found.
+following the formula: \(n! = \prod_{k=1}^n k\). Similar to the Fibonacci
+function, the factorial function involves recursive computations and can stress
+the function invocation and memory management aspects of the \ac{FaaS} platform.
+4. *Prime number*: This function finds the *nth* prime number using a
+   brute-force approach, looping through a vast range of numbers (0 through
+\(2^{64} - 1\) to check for primality. This benchmark stresses the CPU and
+memory capabilities of Nebula by simulating computationally intensive workloads
+involving large datasets and long-running calculations, commonly found in areas
+like cryptogrpahy.
 
 By implementing, deploying and executing these functions as both \ac{Wasm}
 modules and Docker containers, the research aims to provide a thorough
@@ -1783,7 +1831,7 @@ Fermyon Cloud, which is supported by their developer framework, Spin. Spin is a
 framework for building \ac{Wasm}-based functions that can be deployed on their
 cloud, and this setup acts as an inspiration for the prototype we are going to
 build. Both projects are open-sourced and available on Github, so we
-can take a look at how they've implemented their services to run \ac{Wasm}
+can take a look at how they have implemented their services to run \ac{Wasm}
 modules in a serverless environment.
 
 In this chapter, the code snipets are presented in a condensed form, focusing on
@@ -1827,8 +1875,8 @@ can also be installed as a crate and shipped with a Rust application.
 
 \subsection{Docker Environment}
 
-For our Docker environment, we installed Docker Desktop on both our development
-computer and each deployment target. Docker Desktop supports Debian on ARM64 for
+For our Docker environment, we installed Docker Engine on both our development
+computer and each deployment target. Docker Engine supports Debian on ARM64 for
 our Raspberry Pi deployment. It also supports Debian on amd for our virtual
 machine. We implemented a Rust function to spin up a command for running our
 Docker images during execution.
@@ -1895,15 +1943,15 @@ pass input as stdin to our functions.
 
 The key steps involved in executing a Wasm module are:
 
-1. Initialize the Wasmtime engine and linker.
-2. Set up the WASI context, including stdin and stdout pipes for passing input
-   and receiving output.
-3. Load the correct Wasm module from the provided path. This path is determined
-   in the `call_function` and lets our runner know where our .wasm binary files
-are stored on our server. In our case it's in `/root/modules/wasm/`.
-4. Instantiate the module and execute the modules default function, which
-   corresponds to each functions main function, which we will show later.
-5. Capture the output from stdout and return it as the function result.
+\renewcommand{\theenumi}{1.\arabic{enumi}}
+\begin{enumerate}
+  \item Initialize the Wasmtime engine and linker.
+  \item Set up the WASI context, including stdin and stdout pipes for passing input and receiving output.
+  \item Load the correct Wasm module from the provided path. This path is determined in the \textit{call\_function} and lets our runner know where our .wasm binary files are stored on our server. In our case it is in \textit{/root/modules/wasm/}`.
+  \item Instantiate the module and execute the module's default function, which corresponds to each function's main function, which we will show later.
+  \item Capture the output from stdout and return it as the function result.
+\end{enumerate}
+
 
 Throughout the execution process, we collect startup and runtime metrics which
 are included in the returned `FunctionResult` struct. 
@@ -1916,19 +1964,15 @@ The `run_docker` function is responsible for executing a function deployed as a 
 
 The key steps involved in executing a Docker container are:
 
-1. Start up a Command process, from Rust's standard library, which spawns a
-   `docker run` command that we provide with image name and append stdin and
-stdout processes. 
-2. Time the moment the container spawns, this will be compared against the
-   timestamp timed inside container, to get an accurate cold start time.
-3. Write input to the stdin, which the function that is packaged inside our
-   container is waiting on.
-4. Wait for function inside the Docker container to execute and write out the
-   result as stdout.
-5. Parse output from the Docker container with a helper function, which comes in
-   the form of a tuple of (result, micro_seconds_since_epoch). We will use the
-second item in this tuple pair for determining the actual startup time of our
-function, which when the Docker container starts executing.
+\renewcommand{\theenumi}{2.\arabic{enumi}}
+\begin{enumerate}
+  \item Start up a Command process, from Rust's standard library, which spawns a `docker run` command that we provide with image name and append stdin and stdout processes. 
+  \item Time the moment the container spawns, this will be compared against the timestamp timed inside container, to get an accurate cold start time.
+  \item Write input to the stdin, which the function that is packaged inside our container is waiting on.
+  \item Wait for function inside the Docker container to execute and write out the result as stdout.
+  \item Parse output from the Docker container with a helper function, which comes in the form of a tuple of (result, micro\_seconds\_since\_epoch). We will use the second item in this tuple pair for determining the actual startup time of our function, which when the Docker container starts executing.
+\end{enumerate}
+
 
 Similar to the \ac{Wasm} module execution, we collect relevant metrics for
 startup and runtime of our functions invoked as Docker containers.
@@ -1981,15 +2025,16 @@ as follows:
 
 The steps involved in serializing our modules are:
 
-1. Get a list of all the \ac{Wasm} modules present in our deployment folder.
-2. Instantiate the same kind of Wasmtime engine that we use in our function
-   execution function.
-3. Loop through all the deployed modules in our folder.
-4. Load the raw \ac{Wasm} binary and compile into a `Module` which Wasmtime can
-   run on its engine. Then serialize the resulting compiled binary represented
-by bytecode.
-5. Write the resulting bytecode into a file that we store in a separate folder
-   from our deployment storage.
+\renewcommand{\theenumi}{3.\arabic{enumi}}
+\begin{enumerate}
+  \item Get a list of all the \ac{Wasm} modules present in our deployment folder.
+  \item Instantiate the same kind of Wasmtime engine that we use in our function execution function.
+  \item Loop through all the deployed modules in our folder.
+  \item Load the raw \ac{Wasm} binary and compile into a `Module` which Wasmtime can run on its engine. Then serialize the resulting compiled binary represented by bytecode.
+  \item Write the resulting bytecode into a file that we store in a separate folder from our deployment storage.
+\end{enumerate}
+
+
 
 This sequence precompiles our raw \ac{Wasm} binaries into bytecode we can load
 and execute upon request. The code for loading the binaries can be seen here:
@@ -2026,7 +2071,7 @@ and conduct the experiments we have planned.
 For our development environment, we are going to set up some parts: 
 
 - A shared library: We are relying on stdin and stdout to pass input and output
-from our functions, and ideally we won't have to implement that individually for
+from our functions, and ideally we will not have to implement that individually for
 each of our functions. Therefore we are going to build a shared library that
 exposes functions for reading from stdin and printing to stdout. 
 - Timing docker cold start: In this library we will also implement a helper
@@ -2057,7 +2102,7 @@ into the code for each of our benchmark functions. For each of our functions we
 want to start with timing the start of our function, if it is Docker. If it is
 not, the timestamp will be empty and not returned to Nebula. In hindsight, we
 could have measured the start time in the same way for our \ac{Wasm} modules,
-but some manual testing revelead a negligble difference, which shouldn't have
+but some manual testing revelead a negligble difference, which shouldn not have
 any major impact on our results. 
 
 After timing the start of the function, we read from the stdin, run the function
@@ -2129,7 +2174,7 @@ container based on the `--features docker` flag we pass in our build command.
 (See \Cref{fig:build_deploy_function})
 
 Then we implement the `fib` function which takes in what number in the Fibonacci
-sequence we're interested in, which we have implemented recursively, and pass
+sequence we are interested in, which we have implemented recursively, and pass
 this into our `run_function` wrapper from our shared library.
 
 With that in place, we just need to set up our deployment targets - the
@@ -2163,7 +2208,7 @@ desktop). Configure the OS with:
 
 \begin{figure}[H]
 \centering
-  \includegraphics{assets/raspberry-setup.jpeg}
+  \includegraphics[width=0.7\textwidth]{assets/raspberry-setup.jpeg}
   \caption{Our Raspberry Pi Model 4B.}
   \label{fig:rpi_setup}
 \end{figure}
@@ -2193,15 +2238,9 @@ provided during setup.
 \subsection{Software Setup}
 
 As both our setups are running a flavor of Debian, setting up the software
-required to run our experiments are identical.
-
-- First we update the package lists and upgrade pre-installed packages on our
-server: 
-
-\inputminted[firstline=12, lastline=13]{shell}{assets/code/commands.sh}
-
-- Then we install Docker Engine following their official guide from their
-manual^[https://docs.docker.com/engine/install/debian/].
+required to run our experiments are identical. First we must update the
+packages on our Debian server, and then install Docker Engine, following their
+official guide in their manual^[https://docs.docker.com/engine/install/debian/].
 
 At this point, we are ready to deploy Nebula to each server and deploy our
 functions.
@@ -2247,7 +2286,7 @@ amount of requests, which we in theory could do with something like Postman.
 But, we also need to measure power data while hammering our Raspberry Pi over
 Modbus TCP and then bind these power readings to our function invocations.
 Because of this, we will develop a custom benchmark utility in Rust, which will
-let us collect the data we're interested in.
+let us collect the data we are interested in.
 
 For our experiments we will need to implement two core functionalities. First,
 we need to implement a function that loops through  a pre-defined set of input
@@ -2264,7 +2303,7 @@ perform a range of POST requests with the intent of gathering a wide range of
 data that we can compare later. For this we rely on the widely used Rust crate,
 `reqwest`, a library for performing http requests in Rust. The code for
 performing the request is omitted from this example, but the suite of
-functions and their corresponding inputs we're testing with can be seen here:
+functions and their corresponding inputs we are testing with can be seen here:
 
 \newpage
 
@@ -2276,21 +2315,21 @@ when running functions as WebAssembly (Wasm) modules or Docker containers.
 
 The steps we take in our stress-test function are:
 
-1. Define a list of modules that we are going to benchmark. For each function we
-   have a tuple that consist of three values.  
-   - The name of the function.
-   - The amount of input values we want to test for each function.  
-   - The factor we want to multiply our input values with, to cover a wider
-      range of input values for our experiments. 
-2. Loop through our list of functions.
-3. For each function, loop through a range of <0, steps>.
-4. Determine input value by multiplying current step with factor.
-5. Perform each set of function and input 6 times. This is lets us gather a
-   mean of each metric for our results later, to account for variance in our
-results.
-6. Perform a function invocation for each function as both Wasm and Docker
-   sequentially, then append result to the final result.
-7. Return the list of results.
+\renewcommand{\theenumi}{4.\arabic{enumi}}
+\begin{enumerate}
+  \item Define a list of modules that we are going to benchmark. For each function we have a tuple that consist of three values.  
+    \begin{itemize}
+      \item The name of the function.
+      \item The amount of input values we want to test for each function.
+      \item The factor we want to multiply our input values with, to cover a wider range of input values for our experiments. 
+    \end{itemize}
+  \item Loop through our list of functions.
+  \item For each function, loop through a range of <0, steps>.
+  \item Determine input value by multiplying current step with factor.
+  \item Perform each set of function and input 6 times. This is lets us gather a mean of each metric for our results later, to account for variance in our results.
+  \item Perform a function invocation for each function as both Wasm and Docker sequentially, then append result to the final result.
+  \item Return the list of results.
+\end{enumerate}
 
 The result of this, is a long list of values that we store as JSON, for
 further analysis.
@@ -2327,7 +2366,7 @@ To read from the packets we receive from our Gude power supply, we need to know
 which register each measurement it can report to are registered. From the manual
 of our Gude Expert Power Control 1105, we find this table of sensor that it can
 report on. In \Cref{tab:gude_config} below, we have extracted the most relevant
-sensors for our measurements, it's register address, and how accurate it's
+sensors for our measurements, its register address, and how accurate its
 reported units are. 
 
 ```{r, echo=F, eval=T}
@@ -2366,7 +2405,7 @@ sensor to read from is the Power factor, which is a factor that indicates how
 much power the connected device is actually consuming, compared to the total
 draw of current through the power cable. For our system it varied between 0.50
 and 0.55, so with an example of \(PF = 0.55\) for our example above, we get
-\(240V \times 24mA \times 0.55 = 3,168mW\). This product is what we're going to
+\(240V \times 24mA \times 0.55 = 3,168mW\). This product is what we are going to
 collect data on. 
 
 In \Cref{sect:energy_challenges} we will discuss some challenges regarding this
@@ -2397,17 +2436,15 @@ described in code:
 
 The steps we go through here are:
 
-1. Define our tcp client and connect it to our Gude device on the modbus tcp
-port (e.g., 192.168.68.71:502), and create an instance of our SensorData struct,
-where we set values to 0, and time the start of our measurement in microseconds
-since epoch.
-2. Read current from its register, cast it as a floating point number and divide
-   by 1000, so we get the value in *A*, instead of *mA*.
-3. Read power factor from the register, which is multiplied by 1000 in the
-   measurements, so we cast it to f32 and divide it by 1000 to get the power
-factor.
-4. Calculate power at the time of measurement to \(240V \times I \times
-   PF\) and return the power product and start and end times for the measurement.
+\renewcommand{\theenumi}{5.\arabic{enumi}}
+\begin{enumerate}
+  \item Define our tcp client and connect it to our Gude device on the modbus tcp port (e.g., 192.168.68.71:502), and create an instance of our SensorData struct, where we set values to 0, and time the start of our measurement in microseconds since epoch.
+  \item Read current from its register, cast it as a floating point number and divide by 1000, so we get the value in *A*, instead of *mA*.
+  \item Read power factor from the register, which is multiplied by 1000 in the measurements, so we cast it to f32 and divide it by 1000 to get the power factor.
+  \item Calculate power at the time of measurement to \(240V \times I \times PF\) and return the power product and start and end times for the measurement.
+\end{enumerate}
+
+
 
 \subsection{Attaching Power Measurement to Function Invocations}
 
@@ -2427,7 +2464,7 @@ to run our functions.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/6-power_measurements}
-  \caption{Power measurements that overlap with function invocations}
+  \caption{Power measurements that overlap with function invocations.}
   \label{fig:power_measurement_timeline}
 \end{figure}
 
@@ -2515,7 +2552,7 @@ errors, increasing the overall stability and predictability of the codebase.
 Furthermore, Rust's ownership model and borrowing rules ensure safe and
 efficient memory management, without the need for manual intervention or a
 garbage collector. This approach reduces the risk of memory-related bugs, which
-are very difficult to detect and resolve. We can't guarantee that
+are very difficult to detect and resolve. We can not guarantee that
 there are not any present in Nebula, as testing will never be able to guarantee
 the absence of bugs. However, we saw that during extensive stress-testing, our
 prototype consistently for several hours straight during our benchmarks.
@@ -2922,7 +2959,7 @@ fib_rip_data <- rpi_data %>%
 print_power_graph(fib_rip_data, "Fibonacci")
 ```
 
-```{r, fib-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Fibonacci benchmark"}
+```{r, fib-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Fibonacci benchmark."}
 print_energy_graph(fib_rip_data, "Fibonacci")
 ```
 
@@ -2980,6 +3017,11 @@ environments.
 \chapter{Discussion}
 \label{chap:discussion}
 
+\epigraph{\itshape  
+The aim of argument, or of discussion, should not be victory, but progress.
+}{---Joseph Joubert} 
+
+
 
 The results obtained from our experiments shed light on the performance
 characteristics and resource implications of serverless function execution using
@@ -2998,13 +3040,12 @@ Pi, due to its resource constraints, it is still noticeable with \ac{Wasm}
 starting up 217 times faster than Docker containers on average. In
 \Cref{fig:nrec-efficiency,fig:rpi-efficiency} we can see the detailed startup
 times of our functions across both our setups, and while the values can vary a
-lot across invocations, we can see that the trend for a consistent startup time
-is consistent. 
+lot across invocations, we can see that a consistent startup time trend. 
 
 In addition to faster startup times, the results in
 \Cref{fig:avg-efficiency-nrec-rpi} indicates that \ac{Wasm} modules maintained a
 notable performance advantage over Docker containers in form of overall runtime.
-On the virtual machine, \ac{Wasm} runtimes were between 217 times faster than
+On the virtual machine, \ac{Wasm} runtimes were about 271 times faster than
 Docker runtimes, and finally 324 times faster for the functions entire lifetime,
 from start to finish. On the Raspberry Pi, \ac{Wasm} still showed significant
 runtime improvements compared to Docker containers, spending 146 times less time
@@ -3021,11 +3062,10 @@ workloads.
 A very interesting observation that is made apparent from
 \Cref{fig:avg-efficiency-nrec-rpi} is that our Docker containers perform
 unexpectedly slow in runtime, compared to the runtime of the same code executed
-as \ac{Wasm} modules. The ratio of our tuntimes across both \ac{Wasm} and Docker
+as \ac{Wasm} modules. The ratio of our runtimes across both \ac{Wasm} and Docker
 remains largely the same, but with the same source code, one could expect that the
 Rust binary inside the Docker container would perform close to the same source
-code compiled to \ac{Wasm}. Examining this discrepancy would be valuable to
-explore in future work.
+code compiled to \ac{Wasm}. 
 
 \section{Power Consumption and Energy Efficiency}
 
@@ -3305,10 +3345,15 @@ as security and portability.
 
 In summary, our research has demonstrated the potential of Wasm as a
 high-performance and energy-efficient alternative to Docker for serverless
-computing. The findings presented in this thesis provide a solid foundation for
-further exploration and adoption of Wasm in the serverless ecosystem,
+computing, particularly in scenarios involving small, repeated workloads. It is
+important to note that our testing focused exclusively on this specific type of
+workload. Therefore, while Wasm shows superiority in such situations, further
+research is needed to evaluate its performance in other types of services.
+
+Nevertheless, the findings presented in this thesis provide a solid foundation
+for further exploration and adoption of Wasm in the serverless ecosystem,
 particularly in scenarios where performance, latency, and energy efficiency are
-critical concerns.
+critical concerns
 
 \newpage
 \chapter{Future work}
