@@ -442,10 +442,10 @@ for further research and development in this area.
 \chapter{Three Waves of Cloud Compute}
 \label{chap:three-waves}
 
-\setlength\epigraphwidth{.35\textwidth}
+\setlength\epigraphwidth{.45\textwidth}
 
 \epigraph{\itshape 
-If VMs were the first wave and containers were the second, \#WebAssembly is the third wave of cloud compute.
+If VMs were the first wave and containers were the second, WebAssembly is the third wave of cloud compute.
 }{---Matt Butcher, \textit{CEO of Fermyon}}
 
 The evolution of cloud computing represents a transformative adventure, driven
@@ -879,7 +879,7 @@ machine.
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.7\columnwidth]{assets/3.3-container-figure.png}
-  \caption{Containers running on the Docker Engine}
+  \caption{Containers running on the Docker Engine.}
   \label{container-figure}
 \end{figure}
 
@@ -1047,7 +1047,7 @@ browser can be found in figure \ref{fig:asm-figure} below.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/asm.js-figure.png}
-\caption{Source code in C/C++ compiled to asm.js and run in browser}\label{fig:asm-figure}
+\caption{Source code in C/C++ compiled to asm.js and run in browser.}\label{fig:asm-figure}
 \end{figure}
 
 While asm.js was a great leap forward, being a subset of JavaScript limited its
@@ -1069,7 +1069,7 @@ written in different languages can be compiled and run inside a web browser.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/wasm-browser.png}
-  \caption{Source code compiled to WebAssembly and embedded in browser}
+  \caption{Source code compiled to WebAssembly and embedded in browser.}
   \label{fig:wasm-browser}
 \end{figure}
 
@@ -1219,7 +1219,7 @@ supports reporting measurements at an interval of 1 second \citep{aeotecAeotecSm
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.7\columnwidth]{assets/3-smart-switch.png}
-  \caption{Smart Switch 6 communicating with zwave-js-ui through Aeotec Smart Stick }
+  \caption{Smart Switch 6 communicating with zwave-js-ui through Aeotec Smart Stick.}
   \label{fig:modbus-tcp-gude}
 \end{figure}
 
@@ -1277,6 +1277,7 @@ spent on actual computation \citep{rasmussenImpactLeadingPower2020}.
 \chapter{Methodology} 
 \label{chap:method} 
 
+\setlength\epigraphwidth{.45\textwidth}
 \epigraph{\itshape 
 The only true wisdom is in knowing you know nothing.
 }{---Socrates}
@@ -1821,7 +1822,6 @@ the hypothesis we set out to explore ends up holding true.
 Talk is cheap. Show me the code.
 }{---Linus Torvalds, creator of Linux} 
 
-
 As mentioned in the acknowledgments at the start of this thesis, the idea for
 this project came from a podcast episode where the CEO of Fermyon, Matt Butcher,
 told the journey of how they ended up developing their cloud platform 
@@ -1834,13 +1834,15 @@ build. Both projects are open-sourced and available on Github, so we
 can take a look at how they have implemented their services to run \ac{Wasm}
 modules in a serverless environment.
 
-In this chapter, the code snipets are presented in a condensed form, focusing on
-the parts relevant to our experiments. There is also an interactive GUI
-built with HTMX and Askama HTML templating which the user can use to manually
-interact with each deployed function, but this aspect is more a novelty for
-manual testing, rather than a feature that supports this thesis. A lot of the
-source code will not be shown, we are going to focus on the code that lets us
-run functions as either \ac{Wasm} modules or Docker containers. 
+In this chapter, the code snippets are presented in a condensed form, focusing
+on the parts relevant to our experiments. There is also an interactive GUI built
+with HTMX and Askama HTML templating which the user can use to manually interact
+with each deployed function, but this aspect is more a novelty for manual
+testing, rather than a feature that supports this thesis. A lot of the source
+code will not be shown, we are going to focus on the code that lets us run
+functions as either \ac{Wasm} modules or Docker containers. The souce code can
+be found on Github at the public repository for this
+project^[https://github.com/brehen/nebula/tree/v1.0], for closer inspection.
 
 \section{Choosing a Tech Stack}
 \label{sect:tech_stack}
@@ -2631,7 +2633,7 @@ presented seperately to allow for closer examination of each execution mode.
 
 \section{Startup and Runtimes}
 
-```{r, avg-efficiency-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Mean startup and runtimes on both our setups"}
+```{r, avg-efficiency-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Mean startup and runtimes on both our setups."}
 combined_data <- bind_rows(
   nrec_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
   rpi_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
@@ -3455,8 +3457,3 @@ energy implications of Wasm modules in serverless computing environments.
   \acro{MQTT}[MQTT]{Message Queuing Telemetry Transport}
   \acro{NREC}[NREC]{Norwegian Reasearch and Education Cloud}
 \end{acronym}
-
-\chapter*{Appendices}
-
-
-
