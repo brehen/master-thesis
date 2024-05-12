@@ -903,11 +903,11 @@ These tools provide features like:
 \item
   Self-healing and monitoring: Orchestration tools can monitor the
   health of containers and automatically restart or reschedule them in
-  case of failures \citep{kubernetesKubernetes}.
+  case of failures\footnote{\url{https://kubernetes.io/docs/concepts/overview/}}.
 \item
   Service discovery and load balancing: Applications running in
   containers can be easily discovered and accessed by other services,
-  enabling microservice architectures \citep{kubernetesKubernetes}.
+  enabling microservice architectures\footnote{\url{https://kubernetes.io/docs/concepts/services-networking/}}.
 \end{enumerate}
 
 Container orchestration has become an essential component of modern
@@ -1151,18 +1151,19 @@ edge computing \citep{haasBringingWebSpeed2017}.
 
 While \ac{Wasm} was initially designed to run in web browsers, its
 potential for use in other environments, such as cloud and edge
-compuitng, led to the development of the WebAssembly System Interface.
-\ac{WASI} is a modular system interface that provides a standardized set
-of functions for interacting with the host operating system, enabling
-\ac{Wasm} modules to run outside of web browsers \citep{WASIDev}.
+compuitng, led to the development of the WebAssembly System
+Interface\footnote{\url{https://wasi.dev/}}. \ac{WASI} is a modular
+system interface that provides a standardized set of functions for
+interacting with the host operating system, enabling \ac{Wasm} modules
+to run outside of web browsers.
 
 \ac{WASI} defines a set of APIs for performing tasks like file system
 operations, networking, and other system-level operations, allowing
 \ac{Wasm} modules to be portable across different platforms and
-environments \citep{WASIDev}. Its first iteration aimed to be implement
-as many POXIS-like features as possible, but has since extended beyond
-this and in their latest Preview 2, they have implemented support for
-websockets and HTTP interfaces \citep{WASIPreview2README}.
+environments. Its first iteration aimed to be implement as many
+POXIS-like features as possible, but has since extended beyond this and
+in their latest Preview 2, they have implemented support for websockets
+and HTTP interfaces \citep{WASIPreview2README}.
 
 \begin{figure}[H]
 \centering
@@ -2277,23 +2278,14 @@ Then we use a smaller debian:bullseye-slim image as a target for our
 final Docker image as we do not need the entire Rust toolchain installed
 in our final image to run our functions as Rust binaries.
 
-Finally, we define a simple run.sh script, which is identical for every
-function, as shown here:
-
-\inputminted[firstline=2, lastline=4]{bash}{assets/code/commands.sh}
-
-This serves as the script that we run when we invoke our Docker
-functions as described in \Cref{sect:execute_docker}, invoking the main
-function of our benchmark functions.
-
-Finally, we created a \texttt{Makefile} to streamline the commands
-required for building and deploying our functions, following the process
-described earlier.
+Finally, we add a simple run script that the image invokes when we run
+our Docker containers as described in \Cref{sect:execute_docker},
+invoking the main function of our benchmark functions.
 
 While explaining the code for this file is not crucial for our research,
 \Cref{fig:build_deploy_function} illustrates the flow it follows.
 
-\begin{figure}[H]
+\begin{figure}[htp]
 \centering
   \includegraphics{assets/6-build_deploy_functions.png}
   \caption{Streamlined flow of building and deploying functions.}
@@ -2370,13 +2362,6 @@ is built on top of Debian.
   \texttt{raspberrypi.local}, which can be used instead of its
   IP-address.
 \end{enumerate}
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.7\textwidth]{assets/raspberry-setup.jpeg}
-  \caption{Our Raspberry Pi Model 4B.}
-  \label{fig:rpi_setup}
-\end{figure}
 
 \subsection{Virtual Machine Setup (\ac{NREC})}
 
@@ -2695,7 +2680,7 @@ readings for our experiments.
 This limitation was unexpected, but Qian had used an Aotec Smart Switch
 6, the previous generation, which turned out to support reporting once
 every second. This device was luckily found on Finn.no, and allowed us
-to upgrade the accuracy own to measuring every second instead.
+to upgrade the accuracy down to measuring every second instead.
 
 However, as we will present in \Cref{chap:results}, our function
 executions on our Raspberry Pi can come down to single-digit
@@ -2863,6 +2848,42 @@ For the sake of clarity, measurements exceeding specific input
 thresholds for the fibonacci (above 30) and prime number (above 1500)
 functions have been ecluded from the graphs, as their steep runtime
 increases would impede effective visualization.
+
+Based on these factors, our findings are summarized in
+\Cref{tab:nrec-avg,tab:rpi-avg}. These tables shows the direct
+comparison of each metric we set out to measure between \ac{Wasm}
+modules and Docker containers on our setups.
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:nrec_data_table}Comparison of Wasm vs. Docker cold starts on VM.\label{tab:nrec-avg}}
+\centering
+\begin{tabular}[t]{llrr}
+\toprule
+  & Docker & Wasm & vs Docker\\
+\midrule
+\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{324.66 ms} & \cellcolor{gray!10}{0.89 ms} & \cellcolor{gray!10}{365×}\\
+Runtime & 187.03 ms & 0.69 ms & 271×\\
+\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{511.69 ms} & \cellcolor{gray!10}{1.58 ms} & \cellcolor{gray!10}{324×}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:rpi_data_table}Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\label{tab:rpi-avg}}
+\centering
+\begin{tabular}[t]{llrr}
+\toprule
+  & Docker & Wasm & vs Docker\\
+\midrule
+\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{692.36 ms} & \cellcolor{gray!10}{3.19 ms} & \cellcolor{gray!10}{217×}\\
+Runtime & 426.82 ms & 2.93 ms & 146×\\
+\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{1119.18 ms} & \cellcolor{gray!10}{6.12 ms} & \cellcolor{gray!10}{183×}\\
+Energy consumption & 1176.15 μWh & 5.95 μWh & 198×\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \newpage
 
@@ -3203,40 +3224,7 @@ The more we got into WebAssembly, the more we thought, oh, this is actually a ve
 With the first goal of this thesis achieved, we move our attention to
 the topic of whether our hypothesis that Wasm offers a more efficient
 alternative to Docker in regards to startup, runtime, and energy
-consumption. Our findings are summiarised in
-\Cref{tab:nrec-avg,tab:rpi-avg} which represent the differences in our
-controlled experiments for this project.
-
-\begin{table}[H]
-\centering
-\caption{\label{tab:nrec_data_table}Comparison of Wasm vs. Docker cold starts on VM.\label{tab:nrec-avg}}
-\centering
-\begin{tabular}[t]{llrr}
-\toprule
-  & Docker & Wasm & vs Docker\\
-\midrule
-\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{324.66 ms} & \cellcolor{gray!10}{0.89 ms} & \cellcolor{gray!10}{365×}\\
-Runtime & 187.03 ms & 0.69 ms & 271×\\
-\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{511.69 ms} & \cellcolor{gray!10}{1.58 ms} & \cellcolor{gray!10}{324×}\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{\label{tab:rpi_data_table}Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\label{tab:rpi-avg}}
-\centering
-\begin{tabular}[t]{llrr}
-\toprule
-  & Docker & Wasm & vs Docker\\
-\midrule
-\cellcolor{gray!10}{Cold start} & \cellcolor{gray!10}{692.36 ms} & \cellcolor{gray!10}{3.19 ms} & \cellcolor{gray!10}{217×}\\
-Runtime & 426.82 ms & 2.93 ms & 146×\\
-\cellcolor{gray!10}{Total runtime} & \cellcolor{gray!10}{1119.18 ms} & \cellcolor{gray!10}{6.12 ms} & \cellcolor{gray!10}{183×}\\
-Energy consumption & 1176.15 μWh & 5.95 μWh & 198×\\
-\bottomrule
-\end{tabular}
-\end{table}
+consumption.
 
 The findings from our experiments conclusively demonstrate the
 superiority of \ac{Wasm} over Docker in terms of our scoped domain. As

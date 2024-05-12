@@ -895,11 +895,11 @@ These tools provide features like:
    provisioned, scaled up or down based on demand, and load-balanced across
 multiple hosts \citep{burnsBorgOmegaKubernetes2016}.
 2. Self-healing and monitoring: Orchestration tools can monitor the health of
-   containers and automatically restart or reschedule them in case of failures
-\citep{kubernetesKubernetes}.
+   containers and automatically restart or reschedule them in case of
+failures^[https://kubernetes.io/docs/concepts/overview/].
 3. Service discovery and load balancing: Applications running in containers can
    be easily discovered and accessed by other services, enabling microservice
-architectures \citep{kubernetesKubernetes}.
+architectures^[https://kubernetes.io/docs/concepts/services-networking/].
 
 Container orchestration has become an essential component of modern cloud-native
 architectures, enabling efficient management and scaling of containerized
@@ -1117,18 +1117,17 @@ and in other computing environments, such as cloud and edge computing
 
 While \ac{Wasm} was initially designed to run in web browsers, its potential for
 use in other environments, such as cloud and edge compuitng, led to the
-development of the WebAssembly System Interface. \ac{WASI} is a modular system
-interface that provides a standardized set of functions for interacting with
-the host operating system, enabling \ac{Wasm} modules to run outside of web
-browsers \citep{WASIDev}. 
+development of the WebAssembly System Interface^[https://wasi.dev/]. \ac{WASI}
+is a modular system interface that provides a standardized set of functions for
+interacting with the host operating system, enabling \ac{Wasm} modules to run
+outside of web browsers. 
 
 \ac{WASI} defines a set of APIs for performing tasks like file system
 operations, networking, and other system-level operations, allowing \ac{Wasm}
-modules to be portable across different platforms and environments
-\citep{WASIDev}. Its first iteration aimed to be implement as many POXIS-like
-features as possible, but has since extended beyond this and in their latest
-Preview 2, they have implemented support for websockets and HTTP interfaces
-\citep{WASIPreview2README}.
+modules to be portable across different platforms and environments. Its first
+iteration aimed to be implement as many POXIS-like features as possible, but has
+since extended beyond this and in their latest Preview 2, they have implemented
+support for websockets and HTTP interfaces \citep{WASIPreview2README}.
 
 
 \begin{figure}[H]
@@ -2130,22 +2129,15 @@ Then we use a smaller debian:bullseye-slim image as a target for our final
 Docker image as we do not need the entire Rust toolchain installed in our final
 image to run our functions as Rust binaries.
 
-Finally, we define a simple run.sh script, which is identical for every
-function, as shown here:
 
-\inputminted[firstline=2, lastline=4]{bash}{assets/code/commands.sh}
-
-This serves as the script that we run when we invoke our Docker functions as
-described in \Cref{sect:execute_docker}, invoking the main function of our
-benchmark functions.
-
-Finally, we created a `Makefile` to streamline the commands required for
-building and deploying our functions, following the process described earlier.
+Finally, we add a simple run script that the image invokes when we run our
+Docker containers as described in \Cref{sect:execute_docker}, invoking the main
+function of our benchmark functions.
 
 While explaining the code for this file is not crucial for our research,
 \Cref{fig:build_deploy_function} illustrates the flow it follows. 
 
-\begin{figure}[H]
+\begin{figure}[htp]
 \centering
   \includegraphics{assets/6-build_deploy_functions.png}
   \caption{Streamlined flow of building and deploying functions.}
@@ -2206,14 +2198,6 @@ desktop). Configure the OS with:
 2. Insert the microSD into the device and connect it to power, which boots it up.
 3. If device connects to internet, it will be discoverable as `raspberrypi.local`,
    which can be used instead of its IP-address.
-
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.7\textwidth]{assets/raspberry-setup.jpeg}
-  \caption{Our Raspberry Pi Model 4B.}
-  \label{fig:rpi_setup}
-\end{figure}
 
 \subsection{Virtual Machine Setup (\ac{NREC})}
  
@@ -2517,7 +2501,7 @@ slow for attempting to measure accurate readings for our experiments.
 This limitation was unexpected, but Qian had used an Aotec Smart Switch 6, the
 previous generation, which turned out to support reporting once every second.
 This device was luckily found on Finn.no, and allowed us to upgrade the accuracy
-own to measuring every second instead.
+down to measuring every second instead.
 
 However, as we will present in \Cref{chap:results}, our function executions on
 our Raspberry Pi can come down to single-digit milliseconds, meaning that once
@@ -2713,7 +2697,107 @@ least five times during the benchmarking process.
 For the sake of clarity, measurements exceeding specific input thresholds for
 the fibonacci (above 30) and prime number (above 1500) functions have been
 ecluded from the graphs, as their steep runtime increases would impede effective
-visualization.
+visualization. 
+
+Based on these factors, our findings are summarized in
+\Cref{tab:nrec-avg,tab:rpi-avg}. These tables shows the direct comparison of
+each metric we set out to measure between \ac{Wasm} modules and Docker
+containers on our setups.
+
+```{r nrec_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on VM."}
+nrec_avg_data <- nrec_data %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+  filter(!(func_name == "prime-number" & input > 1500)) %>%
+  group_by(func_type) %>%
+  summarise(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2),
+    avg_total_runtime = round(mean(total_runtime), digits = 2),
+  )
+
+nrec_table <- data.frame(
+  Docker = c(
+    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Docker"],
+    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Docker"],
+    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Docker"]
+  ),
+  Wasm = c(
+    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Wasm"],
+    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Wasm"],
+    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Wasm"]
+  ),
+  row.names = c("Cold start", "Runtime", "Total runtime")
+)
+
+nrec_table$`vs Docker` <- paste0(round(nrec_table$Docker / nrec_table$Wasm), "×")
+
+nrec_table[, 1:2] <- sapply(nrec_table[, 1:2], function(x) paste0(x, " ms"))
+
+
+
+
+kbl(nrec_table,
+  booktabs = T,
+  caption = "Comparison of Wasm vs. Docker cold starts on VM.\\label{tab:nrec-avg}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    # full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+```{r rpi_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on Raspberry Pi."}
+# rpi_table_data <- rpi_data %>%
+#   filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+#   filter(!(func_name == "prime-number" & input > 1500))
+
+rpi_avg_data <- rpi_data %>%
+  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
+  filter(!(func_name == "prime-number" & input > 1500)) %>%
+  group_by(func_type) %>%
+  summarise(
+    avg_startup_time = round(mean(startup_time), digits = 2),
+    avg_runtime = round(mean(runtime), digits = 2),
+    avg_total_runtime = round(mean(total_runtime), digits = 2),
+    avg_energy_consumption_wh = round(mean(energy_consumption_wh), digits = 2)
+  )
+
+rpi_table <- data.frame(
+  Docker = c(
+    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Docker"],
+    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Docker"]
+  ),
+  Wasm = c(
+    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Wasm"],
+    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Wasm"]
+  ),
+  row.names = c("Cold start", "Runtime", "Total runtime", "Energy consumption")
+)
+
+rpi_table$`vs Docker` <- paste0(round(rpi_table$Docker / rpi_table$Wasm), "×")
+
+
+rpi_table[1:3, 1:2] <- sapply(rpi_table[1:3, 1:2], function(x) paste0(x, " ms"))
+rpi_table[4, 1:2] <- sapply(rpi_table[4, 1:2], function(x) paste0(x, " μWh"))
+
+
+kbl(rpi_table,
+  booktabs = T,
+  caption = "Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\\label{tab:rpi-avg}",
+  align = "lrrr",
+) %>%
+  kableExtra::kable_styling(
+    # full_width = T,
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+
+
 
 \newpage
 
@@ -3211,103 +3295,7 @@ The more we got into WebAssembly, the more we thought, oh, this is actually a ve
 
 With the first goal of this thesis achieved, we move our attention to the topic
 of whether our hypothesis that Wasm offers a more efficient alternative to
-Docker in regards to startup, runtime, and energy consumption. Our findings are
-summiarised in \Cref{tab:nrec-avg,tab:rpi-avg} which represent the differences
-in our controlled experiments for this project.
-
-```{r nrec_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on VM."}
-nrec_avg_data <- nrec_data %>%
-  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
-  filter(!(func_name == "prime-number" & input > 1500)) %>%
-  group_by(func_type) %>%
-  summarise(
-    avg_startup_time = round(mean(startup_time), digits = 2),
-    avg_runtime = round(mean(runtime), digits = 2),
-    avg_total_runtime = round(mean(total_runtime), digits = 2),
-  )
-
-nrec_table <- data.frame(
-  Docker = c(
-    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Docker"],
-    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Docker"],
-    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Docker"]
-  ),
-  Wasm = c(
-    nrec_avg_data$avg_startup_time[nrec_avg_data$func_type == "Wasm"],
-    nrec_avg_data$avg_runtime[nrec_avg_data$func_type == "Wasm"],
-    nrec_avg_data$avg_total_runtime[nrec_avg_data$func_type == "Wasm"]
-  ),
-  row.names = c("Cold start", "Runtime", "Total runtime")
-)
-
-nrec_table$`vs Docker` <- paste0(round(nrec_table$Docker / nrec_table$Wasm), "×")
-
-nrec_table[, 1:2] <- sapply(nrec_table[, 1:2], function(x) paste0(x, " ms"))
-
-
-
-
-kbl(nrec_table,
-  booktabs = T,
-  caption = "Comparison of Wasm vs. Docker cold starts on VM.\\label{tab:nrec-avg}",
-  align = "lrrr",
-) %>%
-  kableExtra::kable_styling(
-    # full_width = T,
-    latex_options = c("HOLD_position", "striped")
-  )
-```
-
-```{r rpi_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on Raspberry Pi."}
-# rpi_table_data <- rpi_data %>%
-#   filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
-#   filter(!(func_name == "prime-number" & input > 1500))
-
-rpi_avg_data <- rpi_data %>%
-  filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
-  filter(!(func_name == "prime-number" & input > 1500)) %>%
-  group_by(func_type) %>%
-  summarise(
-    avg_startup_time = round(mean(startup_time), digits = 2),
-    avg_runtime = round(mean(runtime), digits = 2),
-    avg_total_runtime = round(mean(total_runtime), digits = 2),
-    avg_energy_consumption_wh = round(mean(energy_consumption_wh), digits = 2)
-  )
-
-rpi_table <- data.frame(
-  Docker = c(
-    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Docker"],
-    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Docker"],
-    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Docker"],
-    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Docker"]
-  ),
-  Wasm = c(
-    rpi_avg_data$avg_startup_time[rpi_avg_data$func_type == "Wasm"],
-    rpi_avg_data$avg_runtime[rpi_avg_data$func_type == "Wasm"],
-    rpi_avg_data$avg_total_runtime[rpi_avg_data$func_type == "Wasm"],
-    rpi_avg_data$avg_energy_consumption_wh[rpi_avg_data$func_type == "Wasm"]
-  ),
-  row.names = c("Cold start", "Runtime", "Total runtime", "Energy consumption")
-)
-
-rpi_table$`vs Docker` <- paste0(round(rpi_table$Docker / rpi_table$Wasm), "×")
-
-
-rpi_table[1:3, 1:2] <- sapply(rpi_table[1:3, 1:2], function(x) paste0(x, " ms"))
-rpi_table[4, 1:2] <- sapply(rpi_table[4, 1:2], function(x) paste0(x, " μWh"))
-
-
-kbl(rpi_table,
-  booktabs = T,
-  caption = "Comparison of Wasm vs. Docker cold starts on Raspberry Pi.\\label{tab:rpi-avg}",
-  align = "lrrr",
-) %>%
-  kableExtra::kable_styling(
-    # full_width = T,
-    latex_options = c("HOLD_position", "striped")
-  )
-```
-
+Docker in regards to startup, runtime, and energy consumption. 
 
 The findings from our experiments conclusively demonstrate the superiority of
 \ac{Wasm} over Docker in terms of our scoped domain. As evident from
