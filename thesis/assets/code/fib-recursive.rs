@@ -1,6 +1,7 @@
 use shared::{run_function, FunctionType};
-// Reads std in as input, retrieves the fibonacci sequence and returns the last number of the
-// fibonacci sequence of the provided size
+/* Reads std in as input, retrieves the fibonacci sequence
+* and returns the last number of the fibonacci sequence of
+* the provided size */
 fn main() {
   // Determine if function type is docker or wasm
   let func_type = if cfg!(feature = "docker") {
