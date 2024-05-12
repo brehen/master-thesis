@@ -40,7 +40,6 @@ header-includes:
         after=\vspace{0.5cm}
       }
     }
-  - \usepackage{todonotes}
 
 
   - \usepackage[style=apa, natbib=true]{biblatex}
