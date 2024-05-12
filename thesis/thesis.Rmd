@@ -265,47 +265,49 @@ offering a viable pathway towards more sustainable cloud computing.
 
 \newpage
 
-\vspace*{\fill}
 \begin{center}
 \begin{minipage}{0.75\textwidth}
 
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \chapter*{Acknowledgments}
 
-The idea for the topic for this thesis appeared in an episode of the podcast
-"Rustacean station". Matt Butcher, the CEO of Fermyon, told the story of his
-journey through the different waves of cloud computing, and how Fermyon was
-founded as a software company that aimed to build a cloud platform with
-WebAssembly and lead the charge into the next big wave of cloud compute.
+The inspiration for this thesis originated from an episode of the podcast
+"Rustacean Station," where Matt Butcher, the CEO of Fermyon, discussed the
+capabilities of WebAssembly running on the server with the aid of WebAssembly
+System Interface. This piqued my interest and set in motion the events that
+culminated in this thesis. I would like to express my gratitude to Matt Butcher
+and the team at Fermyon for inadvertently inspiring my topic.
 
 \vspace{0.25cm}
 
-The capabilities of WebAssembly running on the server, with the aid of the
-WebAssembly System Interface project, caught my interest and started the
-snowball that ended up as the avalanche that is this thesis. I would like to
-thank Matt Butcher and the people over at Fermyon for inadvertently inspiring my
-topic. 
+I also extend my sincere thanks to my two supervisors, Joachim Tilsted
+Kristensen and Michael Kirkedal Thomsen, whom I somehow managed to convince to
+guide me through such a cutting-edge topic. Their guidance and insight have been
+invaluable throughout the past semesters.
 
 \vspace{0.25cm}
 
-I would also like to thank my two supervisors Joachim Tilsted Kristensen and 
-Michael Kirkedal Thomsen, whom I somehow managed to convinced to help guide me 
-through such a cutting edge topic. Their guidance and insight have been
-invaluable the past semesters. 
+The completion of this thesis alongside a full-time job was made possible, in
+part, by the support and patience of my girlfriend, Ingvild Stølen, whose
+feedback throughout the project proved invaluable.
+
+\vspace{0.25cm}
+
+I would also like to express my gratitude to my peer, Håkon Thorkildsen Smørvik,
+for his valuable feedback and assistance in reviewing and testing the prototype
+during its development, often breaking it in unexpected ways.
 
 \vspace{0.25cm}
 
 Finally, I would like to thank Syrus Akbary, founder of Wasmer. If I hadn't met
-him at the WasmIO 2024 conference in Barcelona, my startup times would be 100
-times slower.
+him at the WasmIO 2024 conference in Barcelona, my startup times would still be
+100 times slower.
 
 \end{minipage}
 \end{center}
 \vspace*{\fill}
 
 \newpage
-
-
 
 \tableofcontents
 
@@ -1244,31 +1246,31 @@ TCP.}
 \subsection{Gude Expert Power Control 1105}
 
 The Gude Expert Power Control 1105 is a switched PDU with an integrated current
-metering and monitoring that supports communicating over TCP/IP. It is
-effectively a light weight server that can measure energy, current, power
-factor, phase angle, voltage, and active / apparent / reactive power. To read
-these measurements, the PDU supports a handful of interfaces, such as REST API,
-HTTPS, SNMP, Telnet, \ac{MQTT} and Modbus TCP \citep{gmbhExpertPowerControl2023}. In
-\Cref{fig:gude-control} below, a simplified setup with the Gude acting as the
-server for communicating over Modbus TCP is shown.
+metering and monitoring that supports communicating over TCP/IP. It has a server
+that can measure energy, current, power factor, phase angle, voltage, and active
+/ apparent / reactive power. To read these measurements, the PDU supports a
+handful of interfaces, such as REST API, HTTPS, SNMP, Telnet, \ac{MQTT} and
+Modbus TCP \citep{gmbhExpertPowerControl2023}. In \Cref{fig:gude-control} below,
+a simplified setup with the Gude acting as the server for communicating over
+Modbus TCP is shown.
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.7\columnwidth]{assets/3-modbus-gude.png}
+  \includegraphics[width=0.5\columnwidth]{assets/3-modbus-gude.png}
   \caption{Client communicating with Gude over Modbus TCP.}
   \label{fig:gude-control}
 \end{figure}
 
 This device can measure a lot of different sensor, including current, voltage,
 power draw and power factor. Voltage is the amount of volts the system
-has access to, typically 240V in Norway on alternate current (AC). The current
+has access to, typically 240V in Norway on AC. The current
 is the amount of electricity measured in ampere that the system is consuming.
-Power draw is a product of current and voltage, \(P = U \times I)\), while Power
-factor is a factor between 0 to 1 that describes the amount of power consumed
-that is spent on actual usage. For example, a power factor of 0.5 means that 50%
+Power draw is a product of current and voltage, \(P = U \times I)\), while power
+factor measures between 0 to 1 and describes the amount of power consumed
+spent on actual usage. For example, a power factor of 0.5 means that 50%
 of the power consumed in a circuit goes to waste. Most data centers aim to get
-as close to a power factor 1 as possible, to ensure the energy they pay for is
-spent on actual computation \citep{rasmussenImpactLeadingPower2020}.
+as close to a power factor 1 as possible, to make most of the energy they pay
+for not go to waste \citep{rasmussenImpactLeadingPower2018}.
 
 \part{Project}
 
@@ -1440,9 +1442,14 @@ memory capabilities of Nebula by simulating computationally intensive workloads
 involving large datasets and long-running calculations, commonly found in areas
 like cryptogrpahy.
 
-By implementing, deploying and executing these functions as both \ac{Wasm}
-modules and Docker containers, the research aims to provide a thorough
-evaluation of the performance and efficiency of each environment.
+Choosing what functions to implement is not an easy task. While these functions
+are relatively simple in nature, and software applications are commonly more
+complex, these four functions still provide a well-rounded evaluation by
+stressing various aspects of Nebula. With these functions we can test
+computational intensity, memory management, and handling of large datasets.
+The selection balances comprehensiveness with practicality, letting us perform a
+thorough evaluation within a reasonable scope.
+
 
 \subsection{Measurement and Data Collection}
 \label{sect:measure_data_collect}
@@ -1469,9 +1476,48 @@ will set up benchmarking and energy measurements for our experiments.
   \label{fig:benchmark-setup}
 \end{figure}
 
+As we will discuss in \Cref{sect:energy_challenges}, we will opt for
+using the Gude Expert Power Control 1105 for measuring our energy readings.
+\Cref{tab:gude_config} below shows a sample of sensors we can read from this
+device. To read from each sensor we need its address represented in hex values
+as we will discuss in more detail \Cref{sect:measure_power}.
+
+```{r, echo=F, eval=T}
+data <- data.frame(
+  Offset = 0:5,
+  "Sensor Field" = c("Absolute Active Energy", "Power Active", "Voltage", "Current", "Frequency", "Power Factor"),
+  Address = c("0x400", "0x402", "0x404", "0x406", "0x408", "0x40a"),
+  Unit = c("Wh", "W", "V", "mA", "0.01hz", "0.001"),
+  Inaccuracy = c("< 1.5%", "< 1.5%", "< 1%", "< 1.5%", "< 0.03%", "< 3%")
+)
+
+kbl(data,
+  booktabs = T,
+  caption = "Gude Expert Power Control 1105 sensors. \\label{tab:gude_config}",
+  align = "ccrc",
+) %>%
+  kableExtra::kable_styling(
+    latex_options = c("HOLD_position", "striped")
+  )
+```
+As we can see from \Cref{tab:gude_config}, we can read *Absolute Active Energy*,
+a value that is the cumulative sum of all energy consumed on our device,
+measured in Wh. *Power Active* reports the current W being drawn at the moment of
+reading the sensor, the product of *Voltage* and *Current*. At first glance, these
+two sensors seem ideal for our benchmarkings, but as we will reveal in
+\Cref{chap:results}, the energy it takes to invoke a function as either a
+\ac{Wasm} module or Docker container, will be measured in μWh. Measurements in
+whole Watts will not provide accurate enough data for our experiments. The three
+most important sensors for our experiments will be *Voltage*, *Current* and *Power
+Factor*. 
+
 Throughout the experiments, we will collect various data points to evaluate the
 performance and energy efficiency of both \ac{Wasm} modules and Docker
-containers. 
+containers. As we can see in \Cref{tab:gude_config} there will be some measure
+of inaccuracy involved with our experiments, with the most impactful one being
+the power factor at < 3\%. We will collect multiple measurements for each
+permutation of our function invocations which should help account for this
+inaccuracy, but it is still important to keep in mind.
 
 To isolate how much power our functions invoke on top of the idle load of the
 underlying system that hosts Nebula, we will also benchmark a baseline power
@@ -1595,6 +1641,8 @@ container-based deployments in the context of cloud-native applications. On top
 of this, we will need supporting infrastructure and utilities for benchmarking
 our prototype.
 
+
+
 \section{Prototype Scope and Objectives}
 \label{sect:prototype_scope}
 
@@ -1612,7 +1660,6 @@ and databases, and more. However, this focused design is intentional, as we
 want to minimize other factors, and rather hone in on a controlled comparison
 between the two deployment methods. 
 
-\newpage 
 
 \section{System Architecture}
 
@@ -1654,7 +1701,7 @@ experiments.
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.7\columnwidth]{assets/5-overall-system-design.png}
+  \includegraphics[width=0.6\columnwidth]{assets/5-overall-system-design.png}
   \caption{Overall architecture of our benchmarking setup.}
   \label{fig:system-design}
 \end{figure}
@@ -1665,7 +1712,14 @@ Nebula will serve as the core component of the prototype. It will handle incomin
 requests, manage the lifecycle of deployed functions, execute them, and
 measure startup and runtimes of each execution. We will develop an interface
 for users to interact with the deployed functions, either as \ac{Wasm} modules
-or Docker containers.
+or Docker containers, like illustrated in \Cref{fig:user-interaction}.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.6\columnwidth]{assets/user-interaction.jpg}
+  \caption{User interacting with Nebula.}
+  \label{fig:user-interaction}
+\end{figure}
 
 Nebula's function execution process will involve several steps, as illustrated
 in \Cref{fig:function-execution-design}. When a user invokes a function through
@@ -2136,9 +2190,9 @@ function of our benchmark functions.
 While explaining the code for this file is not crucial for our research,
 \Cref{fig:build_deploy_function} illustrates the flow it follows. 
 
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering
-  \includegraphics{assets/6-build_deploy_functions.png}
+  \includegraphics[width=0.75\textwidth]{assets/6-build_deploy_functions.png}
   \caption{Streamlined flow of building and deploying functions.}
   \label{fig:build_deploy_function}
 \end{figure}
@@ -2149,7 +2203,7 @@ tools we can use to manipulate our \ac{Wasm} modules. Compiling a Rust program
 to \ac{Wasm} includes some unnecessary sections that we can strip away. The
 \ac{Wasm} binaries we built for our experiments resulted in ~2Mb in size. Using
 this tool lets us cut this down to ~200Kb instead, while still maintaining its
-function. More on that in our \Cref{chap:results}.
+function. More on that in \Cref{sect:func_storage}.
 
 \subsection{Implementing a Benchmark Function}
 
@@ -2290,8 +2344,6 @@ data that we can compare later. For this we rely on the widely used Rust crate,
 performing the request is omitted from this example, but the suite of
 functions and their corresponding inputs we are testing with can be seen here:
 
-\newpage
-
 \inputminted{rust}{assets/code/request.rs}
 
 Through the development and manual testing of Nebula, we identified a range of
@@ -2329,6 +2381,7 @@ and end of each function invocation, this is important for our power
 measurements.
 
 \subsection{Measuring Power}
+\label{sect:measure_power}
 
 For communicating with our Gude expert control over Modbus TCP, we are going to
 use the `tokio-modbus` crate. This library will let us write an interface
@@ -2350,38 +2403,9 @@ important for our implementation for communicating with our Gude power supply.
 To read from the packets we receive from our Gude power supply, we need to know
 which register each measurement it can report to are registered. From the manual
 of our Gude Expert Power Control 1105, we find this table of sensor that it can
-report on. In \Cref{tab:gude_config} below, we have extracted the most relevant
-sensors for our measurements, its register address, and how accurate its
-reported units are. 
+report on. In \Cref{tab:gude_config}, we extracted the most relevant sensors for
+our measurements, its register address, and how accurate its reported units are. 
 
-```{r, echo=F, eval=T}
-data <- data.frame(
-  Offset = 0:5,
-  "Sensor Field" = c("Absolute Active Energy", "Power Active", "Voltage", "Current", "Frequency", "Power Factor"),
-  Address = c("0x400", "0x402", "0x404", "0x406", "0x408", "0x40a"),
-  Unit = c("Wh", "W", "V", "mA", "0.01hz", "0.001")
-)
-
-kbl(data,
-  booktabs = T,
-  caption = "Gude Expert Power Control 1105 sensors. \\label{tab:gude_config}",
-  align = "ccrc",
-) %>%
-  kableExtra::kable_styling(
-    latex_options = c("HOLD_position", "striped")
-  )
-```
-
-As we can see from \Cref{tab:gude_config}, we can read Absolute Active Energy,
-a value that is the cumulative sum of all energy consumed on our device,
-measured in Wh. Power active reports the current W being drawn at the moment of
-reading the sensor, the product of Voltage and Current. At first glance, these
-two sensors seem ideal for our benchmarkings, but as we will reveal in
-\Cref{chap:results}, the energy it takes to invoke a function as either a
-\ac{Wasm} module or Docker container, will be measured in μWh. Measurements in
-whole Watts will not provide accurate enough data for our experiments. The three
-most important sensors for our experiments will be Voltage, Current and Power
-Factor. 
 
 To re-iterate, the formula for calculating power is \(P = U \times I\), where *U* is
 voltage and *I* is current. For example, with a constant voltage of 240V and a
@@ -2467,8 +2491,8 @@ The code below shows how this is done. It loops through each function result,
 finds the energy measurements that begin and end within the start and end of
 each function invocation. Then it updates each function result with the average
 power that was consumed by the system during the functions execution. We also
-calculate the estimated *Wh* in energy consumption with the formula: \[P \times
-\frac{t}{36000000000}\] 
+calculate the estimated *μWh* in energy consumption, with *t* in microseconds,
+with the formula: \[P \times \frac{t}{3600}\] 
 
 \inputminted{rust}{assets/code/pair_power_data.rs}
 
@@ -2616,7 +2640,7 @@ presented seperately to allow for closer examination of each execution mode.
 
 \section{Startup and Runtimes}
 
-```{r, avg-efficiency-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=7, fig.align = 'center', fig.cap="Mean startup and runtimes on both our setups."}
+```{r, avg-efficiency-nrec-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height=6.5, fig.align = 'center', fig.cap="Mean startup and runtimes on both our setups."}
 combined_data <- bind_rows(
   nrec_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
   rpi_data %>% mutate(source_func_type = paste(source, func_type, sep = "_")),
@@ -2698,10 +2722,11 @@ the fibonacci (above 30) and prime number (above 1500) functions have been
 ecluded from the graphs, as their steep runtime increases would impede effective
 visualization. 
 
-Based on these factors, our findings are summarized in
-\Cref{tab:nrec-avg,tab:rpi-avg}. These tables shows the direct comparison of
-each metric we set out to measure between \ac{Wasm} modules and Docker
-containers on our setups.
+Based on this, our findings are summarized in \Cref{tab:nrec-avg,tab:rpi-avg}.
+These tables shows the direct comparison of each metric we set out to measure
+between \ac{Wasm} modules and Docker containers on our setups.
+
+\newpage
 
 ```{r nrec_data_table, eval=T, echo=F, fig.align="center", fig.cap="Comparison of Wasm vs Docker on VM."}
 nrec_avg_data <- nrec_data %>%
@@ -3009,7 +3034,7 @@ divergence in energy consumption, even with converging power loads, highlights
 the importance of considering both power and time factors when optimizing energy
 efficiency in serverless computing environments. 
 
-```{r, avg-energy-consumption-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Average energy consumption for our functions."}
+```{r, avg-energy-consumption-rpi, echo=F, warning=F, dev = "cairo_pdf", fig.height = 4, fig.align = 'center', fig.cap="Average energy consumption for our functions."}
 avg_srtup_data <- rpi_data %>%
   filter(!(func_name == "fibonacci-recursive" & input > 30)) %>%
   filter(!(func_name == "prime-number" & input > 1500))
@@ -3078,14 +3103,14 @@ print_energy_graph(exp_rip_data, "Exponential")
 
 \newpage
 
-```{r, prime-power, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Power load on Raspberry Pi during Prime Number benchmark."}
+```{r, prime-power, echo=F, warning=F, dev = "cairo_pdf", fig.height = 4, fig.align = 'center', fig.cap="Power load on Raspberry Pi during Prime Number benchmark."}
 prime_rip_data <- rpi_data %>%
   filter(func_name == "prime-number")
 
 print_power_graph(prime_rip_data, "Prime Number")
 ```
 
-```{r, prime-energy, echo=F, warning=F, dev = "cairo_pdf", fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Prime Number benchmark."}
+```{r, prime-energy, echo=F, warning=F, dev = "cairo_pdf", fig.height = 4, fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Prime Number benchmark."}
 print_energy_graph(prime_rip_data, "Prime Number")
 ```
 
@@ -3112,7 +3137,10 @@ The results obtained from our experiments shed light on the performance
 characteristics and resource implications of serverless function execution using
 \ac{Wasm} modules and traditional Docker containers. In this chapter we will
 discuss the key findings, their significance and compare them to existing
-research in this domain.
+research in this domain. As shown in \Cref{tab:gude_config}, there is a small
+degree of inaccuracy in the collected and analyzed data. However, despite this,
+our results still provide a clear and accurate representation of the performance
+differences between the two approaches.
 
 \section{Startup Latency and Runtime Performance}
 
