@@ -326,27 +326,27 @@ sustainable cloud computing ecosystem.
 \section{The Project}
 \label{sect:project}
 
-This thesis explores \ac{Wasm} with \ac{WASI} as an innovative choice
+This thesis explores WebAssembly with \ac{WASI} as an innovative choice
 for deploying functions to the cloud, through developing a prototype
 \ac{FaaS} platform named Nebula. This platform will run functions
-compiled to \ac{Wasm}, originally designed for high-performance tasks in
-web browsers, which coupled with \ac{WASI}, allows us to give
+compiled to WebAssembly, originally designed for high-performance tasks
+in web browsers, which coupled with \ac{WASI}, allows us to give
 WebAssembly programs access to the underlying system. This holds
 potential for a more efficient way to package and deploy functions,
 potentially reducing the startup latency and the overhead associated
-with traditional serverless platforms. \ac{Wasm} and \ac{WASI} offers a
-pathway, where the demands of today is met, while reducing the carbon
+with traditional serverless platforms. WebAssembly and \ac{WASI} offers
+a pathway, where the demands of today is met, while reducing the carbon
 footprint for cloud applications.
 
 \section{Problem Statement}
 \label{sect:problems}
 
 In this thesis, we are interested in exploring the potential of
-\ac{Wasm} and \ac{WASI} as an energy-efficient alternative for deploying
-functions in a serverless computing environment. The primary focus is to
-investigate whether \ac{Wasm}-based functions can offer improved
-performance and reduced energy consumption compared to traditional
-containerized functions.
+WebAssembly and \ac{WASI} as an energy-efficient alternative for
+deploying functions in a serverless computing environment. The primary
+focus is to investigate whether WebAssembly-based functions can offer
+improved performance and reduced energy consumption compared to
+traditional containerized functions.
 
 Based on this, we can define these goals that we want to achieve with
 this thesis:
@@ -357,16 +357,16 @@ this thesis:
   Develop a prototype cloud computing platform for the \ac{FaaS}
   paradigm.
 \item
-  Use this prototype to compare the performance of \ac{Wasm}-based
+  Use this prototype to compare the performance of WebAssembly-based
   functions to containerized functions in terms of startup latency and
   execution time
 \item
-  Find out if \ac{Wasm}-based functions consume less energy than
+  Find out if WebAssembly-based functions consume less energy than
   containerized functions when executing equivalent tasks
 \end{itemize}
 
 By achieving these goals this thesis seeks to shed light on the
-feasibility and implications of adopting \ac{Wasm} and \ac{WASI} for a
+feasibility and implications of adopting WebAssembly and \ac{WASI} for a
 greener cloud.
 
 \section{Outline}
@@ -381,10 +381,11 @@ aspects covered include:
   promising technology for serverless computing.
 \item
   The design and implementation of the Nebula prototype, highlighting
-  the integration of Wasm and WASI, using the Rust programming language.
+  the integration of WebAssembly and WASI, using the Rust programming
+  language.
 \item
   The experimental setup and methodology employed to compare the
-  performance and energy consumption of \ac{Wasm}-based functions
+  performance and energy consumption of WebAssembly-based functions
   against containerized functions.
 \item
   An in-depth analysis and discussion of the experimental results,
@@ -414,8 +415,8 @@ coined by the WebAssembly community
 \citep*{butcherDodds2024, leonardWebAssemblyHeraldsThird2024}. Where the
 two first waves of cloud compute represent the shift from virtual
 machines to containerization, the third wave encompasses utilizing
-\ac{Wasm} and \ac{WASI} to build the next era of cloud compute with the
-potential to significantly reduce the carbon footprint.
+WebAssembly and \ac{WASI} to build the next era of cloud compute with
+the potential to significantly reduce the carbon footprint.
 
 \section{Ashore: Before the Waves}
 \label{sect:ashore}
@@ -520,10 +521,10 @@ platforms can be difficult.
 
 These solutions are more efficient than manually installing an operating
 system on a machine, but they still have leave a large footprint. Is
-there a more efficient way to package and deploy our programs? \ac{Wasm}
-and \ac{WASI}, as mentioned in epigraph of \cref{chap:intro}, has
-positioned itself as a potential contender for how applications are
-built, packaged and deployed to the cloud.
+there a more efficient way to package and deploy our programs?
+WebAssembly and \ac{WASI}, as mentioned in epigraph of
+\cref{chap:intro}, has positioned itself as a potential contender for
+how applications are built, packaged and deployed to the cloud.
 
 \section{The Third Wave: WebAssembly Modules}
 \label{sect:third-wave}
@@ -551,30 +552,39 @@ project that turned many developers onto the path of exploring
 WebAssembly as a potential contender for building cloud applications.
 With WebAssembly, developers can write programs in a programming
 language that supports it as a compilation target, such as Rust, C, C++,
-Go, and build tiny modules that can run on a WebAssembly runtime. These
-WebAssembly runtimes can run on pretty much any architecture with ease,
-the resulting binary size are quite small, and the performance is
+Go, and build tiny modules that can run on a WebAssembly runtime.
+
+These runtimes can run on pretty much any architecture with ease, the
+resulting binary size are quite small, and the performance is
 near-native. These perks combined with the potential for reduced
 overhead, smaller image sizes, and faster startup times make WebAssembly
 and \ac{WASI} a promising candidate for the third wave of cloud compute
 with a lower impact on the environment.
 
+Recent advancement in the space has also seen the development of the
+WebAssembly component model\footnote{\url{https://component-model.bytecodealliance.org/}}.
+With this model we will be able to piece together our tiny WebAssembly
+modules compiled from multiple source languages into a larger puzzle
+where we can build polyglot applications using multiple languages, as
+illustrated in \Cref{fig:wasm-wave}.
+
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.8\columnwidth]{assets/wasm-wave.jpg}
-  \caption{An example polyglot app built with different languages that all
-compile to \ac{Wasm} and can interface together.}
+  \caption{A polyglot application assembled from interoperable WebAssembly
+modules, represented as a jigsaw puzzle where each piece symbolizes a module
+compiled from different programming languages.}
   \label{fig:wasm-wave}
 \end{figure}
 
 In summary, the three waves of cloud computing - virtual machines,
-containers, and now \ac{Wasm} with \ac{WASI} - represent the industry's
-pursuit of more efficient, scalable and reliable solutions for building
-cloud applications. While each wave has attempted to tackle pressing
-challenges of its time, it is exciting to see how \ac{Wasm} and
-\ac{WASI} can be leveraged in this third wave and see if it is promise
-of more efficient applications can lead to reducing the environmental
-impact of ICT.
+containers, and now WebAssembly with \ac{WASI} - represent the
+industry's pursuit of more efficient, scalable and reliable solutions
+for building cloud applications. While each wave has attempted to tackle
+pressing challenges of its time, it is exciting to see how WebAssembly
+and \ac{WASI} can be leveraged in this third wave and see if it is
+promise of more efficient applications can lead to reducing the
+environmental impact of ICT.
 
 \newpage
 
@@ -1011,8 +1021,8 @@ period of inactivity. This latency can be significant, especially for
 applications with strict performance requirements
 \citep{wangPeekingCurtainsServerless2018}. The limitations of containers
 in FaaS environments have led to the exploration of alternative
-approaches, such as using \ac{Wasm} and \{WASI\}. As Solomon Hykes, the
-creator of Docker, stated:
+approaches, such as using WebAssembly and \{WASI\}. As Solomon Hykes,
+the creator of Docker, stated:
 
 \begin{displayquote}
 \textit{ ``If WASM+WASI existed in 2008, we wouldn't have needed to create Docker.
@@ -1021,7 +1031,7 @@ computing. A standardized system interface was the missing link. Let's hope WASI
 is up to the task.`` \citep{hykesOne2019} }
 \end{displayquote}
 
-This statement highlights the potential of \ac{Wasm} and \ac{WASI} to
+This statement highlights the potential of WebAssembly and \ac{WASI} to
 face the challenges with containers in FaaS and to provide a more
 efficient and platform-agnostic approach to serverless computing, a
 potential explored and supported by
@@ -1030,13 +1040,13 @@ potential explored and supported by
 \section{WebAssembly and WASI}
 \label{sect:wasmwasi}
 
-WebAssembly, commonly referred to as Wasm, is a modern binary
+WebAssembly, commonly abbreviated as Wasm, is a modern binary
 instruction format that has risen to prominence as a versatile
 technology across a diverse amount of computing environments,
 originating in the web browser. This section introduces the project that
-WebAssembly evolved from - \emph{asm.js} - and illustrate how
-WebAssembly lets developers write programs in a high-level language and
-run them across a multitude of platforms.
+\ac{Wasm} evolved from - \emph{asm.js} - and illustrate how \ac{Wasm}
+lets developers write programs in a high-level language and run them
+across a multitude of platforms.
 
 \subsection{asm.js}
 \label{subsect:asm}
@@ -1064,9 +1074,9 @@ development of a more efficient and portable format
 \subsection{WebAssembly}
 
 The team at Mozilla built upon the lessons learned from asm.js and went
-on to develop WebAssembly, launching the first public version in 2017.
-WebAssembly is a low-level code format designed to serve as a
-compilation target for high-level programming languages
+on to develop \ac{Wasm}, launching the first public version in 2017.
+\ac{Wasm} is a low-level code format designed to serve as a compilation
+target for high-level programming languages
 \citep{haasBringingWebSpeed2017}. It is a binary format that gets
 executed by a stack-based virtual machine, comparable to how Java
 bytecode runs on the \ac{JVM} \citep{haasBringingWebSpeed2017}. In
@@ -1077,7 +1087,7 @@ inside a web browser.
 \begin{figure}[H]
 \centering
   \includegraphics{assets/wasm-browser.png}
-  \caption{Source code compiled to WebAssembly and embedded in browser.}
+  \caption{Source code compiled to \ac{Wasm} and embedded in browser.}
   \label{fig:wasm-browser}
 \end{figure}
 
@@ -1149,18 +1159,18 @@ and HTTP interfaces \citep{WASIPreview2README}.
 \subsection{WebAssembly Runtimes}
 \label{sect:wasm_runtimes}
 
-WebAssembly modules cannot run independently; they require a runtime
-environment to interpret and execute them. Several WebAssembly runtimes
-have been developed to support the execution of WebAssembly modules in
+\ac{Wasm} modules cannot run independently; they require a runtime
+environment to interpret and execute them. Several \ac{Wasm} runtimes
+have been developed to support the execution of \ac{Wasm} modules in
 different environments, such as Wasmtime, Wasmer, and WasmEdge
 \citep{zhang2024}.
 
 \citet{zhang2024} explains that these runtimes provide a secure and
-efficient execution environment for WebAssembly modules, enabling them
-to run on a wide range of platforms, including cloud servers, edge
-devices, and even embedded systems. They explain that some runtimes
-offer features like \ac{AOT} compilation, which can further improve the
-performance of WebAssembly modules. \Cref{fig:wasm-runtimes} below
+efficient execution environment for \ac{Wasm} modules, enabling them to
+run on a wide range of platforms, including cloud servers, edge devices,
+and even embedded systems. They explain that some runtimes offer
+features like \ac{AOT} compilation, which can further improve the
+performance of \ac{Wasm} modules. \Cref{fig:wasm-runtimes} below
 illustrates how code written in a programming languages with support for
 compiling to \ac{Wasm} can run cross-platform.
 
@@ -1168,12 +1178,12 @@ compiling to \ac{Wasm} can run cross-platform.
 \centering
   \includegraphics[width=0.7\columnwidth]{assets/3-wasm-runtime.png}
   \caption{Source code compiled to wasm\_wasi32 that can run anywhere
-a WebAssembly runtime can be installed.}
+a \ac{Wasm} runtime can be installed.}
   \label{fig:wasm-runtimes}
 \end{figure}
 
-The combination of WebAssembly, WASI, and efficient runtimes has sparked
-interest in using WebAssembly as an alternative to traditional
+The combination of \ac{Wasm}, WASI, and efficient runtimes has sparked
+interest in using \ac{Wasm} as an alternative to traditional
 containerization technologies, such as Docker, in cloud-native and
 serverless environments \citep{shillakerFaasmLightweightIsolation2020a,
 sebrechtsAdaptingKubernetesControllers2022}.
@@ -1823,9 +1833,9 @@ much time is attributed to the function running itself.
 \subsection{Function Packaging and Deployment}
 
 Our development environment will need to support packaging and deploying
-functions as WebAssembly (Wasm) modules or Docker images For Wasm, the
-compiled binary will be transferred to the server through SCP (Secure
-Copy Protocol). For Docker, a Dockerfile specifying the image build
+functions as \ac{Wasm} modules or Docker images For Wasm, the compiled
+binary will be transferred to the server through SCP (Secure Copy
+Protocol). For Docker, a Dockerfile specifying the image build
 instructions will describe how Docker should package our function,
 before we gzip the image and upload it to the server through SCP.
 
@@ -2492,8 +2502,8 @@ we are testing with can be seen here:
 
 Through the development and manual testing of Nebula, we identified a
 range of benchmark values that provide a clear picture of our
-prototype's performance when running functions as WebAssembly (Wasm)
-modules or Docker containers.
+prototype's performance when running functions as \ac{Wasm} modules or
+Docker containers.
 
 The steps we take in our stress-test function are:
 
@@ -2902,7 +2912,7 @@ Energy consumption & 1176.15 μWh & 5.95 μWh & 198×\\
 
 }
 
-\caption{Startup and Runtime measurements on Raspberry Pi 4B during benchmarks.}\label{fig:rpi-efficiency}
+\caption{Startup and runtime measurements on Raspberry Pi 4B during benchmarks.}\label{fig:rpi-efficiency}
 \end{figure}
 
 \newpage
@@ -2997,7 +3007,7 @@ computing environments.
 
 }
 
-\caption{Energy consumption on Raspberry Pi during Factorial benchmark.}\label{fig:exp-energy}
+\caption{Energy consumption on Raspberry Pi during Exponential benchmark.}\label{fig:exp-energy}
 \end{figure}
 
 \newpage
