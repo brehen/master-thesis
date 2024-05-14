@@ -8,6 +8,7 @@ classoption:
   - table
 
 date: 2024
+biblio-title: References
 output: 
   pdf_document:
     number_sections: true
@@ -68,7 +69,7 @@ header-includes:
   - \tcbuselibrary{theorems}
 
 
-  # - \usepackage{tocloft}
+  - \usepackage{tocloft}
   # - \renewcommand\cftchapaftersnum{.}
   # - \renewcommand\cftsecaftersnum{.}
   #
@@ -84,16 +85,45 @@ header-includes:
   - \setmainfont{Georgia}
   - \usepackage{titlesec}
   - \newfontfamily\headingfont{Avenir}
+
+  - \titleformat{\part}
+    {\headingfont\huge\bfseries\centering\vfill} 
+    {\partname\ \thepart} 
+    {12pt} 
+    {\centering} 
+    [\vfill] 
   - \titleformat{\chapter}[display]{\headingfont\large}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
   - \titleformat*{\section}{\Large\headingfont}
   - \titleformat*{\subsection}{\large\headingfont}
   - \titleformat*{\subsubsection}{\large\headingfont}
+
+  - \renewcommand{\cfttoctitlefont}{\hfill\headingfont\Large\bfseries}
+  - \renewcommand{\cftaftertoctitle}{\hfill\mbox{}\par}
+  - \renewcommand{\cftpartfont}{\headingfont\large}
+  - \renewcommand{\cftpartpagefont}{\headingfont\large}
+  - \renewcommand{\cftchapfont}{\headingfont\mdseries}
+  - \renewcommand{\cftchappagefont}{\headingfont\mdseries}
+  - \renewcommand{\cftsecfont}{\headingfont}
+  - \renewcommand{\cftsecpagefont}{\headingfont}
+  - \renewcommand{\cftsubsecfont}{\headingfont}
+  - \renewcommand{\cftsubsecpagefont}{\headingfont}
+
+  - \renewcommand{\cftloftitlefont}{\hfill\headingfont\Large\bfseries}
+  - \renewcommand{\cftafterloftitle}{\hfill\mbox{}\par}
+  - \renewcommand{\cftfigfont}{\headingfont}
+  - \renewcommand{\cftfigpagefont}{\headingfont}
+  - \renewcommand{\cftlottitlefont}{\hfill\headingfont\Large\bfseries}
+  - \renewcommand{\cftafterlottitle}{\hfill\mbox{}\par}
+  - \renewcommand{\cfttabfont}{\headingfont}
+  - \renewcommand{\cfttabpagefont}{\headingfont}
 
 
   - \hyphenation{Web-Assembly}
   - \usepackage{acronym}
 
   - \usepackage[USenglish]{uiomasterfp}
+  - \renewcommand{\bibname}{References}
+  - \renewcommand{\bibsection}{References}
 
 ---
 
@@ -158,7 +188,6 @@ function_labeller <- function(variable, value) {
 
 
 
-
 <!-- -------------------- -->
 <!--      COVER PAGE      -->
 <!-- -------------------- -->
@@ -173,12 +202,11 @@ function_labeller <- function(variable, value) {
 
 \begin{center}
 \vspace*{\fill} 
-\Huge \textbf{Nebula} \\[10pt]
+{\LARGE\headingfont Nebula\par}
+{\LARGE\headingfont Performance and Energy Efficiency in Serverless Computing\par}
+{\Large\itshape\headingfont A Comparative Study of WebAssembly and Docker\par}
 \vspace{2cm} 
-{\LARGE Performance and Energy Efficiency in Serverless Computing\par}
-{\Large\itshape A Comparative Study of WebAssembly and Docker\par}
-\vspace{2cm} 
-\Large Marius Nilsen Kluften \\[30pt]
+\Large\headingfont Marius Nilsen Kluften \\[30pt]
 \vspace*{\fill} 
 \end{center}
 
@@ -3432,7 +3460,9 @@ By addressing these areas, future research can build upon the foundations laid
 by this thesis, further advancing our understanding of the performance and
 energy implications of Wasm modules in serverless computing environments.
 
+\newpage
 
+\addcontentsline{toc}{chapter}{Acronyms}
 \chapter*{Acronyms}
 \begin{acronym}
   \acro{IaaS}[IaaS]{Infrastructure-as-a-Service}
@@ -3451,3 +3481,7 @@ energy implications of Wasm modules in serverless computing environments.
   \acro{MQTT}[MQTT]{Message Queuing Telemetry Transport}
   \acro{NREC}[NREC]{Norwegian Reasearch and Education Cloud}
 \end{acronym}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{\bibname}
