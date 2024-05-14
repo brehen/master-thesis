@@ -54,6 +54,7 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \AtBeginDocument{\let\maketitle\relax}
+\usepackage[T1]{fontenc}
 \usepackage{lastpage} % Calculate the last page of the document
 \usepackage{tocbibind} % Insert custom table of content items
 \usepackage{graphicx} % import figure
@@ -98,6 +99,7 @@
 \titleformat*{\subsubsection}{\large\headingfont}
 \hyphenation{Web-Assembly}
 \usepackage{acronym}
+\usepackage[USenglish]{uiomasterfp}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -120,59 +122,27 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Nebula},
+  pdftitle={Nebula:~Performance and Energy Efficiency in Serverless Computing},
   pdfauthor={Marius Nilsen Kluften},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Nebula}
+\title{Nebula:~Performance and Energy Efficiency in Serverless
+Computing}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Comparing two waves of cloud computing}
+\subtitle{A Comparative Study of WebAssembly and Docker}
 \author{Marius Nilsen Kluften}
 \date{2024}
 
 \begin{document}
 \maketitle
 
-\begin{titlepage}
-\thispagestyle{fancy}
-\fancyfoot[C]{2024}
-\centering
-{\Huge\bfseries Nebula\par}
-
-\vspace{0.5cm}
-
-{\Huge\itshape Comparing two waves of cloud compute\par}
-
-\vspace{1cm}
-
-{\Large Marius Nilsen Kluften\par}
-
-\vspace{1cm}
-
-\includegraphics[width=0.4\textwidth]{assets/uio-logo.png}\\[1cm]
-
-{\Large Thesis submitted for the degree of\par}
-{\Large Master in Informatics: Programming and System Architecture\par}
-
-\vspace{0.25cm}
-
-{\Large 60 credits\par}
-
-\vspace{1cm}
-
-{\Large Institute of Informatics\par}
-
-{\Large Faculty of mathematics and natural sciences\par}
-
-{\Large University of Oslo\par}
-
-\end{titlepage}
+\uiomasterfp[compact, program={Informatics: Programming and System Architecture}, color=blue, image={assets/cover_v_1}]
 
 \newpage
 
@@ -180,7 +150,8 @@
 \vspace*{\fill} 
 \Huge \textbf{Nebula} \\[10pt]
 \vspace{2cm} 
-\Large \textit{Comparing two waves of cloud compute} \\[20pt]
+{\LARGE Performance and Energy Efficiency in Serverless Computing\par}
+{\Large\itshape A Comparative Study of WebAssembly and Docker\par}
 \vspace{2cm} 
 \Large Marius Nilsen Kluften \\[30pt]
 \vspace*{\fill} 

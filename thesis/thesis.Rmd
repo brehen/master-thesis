@@ -1,6 +1,7 @@
 ---
-title: Nebula 
-subtitle: Comparing two waves of cloud computing 
+title: Nebula\:\ Performance and Energy Efficiency in Serverless Computing
+subtitle: A Comparative Study of WebAssembly and Docker
+
 author: Marius Nilsen Kluften  
 documentclass: report
 classoption:
@@ -19,6 +20,7 @@ output:
 
 header-includes: 
   - \AtBeginDocument{\let\maketitle\relax}
+  - \usepackage[T1]{fontenc}
   - \usepackage{lastpage} % Calculate the last page of the document
   - \usepackage{tocbibind} % Insert custom table of content items
   - \usepackage{graphicx} % import figure
@@ -78,7 +80,7 @@ header-includes:
 
   - \usepackage{epigraph}
   - \setlength\epigraphwidth{.6\textwidth}
-
+ 
   - \setmainfont{Georgia}
   - \usepackage{titlesec}
   - \newfontfamily\headingfont{Avenir}
@@ -91,6 +93,7 @@ header-includes:
   - \hyphenation{Web-Assembly}
   - \usepackage{acronym}
 
+  - \usepackage[USenglish]{uiomasterfp}
 
 ---
 
@@ -154,47 +157,13 @@ function_labeller <- function(variable, value) {
 ```
 
 
+
+
 <!-- -------------------- -->
 <!--      COVER PAGE      -->
 <!-- -------------------- -->
 
-
-
-\begin{titlepage}
-\thispagestyle{fancy}
-\fancyfoot[C]{2024}
-\centering
-{\Huge\bfseries Nebula\par}
-
-\vspace{0.5cm}
-
-{\Huge\itshape Comparing two waves of cloud compute\par}
-
-\vspace{1cm}
-
-{\Large Marius Nilsen Kluften\par}
-
-\vspace{1cm}
-
-\includegraphics[width=0.4\textwidth]{assets/uio-logo.png}\\[1cm]
-
-{\Large Thesis submitted for the degree of\par}
-{\Large Master in Informatics: Programming and System Architecture\par}
-
-\vspace{0.25cm}
-
-{\Large 60 credits\par}
-
-\vspace{1cm}
-
-{\Large Institute of Informatics\par}
-
-{\Large Faculty of mathematics and natural sciences\par}
-
-{\Large University of Oslo\par}
-
-\end{titlepage}
-
+\uiomasterfp[compact, program={Informatics: Programming and System Architecture}, color=blue, image={assets/cover_v_1}]
 
 <!-- -------------------- -->
 <!--      TITLE PAGE      -->
@@ -206,7 +175,8 @@ function_labeller <- function(variable, value) {
 \vspace*{\fill} 
 \Huge \textbf{Nebula} \\[10pt]
 \vspace{2cm} 
-\Large \textit{Comparing two waves of cloud compute} \\[20pt]
+{\LARGE Performance and Energy Efficiency in Serverless Computing\par}
+{\Large\itshape A Comparative Study of WebAssembly and Docker\par}
 \vspace{2cm} 
 \Large Marius Nilsen Kluften \\[30pt]
 \vspace*{\fill} 
