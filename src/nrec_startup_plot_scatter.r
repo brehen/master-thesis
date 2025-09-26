@@ -13,6 +13,7 @@ load_data_and_plot_scatter <- function(file_path) {
 
   # Select and rename the metrics columns, convert types
   data <- data_raw %>%
+    filter(func_name == "prime-number") %>%
     mutate(
       startup_time = as.numeric(metrics.startup_time) / 1000,
       total_runtime = as.numeric(metrics.total_runtime) / 1000,
@@ -63,4 +64,4 @@ load_data_and_plot_scatter <- function(file_path) {
   print(gg)
 }
 
-load_data_and_plot_scatter("../thesis/assets/metrics/nrec_energy_data.json")
+load_data_and_plot_scatter("thesis/assets/metrics/nrec_energy_data.json")

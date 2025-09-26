@@ -3121,6 +3121,20 @@ print_power_graph(prime_rip_data, "Prime Number")
 print_energy_graph(prime_rip_data, "Prime Number")
 ```
 
+\newpage
+
+```{r, prime-power, echo=F, warning=F, dev = "cairo_pdf", fig.height = 4, fig.align = 'center', fig.cap="Power load on Raspberry Pi during Prime Number benchmark."}
+prime_rip_data <- rpi_data %>%
+  filter(func_name == "prime-number")
+
+print_power_graph(prime_rip_data, "Prime Number")
+```
+
+```{r, prime-energy, echo=F, warning=F, dev = "cairo_pdf", fig.height = 4, fig.align = 'center', fig.cap="Energy consumption on Raspberry Pi during Prime Number benchmark."}
+print_energy_graph(prime_rip_data, "Prime Number")
+```
+
+
 These results provide insights into the power and energy implications of
 executing various functions as \ac{Wasm} modules and Docker containers on
 resource-constrained devices like the Raspberry Pi. While this controlled
